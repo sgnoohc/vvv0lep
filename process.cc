@@ -2,6 +2,8 @@
 #include "rooutil.h"
 #include "cxxopts.h"
 
+using json = nlohmann::json;
+
 class AnalysisConfig {
 
 public:
@@ -61,8 +63,8 @@ int main(int argc, char** argv)
 
     // Read the options
     options.add_options()
-        ("i,input"       , "Comma separated input file list OR if just a directory is provided it will glob all in the directory BUT must end with '/' for the path", cxxopts::value<std::string>())
-        ("t,tree"        , "Name of the tree in the root file to open and loop over"                                             , cxxopts::value<std::string>())
+        ("J,json"        , "Provide the json format input."                                                                      , cxxopts::value<std::string>())
+        ("e,evtchunk"    , "N events chunking"                                                                                   , cxxopts::value<int>())
         ("o,output"      , "Output file name"                                                                                    , cxxopts::value<std::string>())
         ("n,nevents"     , "N events to loop over"                                                                               , cxxopts::value<int>()->default_value("-1"))
         ("j,nsplit_jobs" , "Enable splitting jobs by N blocks (--job_index must be set)"                                         , cxxopts::value<int>())
@@ -85,62 +87,30 @@ int main(int argc, char** argv)
         exit(1);
     }
 
-    //_______________________________________________________________________________
-    // --input
-    if (result.count("input"))
+    if (result.count("json"))
     {
-        ana.input_file_list_tstring = result["input"].as<std::string>();
     }
     else
     {
         std::cout << options.help() << std::endl;
-        std::cout << "ERROR: Input list is not provided! Check your arguments" << std::endl;
+        std::cout << "ERROR: option string --json has not been provided!" << std::endl;
+        std::cout << "Must provide a job config json file!" << std::endl;
         exit(1);
     }
 
-    //_______________________________________________________________________________
-    // --tree
-    if (result.count("tree"))
-    {
-        ana.input_tree_name = result["tree"].as<std::string>();
-    }
-    else
-    {
-        std::cout << options.help() << std::endl;
-        std::cout << "ERROR: Input tree name is not provided! Check your arguments" << std::endl;
-        exit(1);
-    }
+    std::ifstream jobconfig(result["json"].as<std::string>());
+    json j;
+    jobconfig >> j;
 
-    //_______________________________________________________________________________
-    // --debug
-    if (result.count("debug"))
+    // Get the list of files
+    std::vector<TString> files;
+    for (auto& f : j["files"])
     {
-        ana.output_tfile = new TFile("debug.root", "recreate");
+        files.push_back(f);
     }
-    else
-    {
-        //_______________________________________________________________________________
-        // --output
-        if (result.count("output"))
-        {
-            ana.output_tfile = new TFile(result["output"].as<std::string>().c_str(), "create");
-            if (not ana.output_tfile->IsOpen())
-            {
-                std::cout << options.help() << std::endl;
-                std::cout << "ERROR: output already exists! provide new output name or delete old file. OUTPUTFILE=" << result["output"].as<std::string>() << std::endl;
-                exit(1);
-            }
-        }
-        else
-        {
-            std::cout << options.help() << std::endl;
-            std::cout << "ERROR: Output file name is not provided! Check your arguments" << std::endl;
-            exit(1);
-        }
-    }
+    ana.input_file_list_tstring = RooUtil::StringUtil::join(files);
+    ana.input_tree_name = "t";
 
-    //_______________________________________________________________________________
-    // --nevents
     ana.n_events = result["nevents"].as<int>();
 
     //_______________________________________________________________________________
@@ -158,7 +128,7 @@ int main(int argc, char** argv)
     }
     else
     {
-        ana.nsplit_jobs = -1;
+        ana.nsplit_jobs = 1;
     }
 
     //_______________________________________________________________________________
@@ -176,7 +146,7 @@ int main(int argc, char** argv)
     }
     else
     {
-        ana.job_index = -1;
+        ana.job_index = 0;
     }
 
 
@@ -200,6 +170,23 @@ int main(int argc, char** argv)
                 exit(1);
             }
         }
+    }
+
+    //_______________________________________________________________________________
+    // --debug
+    if (result.count("debug"))
+    {
+        ana.output_tfile = new TFile("debug.root", "recreate");
+    }
+    else
+    {
+        TString tag = j["tag"];
+        TString process = j["process"];
+        TString output_dir = j["output_dir"];
+        TString output_name = TString::Format("output_%d.root", ana.job_index);
+        gSystem->mkdir(output_dir.Data(), true);
+        TString output_fullpath = output_dir + "/" + output_name;
+        ana.output_tfile = new TFile(output_fullpath.Data(), "recreate");
     }
 
     //
@@ -370,7 +357,10 @@ int main(int argc, char** argv)
     // Set the cutflow object output file
     ana.cutflow.setTFile(ana.output_tfile);
 
-    ana.cutflow.addCut("Base", UNITY, [&]() { return vvv.genWeight(); } );
+    float lumi = j["lumi"];
+    float xsec = j["xsec"];
+    float sum_genWeight = j["sum_genWeight"];
+    ana.cutflow.addCut("Base", UNITY, [&, lumi, xsec, sum_genWeight]() { return vvv.genWeight() * lumi * xsec * 1000.0 / sum_genWeight; } );
 
     ana.cutflow.getCut("Base");
     ana.cutflow.addCutToLastActiveCut("OL", [&]() { return vvv.is1Lep(); }, UNITY);
