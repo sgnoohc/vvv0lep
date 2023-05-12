@@ -5,5 +5,8 @@
     source setup.sh
     cd rooutil/ && make -j && cd ../ # do this once
     make -j
-    ./doAnalysis -i /ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeDebug/debug_www.root -t t -d
+    ./run.py
+    xargs.sh .jobs.txt
+    ./merge.py
+    xargs.sh .merge.txt
     python3 plot.py

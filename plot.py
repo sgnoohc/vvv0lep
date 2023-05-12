@@ -4,34 +4,42 @@ import plottery_wrapper as p
 
 lumi_value = 59.83
 
-p.dump_plot(
-        fnames = [
-            "output/VVV0TreeV4/merged/diboson.root",
-            "output/VVV0TreeV4/merged/qcd.root",
-            "output/VVV0TreeV4/merged/ttbar.root",
-            "output/VVV0TreeV4/merged/w.root",
-            "output/VVV0TreeV4/merged/z.root",
-            ],
-        legend_labels = [
+tag = "VVV0TreeV6"
+mdir = f"output/{tag}/merged"
+
+fnames = [
+        f"{mdir}/diboson.root",
+        f"{mdir}/qcd.root",
+        f"{mdir}/ttbar.root",
+        f"{mdir}/w.root",
+        f"{mdir}/z.root",
+        f"{mdir}/ttv.root",
+        f"{mdir}/onetop.root",
+        ]
+legend_labels = [
             "VV",
             "QCD",
             "TT",
             "W",
             "Z",
-            ],
-        sig_fnames = [
-            "output/VVV0TreeV4/merged/wwwdim6.root",
-            "output/VVV0TreeV4/merged/wwzdim6.root",
-            "output/VVV0TreeV4/merged/wzzdim6.root",
-            "output/VVV0TreeV4/merged/zzzdim6.root",
-            ],
-        signal_labels = [
+            "TTV",
+            "1T",
+            ]
+sig_fnames = [
+            f"{mdir}/wwwdim6.root",
+            f"{mdir}/wwzdim6.root",
+            f"{mdir}/wzzdim6.root",
+            f"{mdir}/zzzdim6.root",
+            ]
+
+signal_labels = [
             "WWW D6",
             "WWZ D6",
             "WZZ D6",
             "ZZZ D6",
-            ],
-        usercolors = [
+            ]
+
+usercolors = [
             7001,
             7002,
             7003,
@@ -39,9 +47,10 @@ p.dump_plot(
             7005,
             7006,
             7007,
-            ],
-        extraoptions = {
-            "nbins"            : 20,
+            ]
+
+extraoptions = {
+            "nbins"            : 60,
             # "autobin"          : True,
             "print_yield"      : True,
             "yield_prec"       : 6,
@@ -56,6 +65,44 @@ p.dump_plot(
             # "divide_by_bin_width": True,
             # "fit_bkg"          : True,
             # "signal_scale"     : "auto",
-            # "signal_scale"     : 100,
+            "signal_scale"     : 500,
             }
+
+data_fname = f"{mdir}/jetht.root"
+p.dump_plot(
+        fnames = fnames,
+        legend_labels = legend_labels,
+        sig_fnames = sig_fnames,
+        signal_labels = signal_labels,
+        data_fname = data_fname,
+        usercolors = usercolors,
+        filter_pattern = "ZL*",
+        dogrep = True,
+        extraoptions = extraoptions, 
+        )
+
+data_fname = f"{mdir}/onemu.root"
+p.dump_plot(
+        fnames = fnames,
+        legend_labels = legend_labels,
+        sig_fnames = sig_fnames,
+        signal_labels = signal_labels,
+        data_fname = data_fname,
+        usercolors = usercolors,
+        filter_pattern = "OLMu*",
+        dogrep = True,
+        extraoptions = extraoptions, 
+        )
+
+data_fname = f"{mdir}/oneel.root"
+p.dump_plot(
+        fnames = fnames,
+        legend_labels = legend_labels,
+        sig_fnames = sig_fnames,
+        signal_labels = signal_labels,
+        data_fname = data_fname,
+        usercolors = usercolors,
+        filter_pattern = "OLEl*",
+        dogrep = True,
+        extraoptions = extraoptions, 
         )

@@ -5,7 +5,7 @@ import ROOT as r
 import os
 import json
 
-tag = "VVV0TreeV4"
+tag = "VVV0TreeV6"
 sample_dirs = glob.glob(f"/ceph/cms/store/user/phchang/VVV0LepAnalysis/{tag}/*_{tag}")
 os.system(f"mkdir -p data/samples/{tag}")
 
@@ -87,21 +87,23 @@ def parse_sample(d, j):
 def main():
 
     for d in sample_dirs:
+        print(f"Processing sample: {d}")
         j = dict()
         rootfiles = glob.glob(f"{d}/*.root")
         j["tag"] = tag
-        j["ntotalevents"] = int(0)
+        j["noriginalevents"] = int(0)
         j["sum_genWeight"] = 0
         j["nfiles"] = len(rootfiles)
         j["files"] = rootfiles
-        j["nevents"] = int(0)
+        j["nevents"] = []
         parse_sample(d, j)
         for rf in rootfiles:
+            print(f"  Processing file: {rf}")
             f = r.TFile(rf)
-            j["nevents"] = f.Get("t").GetEntries()
-            j["ntotalevents"] += int(f.Get("Root__h_nevents").GetBinContent(1))
-            j["sum_genWeight"] += f.Get("Root__h_Common_genWeight").GetBinContent(1)
-
+            j["nevents"].append(f.Get("t").GetEntries())
+            j["noriginalevents"] += int(f.Get("Root__h_nevents").GetBinContent(1))
+            if j["is_bkg"] or j["is_sig"]:
+                j["sum_genWeight"] += f.Get("Root__h_Common_genWeight").GetBinContent(1)
         json_formatted_str = json.dumps(j, indent=4)
         jfile = open(f'data/samples/{tag}/{j["name"]}.json', "w")
         jfile.write(json_formatted_str)

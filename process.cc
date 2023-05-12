@@ -63,8 +63,9 @@ int main(int argc, char** argv)
 
     // Read the options
     options.add_options()
-        ("J,json"        , "Provide the json format input."                                                                      , cxxopts::value<std::string>())
-        ("e,evtchunk"    , "N events chunking"                                                                                   , cxxopts::value<int>())
+        ("J,json"        , "json job config",                                                                                                                         cxxopts::value<std::string>())
+        ("i,input"       , "Comma separated input file list OR if just a directory is provided it will glob all in the directory BUT must end with '/' for the path", cxxopts::value<std::string>())
+        ("t,tree"        , "Name of the tree in the root file to open and loop over"                                             , cxxopts::value<std::string>())
         ("o,output"      , "Output file name"                                                                                    , cxxopts::value<std::string>())
         ("n,nevents"     , "N events to loop over"                                                                               , cxxopts::value<int>()->default_value("-1"))
         ("j,nsplit_jobs" , "Enable splitting jobs by N blocks (--job_index must be set)"                                         , cxxopts::value<int>())
@@ -87,30 +88,74 @@ int main(int argc, char** argv)
         exit(1);
     }
 
+    //_______________________________________________________________________________
+    // --input
+    if (result.count("input"))
+    {
+        ana.input_file_list_tstring = result["input"].as<std::string>();
+    }
+    else
+    {
+        std::cout << options.help() << std::endl;
+        std::cout << "ERROR: Input list is not provided! Check your arguments" << std::endl;
+        exit(1);
+    }
+
+    //_______________________________________________________________________________
+    // --json
     if (result.count("json"))
     {
     }
     else
     {
         std::cout << options.help() << std::endl;
-        std::cout << "ERROR: option string --json has not been provided!" << std::endl;
-        std::cout << "Must provide a job config json file!" << std::endl;
+        std::cout << "ERROR: Json file not provided! Check your arguments" << std::endl;
         exit(1);
     }
 
-    std::ifstream jobconfig(result["json"].as<std::string>());
-    json j;
-    jobconfig >> j;
-
-    // Get the list of files
-    std::vector<TString> files;
-    for (auto& f : j["files"])
+    //_______________________________________________________________________________
+    // --tree
+    if (result.count("tree"))
     {
-        files.push_back(f);
+        ana.input_tree_name = result["tree"].as<std::string>();
     }
-    ana.input_file_list_tstring = RooUtil::StringUtil::join(files);
-    ana.input_tree_name = "t";
+    else
+    {
+        std::cout << options.help() << std::endl;
+        std::cout << "ERROR: Input tree name is not provided! Check your arguments" << std::endl;
+        exit(1);
+    }
 
+    //_______________________________________________________________________________
+    // --debug
+    if (result.count("debug"))
+    {
+        ana.output_tfile = new TFile("debug.root", "recreate");
+    }
+    else
+    {
+        //_______________________________________________________________________________
+        // --output
+        if (result.count("output"))
+        {
+            ana.output_tfile = new TFile(result["output"].as<std::string>().c_str(), "recreate");
+            // if (not ana.output_tfile->IsOpen())
+            // {
+            //     std::cout << options.help() << std::endl;
+            //     std::cout << "ERROR: output already exists! provide new output name or delete old file. OUTPUTFILE=" << result["output"].as<std::string>() << std::endl;
+            //     exit(1);
+            // }
+        }
+        else
+        {
+            std::cout << options.help() << std::endl;
+            std::cout << "ERROR: Output file name is not provided! Check your arguments" << std::endl;
+            exit(1);
+        }
+    }
+
+    //_______________________________________________________________________________
+    // --nevents
     ana.n_events = result["nevents"].as<int>();
 
     //_______________________________________________________________________________
@@ -128,7 +173,7 @@ int main(int argc, char** argv)
     }
     else
     {
-        ana.nsplit_jobs = 1;
+        ana.nsplit_jobs = -1;
     }
 
     //_______________________________________________________________________________
@@ -146,7 +191,7 @@ int main(int argc, char** argv)
     }
     else
     {
-        ana.job_index = 0;
+        ana.job_index = -1;
     }
 
 
@@ -170,23 +215,6 @@ int main(int argc, char** argv)
                 exit(1);
             }
         }
-    }
-
-    //_______________________________________________________________________________
-    // --debug
-    if (result.count("debug"))
-    {
-        ana.output_tfile = new TFile("debug.root", "recreate");
-    }
-    else
-    {
-        TString tag = j["tag"];
-        TString process = j["process"];
-        TString output_dir = j["output_dir"];
-        TString output_name = TString::Format("output_%d.root", ana.job_index);
-        gSystem->mkdir(output_dir.Data(), true);
-        TString output_fullpath = output_dir + "/" + output_name;
-        ana.output_tfile = new TFile(output_fullpath.Data(), "recreate");
     }
 
     //
@@ -354,17 +382,28 @@ int main(int argc, char** argv)
     // And later in the loop when RooUtil::CutName::fill() function is called, the tree structure will be traversed through and the appropriate histograms will be filled with appropriate variables
     // After running the loop check for the histograms in the output root file
 
+    // cross section information is saved in a json format
+    std::ifstream jj(result["json"].as<std::string>()); //
+    json j;
+    jj >> j;
+
     // Set the cutflow object output file
     ana.cutflow.setTFile(ana.output_tfile);
 
+    int is_data = j["is_data"];
     float lumi = j["lumi"];
     float xsec = j["xsec"];
     float sum_genWeight = j["sum_genWeight"];
-    ana.cutflow.addCut("Base", UNITY, [&, lumi, xsec, sum_genWeight]() { return vvv.genWeight() * lumi * xsec * 1000.0 / sum_genWeight; } );
+
+    ana.cutflow.addCut("Base", UNITY, [&, is_data, lumi, xsec, sum_genWeight]() { return is_data ? 1.f : vvv.genWeight() * lumi * xsec * 1000.0 / sum_genWeight; } );
 
     ana.cutflow.getCut("Base");
     ana.cutflow.addCutToLastActiveCut("OL", [&]() { return vvv.is1Lep(); }, UNITY);
     ana.cutflow.addCutToLastActiveCut("OL1FJ", [&]() { return vvv.NFJ() == 1; }, UNITY);
+    ana.cutflow.getCut("OL1FJ");
+    ana.cutflow.addCutToLastActiveCut("OLEl", [&]() { return abs(vvv.LepFlav()) == 11; }, UNITY);
+    ana.cutflow.getCut("OL1FJ");
+    ana.cutflow.addCutToLastActiveCut("OLMu", [&]() { return abs(vvv.LepFlav()) == 13; }, UNITY);
 
     ana.cutflow.getCut("Base");
     ana.cutflow.addCutToLastActiveCut("ZL", [&]() { return vvv.is0Lep(); }, UNITY);

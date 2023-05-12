@@ -1,9 +1,13 @@
 {
+    "JetHT"                                                                        : "jetht",
+    "SingleMuon"                                                                   : "onemu",
+    "EGamma"                                                                       : "oneel",
     "ST_tW_antitop_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8"          : "onetop",
     "ST_tW_antitop_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8"                : "onetop",
     "ST_tW_top_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8"              : "onetop",
     "ST_tW_top_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8"                    : "onetop",
     "ST_s-channel_4f_leptonDecays_TuneCP5_13TeV-amcatnlo-pythia8"                  : "onetop",
+    "ST_s-channel_4f_hadronicDecays_TuneCP5_13TeV-amcatnlo-pythia8"                : "onetop",
     "ST_t-channel_eleDecays_TuneCP5_13TeV-comphep-pythia8"                         : "onetop",
     "ST_t-channel_muDecays_TuneCP5_13TeV-comphep-pythia8"                          : "onetop",
     "ST_t-channel_tauDecays_TuneCP5_13TeV-comphep-pythia8"                         : "onetop",

@@ -4,6 +4,7 @@
     "ST_tW_top_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8"              : 34.91,
     "ST_tW_top_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8"                    : 34.91,
     "ST_s-channel_4f_leptonDecays_TuneCP5_13TeV-amcatnlo-pythia8"                  : 3.74,
+    "ST_s-channel_4f_hadronicDecays_TuneCP5_13TeV-amcatnlo-pythia8"                : 7.104,
     "ST_t-channel_eleDecays_TuneCP5_13TeV-comphep-pythia8"                         : 24.78,
     "ST_t-channel_muDecays_TuneCP5_13TeV-comphep-pythia8"                          : 24.73,
     "ST_t-channel_tauDecays_TuneCP5_13TeV-comphep-pythia8"                         : 24.8,
