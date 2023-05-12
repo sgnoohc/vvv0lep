@@ -1,0 +1,8 @@
+.jobs.txt
+.makeclass.log
+.merge.txt
+*.o
+*.root
+doAnalysis
+output/
+plots/
