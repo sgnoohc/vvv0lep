@@ -47,7 +47,7 @@ def get_sample_name(name, json):
     if json["is_bkg"] or json["is_sig"]:
         json["process"] = json["name"].split("_RunII")[0]
     else:
-        json["process"] = json["name"].split("_Run201")[0]
+        json["process"] = json["name"].split("_Run201")[0] + "_Run201" + json["name"].split("_Run201")[1][0:2]
 
 def get_sample_dir(name, json):
     json["dir"] = name
@@ -87,6 +87,8 @@ def parse_sample(d, j):
 def main():
 
     for d in sample_dirs:
+        if "Run201" not in d:
+            continue
         print(f"Processing sample: {d}")
         j = dict()
         rootfiles = glob.glob(f"{d}/*.root")

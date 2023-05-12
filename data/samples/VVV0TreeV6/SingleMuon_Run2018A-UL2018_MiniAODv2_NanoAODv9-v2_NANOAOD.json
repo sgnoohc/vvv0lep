@@ -196,8 +196,8 @@
     "is_data": 1,
     "dir": "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV6/SingleMuon_Run2018A-UL2018_MiniAODv2_NanoAODv9-v2_NANOAOD_VVV0TreeV6",
     "name": "SingleMuon_Run2018A-UL2018_MiniAODv2_NanoAODv9-v2_NANOAOD",
-    "process": "SingleMuon",
+    "process": "SingleMuon_Run2018A",
     "xsec": 1,
     "lumi": 1,
-    "output_dir": "output/VVV0TreeV6/SingleMuon"
+    "output_dir": "output/VVV0TreeV6/SingleMuon_Run2018A"
 }

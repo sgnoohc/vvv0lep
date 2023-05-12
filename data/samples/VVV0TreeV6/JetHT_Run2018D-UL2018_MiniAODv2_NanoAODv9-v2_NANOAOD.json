@@ -476,8 +476,8 @@
     "is_data": 1,
     "dir": "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV6/JetHT_Run2018D-UL2018_MiniAODv2_NanoAODv9-v2_NANOAOD_VVV0TreeV6",
     "name": "JetHT_Run2018D-UL2018_MiniAODv2_NanoAODv9-v2_NANOAOD",
-    "process": "JetHT",
+    "process": "JetHT_Run2018D",
     "xsec": 1,
     "lumi": 1,
-    "output_dir": "output/VVV0TreeV6/JetHT"
+    "output_dir": "output/VVV0TreeV6/JetHT_Run2018D"
 }
