@@ -63,7 +63,7 @@ extraoptions = {
             "lumi_value"       : lumi_value,
             # "bkg_sort_method"  : "unsorted",
             # "divide_by_bin_width": True,
-            "fit_bkg"          : True,
+            # "fit_bkg"          : True,
             # "signal_scale"     : "auto",
             "signal_scale"     : 500,
             }
