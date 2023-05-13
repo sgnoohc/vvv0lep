@@ -1,7 +1,3 @@
-#!/bin/env python3
-
-import plottery_wrapper as p
-
 lumi_value = 59.83
 
 tag = "VVV0TreeV6"
@@ -68,41 +64,3 @@ extraoptions = {
             "signal_scale"     : 500,
             }
 
-data_fname = f"{mdir}/jetht.root"
-p.dump_plot(
-        fnames = fnames,
-        legend_labels = legend_labels,
-        sig_fnames = sig_fnames,
-        signal_labels = signal_labels,
-        data_fname = data_fname,
-        usercolors = usercolors,
-        filter_pattern = "ZL*",
-        dogrep = True,
-        extraoptions = extraoptions, 
-        )
-
-data_fname = f"{mdir}/onemu.root"
-p.dump_plot(
-        fnames = fnames,
-        legend_labels = legend_labels,
-        sig_fnames = sig_fnames,
-        signal_labels = signal_labels,
-        data_fname = data_fname,
-        usercolors = usercolors,
-        filter_pattern = "OLMu*",
-        dogrep = True,
-        extraoptions = extraoptions, 
-        )
-
-data_fname = f"{mdir}/oneel.root"
-p.dump_plot(
-        fnames = fnames,
-        legend_labels = legend_labels,
-        sig_fnames = sig_fnames,
-        signal_labels = signal_labels,
-        data_fname = data_fname,
-        usercolors = usercolors,
-        filter_pattern = "OLEl*",
-        dogrep = True,
-        extraoptions = extraoptions, 
-        )

@@ -396,6 +396,24 @@ int main(int argc, char** argv)
     float sum_genWeight = j["sum_genWeight"];
 
     //===============================================================================================================================================================
+    // Custom variables that gets computed on the fly
+    auto OLFJ0 = [&]() {
+        if (vvv.NFJ() == 1)
+            return vvv.FJ0();
+        if (vvv.NFJ() == 0 and vvv.NiFJ() == 1)
+            return vvv.iFJ0();
+        return LV();
+    };
+
+    auto OLVMD0 = [&]() {
+        if (vvv.NFJ() == 1)
+            return vvv.VMD0();
+        if (vvv.NFJ() == 0 and vvv.NiFJ() == 1)
+            return vvv.iVMD0();
+        return -999.f;
+    };
+
+    //===============================================================================================================================================================
     // Applying weights
     ana.cutflow.addCut("Base", UNITY, [&, is_data, lumi, xsec, sum_genWeight]() { return is_data ? 1.f : vvv.genWeight() * lumi * xsec * 1000.0 / sum_genWeight; } );
 
@@ -404,10 +422,39 @@ int main(int argc, char** argv)
     ana.cutflow.getCut("Base");
     ana.cutflow.addCutToLastActiveCut("OL", [&]() { return vvv.is1Lep(); }, UNITY);
     ana.cutflow.addCutToLastActiveCut("OL1FJ", [&]() { return vvv.NFJ() == 1 or (vvv.NFJ() == 0 and vvv.NiFJ() == 1); }, UNITY);
+    // True Fat-jet's (W fat-jets from top)
     ana.cutflow.getCut("OL1FJ");
-    ana.cutflow.addCutToLastActiveCut("OLEl", [&]() { return abs(vvv.LepFlav()) == 11; }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("OLTB", [&]() { return vvv.NbTight() >= 1; }, UNITY);
+    ana.cutflow.getCut("OLTB");
+    ana.cutflow.addCutToLastActiveCut("OLElTB", [&]() { return abs(vvv.LepFlav()) == 11; }, UNITY);
+    ana.cutflow.getCut("OLTB");
+    ana.cutflow.addCutToLastActiveCut("OLMuTB", [&]() { return abs(vvv.LepFlav()) == 13; }, UNITY);
+    // Fake Fat-jet's
     ana.cutflow.getCut("OL1FJ");
-    ana.cutflow.addCutToLastActiveCut("OLMu", [&]() { return abs(vvv.LepFlav()) == 13; }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("OLNB", [&]() { return vvv.NoORNbTight() == 0; }, UNITY);
+    ana.cutflow.getCut("OLNB");
+    ana.cutflow.addCutToLastActiveCut("OLElNB", [&]() { return abs(vvv.LepFlav()) == 11; }, UNITY);
+    ana.cutflow.getCut("OLNB");
+    ana.cutflow.addCutToLastActiveCut("OLMuNB", [&]() { return abs(vvv.LepFlav()) == 13; }, UNITY);
+    // For each regions add regions with pt bins
+    vector<TString> regions = {"OLTB", "OLElTB", "OLMuTB", "OLNB", "OLElNB", "OLMuNB"};
+    vector<float> ptbins = {200, 250, 300, 350, 400, 450, 500, 600, 800, 1000, 1300};
+    for (unsigned int ibin = 0; ibin < ptbins.size(); ++ibin)
+    {
+        int pt_lower_bound = ptbins[ibin];
+        int pt_upper_bound = ibin != ptbins.size() - 1 ? ptbins[ibin + 1] : 13600;
+        for (auto& region : regions)
+        {
+            ana.cutflow.getCut(region);
+            ana.cutflow.addCutToLastActiveCut(
+                TString::Format("%sPtLo%dHi%d", region.Data(), pt_lower_bound, pt_upper_bound),
+                [&, pt_lower_bound, pt_upper_bound]()
+                {
+                    float pt = OLFJ0().pt();
+                    return (pt > pt_lower_bound and pt <= pt_upper_bound);
+                }, UNITY);
+        }
+    }
 
     //===============================================================================================================================================================
     // Zero lepton region
@@ -474,11 +521,12 @@ int main(int argc, char** argv)
     histograms_onelep.addHistogram("LPhi"    , 180 , -3.1416 , 3.1416 , [&]() { return vvv.Lep().phi(); } );
     histograms_onelep.addHistogram("LepFlav" , 30  , -15     , 15     , [&]() { return vvv.LepFlav(); } );
     RooUtil::Histograms histograms_aFJ0;
-    histograms_aFJ0.addHistogram("aPt0"    , 180 , 0       , 3000   , [&]() { if (vvv.NFJ() == 1) return vvv.FJ0().pt();   if (vvv.NFJ() == 0 and vvv.NiFJ() == 1) return vvv.iFJ0().pt();   return -999.f; } );
-    histograms_aFJ0.addHistogram("aEta0"   , 180 , -5      , 5      , [&]() { if (vvv.NFJ() == 1) return vvv.FJ0().eta();  if (vvv.NFJ() == 0 and vvv.NiFJ() == 1) return vvv.iFJ0().eta();  return -999.f; } );
-    histograms_aFJ0.addHistogram("aPhi0"   , 180 , -3.1416 , 3.1416 , [&]() { if (vvv.NFJ() == 1) return vvv.FJ0().phi();  if (vvv.NFJ() == 0 and vvv.NiFJ() == 1) return vvv.iFJ0().phi();  return -999.f; } );
-    histograms_aFJ0.addHistogram("aMass0"  , 180 , 0       , 250    , [&]() { if (vvv.NFJ() == 1) return vvv.FJ0().mass(); if (vvv.NFJ() == 0 and vvv.NiFJ() == 1) return vvv.iFJ0().mass(); return -999.f; } );
-    histograms_aFJ0.addHistogram("aVMD0"   , 180 , 0       , 1      , [&]() { if (vvv.NFJ() == 1) return vvv.VMD0();       if (vvv.NFJ() == 0 and vvv.NiFJ() == 1) return vvv.iVMD0();       return -999.f; } );
+    histograms_aFJ0.addHistogram("aPt0"    , 180 , 0       , 3000   , [&]() { return OLFJ0().pt(); } );
+    histograms_aFJ0.addHistogram("aEta0"   , 180 , -5      , 5      , [&]() { return OLFJ0().eta(); } );
+    histograms_aFJ0.addHistogram("aPhi0"   , 180 , -3.1416 , 3.1416 , [&]() { return OLFJ0().phi(); } );
+    histograms_aFJ0.addHistogram("aMass0"  , 180 , 0       , 250    , [&]() { return OLFJ0().mass(); } );
+    histograms_aFJ0.addHistogram("aVMD0"   , 180 , 0       , 1      , [&]() { return OLVMD0(); } );
+    histograms_aFJ0.addHistogram("aVMD0F"  , 1000, 0       , 1      , [&]() { return OLVMD0(); } );
 
     // Book cutflows
     ana.cutflow.bookCutflows();
