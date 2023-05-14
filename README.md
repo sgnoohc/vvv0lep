@@ -7,4 +7,6 @@
     make -j
     ./run.py
     ./merge.py
-    ./plot.py
+    ./plot_zerolep.py
+    ./plot_onelep.py
+    ./plot_vmdsf.py
