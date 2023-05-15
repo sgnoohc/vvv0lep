@@ -87,8 +87,6 @@ def parse_sample(d, j):
 def main():
 
     for d in sample_dirs:
-        if "Run201" not in d:
-            continue
         print(f"Processing sample: {d}")
         j = dict()
         rootfiles = glob.glob(f"{d}/*.root")
@@ -99,13 +97,17 @@ def main():
         j["files"] = rootfiles
         j["nevents"] = []
         parse_sample(d, j)
+        if not j["is_sig"]:
+            continue
         for rf in rootfiles:
             print(f"  Processing file: {rf}")
             f = r.TFile(rf)
             j["nevents"].append(f.Get("t").GetEntries())
             j["noriginalevents"] += int(f.Get("Root__h_nevents").GetBinContent(1))
-            if j["is_bkg"] or j["is_sig"]:
+            if j["is_bkg"]:
                 j["sum_genWeight"] += f.Get("Root__h_Common_genWeight").GetBinContent(1)
+            elif j["is_sig"]:
+                j["sum_genWeight"] += f.Get("Root__h_Common_LHEWeight_mg_reweighting_times_genWeight").GetBinContent(1)
         json_formatted_str = json.dumps(j, indent=4)
         jfile = open(f'data/samples/{tag}/{j["name"]}.json', "w")
         jfile.write(json_formatted_str)

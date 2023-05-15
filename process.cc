@@ -391,9 +391,11 @@ int main(int argc, char** argv)
     ana.cutflow.setTFile(ana.output_tfile);
 
     int is_data = j["is_data"];
+    int is_sig = j["is_sig"];
     float lumi = j["lumi"];
     float xsec = j["xsec"];
     float sum_genWeight = j["sum_genWeight"];
+    int eft_idx = 16;
 
     //===============================================================================================================================================================
     auto fjcateg = [&]()
@@ -426,7 +428,33 @@ int main(int argc, char** argv)
 
     //===============================================================================================================================================================
     // Applying weights
-    ana.cutflow.addCut("Base", UNITY, [&, is_data, lumi, xsec, sum_genWeight]() { return is_data ? 1.f : vvv.genWeight() * lumi * xsec * 1000.0 / sum_genWeight; } );
+    ana.cutflow.addCut("Base",
+                       [&, is_sig]()
+                       {
+                           if (is_sig)
+                               return vvv.LHEReweightingWeight().size() != 0;
+                           else
+                               return true;
+                       },
+                       [&, is_data, is_sig, eft_idx, lumi, xsec, sum_genWeight]()
+                       {
+                           if (is_data)
+                           {
+                               return 1.f;
+                           }
+                           else
+                           {
+                               float wgt = vvv.genWeight() * lumi * xsec * 1000.0 / sum_genWeight;
+                               if (is_sig)
+                               {
+                                   return vvv.LHEReweightingWeight()[eft_idx] * wgt;
+                               }
+                               else
+                               {
+                                   return wgt;
+                               }
+                           }
+                       } );
 
     //===============================================================================================================================================================
     // One lepton region
@@ -490,6 +518,7 @@ int main(int argc, char** argv)
     // Zero lepton + three fat-jet region
     ana.cutflow.getCut("ZL");
     ana.cutflow.addCutToLastActiveCut("ZL3FJ", [&]() { return vvv.NFJ() >= 3; }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("ZL3FJPresel", [&]() { return vvv.HTFJ() > 1250 and vvv.FJ0().pt() > 500.; }, UNITY);
 
     // Print cut structure
     ana.cutflow.printCuts();

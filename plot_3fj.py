@@ -3,6 +3,10 @@
 import plottery_wrapper as p
 import plot_config as c
 
+c.extraoptions["signal_scale"] = 50
+c.extraoptions["fit_bkg"] = True
+c.extraoptions["yaxis_log"] = True
+
 data_fname = f"{c.mdir}/jetht.root"
 p.dump_plot(
         fnames = c.fnames,
@@ -11,7 +15,8 @@ p.dump_plot(
         signal_labels = c.signal_labels,
         data_fname = data_fname,
         usercolors = c.usercolors,
-        filter_pattern = "ZL*",
+        filter_pattern = "ZL3FJPresel*",
+        dirname = "plots/ZL3FJ/",
         dogrep = True,
         extraoptions = c.extraoptions, 
         )

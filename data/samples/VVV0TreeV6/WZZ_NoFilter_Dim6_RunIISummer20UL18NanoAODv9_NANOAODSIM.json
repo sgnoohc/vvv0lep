@@ -1,7 +1,7 @@
 {
     "tag": "VVV0TreeV6",
     "noriginalevents": 991000,
-    "sum_genWeight": 991000.0,
+    "sum_genWeight": 183024.86155254504,
     "nfiles": 1,
     "files": [
         "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV6/WZZ_NoFilter_Dim6_RunIISummer20UL18NanoAODv9_NANOAODSIM_VVV0TreeV6/output_1.root"
