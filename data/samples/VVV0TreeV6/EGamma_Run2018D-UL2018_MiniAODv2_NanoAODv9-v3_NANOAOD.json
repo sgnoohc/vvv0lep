@@ -725,5 +725,6 @@
     "process": "EGamma_Run2018D",
     "xsec": 1,
     "lumi": 1,
+    "year": 2018,
     "output_dir": "output/VVV0TreeV6/EGamma_Run2018D"
 }

@@ -382,49 +382,23 @@ int main(int argc, char** argv)
     // And later in the loop when RooUtil::CutName::fill() function is called, the tree structure will be traversed through and the appropriate histograms will be filled with appropriate variables
     // After running the loop check for the histograms in the output root file
 
-    // cross section information is saved in a json format
-    std::ifstream jj(result["json"].as<std::string>()); //
-    json j;
-    jj >> j;
-
     // Set the cutflow object output file
     ana.cutflow.setTFile(ana.output_tfile);
 
+    // various information on the sample is saved in a json format
+    std::ifstream jj(result["json"].as<std::string>()); //
+    json j;
+    jj >> j;
     int is_data = j["is_data"];
     int is_sig = j["is_sig"];
     float lumi = j["lumi"];
     float xsec = j["xsec"];
     float sum_genWeight = j["sum_genWeight"];
-    int eft_idx = 16;
+    TString process = j["process"];
+    int eft_idx = 12;
+    int year = j["year"];
 
-    //===============================================================================================================================================================
-    auto fjcateg = [&]()
-    {
-        if (vvv.NLGen0() == 2 and vvv.NBGen0() == 1)// qqb (top)
-        {
-            return 0;
-        }
-        else if (vvv.NLGen0() == 2 and vvv.NBGen0() == 0)// qq (W)
-        {
-            return 1;
-        }
-        else if (vvv.NLGen0() == 1 and vvv.NBGen0() == 1)// qb
-        {
-            return 2;
-        }
-        else if (vvv.NLGen0() == 1 and vvv.NBGen0() == 0)// q
-        {
-            return 3;
-        }
-        else if (vvv.NLGen0() == 0 and vvv.NBGen0() == 1)// b
-        {
-            return 4;
-        }
-        else
-        {
-            return 5;
-        }
-    };
+    #include "lambda.h"
 
     //===============================================================================================================================================================
     // Applying weights
@@ -518,7 +492,20 @@ int main(int argc, char** argv)
     // Zero lepton + three fat-jet region
     ana.cutflow.getCut("ZL");
     ana.cutflow.addCutToLastActiveCut("ZL3FJ", [&]() { return vvv.NFJ() >= 3; }, UNITY);
-    ana.cutflow.addCutToLastActiveCut("ZL3FJPresel", [&]() { return vvv.HTFJ() > 1250 and vvv.FJ0().pt() > 500.; }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("ZL3FJPresel", [&]() { return vvv.SumPtFJ() > 1250 and vvv.FJ0().pt() > 500.; }, [&, process]() { if (process.Contains("QCD")) return 2.05391728656f; else return 1.f; });
+    ana.cutflow.addCutToLastActiveCut("ZL3FJM150"  , [&]() { return vvv.FJ0().mass() < 150. and vvv.FJ1().mass() < 150. and vvv.FJ2().mass() < 150.; }, UNITY);
+    ana.cutflow.getCut("ZL3FJM150");
+    ana.cutflow.addCutToLastActiveCut("ZL3FJA", [&]() { return is_inside_3d() and vmd_reg_3d() == 8; }, UNITY);
+    ana.cutflow.getCut("ZL3FJM150");
+    ana.cutflow.addCutToLastActiveCut("ZL3FJB", [&]() { return is_outside_3d() and vmd_reg_3d() == 8; }, UNITY);
+    ana.cutflow.getCut("ZL3FJM150");
+    ana.cutflow.addCutToLastActiveCut("ZL3FJC", [&]() { return is_inside_3d() and vmd_reg_3d() != 8; }, UNITY);
+    ana.cutflow.getCut("ZL3FJM150");
+    ana.cutflow.addCutToLastActiveCut("ZL3FJD", [&]() { return is_outside_3d() and vmd_reg_3d() != 8; }, UNITY);
+    ana.cutflow.getCut("ZL3FJM150");
+    ana.cutflow.addCutToLastActiveCut("ZL3FJE", [&]() { return is_shell_3d() and vmd_reg_3d() == 8; }, UNITY);
+    ana.cutflow.getCut("ZL3FJM150");
+    ana.cutflow.addCutToLastActiveCut("ZL3FJF", [&]() { return is_shell_3d() and vmd_reg_3d() != 8; }, UNITY);
 
     // Print cut structure
     ana.cutflow.printCuts();
@@ -571,9 +558,12 @@ int main(int argc, char** argv)
     histograms_onelep.addHistogram("LepFlav" , 30  , -15     , 15     , [&]() { return vvv.LepFlav(); } );
     RooUtil::Histograms histograms_FJ0_SF;
     histograms_FJ0_SF.addHistogram("SFVMD0" , 10000  , 0     , 1     , [&]() { return vvv.VMD0(); } );
+    RooUtil::Histograms histograms_3FJ_SR;
+    histograms_3FJ_SR.addHistogram("SR1SumPtFJ", {1250, 1500, 1750, 2000, 2500, 3000, 4000} , [&]() { return vvv.SumPtFJ(); } );
+    histograms_3FJ_SR.addHistogram("SR2SumPtFJ", {1250, 1500, 1750, 2000, 3000} , [&]() { return vvv.SumPtFJ(); } );
 
     // Book cutflows
-    // ana.cutflow.bookCutflows(); // This slow things down
+    // ana.cutflow.bookCutflows(); // This slow things down so try to keep it commented out and use only when necessary
 
     // Book Histograms
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ0, "OL");
@@ -589,7 +579,7 @@ int main(int argc, char** argv)
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ1, "ZL3FJ");
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ2, "ZL3FJ");
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_event, "ZL3FJ");
-    // ana.cutflow.bookHistograms(ana.histograms); // if just want to book everywhere
+    ana.cutflow.bookHistogramsForCutAndBelow(histograms_3FJ_SR, "ZL3FJ");
 
     // Looping input file
     while (ana.looper.nextEvent())

@@ -59,5 +59,6 @@
     "process": "WJetsToQQ_HT-200to400_TuneCP5_13TeV-madgraphMLM-pythia8",
     "xsec": 2549,
     "lumi": 59.83,
+    "year": 2018,
     "output_dir": "output/VVV0TreeV6/WJetsToQQ_HT-200to400_TuneCP5_13TeV-madgraphMLM-pythia8"
 }

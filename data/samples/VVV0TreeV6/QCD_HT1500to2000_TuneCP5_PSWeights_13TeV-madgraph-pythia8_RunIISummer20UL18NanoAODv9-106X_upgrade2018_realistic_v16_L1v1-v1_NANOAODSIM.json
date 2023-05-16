@@ -45,5 +45,6 @@
     "process": "QCD_HT1500to2000_TuneCP5_PSWeights_13TeV-madgraph-pythia8",
     "xsec": 109.8,
     "lumi": 59.83,
+    "year": 2018,
     "output_dir": "output/VVV0TreeV6/QCD_HT1500to2000_TuneCP5_PSWeights_13TeV-madgraph-pythia8"
 }

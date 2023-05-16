@@ -119,5 +119,6 @@
     "process": "ST_tW_top_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8",
     "xsec": 34.91,
     "lumi": 59.83,
+    "year": 2018,
     "output_dir": "output/VVV0TreeV6/ST_tW_top_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8"
 }

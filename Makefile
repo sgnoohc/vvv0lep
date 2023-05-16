@@ -23,7 +23,7 @@ EXTRAFLAGS  = -fPIC -ITMultiDrawTreePlayer -Wunused-variable -lTMVA -lEG -lGenVe
 
 all: $(ROOUTILDIR) $(EXE)
 
-$(EXE): $(OBJECTS) VVV0Tree.o
+$(EXE): $(OBJECTS) VVV0Tree.o lambda.h
 	$(LD) $(CXXFLAGS) $(LDFLAGS) $(OBJECTS) $(ROOTLIBS) $(EXTRAFLAGS) -o $@
 
 %.o: %.cc

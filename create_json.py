@@ -58,20 +58,35 @@ def get_xsec(d, json):
     else:
         json["xsec"] = 1
 
-def get_lumi(d, json):
+def get_lumi_and_year(d, json):
     if json["is_bkg"] or json["is_sig"]:
         if "UL16NanoAODAPVv9" in json["name"]:
             json["lumi"] = 19.52
+            json["year"] = 2006
         elif "UL16NanoAODv9" in json["name"]:
             json["lumi"] = 16.81
+            json["year"] = 2016
         elif "UL17NanoAODv9" in json["name"]:
             json["lumi"] = 41.48
+            json["year"] = 2017
         elif "UL18NanoAODv9" in json["name"]:
             json["lumi"] = 59.83
+            json["year"] = 2018
         else:
             json["lumi"] = 137.64
+            json["year"] = -1
     else:
         json["lumi"] = 1
+        if "Run2016" in json["name"] and "HIPM" in json["name"]:
+            json["year"] = 2006
+        elif "Run2016" in json["name"]:
+            json["year"] = 2016
+        elif "Run2017" in json["name"]:
+            json["year"] = 2017
+        elif "Run2018" in json["name"]:
+            json["year"] = 2018
+        else:
+            json["year"] = -1
 
 def build_output_dir(d, json):
     json["output_dir"] = f'output/{json["tag"]}/{json["process"]}'
@@ -81,7 +96,7 @@ def parse_sample(d, j):
     get_sample_dir(d, j)
     get_sample_name(d, j)
     get_xsec(d, j)
-    get_lumi(d, j)
+    get_lumi_and_year(d, j)
     build_output_dir(d, j)
 
 def main():
@@ -97,7 +112,7 @@ def main():
         j["files"] = rootfiles
         j["nevents"] = []
         parse_sample(d, j)
-        if not j["is_sig"]:
+        if not j["is_data"]:
             continue
         for rf in rootfiles:
             print(f"  Processing file: {rf}")
