@@ -496,6 +496,7 @@ int main(int argc, char** argv)
     ana.cutflow.addCutToLastActiveCut("ZL3FJM150"  , [&]() { return vvv.FJ0().mass() < 150. and vvv.FJ1().mass() < 150. and vvv.FJ2().mass() < 150.; }, UNITY);
     ana.cutflow.getCut("ZL3FJM150");
     ana.cutflow.addCutToLastActiveCut("ZL3FJA", [&]() { return is_inside_3d() and vmd_reg_3d() == 8; }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("ZL3FJA2TeV", [&]() { return vvv.SumPtFJ() > 2000.; }, UNITY);
     ana.cutflow.getCut("ZL3FJM150");
     ana.cutflow.addCutToLastActiveCut("ZL3FJB", [&]() { return is_outside_3d() and vmd_reg_3d() == 8; }, UNITY);
     ana.cutflow.getCut("ZL3FJM150");
@@ -545,6 +546,9 @@ int main(int argc, char** argv)
     histograms_event.addHistogram("NoORNbLoose"  , 7   , 0 , 7    , [&]() { return vvv.NoORNbLoose(); } );
     histograms_event.addHistogram("NoORNbMedium" , 7   , 0 , 7    , [&]() { return vvv.NoORNbMedium(); } );
     histograms_event.addHistogram("NoORNbTight"  , 7   , 0 , 7    , [&]() { return vvv.NoORNbTight(); } );
+    histograms_event.addHistogram("ORNbLoose"    , 7   , 0 , 7    , [&]() { return vvv.NoORNbLoose() - vvv.NbLoose(); } );
+    histograms_event.addHistogram("ORNbMedium"   , 7   , 0 , 7    , [&]() { return vvv.NoORNbMedium() - vvv.NbMedium(); } );
+    histograms_event.addHistogram("ORNbTight"    , 7   , 0 , 7    , [&]() { return vvv.NoORNbTight() - vvv.NbTight(); } );
     histograms_event.addHistogram("HT"           , 180 , 0 , 5000 , [&]() { return vvv.HT(); } );
     histograms_event.addHistogram("HTFJ"         , 180 , 0 , 5000 , [&]() { return vvv.HTFJ(); } );
     histograms_event.addHistogram("HTJ"          , 180 , 0 , 5000 , [&]() { return vvv.HTJ(); } );
