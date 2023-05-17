@@ -1,28 +1,28 @@
 lumi_value = 59.83
 
 tag = "VVV0TreeV6"
-mdir = f"output/{tag}/merged/Nominal"
+mdir = lambda syst: f"output/{tag}/merged/{syst}"
 
 # fnames with QCD replaced with ddqcd.root
-ddfnames = [
-        f"{mdir}/diboson.root",
-        f"{mdir}/ddqcd.root",
-        f"{mdir}/ttbar.root",
-        f"{mdir}/w.root",
-        f"{mdir}/z.root",
-        f"{mdir}/ttv.root",
-        f"{mdir}/onetop.root",
+ddfnames = lambda syst: [
+        f"{mdir(syst)}/diboson.root",
+        f"{mdir(syst)}/ddqcd.root",
+        f"{mdir(syst)}/ttbar.root",
+        f"{mdir(syst)}/w.root",
+        f"{mdir(syst)}/z.root",
+        f"{mdir(syst)}/ttv.root",
+        f"{mdir(syst)}/onetop.root",
         ]
 
 # background samples
-fnames = [
-        f"{mdir}/diboson.root",
-        f"{mdir}/qcd.root",
-        f"{mdir}/ttbar.root",
-        f"{mdir}/w.root",
-        f"{mdir}/z.root",
-        f"{mdir}/ttv.root",
-        f"{mdir}/onetop.root",
+fnames = lambda syst: [
+        f"{mdir(syst)}/diboson.root",
+        f"{mdir(syst)}/qcd.root",
+        f"{mdir(syst)}/ttbar.root",
+        f"{mdir(syst)}/w.root",
+        f"{mdir(syst)}/z.root",
+        f"{mdir(syst)}/ttv.root",
+        f"{mdir(syst)}/onetop.root",
         ]
 
 # legend
@@ -48,11 +48,11 @@ ddlegend_labels = [
             ]
 
 # signal names
-sig_fnames = [
-            f"{mdir}/wwwdim6.root",
-            f"{mdir}/wwzdim6.root",
-            f"{mdir}/wzzdim6.root",
-            f"{mdir}/zzzdim6.root",
+sig_fnames = lambda syst: [
+            f"{mdir(syst)}/wwwdim6.root",
+            f"{mdir(syst)}/wwzdim6.root",
+            f"{mdir(syst)}/wzzdim6.root",
+            f"{mdir(syst)}/zzzdim6.root",
             ]
 
 signal_labels = [

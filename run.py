@@ -47,7 +47,7 @@ for jobconfig in jobconfigs:
             os.system(f"mkdir -p {output_dir}/{syst}")
             output_log_fullpath = output_fullpath.replace(".root", ".log")
             inputs = ",".join(cs[job_index])
-            jobs.write(f"./doAnalysis --json {jobconfig} -i {inputs} -o {output_fullpath} -t t > {output_log_fullpath} 2>&1\n")
+            jobs.write(f"./doAnalysis --json {jobconfig} -i {inputs} -o {output_fullpath} -t t -s {syst} > {output_log_fullpath} 2>&1\n")
 
 jobs.close()
 
