@@ -63,6 +63,13 @@ auto VWP = [&, year]()
     else return 999.f;
 };
 
+auto BLIND = [&, is_data]()
+{
+    if (is_data)
+        return 0.f;
+    else
+        return 1.f;
+};
 
 
 

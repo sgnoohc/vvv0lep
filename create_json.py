@@ -27,6 +27,7 @@ def parse_sample_category(name, json):
             "WWZ_NoFilter",
             "WZZ_NoFilter",
             "ZZZ_NoFilter",
+            "WWZ_4F",
             ]
     for sp in signal_patterns:
         if sp in name:
@@ -40,6 +41,12 @@ def parse_sample_category(name, json):
     json["is_bkg"] = 1
     json["is_data"] = 0
     return
+
+def parse_eft_sample(name, json):
+    if "NoFilter" in name:
+        json["is_eft"] = 1
+    else:
+        json["is_eft"] = 0
 
 def get_sample_name(name, json):
     n = os.path.basename(name)
@@ -93,6 +100,7 @@ def build_output_dir(d, json):
 
 def parse_sample(d, j):
     parse_sample_category(d, j)
+    parse_eft_sample(d, j)
     get_sample_dir(d, j)
     get_sample_name(d, j)
     get_xsec(d, j)
@@ -112,17 +120,17 @@ def main():
         j["files"] = rootfiles
         j["nevents"] = []
         parse_sample(d, j)
-        if not j["is_data"]:
+        if not j["is_sig"]:
             continue
         for rf in rootfiles:
             print(f"  Processing file: {rf}")
             f = r.TFile(rf)
             j["nevents"].append(f.Get("t").GetEntries())
             j["noriginalevents"] += int(f.Get("Root__h_nevents").GetBinContent(1))
-            if j["is_bkg"]:
-                j["sum_genWeight"] += f.Get("Root__h_Common_genWeight").GetBinContent(1)
-            elif j["is_sig"]:
+            if j["is_eft"]:
                 j["sum_genWeight"] += f.Get("Root__h_Common_LHEWeight_mg_reweighting_times_genWeight").GetBinContent(1)
+            elif j["is_bkg"] or j["is_sig"]:
+                j["sum_genWeight"] += f.Get("Root__h_Common_genWeight").GetBinContent(1)
         json_formatted_str = json.dumps(j, indent=4)
         jfile = open(f'data/samples/{tag}/{j["name"]}.json', "w")
         jfile.write(json_formatted_str)

@@ -3,6 +3,18 @@ lumi_value = 59.83
 tag = "VVV0TreeV6"
 mdir = f"output/{tag}/merged"
 
+# fnames with QCD replaced with ddqcd.root
+ddfnames = [
+        f"{mdir}/diboson.root",
+        f"{mdir}/ddqcd.root",
+        f"{mdir}/ttbar.root",
+        f"{mdir}/w.root",
+        f"{mdir}/z.root",
+        f"{mdir}/ttv.root",
+        f"{mdir}/onetop.root",
+        ]
+
+# background samples
 fnames = [
         f"{mdir}/diboson.root",
         f"{mdir}/qcd.root",
@@ -12,6 +24,8 @@ fnames = [
         f"{mdir}/ttv.root",
         f"{mdir}/onetop.root",
         ]
+
+# legend
 legend_labels = [
             "VV",
             "QCD",
@@ -21,6 +35,19 @@ legend_labels = [
             "TTV",
             "1T",
             ]
+
+# legend
+ddlegend_labels = [
+            "VV",
+            "QCD-DD",
+            "TT",
+            "W",
+            "Z",
+            "TTV",
+            "1T",
+            ]
+
+# signal names
 sig_fnames = [
             f"{mdir}/wwwdim6.root",
             f"{mdir}/wwzdim6.root",
@@ -38,6 +65,16 @@ signal_labels = [
 usercolors = [
             7001,
             7002,
+            7003,
+            7004,
+            7005,
+            7006,
+            7007,
+            ]
+
+ddusercolors = [
+            7001,
+            4003,
             7003,
             7004,
             7005,

@@ -391,11 +391,12 @@ int main(int argc, char** argv)
     jj >> j;
     int is_data = j["is_data"];
     int is_sig = j["is_sig"];
+    int is_eft = j["is_eft"];
     float lumi = j["lumi"];
     float xsec = j["xsec"];
     float sum_genWeight = j["sum_genWeight"];
     TString process = j["process"];
-    int eft_idx = 12;
+    int eft_idx = 0;
     int year = j["year"];
 
     #include "lambda.h"
@@ -405,12 +406,12 @@ int main(int argc, char** argv)
     ana.cutflow.addCut("Base",
                        [&, is_sig]()
                        {
-                           if (is_sig)
+                           if (is_eft)
                                return vvv.LHEReweightingWeight().size() != 0;
                            else
                                return true;
                        },
-                       [&, is_data, is_sig, eft_idx, lumi, xsec, sum_genWeight]()
+                       [&, is_data, is_sig, is_eft, eft_idx, lumi, xsec, sum_genWeight]()
                        {
                            if (is_data)
                            {
@@ -419,7 +420,7 @@ int main(int argc, char** argv)
                            else
                            {
                                float wgt = vvv.genWeight() * lumi * xsec * 1000.0 / sum_genWeight;
-                               if (is_sig)
+                               if (is_eft)
                                {
                                    return vvv.LHEReweightingWeight()[eft_idx] * wgt;
                                }
@@ -495,8 +496,7 @@ int main(int argc, char** argv)
     ana.cutflow.addCutToLastActiveCut("ZL3FJPresel", [&]() { return vvv.SumPtFJ() > 1250 and vvv.FJ0().pt() > 500.; }, [&, process]() { if (process.Contains("QCD")) return 2.05391728656f; else return 1.f; });
     ana.cutflow.addCutToLastActiveCut("ZL3FJM150"  , [&]() { return vvv.FJ0().mass() < 150. and vvv.FJ1().mass() < 150. and vvv.FJ2().mass() < 150.; }, UNITY);
     ana.cutflow.getCut("ZL3FJM150");
-    ana.cutflow.addCutToLastActiveCut("ZL3FJA", [&]() { return is_inside_3d() and vmd_reg_3d() == 8; }, UNITY);
-    ana.cutflow.addCutToLastActiveCut("ZL3FJA2TeV", [&]() { return vvv.SumPtFJ() > 2000.; }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("ZL3FJA", [&]() { return is_inside_3d() and vmd_reg_3d() == 8; }, BLIND);
     ana.cutflow.getCut("ZL3FJM150");
     ana.cutflow.addCutToLastActiveCut("ZL3FJB", [&]() { return is_outside_3d() and vmd_reg_3d() == 8; }, UNITY);
     ana.cutflow.getCut("ZL3FJM150");
@@ -507,6 +507,15 @@ int main(int argc, char** argv)
     ana.cutflow.addCutToLastActiveCut("ZL3FJE", [&]() { return is_shell_3d() and vmd_reg_3d() == 8; }, UNITY);
     ana.cutflow.getCut("ZL3FJM150");
     ana.cutflow.addCutToLastActiveCut("ZL3FJF", [&]() { return is_shell_3d() and vmd_reg_3d() != 8; }, UNITY);
+
+    if (is_eft)
+    {
+        for (unsigned int idx = 0; idx < 91; ++idx)
+        {
+            ana.cutflow.getCut("ZL3FJM150");
+            ana.cutflow.addCutToLastActiveCut(TString::Format("ZL3FJAEFTIDX%d", idx), [&]() { return is_inside_3d() and vmd_reg_3d() == 8; }, [&, idx](){ return vvv.LHEReweightingWeight()[idx] / vvv.LHEReweightingWeight()[0]; });
+        }
+    }
 
     // Print cut structure
     ana.cutflow.printCuts();
@@ -564,7 +573,7 @@ int main(int argc, char** argv)
     histograms_FJ0_SF.addHistogram("SFVMD0" , 10000  , 0     , 1     , [&]() { return vvv.VMD0(); } );
     RooUtil::Histograms histograms_3FJ_SR;
     histograms_3FJ_SR.addHistogram("SR1SumPtFJ", {1250, 1500, 1750, 2000, 2500, 3000, 4000} , [&]() { return vvv.SumPtFJ(); } );
-    histograms_3FJ_SR.addHistogram("SR2SumPtFJ", {1250, 1500, 1750, 2000, 3000} , [&]() { return vvv.SumPtFJ(); } );
+    histograms_3FJ_SR.addHistogram("SR2SumPtFJ", {1250, 1500, 1750, 2000, 3000} , [&]() { if (vvv.SumPtFJ() < 2500) return vvv.SumPtFJ(); else return 2500.f; } );
 
     // Book cutflows
     // ana.cutflow.bookCutflows(); // This slow things down so try to keep it commented out and use only when necessary
