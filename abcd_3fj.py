@@ -62,6 +62,11 @@ h[categ]["PredA"].SetDirectory(of)
 h[categ]["PredE"].SetDirectory(of)
 h[categ]["PredA"].Write()
 h[categ]["PredE"].Write()
+
+# Need to save to the bunch of other histograms with different names
+for i in range(91):
+    h[categ]["PredA"].SetName(f"ZL3FJAEFTIDX{i}__SR2SumPtFJ")
+    h[categ]["PredA"].SetDirectory(of)
+    h[categ]["PredA"].Write()
+
 of.Close()
-
-

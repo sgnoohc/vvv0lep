@@ -510,8 +510,8 @@ int main(int argc, char** argv)
 
     for (unsigned int ieft = 0; ieft < 91; ++ieft)
     {
-        ana.cutflow.getCut("ZL3FJM150");
-        ana.cutflow.addCutToLastActiveCut(TString::Format("ZL3FJAEFTIDX%d", ieft), UNITY, [&, is_eft]() { if (is_eft) return vvv.LHEReweightingWeight()[ieft] / vvv.LHEReweightingWeight()[0]; else return 1.f; });
+        ana.cutflow.getCut("ZL3FJA");
+        ana.cutflow.addCutToLastActiveCut(TString::Format("ZL3FJAEFTIDX%d", ieft), UNITY, [&, is_eft, ieft]() { if (is_eft) return vvv.LHEReweightingWeight()[ieft] / vvv.LHEReweightingWeight()[0]; else return 1.f; });
     }
 
     // Print cut structure
