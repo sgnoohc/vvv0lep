@@ -508,15 +508,6 @@ int main(int argc, char** argv)
     ana.cutflow.getCut("ZL3FJM150");
     ana.cutflow.addCutToLastActiveCut("ZL3FJF", [&]() { return is_shell_3d() and vmd_reg_3d() != 8; }, UNITY);
 
-    if (is_eft)
-    {
-        for (unsigned int idx = 0; idx < 91; ++idx)
-        {
-            ana.cutflow.getCut("ZL3FJM150");
-            ana.cutflow.addCutToLastActiveCut(TString::Format("ZL3FJAEFTIDX%d", idx), [&]() { return is_inside_3d() and vmd_reg_3d() == 8; }, [&, idx](){ return vvv.LHEReweightingWeight()[idx] / vvv.LHEReweightingWeight()[0]; });
-        }
-    }
-
     // Print cut structure
     ana.cutflow.printCuts();
 
