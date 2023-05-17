@@ -28,6 +28,9 @@ def parse_sample_category(name, json):
             "WZZ_NoFilter",
             "ZZZ_NoFilter",
             "WWZ_4F",
+            "WZZ_4F",
+            "WZZ_Tune",
+            "ZZZ_Tune",
             ]
     for sp in signal_patterns:
         if sp in name:
@@ -120,8 +123,8 @@ def main():
         j["files"] = rootfiles
         j["nevents"] = []
         parse_sample(d, j)
-        # if not j["is_sig"]:
-        #     continue
+        if not j["is_sig"]:
+            continue
         for rf in rootfiles:
             print(f"  Processing file: {rf}")
             f = r.TFile(rf)

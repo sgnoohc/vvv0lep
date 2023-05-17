@@ -396,7 +396,7 @@ int main(int argc, char** argv)
     float xsec = j["xsec"];
     float sum_genWeight = j["sum_genWeight"];
     TString process = j["process"];
-    int eft_idx = 0;
+    int eft_idx = 14;
     int year = j["year"];
 
     #include "lambda.h"
