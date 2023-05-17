@@ -124,6 +124,7 @@
     "is_sig": 0,
     "is_bkg": 1,
     "is_data": 0,
+    "is_eft": 0,
     "dir": "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV6/WJetsToLNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1_NANOAODSIM_VVV0TreeV6",
     "name": "WJetsToLNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1_NANOAODSIM",
     "process": "WJetsToLNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8",

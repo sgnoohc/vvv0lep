@@ -720,6 +720,7 @@
     "is_sig": 0,
     "is_bkg": 0,
     "is_data": 1,
+    "is_eft": 0,
     "dir": "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV6/EGamma_Run2018D-UL2018_MiniAODv2_NanoAODv9-v3_NANOAOD_VVV0TreeV6",
     "name": "EGamma_Run2018D-UL2018_MiniAODv2_NanoAODv9-v3_NANOAOD",
     "process": "EGamma_Run2018D",
