@@ -396,7 +396,7 @@ int main(int argc, char** argv)
     float xsec = j["xsec"];
     float sum_genWeight = j["sum_genWeight"];
     TString process = j["process"];
-    int eft_idx = 14;
+    int eft_idx = 0;
     int year = j["year"];
 
     #include "lambda.h"
@@ -507,6 +507,12 @@ int main(int argc, char** argv)
     ana.cutflow.addCutToLastActiveCut("ZL3FJE", [&]() { return is_shell_3d() and vmd_reg_3d() == 8; }, UNITY);
     ana.cutflow.getCut("ZL3FJM150");
     ana.cutflow.addCutToLastActiveCut("ZL3FJF", [&]() { return is_shell_3d() and vmd_reg_3d() != 8; }, UNITY);
+
+    for (unsigned int ieft = 0; ieft < 91; ++ieft)
+    {
+        ana.cutflow.getCut("ZL3FJM150");
+        ana.cutflow.addCutToLastActiveCut(TString::Format("ZL3FJAEFTIDX%d", ieft), UNITY, [&, is_eft]() { if (is_eft) return vvv.LHEReweightingWeight()[ieft] / vvv.LHEReweightingWeight()[0]; else return 1.f; });
+    }
 
     // Print cut structure
     ana.cutflow.printCuts();

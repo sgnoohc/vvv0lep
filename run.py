@@ -46,4 +46,4 @@ for jobconfig in jobconfigs:
 
 jobs.close()
 
-# os.system("xargs.sh .jobs.txt")
+os.system("xargs.sh .jobs.txt")

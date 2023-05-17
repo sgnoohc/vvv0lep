@@ -1,8 +1,8 @@
 {
     "tag": "VVV0TreeV6",
-    "noriginalevents": 9052000,
-    "sum_genWeight": 133669.41866631806,
-    "nfiles": 59,
+    "noriginalevents": 9889000,
+    "sum_genWeight": 146027.5047775507,
+    "nfiles": 60,
     "files": [
         "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV6/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1_ext1-v2_NANOAODSIM_VVV0TreeV6/output_60.root",
         "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV6/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1_ext1-v2_NANOAODSIM_VVV0TreeV6/output_8.root",
@@ -10,6 +10,7 @@
         "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV6/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1_ext1-v2_NANOAODSIM_VVV0TreeV6/output_6.root",
         "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV6/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1_ext1-v2_NANOAODSIM_VVV0TreeV6/output_11.root",
         "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV6/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1_ext1-v2_NANOAODSIM_VVV0TreeV6/output_16.root",
+        "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV6/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1_ext1-v2_NANOAODSIM_VVV0TreeV6/output_34.root",
         "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV6/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1_ext1-v2_NANOAODSIM_VVV0TreeV6/output_50.root",
         "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV6/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1_ext1-v2_NANOAODSIM_VVV0TreeV6/output_55.root",
         "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV6/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1_ext1-v2_NANOAODSIM_VVV0TreeV6/output_24.root",
@@ -71,6 +72,7 @@
         2496,
         626,
         247,
+        11685,
         907,
         9427,
         1690,
