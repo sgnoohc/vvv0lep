@@ -1,7 +1,7 @@
 lumi_value = 59.83
 
 tag = "VVV0TreeV6"
-mdir = f"output/{tag}/merged"
+mdir = f"output/{tag}/merged/Nominal"
 
 # fnames with QCD replaced with ddqcd.root
 ddfnames = [

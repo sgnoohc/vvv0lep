@@ -3,6 +3,11 @@
 import os
 import glob
 import json
+import sys
+
+systs = ["Nominal"]
+if len(sys.argv) > 1:
+    systs = ["Nominal", "JESUp", "JESDn", "JERUp", "JERDn", "JMSUp", "JMSDn", "JMRUp", "JMRDn"]
 
 nchunk = 1.5e6
 tag = "VVV0TreeV6"
@@ -35,14 +40,14 @@ for jobconfig in jobconfigs:
     process = j["process"]
     output_dir = j["output_dir"]
 
-    os.system(f"mkdir -p {output_dir}")
-
     for job_index in range(len(cs)):
-        output_name = f"output_{job_index}.root"
-        output_fullpath = f"{output_dir}/{output_name}"
-        output_log_fullpath = output_fullpath.replace(".root", ".log")
-        inputs = ",".join(cs[job_index])
-        jobs.write(f"./doAnalysis --json {jobconfig} -i {inputs} -o {output_fullpath} -t t > {output_log_fullpath} 2>&1\n")
+        for syst in systs:
+            output_name = f"output_{job_index}.root"
+            output_fullpath = f"{output_dir}/{syst}/{output_name}"
+            os.system(f"mkdir -p {output_dir}/{syst}")
+            output_log_fullpath = output_fullpath.replace(".root", ".log")
+            inputs = ",".join(cs[job_index])
+            jobs.write(f"./doAnalysis --json {jobconfig} -i {inputs} -o {output_fullpath} -t t > {output_log_fullpath} 2>&1\n")
 
 jobs.close()
 
