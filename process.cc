@@ -14,6 +14,9 @@ public:
     // TString that holds the name of the TTree to open for each input files
     TString input_tree_name;
 
+    // TString that holds the name of the syst variation
+    TString syst_name;
+
     // Output TFile
     TFile* output_tfile;
 
@@ -66,6 +69,7 @@ int main(int argc, char** argv)
         ("J,json"        , "json job config",                                                                                                                         cxxopts::value<std::string>())
         ("i,input"       , "Comma separated input file list OR if just a directory is provided it will glob all in the directory BUT must end with '/' for the path", cxxopts::value<std::string>())
         ("t,tree"        , "Name of the tree in the root file to open and loop over"                                             , cxxopts::value<std::string>())
+        ("s,syst"        , "Syst variation name"                                                                                 , cxxopts::value<std::string>())
         ("o,output"      , "Output file name"                                                                                    , cxxopts::value<std::string>())
         ("n,nevents"     , "N events to loop over"                                                                               , cxxopts::value<int>()->default_value("-1"))
         ("j,nsplit_jobs" , "Enable splitting jobs by N blocks (--job_index must be set)"                                         , cxxopts::value<int>())
@@ -124,6 +128,17 @@ int main(int argc, char** argv)
         std::cout << options.help() << std::endl;
         std::cout << "ERROR: Input tree name is not provided! Check your arguments" << std::endl;
         exit(1);
+    }
+
+    //_______________________________________________________________________________
+    // --syst
+    if (result.count("syst"))
+    {
+        ana.syst_name = result["syst"].as<std::string>();
+    }
+    else
+    {
+        ana.syst_name = "";
     }
 
     //_______________________________________________________________________________
@@ -404,12 +419,16 @@ int main(int argc, char** argv)
     //===============================================================================================================================================================
     // Applying weights
     ana.cutflow.addCut("Base",
-                       [&, is_sig]()
+                       [&, is_sig, is_eft]()
                        {
                            if (is_eft)
-                               return vvv.LHEReweightingWeight().size() != 0;
+                           {
+                               return LHEReweightingWeight().size() != 0;
+                           }
                            else
+                           {
                                return true;
+                           }
                        },
                        [&, is_data, is_sig, is_eft, eft_idx, lumi, xsec, sum_genWeight]()
                        {
@@ -419,10 +438,13 @@ int main(int argc, char** argv)
                            }
                            else
                            {
-                               float wgt = vvv.genWeight() * lumi * xsec * 1000.0 / sum_genWeight;
+                               float wgt = genWeight() * lumi * xsec * 1000.0 / sum_genWeight;
                                if (is_eft)
                                {
-                                   return vvv.LHEReweightingWeight()[eft_idx] * wgt;
+                                   if (LHEReweightingWeight().size() != 0)
+                                       return LHEReweightingWeight()[eft_idx] * wgt;
+                                   else
+                                       return 0.f;
                                }
                                else
                                {
@@ -434,22 +456,22 @@ int main(int argc, char** argv)
     //===============================================================================================================================================================
     // One lepton region
     ana.cutflow.getCut("Base");
-    ana.cutflow.addCutToLastActiveCut("OL", [&]() { return vvv.is1Lep(); }, UNITY);
-    ana.cutflow.addCutToLastActiveCut("OL1FJ", [&]() { return vvv.NFJ() == 1; }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("OL", [&]() { return is1Lep(); }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("OL1FJ", [&]() { return NFJ() == 1; }, UNITY);
     // True Fat-jet's (W fat-jets from top)
     ana.cutflow.getCut("OL1FJ");
-    ana.cutflow.addCutToLastActiveCut("OLTB", [&]() { return vvv.NbTight() >= 1; }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("OLTB", [&]() { return NbTight() >= 1; }, UNITY);
     ana.cutflow.getCut("OLTB");
-    ana.cutflow.addCutToLastActiveCut("OLElTB", [&]() { return abs(vvv.LepFlav()) == 11; }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("OLElTB", [&]() { return abs(LepFlav()) == 11; }, UNITY);
     ana.cutflow.getCut("OLTB");
-    ana.cutflow.addCutToLastActiveCut("OLMuTB", [&]() { return abs(vvv.LepFlav()) == 13; }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("OLMuTB", [&]() { return abs(LepFlav()) == 13; }, UNITY);
     // Fake Fat-jet's
     ana.cutflow.getCut("OL1FJ");
-    ana.cutflow.addCutToLastActiveCut("OLNB", [&]() { return vvv.NoORNbTight() == 0; }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("OLNB", [&]() { return NoORNbTight() == 0; }, UNITY);
     ana.cutflow.getCut("OLNB");
-    ana.cutflow.addCutToLastActiveCut("OLElNB", [&]() { return abs(vvv.LepFlav()) == 11; }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("OLElNB", [&]() { return abs(LepFlav()) == 11; }, UNITY);
     ana.cutflow.getCut("OLNB");
-    ana.cutflow.addCutToLastActiveCut("OLMuNB", [&]() { return abs(vvv.LepFlav()) == 13; }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("OLMuNB", [&]() { return abs(LepFlav()) == 13; }, UNITY);
     // For each regions add regions with pt bins and flavors
     vector<TString> regions = {"OLTB", "OLElTB", "OLMuTB", "OLNB", "OLElNB", "OLMuNB"};
     vector<float> ptbins = {200, 250, 300, 350, 400, 450, 500, 600, 800, 1000, 1300};
@@ -466,7 +488,7 @@ int main(int argc, char** argv)
                 kinematic_bin_name,
                 [&, pt_lower_bound, pt_upper_bound]()
                 {
-                    float pt = vvv.FJ0().pt();
+                    float pt = FJ0().pt();
                     return (pt > pt_lower_bound and pt <= pt_upper_bound);
                 }, UNITY);
             // Split by flavors
@@ -482,19 +504,19 @@ int main(int argc, char** argv)
     //===============================================================================================================================================================
     // Zero lepton region
     ana.cutflow.getCut("Base");
-    ana.cutflow.addCutToLastActiveCut("ZL", [&]() { return vvv.is0Lep(); }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("ZL", [&]() { return is0Lep(); }, UNITY);
 
     //===============================================================================================================================================================
     // Zero lepton + two fat-jet region
     ana.cutflow.getCut("ZL");
-    ana.cutflow.addCutToLastActiveCut("ZL2FJ", [&]() { return vvv.NFJ() == 2; }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("ZL2FJ", [&]() { return NFJ() == 2; }, UNITY);
 
     //===============================================================================================================================================================
     // Zero lepton + three fat-jet region
     ana.cutflow.getCut("ZL");
-    ana.cutflow.addCutToLastActiveCut("ZL3FJ", [&]() { return vvv.NFJ() >= 3; }, UNITY);
-    ana.cutflow.addCutToLastActiveCut("ZL3FJPresel", [&]() { return vvv.SumPtFJ() > 1250 and vvv.FJ0().pt() > 500.; }, [&, process]() { if (process.Contains("QCD")) return 2.05391728656f; else return 1.f; });
-    ana.cutflow.addCutToLastActiveCut("ZL3FJM150"  , [&]() { return vvv.FJ0().mass() < 150. and vvv.FJ1().mass() < 150. and vvv.FJ2().mass() < 150.; }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("ZL3FJ", [&]() { return NFJ() >= 3; }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("ZL3FJPresel", [&]() { return SumPtFJ() > 1250 and FJ0().pt() > 500.; }, [&, process]() { if (process.Contains("QCD")) return 2.05391728656f; else return 1.f; });
+    ana.cutflow.addCutToLastActiveCut("ZL3FJM150"  , [&]() { return FJ0().mass() < 150. and FJ1().mass() < 150. and FJ2().mass() < 150.; }, UNITY);
     ana.cutflow.getCut("ZL3FJM150");
     ana.cutflow.addCutToLastActiveCut("ZL3FJA", [&]() { return is_inside_3d() and vmd_reg_3d() == 8; }, BLIND);
     ana.cutflow.getCut("ZL3FJM150");
@@ -511,7 +533,7 @@ int main(int argc, char** argv)
     for (unsigned int ieft = 0; ieft < 91; ++ieft)
     {
         ana.cutflow.getCut("ZL3FJA");
-        ana.cutflow.addCutToLastActiveCut(TString::Format("ZL3FJAEFTIDX%d", ieft), UNITY, [&, is_eft, ieft]() { if (is_eft) return vvv.LHEReweightingWeight()[ieft] / vvv.LHEReweightingWeight()[0]; else return 1.f; });
+        ana.cutflow.addCutToLastActiveCut(TString::Format("ZL3FJAEFTIDX%d", ieft), UNITY, [&, is_eft, ieft]() { if (is_eft) return LHEReweightingWeight()[ieft] / LHEReweightingWeight()[0]; else return 1.f; });
     }
 
     // Print cut structure
@@ -519,58 +541,55 @@ int main(int argc, char** argv)
 
     // Histogram utility object that is used to define the histograms
     RooUtil::Histograms histograms_FJ0;
-    histograms_FJ0.addHistogram("Pt0"    , 180 , 0       , 3000   , [&]() { return vvv.FJ0().pt(); } );
-    histograms_FJ0.addHistogram("Eta0"   , 180 , -5      , 5      , [&]() { return vvv.FJ0().eta(); } );
-    histograms_FJ0.addHistogram("Phi0"   , 180 , -3.1416 , 3.1416 , [&]() { return vvv.FJ0().phi(); } );
-    histograms_FJ0.addHistogram("Mass0"  , 180 , 0       , 250    , [&]() { return vvv.FJ0().mass(); } );
-    histograms_FJ0.addHistogram("VMD0"   , 180 , 0       , 1      , [&]() { return vvv.VMD0(); } );
-    histograms_FJ0.addHistogram("NQGen0" , 7   , 0       , 7      , [&]() { return vvv.NQGen0(); } );
-    histograms_FJ0.addHistogram("NBGen0" , 7   , 0       , 7      , [&]() { return vvv.NBGen0(); } );
-    histograms_FJ0.addHistogram("NLGen0" , 7   , 0       , 7      , [&]() { return vvv.NLGen0(); } );
+    histograms_FJ0.addHistogram("Pt0"    , 180 , 0       , 3000   , [&]() { return FJ0().pt(); } );
+    histograms_FJ0.addHistogram("Eta0"   , 180 , -5      , 5      , [&]() { return FJ0().eta(); } );
+    histograms_FJ0.addHistogram("Phi0"   , 180 , -3.1416 , 3.1416 , [&]() { return FJ0().phi(); } );
+    histograms_FJ0.addHistogram("Mass0"  , 180 , 0       , 250    , [&]() { return FJ0().mass(); } );
+    histograms_FJ0.addHistogram("VMD0"   , 180 , 0       , 1      , [&]() { return VMD0(); } );
+    histograms_FJ0.addHistogram("NQGen0" , 7   , 0       , 7      , [&]() { return NQGen0(); } );
+    histograms_FJ0.addHistogram("NBGen0" , 7   , 0       , 7      , [&]() { return NBGen0(); } );
+    histograms_FJ0.addHistogram("NLGen0" , 7   , 0       , 7      , [&]() { return NLGen0(); } );
     RooUtil::Histograms histograms_FJ1;
-    histograms_FJ1.addHistogram("Pt1"    , 180 , 0       , 2500   , [&]() { return vvv.FJ1().pt(); } );
-    histograms_FJ1.addHistogram("Eta1"   , 180 , -5      , 5      , [&]() { return vvv.FJ1().eta(); } );
-    histograms_FJ1.addHistogram("Phi1"   , 180 , -3.1416 , 3.1416 , [&]() { return vvv.FJ1().phi(); } );
-    histograms_FJ1.addHistogram("Mass1"  , 180 , 0       , 250    , [&]() { return vvv.FJ1().mass(); } );
-    histograms_FJ1.addHistogram("VMD1"   , 180 , 0       , 1      , [&]() { return vvv.VMD1(); } );
-    histograms_FJ1.addHistogram("NQGen1" , 7   , 0       , 7      , [&]() { return vvv.NQGen1(); } );
-    histograms_FJ1.addHistogram("NBGen1" , 7   , 0       , 7      , [&]() { return vvv.NBGen1(); } );
-    histograms_FJ1.addHistogram("NLGen1" , 7   , 0       , 7      , [&]() { return vvv.NLGen1(); } );
+    histograms_FJ1.addHistogram("Pt1"    , 180 , 0       , 2500   , [&]() { return FJ1().pt(); } );
+    histograms_FJ1.addHistogram("Eta1"   , 180 , -5      , 5      , [&]() { return FJ1().eta(); } );
+    histograms_FJ1.addHistogram("Phi1"   , 180 , -3.1416 , 3.1416 , [&]() { return FJ1().phi(); } );
+    histograms_FJ1.addHistogram("Mass1"  , 180 , 0       , 250    , [&]() { return FJ1().mass(); } );
+    histograms_FJ1.addHistogram("VMD1"   , 180 , 0       , 1      , [&]() { return VMD1(); } );
+    histograms_FJ1.addHistogram("NQGen1" , 7   , 0       , 7      , [&]() { return NQGen1(); } );
+    histograms_FJ1.addHistogram("NBGen1" , 7   , 0       , 7      , [&]() { return NBGen1(); } );
+    histograms_FJ1.addHistogram("NLGen1" , 7   , 0       , 7      , [&]() { return NLGen1(); } );
     RooUtil::Histograms histograms_FJ2;
-    histograms_FJ2.addHistogram("Pt2"    , 180 , 0       , 1500   , [&]() { return vvv.FJ2().pt(); } );
-    histograms_FJ2.addHistogram("Eta2"   , 180 , -5      , 5      , [&]() { return vvv.FJ2().eta(); } );
-    histograms_FJ2.addHistogram("Phi2"   , 180 , -3.1416 , 3.1416 , [&]() { return vvv.FJ2().phi(); } );
-    histograms_FJ2.addHistogram("Mass2"  , 180 , 0       , 250    , [&]() { return vvv.FJ2().mass(); } );
-    histograms_FJ2.addHistogram("VMD2"   , 180 , 0       , 1      , [&]() { return vvv.VMD2(); } );
-    histograms_FJ2.addHistogram("NQGen2" , 7   , 0       , 7      , [&]() { return vvv.NQGen2(); } );
-    histograms_FJ2.addHistogram("NBGen2" , 7   , 0       , 7      , [&]() { return vvv.NBGen2(); } );
-    histograms_FJ2.addHistogram("NLGen2" , 7   , 0       , 7      , [&]() { return vvv.NLGen2(); } );
+    histograms_FJ2.addHistogram("Pt2"    , 180 , 0       , 1500   , [&]() { return FJ2().pt(); } );
+    histograms_FJ2.addHistogram("Eta2"   , 180 , -5      , 5      , [&]() { return FJ2().eta(); } );
+    histograms_FJ2.addHistogram("Phi2"   , 180 , -3.1416 , 3.1416 , [&]() { return FJ2().phi(); } );
+    histograms_FJ2.addHistogram("Mass2"  , 180 , 0       , 250    , [&]() { return FJ2().mass(); } );
+    histograms_FJ2.addHistogram("VMD2"   , 180 , 0       , 1      , [&]() { return VMD2(); } );
+    histograms_FJ2.addHistogram("NQGen2" , 7   , 0       , 7      , [&]() { return NQGen2(); } );
+    histograms_FJ2.addHistogram("NBGen2" , 7   , 0       , 7      , [&]() { return NBGen2(); } );
+    histograms_FJ2.addHistogram("NLGen2" , 7   , 0       , 7      , [&]() { return NLGen2(); } );
     RooUtil::Histograms histograms_event;
-    histograms_event.addHistogram("NbLoose"      , 7   , 0 , 7    , [&]() { return vvv.NbLoose(); } );
-    histograms_event.addHistogram("NbMedium"     , 7   , 0 , 7    , [&]() { return vvv.NbMedium(); } );
-    histograms_event.addHistogram("NbTight"      , 7   , 0 , 7    , [&]() { return vvv.NbTight(); } );
-    histograms_event.addHistogram("NoORNbLoose"  , 7   , 0 , 7    , [&]() { return vvv.NoORNbLoose(); } );
-    histograms_event.addHistogram("NoORNbMedium" , 7   , 0 , 7    , [&]() { return vvv.NoORNbMedium(); } );
-    histograms_event.addHistogram("NoORNbTight"  , 7   , 0 , 7    , [&]() { return vvv.NoORNbTight(); } );
-    histograms_event.addHistogram("ORNbLoose"    , 7   , 0 , 7    , [&]() { return vvv.NoORNbLoose() - vvv.NbLoose(); } );
-    histograms_event.addHistogram("ORNbMedium"   , 7   , 0 , 7    , [&]() { return vvv.NoORNbMedium() - vvv.NbMedium(); } );
-    histograms_event.addHistogram("ORNbTight"    , 7   , 0 , 7    , [&]() { return vvv.NoORNbTight() - vvv.NbTight(); } );
-    histograms_event.addHistogram("HT"           , 180 , 0 , 5000 , [&]() { return vvv.HT(); } );
-    histograms_event.addHistogram("HTFJ"         , 180 , 0 , 5000 , [&]() { return vvv.HTFJ(); } );
-    histograms_event.addHistogram("HTJ"          , 180 , 0 , 5000 , [&]() { return vvv.HTJ(); } );
-    histograms_event.addHistogram("SumPtFJ"      , 180 , 0 , 5000 , [&]() { return vvv.SumPtFJ(); } );
-    histograms_event.addHistogram("SumPtJ"       , 180 , 0 , 5000 , [&]() { return vvv.SumPtJ(); } );
-    histograms_event.addHistogram("MET"          , 180 , 0 , 1000 , [&]() { return vvv.MET().pt(); } );
+    histograms_event.addHistogram("NbLoose"      , 7   , 0 , 7    , [&]() { return NbLoose(); } );
+    histograms_event.addHistogram("NbMedium"     , 7   , 0 , 7    , [&]() { return NbMedium(); } );
+    histograms_event.addHistogram("NbTight"      , 7   , 0 , 7    , [&]() { return NbTight(); } );
+    histograms_event.addHistogram("NoORNbLoose"  , 7   , 0 , 7    , [&]() { return NoORNbLoose(); } );
+    histograms_event.addHistogram("NoORNbMedium" , 7   , 0 , 7    , [&]() { return NoORNbMedium(); } );
+    histograms_event.addHistogram("NoORNbTight"  , 7   , 0 , 7    , [&]() { return NoORNbTight(); } );
+    histograms_event.addHistogram("HT"           , 180 , 0 , 5000 , [&]() { return HT(); } );
+    histograms_event.addHistogram("HTFJ"         , 180 , 0 , 5000 , [&]() { return HTFJ(); } );
+    histograms_event.addHistogram("HTJ"          , 180 , 0 , 5000 , [&]() { return HTJ(); } );
+    histograms_event.addHistogram("SumPtFJ"      , 180 , 0 , 5000 , [&]() { return SumPtFJ(); } );
+    histograms_event.addHistogram("SumPtJ"       , 180 , 0 , 5000 , [&]() { return SumPtJ(); } );
+    histograms_event.addHistogram("MET"          , 180 , 0 , 1000 , [&]() { return MET().pt(); } );
     RooUtil::Histograms histograms_onelep;
-    histograms_onelep.addHistogram("LPt"     , 180 , 0       , 1000   , [&]() { return vvv.Lep().pt(); } );
-    histograms_onelep.addHistogram("LEta"    , 180 , -5      , 5      , [&]() { return vvv.Lep().eta(); } );
-    histograms_onelep.addHistogram("LPhi"    , 180 , -3.1416 , 3.1416 , [&]() { return vvv.Lep().phi(); } );
-    histograms_onelep.addHistogram("LepFlav" , 30  , -15     , 15     , [&]() { return vvv.LepFlav(); } );
+    histograms_onelep.addHistogram("LPt"     , 180 , 0       , 1000   , [&]() { return Lep().pt(); } );
+    histograms_onelep.addHistogram("LEta"    , 180 , -5      , 5      , [&]() { return Lep().eta(); } );
+    histograms_onelep.addHistogram("LPhi"    , 180 , -3.1416 , 3.1416 , [&]() { return Lep().phi(); } );
+    histograms_onelep.addHistogram("LepFlav" , 30  , -15     , 15     , [&]() { return LepFlav(); } );
     RooUtil::Histograms histograms_FJ0_SF;
-    histograms_FJ0_SF.addHistogram("SFVMD0" , 10000  , 0     , 1     , [&]() { return vvv.VMD0(); } );
+    histograms_FJ0_SF.addHistogram("SFVMD0" , 10000  , 0     , 1     , [&]() { return VMD0(); } );
     RooUtil::Histograms histograms_3FJ_SR;
-    histograms_3FJ_SR.addHistogram("SR1SumPtFJ", {1250, 1500, 1750, 2000, 2500, 3000, 4000} , [&]() { return vvv.SumPtFJ(); } );
-    histograms_3FJ_SR.addHistogram("SR2SumPtFJ", {1250, 1500, 1750, 2000, 3000} , [&]() { if (vvv.SumPtFJ() < 2500) return vvv.SumPtFJ(); else return 2500.f; } );
+    histograms_3FJ_SR.addHistogram("SR1SumPtFJ", {1250, 1500, 1750, 2000, 2500, 3000, 4000} , [&]() { return SumPtFJ(); } );
+    histograms_3FJ_SR.addHistogram("SR2SumPtFJ", {1250, 1500, 1750, 2000, 3000} , [&]() { if (SumPtFJ() < 2500) return SumPtFJ(); else return 2500.f; } );
 
     // Book cutflows
     // ana.cutflow.bookCutflows(); // This slow things down so try to keep it commented out and use only when necessary

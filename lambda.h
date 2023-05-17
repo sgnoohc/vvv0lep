@@ -1,3 +1,5 @@
+#include "variable.h"
+
 //***************************************************************************************************************************************************************
 //
 // One lepton SF derivation region
@@ -9,23 +11,23 @@
 // This is for one lepton region for scale factor computation
 auto fjcateg = [&]()
 {
-    if (vvv.NLGen0() == 2 and vvv.NBGen0() == 1)// qqb (top)
+    if (NLGen0() == 2 and NBGen0() == 1)// qqb (top)
     {
         return 0;
     }
-    else if (vvv.NLGen0() == 2 and vvv.NBGen0() == 0)// qq (W)
+    else if (NLGen0() == 2 and NBGen0() == 0)// qq (W)
     {
         return 1;
     }
-    else if (vvv.NLGen0() == 1 and vvv.NBGen0() == 1)// qb
+    else if (NLGen0() == 1 and NBGen0() == 1)// qb
     {
         return 2;
     }
-    else if (vvv.NLGen0() == 1 and vvv.NBGen0() == 0)// q
+    else if (NLGen0() == 1 and NBGen0() == 0)// q
     {
         return 3;
     }
-    else if (vvv.NLGen0() == 0 and vvv.NBGen0() == 1)// b
+    else if (NLGen0() == 0 and NBGen0() == 1)// b
     {
         return 4;
     }
@@ -96,10 +98,10 @@ auto BLIND = [&, is_data]()
 // Distance in 2d space of FJi.mass from a provided center (x, x) where x is all same e.g. (85 GeV, 85 GeV)
 auto dist_2d = [&] (float center)
 {
-    if (vvv.NFJ() < 2)
+    if (NFJ() < 2)
         return -999.f;
     else
-        return float(sqrt(pow(vvv.FJ0().mass() - center, 2) + pow(vvv.FJ1().mass() - center, 2)));
+        return float(sqrt(pow(FJ0().mass() - center, 2) + pow(FJ1().mass() - center, 2)));
 };
 
 //===============================================================================================================================================================
@@ -133,10 +135,10 @@ auto is_shell_2d = [&] () { return dist_2d(85) >= 35 and dist_2d(85) <= 50; };
 // Distance in 3d space of FJi.mass from a provided center (x, x, x) where x is all same e.g. (85 GeV, 85 GeV, 85 GeV)
 auto dist_3d = [&] (float center)
 {
-    if (vvv.NFJ() < 3)
+    if (NFJ() < 3)
         return -999.f;
     else
-        return float(sqrt(pow(vvv.FJ0().mass() - center, 2) + pow(vvv.FJ1().mass() - center, 2) + pow(vvv.FJ2().mass() - center, 2)));
+        return float(sqrt(pow(FJ0().mass() - center, 2) + pow(FJ1().mass() - center, 2) + pow(FJ2().mass() - center, 2)));
 };
 
 //===============================================================================================================================================================
@@ -150,15 +152,15 @@ auto is_shell_3d = [&] () { return dist_3d(85) >= 35 and dist_3d(85) <= 50; };
 // This is to define side-bands
 auto vmd_reg_3d = [&]()
 {
-    if (vvv.NFJ() < 3)
+    if (NFJ() < 3)
     {
         return 0;
     }
     else
     {
-        bool pass0 = vvv.VMD0() > VWP();
-        bool pass1 = vvv.VMD1() > VWP();
-        bool pass2 = vvv.VMD2() > VWP();
+        bool pass0 = VMD0() > VWP();
+        bool pass1 = VMD1() > VWP();
+        bool pass2 = VMD2() > VWP();
         if (pass0 and pass1 and pass2)
         {
             return 8;
