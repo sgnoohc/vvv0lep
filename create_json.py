@@ -27,8 +27,8 @@ def parse_sample_category(name, json):
             "WWZ_NoFilter",
             "WZZ_NoFilter",
             "ZZZ_NoFilter",
+            "WWW_4F",
             "WWZ_4F",
-            "WZZ_4F",
             "WZZ_Tune",
             "ZZZ_Tune",
             ]
