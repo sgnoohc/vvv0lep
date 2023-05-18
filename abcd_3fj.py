@@ -7,6 +7,8 @@ systs = ["Nominal"]
 if len(sys.argv) > 1:
     systs = ["Nominal", "JESUp", "JESDn", "JERUp", "JERDn", "JMSUp", "JMSDn", "JMRUp", "JMRDn"]
 
+hist_names = ["SR1SumPtFJ", "SR2SumPtFJ"]
+
 for syst in systs:
 
     # Configuration
@@ -35,45 +37,49 @@ for syst in systs:
     categs = ["nonqcd", "qcd", "jetht", "ddqcd"]
     regs = ["A", "B", "C", "D", "E", "F"]
 
-    # Retrieve histograms
-    h = {}
-    for categ in categs:
-        h[categ] = {}
-        for reg in regs:
-            h[categ][reg] = None
-        h[categ]["files"] = files[categ]
-        for reg in regs:
-            for f, p in h[categ]["files"]:
-                tf = r.TFile(f)
-                th1 = tf.Get(f"ZL3FJ{reg}__SR2SumPtFJ")
-                if not h[categ][reg]:
-                    h[categ][reg] = th1.Clone()
-                    h[categ][reg].SetDirectory(0)
-                else:
-                    h[categ][reg].Add(th1, p)
+    of = r.TFile(f"{dirname}/QCD.root", "recreate")
 
-    # Compute A = B * C / D
-    for categ in categs:
-        h[categ]["PredA"] = h[categ]["B"].Clone()
-        h[categ]["PredA"].Multiply(h[categ]["C"])
-        h[categ]["PredA"].Divide(h[categ]["D"])
-        h[categ]["PredE"] = h[categ]["B"].Clone()
-        h[categ]["PredE"].Multiply(h[categ]["F"])
-        h[categ]["PredE"].Divide(h[categ]["D"])
+    for hist_name in hist_names:
 
-    # Save to file
-    of = r.TFile(f"{dirname}/ddqcd.root", "recreate")
-    h[categ]["PredA"].SetName("ZL3FJA__SR2SumPtFJ")
-    h[categ]["PredE"].SetName("ZL3FJE__SR2SumPtFJ")
-    h[categ]["PredA"].SetDirectory(of)
-    h[categ]["PredE"].SetDirectory(of)
-    h[categ]["PredA"].Write()
-    h[categ]["PredE"].Write()
+        # Retrieve histograms
+        h = {}
+        for categ in categs:
+            h[categ] = {}
+            for reg in regs:
+                h[categ][reg] = None
+            h[categ]["files"] = files[categ]
+            for reg in regs:
+                for f, p in h[categ]["files"]:
+                    tf = r.TFile(f)
+                    th1 = tf.Get(f"ZL3FJ{reg}__{hist_name}")
+                    if not h[categ][reg]:
+                        h[categ][reg] = th1.Clone()
+                        h[categ][reg].SetDirectory(0)
+                    else:
+                        h[categ][reg].Add(th1, p)
 
-    # Need to save to the bunch of other histograms with different names
-    for i in range(91):
-        h[categ]["PredA"].SetName(f"ZL3FJAEFTIDX{i}__SR2SumPtFJ")
+        # Compute A = B * C / D
+        for categ in categs:
+            h[categ]["PredA"] = h[categ]["B"].Clone()
+            h[categ]["PredA"].Multiply(h[categ]["C"])
+            h[categ]["PredA"].Divide(h[categ]["D"])
+            h[categ]["PredE"] = h[categ]["B"].Clone()
+            h[categ]["PredE"].Multiply(h[categ]["F"])
+            h[categ]["PredE"].Divide(h[categ]["D"])
+
+        # Save to file
+        h[categ]["PredA"].SetName(f"ZL3FJA__{hist_name}")
+        h[categ]["PredE"].SetName(f"ZL3FJE__{hist_name}")
         h[categ]["PredA"].SetDirectory(of)
+        h[categ]["PredE"].SetDirectory(of)
+        of.cd()
         h[categ]["PredA"].Write()
+        h[categ]["PredE"].Write()
+
+        # Need to save to the bunch of other histograms with different names
+        for i in range(91):
+            h[categ]["PredA"].SetName(f"ZL3FJAEFTIDX{i}__{hist_name}")
+            h[categ]["PredA"].SetDirectory(of)
+            h[categ]["PredA"].Write()
 
     of.Close()

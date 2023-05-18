@@ -23,16 +23,18 @@ for syst in systs:
 
     to_be_merged = {}
     for key in merge_json.keys():
-        to_be_merged[merge_json[key]] = []
+        for categs in merge_json[key]:
+            to_be_merged[categs] = []
 
     sample_jsons = glob.glob(f"data/samples/{tag}/*")
     for sample_json in sample_jsons:
         f = open(sample_json)
         sj = json.loads(f.read())
         output_dir = sj["output_dir"]
-        merge_category = merge_json[sj["process"]]
         output_files = glob.glob(f'{output_dir}/{syst}/*.root')
-        to_be_merged[merge_category] += output_files
+        merge_categories = merge_json[sj["process"]]
+        for categ in merge_categories:
+            to_be_merged[categ] += output_files
 
     merge_output_dir = f"output/{tag}/merged/{syst}"
     os.system(f"mkdir -p {merge_output_dir}")

@@ -3,10 +3,9 @@ lumi_value = 59.83
 tag = "VVV0TreeV6"
 mdir = lambda syst: f"output/{tag}/merged/{syst}"
 
-# fnames with QCD replaced with ddqcd.root
 ddfnames = lambda syst: [
         f"{mdir(syst)}/diboson.root",
-        f"{mdir(syst)}/ddqcd.root",
+        f"{mdir(syst)}/QCD.root",
         f"{mdir(syst)}/ttbar.root",
         f"{mdir(syst)}/w.root",
         f"{mdir(syst)}/z.root",

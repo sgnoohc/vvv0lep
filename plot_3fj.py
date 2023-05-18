@@ -2,51 +2,59 @@
 
 import plottery_wrapper as p
 import plot_config as c
+import sys
+
+systs = ["Nominal"]
+if len(sys.argv) > 1:
+    systs = ["Nominal", "JESUp", "JESDn", "JERUp", "JERDn", "JMSUp", "JMSDn", "JMRUp", "JMRDn"]
 
 # cut_regions = ["ZL3FJPresel", "ZL3FJA", "ZL3FJB", "ZL3FJC", "ZL3FJD", "ZL3FJE", "ZL3FJF"]
-cut_regions = ["ZL3FJA", "ZL3FJE", "ZL3FJAEFTIDX0", "ZL3FJAEFTIDX14"]
+cut_regions = ["ZL3FJA", "ZL3FJB", "ZL3FJC", "ZL3FJD", "ZL3FJE", "ZL3FJF", "ZL3FJAEFTIDX0", "ZL3FJAEFTIDX14"]
 
-data_fname = f"{c.mdir}/jetht.root"
+for syst in systs:
 
-histxaxislabeloptions = {
-        "SR2SumPtFJ" : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale":   1, "yaxis_log": True},
-        }
+    data_fname = f"{c.mdir(syst)}/jetht.root"
 
-filter_patterns = []
-for hist_name in histxaxislabeloptions.keys():
-    for cut_region in cut_regions:
-        filter_patterns.append(f"{cut_region}__{hist_name}")
-filter_pattern = ",".join(filter_patterns)
+    histxaxislabeloptions = {
+            "SR2SumPtFJ" : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale":   1, "yaxis_log": True},
+            # "SR1SumPtFJ" : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale":   1, "yaxis_log": True},
+            }
 
-## MC Out-of-the-box
-## Linear version
-c.extraoptions["yaxis_log"] = False
-p.dump_plot(
-        fnames = c.fnames,
-        legend_labels = c.legend_labels,
-        sig_fnames = c.sig_fnames,
-        signal_labels = c.signal_labels,
-        data_fname = data_fname,
-        usercolors = c.usercolors,
-        filter_pattern = filter_pattern,
-        dirname = f"plots/ZL3FJ/mc",
-        dogrep = True,
-        extraoptions = c.extraoptions, 
-        histxaxislabeloptions = histxaxislabeloptions,
-        )
+    filter_patterns = []
+    for hist_name in histxaxislabeloptions.keys():
+        for cut_region in cut_regions:
+            filter_patterns.append(f"{cut_region}__{hist_name}")
+    filter_pattern = ",".join(filter_patterns)
 
-## Log version
-p.dump_plot(
-        fnames = c.ddfnames,
-        legend_labels = c.ddlegend_labels,
-        sig_fnames = c.sig_fnames,
-        signal_labels = c.signal_labels,
-        data_fname = data_fname,
-        usercolors = c.ddusercolors,
-        filter_pattern = filter_pattern,
-        dirname = f"plots/ZL3FJ/abcd",
-        dogrep = True,
-        extraoptions = c.extraoptions, 
-        histxaxislabeloptions = histxaxislabeloptions,
-        )
+    ## MC Out-of-the-box
+    ## Linear version
+    c.extraoptions["yaxis_log"] = False
+    p.dump_plot(
+            fnames = c.fnames(syst),
+            legend_labels = c.legend_labels,
+            sig_fnames = c.sig_fnames(syst),
+            signal_labels = c.signal_labels,
+            data_fname = data_fname,
+            usercolors = c.usercolors,
+            filter_pattern = filter_pattern,
+            dirname = f"plots/ZL3FJ/{syst}/mc",
+            dogrep = True,
+            extraoptions = c.extraoptions, 
+            histxaxislabeloptions = histxaxislabeloptions,
+            )
+
+    ## Log version
+    p.dump_plot(
+            fnames = c.ddfnames(syst),
+            legend_labels = c.ddlegend_labels,
+            sig_fnames = c.sig_fnames(syst),
+            signal_labels = c.signal_labels,
+            data_fname = data_fname,
+            usercolors = c.ddusercolors,
+            filter_pattern = filter_pattern,
+            dirname = f"plots/ZL3FJ/{syst}/abcd",
+            dogrep = True,
+            extraoptions = c.extraoptions, 
+            histxaxislabeloptions = histxaxislabeloptions,
+            )
 
