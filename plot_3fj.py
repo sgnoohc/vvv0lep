@@ -13,7 +13,7 @@ for syst in systs:
 
     histxaxislabeloptions = {
             "SR2SumPtFJ" : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale":   1, "yaxis_log": True},
-            # "SR1SumPtFJ" : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale":   1, "yaxis_log": True},
+            "SR1SumPtFJ" : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale":   1, "yaxis_log": True},
             }
 
     filter_patterns = []
