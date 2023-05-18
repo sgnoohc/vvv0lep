@@ -5,10 +5,7 @@ import glob
 import ROOT as r
 import os
 import json
-
-systs = ["Nominal"]
-if len(sys.argv) > 1:
-    systs = ["Nominal", "JESUp", "JESDn", "JERUp", "JERDn", "JMSUp", "JMSDn", "JMRUp", "JMRDn"]
+from systematics import systs
 
 tag = "VVV0TreeV6"
 

@@ -3,11 +3,7 @@
 import os
 import glob
 import json
-import sys
-
-systs = ["Nominal"]
-if len(sys.argv) > 1:
-    systs = ["Nominal", "JESUp", "JESDn", "JERUp", "JERDn", "JMSUp", "JMSDn", "JMRUp", "JMRDn", "prefireWgtUp", "prefireWgtDn", "trigWgtUp", "trigWgtDn", "puWgtUp", "puWgtDn"]
+from systematics import systs
 
 nchunk = 1.5e6
 tag = "VVV0TreeV6"

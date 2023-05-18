@@ -2,10 +2,7 @@
 
 import ROOT as r
 import sys
-
-systs = ["Nominal"]
-if len(sys.argv) > 1:
-    systs = ["Nominal", "JESUp", "JESDn", "JERUp", "JERDn", "JMSUp", "JMSDn", "JMRUp", "JMRDn"]
+from systematics import systs
 
 hist_names = ["SR1SumPtFJ", "SR2SumPtFJ"]
 
