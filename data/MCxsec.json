@@ -114,6 +114,7 @@
     "VHToNonbb_M125_TuneCP5_13TeV-amcatnloFXFX_madspin_pythia8"                    : 2.528,
     "WWW_NoFilter_Dim6"                                                            : 0.2086,
     "WWZ_NoFilter_Dim6"                                                            : 0.1651,
+    "WWZ_NoFilter_NoGGPartons_Dim6"                                                : 0.1651,
     "WZZ_NoFilter_Dim6"                                                            : 0.05565,
     "ZZZ_NoFilter_Dim6"                                                            : 0.01398
 }
