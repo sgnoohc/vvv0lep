@@ -529,9 +529,9 @@ int main(int argc, char** argv)
     ana.cutflow.addCutToLastActiveCut("ZL3FJE", [&]() { return is_shell_3d() and vmd_reg_3d() == 8; }, UNITY);
     ana.cutflow.getCut("ZL3FJM150");
     ana.cutflow.addCutToLastActiveCut("ZL3FJF", [&]() { return is_shell_3d() and vmd_reg_3d() != 8; }, UNITY);
-
     for (unsigned int ieft = 0; ieft < 91; ++ieft)
     {
+        // The various EFT regions
         ana.cutflow.getCut("ZL3FJA");
         ana.cutflow.addCutToLastActiveCut(TString::Format("ZL3FJAEFTIDX%d", ieft), UNITY, [&, is_eft, ieft]() { if (is_eft) return LHEReweightingWeight()[ieft] / LHEReweightingWeight()[0]; else return 1.f; });
     }
