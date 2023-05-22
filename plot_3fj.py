@@ -5,7 +5,8 @@ import plot_config as c
 from systematics import systs
 
 # cut_regions = ["ZL3FJPresel", "ZL3FJA", "ZL3FJB", "ZL3FJC", "ZL3FJD", "ZL3FJE", "ZL3FJF"]
-cut_regions = ["ZL3FJA", "ZL3FJB", "ZL3FJC", "ZL3FJD", "ZL3FJE", "ZL3FJF", "ZL3FJAEFTIDX0", "ZL3FJAEFTIDX14"]
+# cut_regions = ["ZL3FJA", "ZL3FJB", "ZL3FJC", "ZL3FJD", "ZL3FJE", "ZL3FJF", "ZL3FJAEFTIDX0", "ZL3FJAEFTIDX14"]
+cut_regions = ["ZL3FJA", "ZL3FJE", "ZL3FJAEFTIDX14"]
 
 for syst in systs:
 

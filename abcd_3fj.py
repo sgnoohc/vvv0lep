@@ -10,7 +10,8 @@ for syst in systs:
 
     # Configuration
     tag = "VVV0TreeV6"
-    dirname = f"output/{tag}/merged/{syst}"
+    year = "Run2"
+    dirname = f"output/{tag}/{year}/merged/{syst}"
     files = {}
     files["nonqcd"] = [
         [f"{dirname}/diboson.root", 1],

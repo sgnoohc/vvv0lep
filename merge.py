@@ -21,7 +21,12 @@ for syst in systs:
     to_be_merged = {}
     for key in merge_json.keys():
         for categs in merge_json[key]:
-            to_be_merged[categs] = []
+            to_be_merged[categs] = {}
+            to_be_merged[categs][2006] = []
+            to_be_merged[categs][2016] = []
+            to_be_merged[categs][2017] = []
+            to_be_merged[categs][2018] = []
+            to_be_merged[categs]["Run2"] = []
 
     sample_jsons = glob.glob(f"data/samples/{tag}/*")
     for sample_json in sample_jsons:
@@ -30,19 +35,25 @@ for syst in systs:
         output_dir = sj["output_dir"]
         output_files = glob.glob(f'{output_dir}/{syst}/*.root')
         merge_categories = merge_json[sj["process"]]
+        year = sj["year"]
         for categ in merge_categories:
-            to_be_merged[categ] += output_files
-
-    merge_output_dir = f"output/{tag}/merged/{syst}"
-    os.system(f"mkdir -p {merge_output_dir}")
+            to_be_merged[categ][year] += output_files
+            to_be_merged[categ]["Run2"] += output_files
 
     for key in to_be_merged:
-        if len(to_be_merged[key]) == 0:
-            continue
-        files = " ".join(to_be_merged[key])
-        merge_output_file = f"{merge_output_dir}/{key}.root"
-        merge_output_log = f"{merge_output_dir}/{key}.log"
-        merge_jobs_command_file.write(f"hadd -f {merge_output_file} {files} > {merge_output_log} 2>&1\n")
+        for year in [2006, 2016, 2017, 2018, "Run2"]:
+            merge_output_dir = f"output/{tag}/{year}/merged/{syst}"
+            os.system(f"mkdir -p {merge_output_dir}")
+
+    for key in to_be_merged:
+        for year in [2006, 2016, 2017, 2018, "Run2"]:
+            merge_output_dir = f"output/{tag}/{year}/merged/{syst}"
+            if len(to_be_merged[key][year]) == 0:
+                continue
+            files = " ".join(to_be_merged[key][year])
+            merge_output_file = f"{merge_output_dir}/{key}.root"
+            merge_output_log = f"{merge_output_dir}/{key}.log"
+            merge_jobs_command_file.write(f"hadd -f {merge_output_file} {files} > {merge_output_log} 2>&1\n")
 
 merge_jobs_command_file.close()
 

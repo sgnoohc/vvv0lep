@@ -63,5 +63,5 @@
     "xsec": 0.5104,
     "lumi": 59.83,
     "year": 2018,
-    "output_dir": "output/VVV0TreeV6/TTZToQQ_TuneCP5_13TeV-amcatnlo-pythia8"
+    "output_dir": "output/VVV0TreeV6/2018/TTZToQQ_TuneCP5_13TeV-amcatnlo-pythia8"
 }

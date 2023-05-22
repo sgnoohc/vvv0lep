@@ -1,7 +1,8 @@
 lumi_value = 59.83
 
 tag = "VVV0TreeV6"
-mdir = lambda syst: f"output/{tag}/merged/{syst}"
+year = "Run2"
+mdir = lambda syst: f"output/{tag}/{year}/merged/{syst}"
 
 ddfnames = lambda syst: [
         f"{mdir(syst)}/diboson.root",
@@ -85,7 +86,7 @@ extraoptions = {
             "nbins"            : 60,
             # "autobin"          : True,
             "print_yield"      : True,
-            "yield_prec"       : 6,
+            "yield_prec"       : 3,
             "yaxis_log"        : False,
             "legend_scalex"    : 2,
             "legend_ncolumns"  : 3,

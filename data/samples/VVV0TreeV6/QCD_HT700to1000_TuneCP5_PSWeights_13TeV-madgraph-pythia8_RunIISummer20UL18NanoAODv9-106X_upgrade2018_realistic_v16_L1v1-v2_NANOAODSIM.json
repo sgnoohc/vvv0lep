@@ -153,5 +153,5 @@
     "xsec": 6444,
     "lumi": 59.83,
     "year": 2018,
-    "output_dir": "output/VVV0TreeV6/QCD_HT700to1000_TuneCP5_PSWeights_13TeV-madgraph-pythia8"
+    "output_dir": "output/VVV0TreeV6/2018/QCD_HT700to1000_TuneCP5_PSWeights_13TeV-madgraph-pythia8"
 }

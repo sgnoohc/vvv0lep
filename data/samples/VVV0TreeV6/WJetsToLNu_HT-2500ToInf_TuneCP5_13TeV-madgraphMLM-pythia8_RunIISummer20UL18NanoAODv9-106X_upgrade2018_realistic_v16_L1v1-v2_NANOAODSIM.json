@@ -119,5 +119,5 @@
     "xsec": 0.008001,
     "lumi": 59.83,
     "year": 2018,
-    "output_dir": "output/VVV0TreeV6/WJetsToLNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8"
+    "output_dir": "output/VVV0TreeV6/2018/WJetsToLNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8"
 }

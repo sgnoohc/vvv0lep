@@ -799,5 +799,5 @@
     "xsec": 365.34,
     "lumi": 59.83,
     "year": 2018,
-    "output_dir": "output/VVV0TreeV6/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8"
+    "output_dir": "output/VVV0TreeV6/2018/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8"
 }

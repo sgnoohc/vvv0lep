@@ -99,7 +99,7 @@ def get_lumi_and_year(d, json):
             json["year"] = -1
 
 def build_output_dir(d, json):
-    json["output_dir"] = f'output/{json["tag"]}/{json["process"]}'
+    json["output_dir"] = f'output/{json["tag"]}/{json["year"]}/{json["process"]}'
 
 def parse_sample(d, j):
     parse_sample_category(d, j)
@@ -123,8 +123,8 @@ def main():
         j["files"] = rootfiles
         j["nevents"] = []
         parse_sample(d, j)
-        if not j["is_eft"]:
-            continue
+        # if not j["is_eft"]:
+        #     continue
         for rf in rootfiles:
             print(f"  Processing file: {rf}")
             f = r.TFile(rf)

@@ -22,7 +22,7 @@ def suffix(syst):
     elif "trigWgtDn" in syst: return "_trigger_weight_Down"
     else: return ""
 
-stat_file_name = "VVV.0L_3FJ.DataCard_Yields.v2.root"
+stat_file_name = "VVV.0L_3FJ.DataCard_Yields.v3.root"
 stat_file = r.TFile(stat_file_name, "RECREATE")
 
 samples = ["WW", "WZ", "ZZ", "ttV", "QCD", "WJets", "DY", "TTbar"]
@@ -63,18 +63,22 @@ eft_names = [
 "cW_10p0",
 ]
 
+signals = ["wwwdim6", "wwzdim6", "wzzdim6", "zzzdim6"]
+signames = {"wwwdim6": "WWW", "wwzdim6": "WWZ", "wzzdim6": "WZZ", "zzzdim6": "ZZZ"}
+
 for eft_idx, eft_name in enumerate(eft_names):
-    for syst in systs:
-        syst_suffix = suffix(syst)
-        dirname = f'{c.mdir(syst)}'
-        f = r.TFile(f"{dirname}/wwwdim6.root")
-        idx = eft_idx + 1 
-        hist_name = f"ZL3FJAEFTIDX{idx}__SR2SumPtFJ"
-        h = f.Get(hist_name).Clone()
-        h.SetName(f"h_WWW_{eft_name}{syst_suffix}")
-        h.SetDirectory(stat_file)
-        stat_file.cd()
-        h.Write()
+    for s in signals:
+        for syst in systs:
+            syst_suffix = suffix(syst)
+            dirname = f'{c.mdir(syst)}'
+            f = r.TFile(f"{dirname}/{s}.root")
+            idx = eft_idx
+            hist_name = f"ZL3FJAEFTIDX{idx}__SR2SumPtFJ"
+            h = f.Get(hist_name).Clone()
+            h.SetName(f"h_{signames[s]}_{eft_name}{syst_suffix}")
+            h.SetDirectory(stat_file)
+            stat_file.cd()
+            h.Write()
 
 
 stat_file.Close()

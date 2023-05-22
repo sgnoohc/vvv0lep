@@ -55,5 +55,5 @@
     "xsec": 3.74,
     "lumi": 59.83,
     "year": 2018,
-    "output_dir": "output/VVV0TreeV6/ST_s-channel_4f_leptonDecays_TuneCP5_13TeV-amcatnlo-pythia8"
+    "output_dir": "output/VVV0TreeV6/2018/ST_s-channel_4f_leptonDecays_TuneCP5_13TeV-amcatnlo-pythia8"
 }
