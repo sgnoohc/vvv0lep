@@ -30,8 +30,6 @@ for syst in systs:
 
     sample_jsons = glob.glob(f"data/samples/{tag}/*")
     for sample_json in sample_jsons:
-        if "Dim6" not in sample_json:
-            continue
         f = open(sample_json)
         sj = json.loads(f.read())
         output_dir = sj["output_dir"]
@@ -59,4 +57,4 @@ for syst in systs:
 
 merge_jobs_command_file.close()
 
-# os.system("xargs.sh .merge.txt")
+os.system("xargs.sh .merge.txt")
