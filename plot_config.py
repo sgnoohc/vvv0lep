@@ -49,6 +49,7 @@ ddlegend_labels = [
 
 # signal names
 sig_fnames = lambda syst: [
+            f"{mdir(syst)}/vvvdim6.root",
             f"{mdir(syst)}/wwwdim6.root",
             f"{mdir(syst)}/wwzdim6.root",
             f"{mdir(syst)}/wzzdim6.root",
@@ -56,6 +57,7 @@ sig_fnames = lambda syst: [
             ]
 
 signal_labels = [
+            "VVV D6",
             "WWW D6",
             "WWZ D6",
             "WZZ D6",
