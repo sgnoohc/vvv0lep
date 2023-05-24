@@ -65,6 +65,22 @@ auto VWP = [&, year]()
     else return 999.f;
 };
 
+auto WWP = [&, year](std::string WP)
+{
+    if( WP == "loose"){
+        if (year == 2006 or year == 2016) return 0.506f;
+        else if (year == 2017) return 0.506f;
+        else if (year == 2018) return 0.479f;
+        else return 999.f;
+    }
+    if( WP == "tight"){
+        if (year == 2006 or year == 2016) return 0.828f;
+        else if (year == 2017) return 0.838f;
+        else if (year == 2018) return 0.806f;
+        else return 999.f;
+    }
+};
+
 auto BLIND = [&, is_data]()
 {
     if (is_data)
@@ -73,9 +89,31 @@ auto BLIND = [&, is_data]()
         return 1.f;
 };
 
+auto signalMSD = [&](LorentzVector fj)
+{
+    return (fj.mass() > 65 && fj.mass() < 105);
+};
+
+auto lowMSD = [&](LorentzVector fj)
+{
+    return (fj.mass() > 20 && fj.mass() < 65);
+};
+
+auto highMSD = [&](LorentzVector fj)
+{
+    return (fj.mass() > 65 && fj.mass() < 150);
+};
+
+auto WMD_TIGHT = [&](float vmd)
+{
+    return (vmd > WWP("tight"));
+};
 
 
-
+auto WMD_LOOSE = [&](float vmd)
+{
+    return (vmd > WWP("loose"));
+};
 
 
 // -------------------====================-------------------====================-------------------====================-------------------====================

@@ -510,6 +510,38 @@ int main(int argc, char** argv)
     // Zero lepton + two fat-jet region
     ana.cutflow.getCut("ZL");
     ana.cutflow.addCutToLastActiveCut("ZL2FJ", [&]() { return NFJ() == 2; }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("ZL2FJPresel", [&]() { return HT() > 1100 and FJ0().pt() > 500.; }, [&, process]() { if (process.Contains("QCD")) return 2.05391728656f; else return 1.f; });
+    ana.cutflow.addCutToLastActiveCut("ZL2FJM20to150"  , [&]() { return FJ0().mass() > 20 and FJ1().mass() > 20 and FJ0().mass() < 150. and FJ1().mass() < 150.; }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("ZL2FJNoB"  , [&]() { return NbMedium() == 0; }, UNITY);
+    
+    //signal region
+    ana.cutflow.addCutToLastActiveCut("ZL2FJA"    , [&]() { 
+        return (signalMSD(FJ0()) and signalMSD(FJ1()) and WMD_TIGHT(WMD0()) and WMD_TIGHT(WMD1()) ); }, BLIND);
+    
+    //1st fatjet loose!tight, 2nd signal 
+    ana.cutflow.getCut("ZL2FJNoB");   
+    ana.cutflow.addCutToLastActiveCut("ZL2FJB"    , [&]() { 
+        return (   signalMSD(FJ0()) and signalMSD(FJ1()) and ( WMD_LOOSE(WMD0()) and !WMD_TIGHT(WMD0())) and WMD_TIGHT(WMD1()) ); }, UNITY);
+
+    //1st fatjet signal, 2nd low mSD 
+    ana.cutflow.getCut("ZL2FJNoB");   
+    ana.cutflow.addCutToLastActiveCut("ZL2FJC"    , [&]() { 
+        return (   signalMSD(FJ0()) and lowMSD(FJ1()) and WMD_TIGHT(WMD0()) and WMD_TIGHT(WMD1()) ); }, UNITY);
+    
+    //1st fatjet loose!tight, 2nd low mSD 
+    ana.cutflow.getCut("ZL2FJNoB");   
+    ana.cutflow.addCutToLastActiveCut("ZL2FJD"    , [&]() { 
+        return (   signalMSD(FJ0()) and lowMSD(FJ1()) and ( WMD_LOOSE(WMD0()) and !WMD_TIGHT(WMD0()) ) and WMD_TIGHT(WMD1()) ); }, UNITY);
+
+    //1st fatjet signal, 2nd high mSD 
+    ana.cutflow.getCut("ZL2FJNoB");   
+    ana.cutflow.addCutToLastActiveCut("ZL2FJE"    , [&]() { 
+        return (   signalMSD(FJ0()) and highMSD(FJ1()) and WMD_TIGHT(WMD0()) and WMD_TIGHT(WMD1()) ); }, UNITY);    
+
+    //1st fatjet loose!tight, 2nd high mSD 
+    ana.cutflow.getCut("ZL2FJNoB");   
+    ana.cutflow.addCutToLastActiveCut("ZL2FJF"    , [&]() { 
+        return (   signalMSD(FJ0()) and highMSD(FJ1()) and ( WMD_LOOSE(WMD0()) and !WMD_TIGHT(WMD0()) ) and WMD_TIGHT(WMD1()) ); }, UNITY);  
 
     //===============================================================================================================================================================
     // Zero lepton + three fat-jet region
