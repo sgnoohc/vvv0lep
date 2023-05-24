@@ -22,7 +22,7 @@ def suffix(syst):
     elif "trigWgtDn" in syst: return "_trigger_weight_Down"
     else: return ""
 
-stat_file_name = "VVV.0L_3FJ.DataCard_Yields.v3.root"
+stat_file_name = "VVV.0L_3FJ.DataCard_Yields.v4.root"
 stat_file = r.TFile(stat_file_name, "RECREATE")
 
 samples = ["WW", "WZ", "ZZ", "ttV", "QCD", "WJets", "DY", "TTbar"]
@@ -63,8 +63,11 @@ eft_names = [
 "cW_10p0",
 ]
 
-signals = ["wwwdim6", "wwzdim6", "wzzdim6", "zzzdim6"]
-signames = {"wwwdim6": "WWW", "wwzdim6": "WWZ", "wzzdim6": "WZZ", "zzzdim6": "ZZZ"}
+# signals = ["wwwdim6", "wwzdim6", "wzzdim6", "zzzdim6", "vvvdim6"]
+# signames = {"wwwdim6": "WWW", "wwzdim6": "WWZ", "wzzdim6": "WZZ", "zzzdim6": "ZZZ", "vvvdim6": "VVV"}
+
+signals = ["vvvdim6"]
+signames = {"vvvdim6": "WWW"}
 
 for eft_idx, eft_name in enumerate(eft_names):
     for s in signals:
@@ -77,6 +80,7 @@ for eft_idx, eft_name in enumerate(eft_names):
             h = f.Get(hist_name).Clone()
             h.SetName(f"h_{signames[s]}_{eft_name}{syst_suffix}")
             h.SetDirectory(stat_file)
+            h.Scale(137.64/59.83)
             stat_file.cd()
             h.Write()
 
