@@ -13,7 +13,7 @@ for syst in systs:
             "SR1SumPtFJ" : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale":   1, "yaxis_log": True},
             }
 
-    cut_regions = ["ZL3FJA", "ZL3FJB", "ZL3FJC", "ZL3FJD", "ZL3FJE", "ZL3FJF", "ZL3FJAEFTIDX0", "ZL3FJAEFTIDX14", "ZL3FJAEFTIDX76"]
+    cut_regions = ["ZL3FJA", "ZL3FJB", "ZL3FJC", "ZL3FJD", "ZL3FJE", "ZL3FJF", "ZL3FJAEFTIDX0", "ZL3FJAEFTIDX14", "ZL3FJAEFTIDX76", "ZL3FJAFT0"]
     filter_patterns = []
     for hist_name in histxaxislabeloptions.keys():
         for cut_region in cut_regions:

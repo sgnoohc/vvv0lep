@@ -50,20 +50,28 @@ ddlegend_labels = [
 # signal names
 sig_fnames = lambda syst: [
             f"{mdir(syst)}/vvvdim6.root",
-            f"{mdir(syst)}/vvvdim8.root",
-            # f"{mdir(syst)}/wwwdim6.root",
-            # f"{mdir(syst)}/wwzdim6.root",
-            # f"{mdir(syst)}/wzzdim6.root",
-            # f"{mdir(syst)}/zzzdim6.root",
+            # f"{mdir(syst)}/vvvdim8.root",
+            f"{mdir(syst)}/wwwdim6.root",
+            f"{mdir(syst)}/wwzdim6.root",
+            f"{mdir(syst)}/wzzdim6.root",
+            f"{mdir(syst)}/zzzdim6.root",
+            # f"{mdir(syst)}/wwwdim8.root",
+            # f"{mdir(syst)}/wwzdim8.root",
+            # f"{mdir(syst)}/wzzdim8.root",
+            # f"{mdir(syst)}/zzzdim8.root",
             ]
 
 signal_labels = [
             "VVV D6",
-            "VVV D8",
-            # "WWW D6",
-            # "WWZ D6",
-            # "WZZ D6",
-            # "ZZZ D6",
+            # "VVV D8",
+            "WWW D6",
+            "WWZ D6",
+            "WZZ D6",
+            "ZZZ D6",
+            # "WWW D8",
+            # "WWZ D8",
+            # "WZZ D8",
+            # "ZZZ D8",
             ]
 
 usercolors = [

@@ -542,9 +542,13 @@ int main(int argc, char** argv)
                                           if (is_eft)
                                           {
                                               if (process.Contains("WWW_"))
-                                                  return LHEReweightingWeight()[87] / LHEReweightingWeight()[0];
+                                              {
+                                                  return LHEReweightingWeight()[91] / LHEReweightingWeight()[0];
+                                              }
                                               else
-                                                  return LHEReweightingWeight()[135] / LHEReweightingWeight()[0];
+                                              {
+                                                  return LHEReweightingWeight()[139] / LHEReweightingWeight()[0];
+                                              }
                                           }
                                           else
                                           {
