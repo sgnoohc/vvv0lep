@@ -535,6 +535,22 @@ int main(int argc, char** argv)
         ana.cutflow.getCut("ZL3FJA");
         ana.cutflow.addCutToLastActiveCut(TString::Format("ZL3FJAEFTIDX%d", ieft), UNITY, [&, is_eft, ieft]() { if (is_eft) return LHEReweightingWeight()[ieft] / LHEReweightingWeight()[0]; else return 1.f; });
     }
+    // Dim8 (87 / 135 = FT0=1)
+    ana.cutflow.getCut("ZL3FJA");
+    ana.cutflow.addCutToLastActiveCut("ZL3FJAFT0", UNITY, [&, is_eft, process]()
+                                      {
+                                          if (is_eft)
+                                          {
+                                              if (process.Contains("WWW_"))
+                                                  return LHEReweightingWeight()[87] / LHEReweightingWeight()[0];
+                                              else
+                                                  return LHEReweightingWeight()[135] / LHEReweightingWeight()[0];
+                                          }
+                                          else
+                                          {
+                                              return 1.f;
+                                          }
+                                      });
 
     // Print cut structure
     ana.cutflow.printCuts();

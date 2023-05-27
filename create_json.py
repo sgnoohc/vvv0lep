@@ -123,8 +123,8 @@ def main():
         j["files"] = rootfiles
         j["nevents"] = []
         parse_sample(d, j)
-        # if not j["is_eft"]:
-        #     continue
+        if not j["is_eft"]:
+            continue
         for rf in rootfiles:
             print(f"  Processing file: {rf}")
             f = r.TFile(rf)
