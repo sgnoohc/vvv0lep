@@ -588,6 +588,7 @@ int main(int argc, char** argv)
     histograms_FJ2.addHistogram("NBGen2" , 7   , 0       , 7      , [&]() { return NBGen2(); } );
     histograms_FJ2.addHistogram("NLGen2" , 7   , 0       , 7      , [&]() { return NLGen2(); } );
     RooUtil::Histograms histograms_event;
+    histograms_event.addHistogram("Yield"        , 1   , 0 , 1    , [&]() { return 0.f; } );
     histograms_event.addHistogram("NbLoose"      , 7   , 0 , 7    , [&]() { return NbLoose(); } );
     histograms_event.addHistogram("NbMedium"     , 7   , 0 , 7    , [&]() { return NbMedium(); } );
     histograms_event.addHistogram("NbTight"      , 7   , 0 , 7    , [&]() { return NbTight(); } );
@@ -615,14 +616,14 @@ int main(int argc, char** argv)
     // ana.cutflow.bookCutflows(); // This slow things down so try to keep it commented out and use only when necessary
 
     // Book Histograms
-    ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ0, "OL");
-    ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ0_SF, "OL");
-    ana.cutflow.bookHistogramsForCutAndBelow(histograms_event, "OL");
-    ana.cutflow.bookHistogramsForCutAndBelow(histograms_onelep, "OL");
+    // ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ0, "OL");
+    // ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ0_SF, "OL");
+    // ana.cutflow.bookHistogramsForCutAndBelow(histograms_event, "OL");
+    // ana.cutflow.bookHistogramsForCutAndBelow(histograms_onelep, "OL");
 
-    ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ0, "ZL2FJ");
-    ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ1, "ZL2FJ");
-    ana.cutflow.bookHistogramsForCutAndBelow(histograms_event, "ZL2FJ");
+    // ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ0, "ZL2FJ");
+    // ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ1, "ZL2FJ");
+    // ana.cutflow.bookHistogramsForCutAndBelow(histograms_event, "ZL2FJ");
 
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ0, "ZL3FJ");
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ1, "ZL3FJ");

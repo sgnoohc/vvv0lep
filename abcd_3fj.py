@@ -80,4 +80,8 @@ for syst in systs:
                 h[categ]["PredA"].SetDirectory(of)
                 h[categ]["PredA"].Write()
 
+            h[categ]["PredA"].SetName(f"ZL3FJAFT0__{hist_name}")
+            h[categ]["PredA"].SetDirectory(of)
+            h[categ]["PredA"].Write()
+
         of.Close()

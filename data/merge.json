@@ -173,8 +173,7 @@
     "WZZ_NoFilter_Dim6"                                                            : ["wzzdim6", "vvvdim6"],
     "ZZZ_NoFilter_Dim6"                                                            : ["zzzdim6", "vvvdim6"],
     "WWW_NoFilter_Dim8"                                                            : ["wwwdim8", "vvvdim8"],
-    "WWZ_NoFilter_Dim8"                                                            : ["none"],
-    "WWZ_NoFilter_NoGGPartons_Dim8"                                                : ["wwzdim6", "vvvdim6"],
+    "WWZ_NoFilter_Dim8"                                                            : ["wwzdim8", "vvvdim8"],
     "WZZ_NoFilter_Dim8"                                                            : ["wzzdim8", "vvvdim8"],
     "ZZZ_NoFilter_Dim8"                                                            : ["zzzdim8", "vvvdim8"]
 }
