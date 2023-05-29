@@ -9,8 +9,8 @@ for syst in systs:
     data_fname = f"{c.mdir(syst)}/jetht.root"
 
     histxaxislabeloptions = {
-            "SR2SumPtFJ" : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale":   1, "yaxis_log": True},
-            "SR1SumPtFJ" : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale":   1, "yaxis_log": True},
+            "SR2SumPtFJ" : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": 137.64/59.83, "yaxis_log": True},
+            "SR1SumPtFJ" : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": 137.64/59.83, "yaxis_log": True},
             }
 
     cut_regions = ["ZL3FJA", "ZL3FJB", "ZL3FJC", "ZL3FJD", "ZL3FJE", "ZL3FJF", "ZL3FJAEFTIDX0", "ZL3FJAEFTIDX14", "ZL3FJAEFTIDX76", "ZL3FJAFT0"]
@@ -30,7 +30,7 @@ for syst in systs:
             data_fname = data_fname,
             usercolors = c.usercolors,
             filter_pattern = filter_pattern,
-            dirname = f"plots/ZL3FJ/{syst}/mc",
+            dirname = f"plots/ZL3FJ/{c.tag}/{syst}/mc",
             dogrep = True,
             extraoptions = c.extraoptions, 
             histxaxislabeloptions = histxaxislabeloptions,
@@ -52,7 +52,7 @@ for syst in systs:
             data_fname = data_fname,
             usercolors = c.ddusercolors,
             filter_pattern = filter_pattern,
-            dirname = f"plots/ZL3FJ/{syst}/abcd",
+            dirname = f"plots/ZL3FJ/{c.tag}/{syst}/abcd",
             dogrep = True,
             extraoptions = c.extraoptions, 
             histxaxislabeloptions = histxaxislabeloptions,

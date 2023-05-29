@@ -6,8 +6,9 @@ import ROOT as r
 import os
 import json
 from systematics import systs
+import plot_config as c
 
-tag = "VVV0TreeV6"
+c.tag = "VVV0TreeV7"
 
 merge_json_file = open("data/merge.json")
 merge_json = json.loads(merge_json_file.read())
@@ -28,7 +29,7 @@ for syst in systs:
             to_be_merged[categs][2018] = []
             to_be_merged[categs]["Run2"] = []
 
-    sample_jsons = glob.glob(f"data/samples/{tag}/*")
+    sample_jsons = glob.glob(f"data/samples/{c.tag}/*")
     for sample_json in sample_jsons:
         f = open(sample_json)
         sj = json.loads(f.read())
@@ -42,12 +43,12 @@ for syst in systs:
 
     for key in to_be_merged:
         for year in [2006, 2016, 2017, 2018, "Run2"]:
-            merge_output_dir = f"output/{tag}/{year}/merged/{syst}"
+            merge_output_dir = f"output/{c.tag}/{year}/merged/{syst}"
             os.system(f"mkdir -p {merge_output_dir}")
 
     for key in to_be_merged:
         for year in [2006, 2016, 2017, 2018, "Run2"]:
-            merge_output_dir = f"output/{tag}/{year}/merged/{syst}"
+            merge_output_dir = f"output/{c.tag}/{year}/merged/{syst}"
             if len(to_be_merged[key][year]) == 0:
                 continue
             files = " ".join(to_be_merged[key][year])

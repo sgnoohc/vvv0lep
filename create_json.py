@@ -123,6 +123,8 @@ def main():
         j["files"] = rootfiles
         j["nevents"] = []
         parse_sample(d, j)
+        # if not j["process"] == "WWZ_NoFilter_NoGGPartons_Dim6":
+        #     continue
         for rf in rootfiles:
             print(f"  Processing file: {rf}")
             f = r.TFile(rf)
