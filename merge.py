@@ -8,8 +8,6 @@ import json
 from systematics import systs
 import plot_config as c
 
-c.tag = "VVV0TreeV7"
-
 merge_json_file = open("data/merge.json")
 merge_json = json.loads(merge_json_file.read())
 

@@ -7,8 +7,7 @@ from systematics import systs
 import plot_config as c
 
 nchunk = 1.5e6
-c.tag = "VVV0TreeV7"
-jobconfigs = glob.glob(f"data/samples/{tag}/*.json")
+jobconfigs = glob.glob(f"data/samples/{c.tag}/*.json")
 os.system("rm -f .jobs.txt")
 jobs = open(".jobs.txt", "w")
 
