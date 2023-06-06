@@ -567,6 +567,26 @@ int main(int argc, char** argv)
         ana.cutflow.getCut("ZL3FJA");
         ana.cutflow.addCutToLastActiveCut(TString::Format("ZL3FJAEFTIDX%d", ieft), UNITY, [&, is_eft, ieft]() { if (is_eft) return LHEReweightingWeight()[ieft] / LHEReweightingWeight()[0]; else return 1.f; });
     }
+    // Dim8 (87 / 135 = FT0=1)
+    ana.cutflow.getCut("ZL3FJA");
+    ana.cutflow.addCutToLastActiveCut("ZL3FJAFT0", UNITY, [&, is_eft, process]()
+                                      {
+                                          if (is_eft)
+                                          {
+                                              if (process.Contains("WWW_"))
+                                              {
+                                                  return LHEReweightingWeight()[91] / LHEReweightingWeight()[0];
+                                              }
+                                              else
+                                              {
+                                                  return LHEReweightingWeight()[139] / LHEReweightingWeight()[0];
+                                              }
+                                          }
+                                          else
+                                          {
+                                              return 1.f;
+                                          }
+                                      });
 
     // Print cut structure
     ana.cutflow.printCuts();
@@ -600,6 +620,7 @@ int main(int argc, char** argv)
     histograms_FJ2.addHistogram("NBGen2" , 7   , 0       , 7      , [&]() { return NBGen2(); } );
     histograms_FJ2.addHistogram("NLGen2" , 7   , 0       , 7      , [&]() { return NLGen2(); } );
     RooUtil::Histograms histograms_event;
+    histograms_event.addHistogram("Yield"        , 1   , 0 , 1    , [&]() { return 0.f; } );
     histograms_event.addHistogram("NbLoose"      , 7   , 0 , 7    , [&]() { return NbLoose(); } );
     histograms_event.addHistogram("NbMedium"     , 7   , 0 , 7    , [&]() { return NbMedium(); } );
     histograms_event.addHistogram("NbTight"      , 7   , 0 , 7    , [&]() { return NbTight(); } );
@@ -620,7 +641,7 @@ int main(int argc, char** argv)
     RooUtil::Histograms histograms_FJ0_SF;
     histograms_FJ0_SF.addHistogram("SFVMD0" , 10000  , 0     , 1     , [&]() { return VMD0(); } );
     RooUtil::Histograms histograms_3FJ_SR;
-    histograms_3FJ_SR.addHistogram("SR1SumPtFJ", {1250, 1500, 1750, 2000, 2500, 3000, 4000} , [&]() { return SumPtFJ(); } );
+    histograms_3FJ_SR.addHistogram("SR1SumPtFJ", {1250, 1500, 1750, 2000, 2500, 3000, 4000} , [&]() { if (SumPtFJ() < 3500) return SumPtFJ(); else return 3500.f; } );
     histograms_3FJ_SR.addHistogram("SR2SumPtFJ", {1250, 1500, 1750, 2000, 3000} , [&]() { if (SumPtFJ() < 2500) return SumPtFJ(); else return 2500.f; } );
     RooUtil::Histograms histograms_2FJ_SR;
     histograms_2FJ_SR.addHistogram("HT_binned", {1100,2500,4000} , [&]() { return HT(); } );

@@ -1,5 +1,4 @@
 lumi_value = 59.83
-
 tag = "VVV0TreeV6"
 year = "Run2"
 mdir = lambda syst: f"output/{tag}/{year}/merged/{syst}"
@@ -48,7 +47,24 @@ ddlegend_labels = [
             ]
 
 # signal names
-sig_fnames = lambda syst: [
+sig_fnames_dim8 = lambda syst: [
+            f"{mdir(syst)}/vvvdim8.root",
+            f"{mdir(syst)}/wwwdim8.root",
+            f"{mdir(syst)}/wwzdim8.root",
+            f"{mdir(syst)}/wzzdim8.root",
+            f"{mdir(syst)}/zzzdim8.root",
+            ]
+
+signal_labels_dim8 = [
+            "VVV D8",
+            "WWW D8",
+            "WWZ D8",
+            "WZZ D8",
+            "ZZZ D8",
+            ]
+
+# signal names
+sig_fnames_dim6 = lambda syst: [
             f"{mdir(syst)}/vvvdim6.root",
             f"{mdir(syst)}/wwwdim6.root",
             f"{mdir(syst)}/wwzdim6.root",
@@ -56,7 +72,7 @@ sig_fnames = lambda syst: [
             f"{mdir(syst)}/zzzdim6.root",
             ]
 
-signal_labels = [
+signal_labels_dim6 = [
             "VVV D6",
             "WWW D6",
             "WWZ D6",

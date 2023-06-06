@@ -3,6 +3,7 @@
 import ROOT as r
 import sys
 from systematics import systs
+import plot_config as c
 
 hist_names = ["SR1SumPtFJ", "SR2SumPtFJ"]
 
@@ -10,8 +11,7 @@ for syst in systs:
     for year in [2006, 2016, 2017, 2018, "Run2"]:
 
         # Configuration
-        tag = "VVV0TreeV6"
-        dirname = f"output/{tag}/{year}/merged/{syst}"
+        dirname = f"output/{c.tag}/{year}/merged/{syst}"
         files = {}
         files["nonqcd"] = [
             [f"{dirname}/diboson.root", 1],
@@ -79,5 +79,9 @@ for syst in systs:
                 h[categ]["PredA"].SetName(f"ZL3FJAEFTIDX{i}__{hist_name}")
                 h[categ]["PredA"].SetDirectory(of)
                 h[categ]["PredA"].Write()
+
+            h[categ]["PredA"].SetName(f"ZL3FJAFT0__{hist_name}")
+            h[categ]["PredA"].SetDirectory(of)
+            h[categ]["PredA"].Write()
 
         of.Close()

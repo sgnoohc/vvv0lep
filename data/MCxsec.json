@@ -116,5 +116,9 @@
     "WWZ_NoFilter_Dim6"                                                            : 0.1651,
     "WWZ_NoFilter_NoGGPartons_Dim6"                                                : 0.1651,
     "WZZ_NoFilter_Dim6"                                                            : 0.05565,
-    "ZZZ_NoFilter_Dim6"                                                            : 0.01398
+    "ZZZ_NoFilter_Dim6"                                                            : 0.01398,
+    "WWW_NoFilter_Dim8"                                                            : 0.2086,
+    "WWZ_NoFilter_Dim8"                                                            : 0.1651,
+    "WZZ_NoFilter_Dim8"                                                            : 0.05565,
+    "ZZZ_NoFilter_Dim8"                                                            : 0.01398
 }

@@ -4,10 +4,10 @@ import os
 import glob
 import json
 from systematics import systs
+import plot_config as c
 
 nchunk = 1.5e6
-tag = "VVV0TreeV6"
-jobconfigs = glob.glob(f"data/samples/{tag}/*.json")
+jobconfigs = glob.glob(f"data/samples/{c.tag}/*.json")
 os.system("rm -f .jobs.txt")
 jobs = open(".jobs.txt", "w")
 

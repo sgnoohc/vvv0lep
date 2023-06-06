@@ -1,0 +1,35 @@
+{
+    "tag": "VVV0TreeV7",
+    "noriginalevents": 4595000,
+    "sum_genWeight": 784713.668115735,
+    "nfiles": 7,
+    "files": [
+        "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV7/WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17_ext1-v1_NANOAODSIM_VVV0TreeV7/output_6.root",
+        "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV7/WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17_ext1-v1_NANOAODSIM_VVV0TreeV7/output_5.root",
+        "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV7/WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17_ext1-v1_NANOAODSIM_VVV0TreeV7/output_7.root",
+        "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV7/WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17_ext1-v1_NANOAODSIM_VVV0TreeV7/output_1.root",
+        "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV7/WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17_ext1-v1_NANOAODSIM_VVV0TreeV7/output_4.root",
+        "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV7/WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17_ext1-v1_NANOAODSIM_VVV0TreeV7/output_3.root",
+        "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV7/WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17_ext1-v1_NANOAODSIM_VVV0TreeV7/output_2.root"
+    ],
+    "nevents": [
+        1244,
+        1538,
+        40448,
+        12597,
+        70748,
+        68946,
+        93475
+    ],
+    "is_sig": 1,
+    "is_bkg": 0,
+    "is_data": 0,
+    "is_eft": 0,
+    "dir": "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV7/WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17_ext1-v1_NANOAODSIM_VVV0TreeV7",
+    "name": "WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17_ext1-v1_NANOAODSIM",
+    "process": "WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8",
+    "xsec": 0.1651,
+    "lumi": 16.81,
+    "year": 2016,
+    "output_dir": "output/VVV0TreeV7/2016/WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8"
+}

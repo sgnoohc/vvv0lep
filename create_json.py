@@ -5,7 +5,7 @@ import ROOT as r
 import os
 import json
 
-tag = "VVV0TreeV6"
+tag = "VVV0TreeV7"
 sample_dirs = glob.glob(f"/ceph/cms/store/user/phchang/VVV0LepAnalysis/{tag}/*_{tag}")
 os.system(f"mkdir -p data/samples/{tag}")
 
@@ -123,7 +123,7 @@ def main():
         j["files"] = rootfiles
         j["nevents"] = []
         parse_sample(d, j)
-        # if not j["is_eft"]:
+        # if not j["process"] == "WWZ_NoFilter_NoGGPartons_Dim6":
         #     continue
         for rf in rootfiles:
             print(f"  Processing file: {rf}")
