@@ -622,7 +622,8 @@ int main(int argc, char** argv)
     RooUtil::Histograms histograms_3FJ_SR;
     histograms_3FJ_SR.addHistogram("SR1SumPtFJ", {1250, 1500, 1750, 2000, 2500, 3000, 4000} , [&]() { return SumPtFJ(); } );
     histograms_3FJ_SR.addHistogram("SR2SumPtFJ", {1250, 1500, 1750, 2000, 3000} , [&]() { if (SumPtFJ() < 2500) return SumPtFJ(); else return 2500.f; } );
-
+    RooUtil::Histograms histograms_2FJ_SR;
+    histograms_2FJ_SR.addHistogram("HT_binned", {1100,2500,4000} , [&]() { return HT(); } );
     // Book cutflows
     // ana.cutflow.bookCutflows(); // This slow things down so try to keep it commented out and use only when necessary
 
@@ -635,12 +636,15 @@ int main(int argc, char** argv)
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ0, "ZL2FJ");
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ1, "ZL2FJ");
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_event, "ZL2FJ");
+    ana.cutflow.bookHistogramsForCutAndBelow(histograms_2FJ_SR, "ZL2FJ");
+
 
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ0, "ZL3FJ");
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ1, "ZL3FJ");
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ2, "ZL3FJ");
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_event, "ZL3FJ");
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_3FJ_SR, "ZL3FJ");
+
 
     // Looping input file
     while (ana.looper.nextEvent())
