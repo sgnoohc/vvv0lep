@@ -11,16 +11,24 @@ for syst in systs:
         data_fname = f"{c.mdir(syst)}/jetht.root"
 
         histxaxislabeloptions = {
-                "SR2SumPtFJ" : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]" , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": 137.64/59.83, "yaxis_log": True},
-                "SR1SumPtFJ" : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]" , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": 137.64/59.83, "yaxis_log": True},
-                "VMD0"       : {"xaxis_label" : "V_{MD,lead} [GeV]"   , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": 137.64/59.83, "yaxis_log": True},
-                "VMD1"       : {"xaxis_label" : "V_{MD,sublead}"      , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": 137.64/59.83, "yaxis_log": True},
-                "VMD2"       : {"xaxis_label" : "V_{MD,trail}"        , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": 137.64/59.83, "yaxis_log": True},
-                "VMD2"       : {"xaxis_label" : "V_{MD,trail}"        , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": 137.64/59.83, "yaxis_log": True},
-                "Yield"      : {"xaxis_label" : "Yield"               , "xaxis_ndivisions" : 505, "nbins": 1 , "signal_scale": 137.64/59.83, "yaxis_log": True},
+                "SR3SumPtFJ"  : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]" , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": 137.64/59.83, "yaxis_log": False},
+                "SR2SumPtFJ"  : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]" , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": 137.64/59.83, "yaxis_log": True},
+                "SR1SumPtFJ"  : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]" , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": 137.64/59.83, "yaxis_log": True},
+                "VMD0"        : {"xaxis_label" : "V_{MD,lead} [GeV]"   , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": 137.64/59.83, "yaxis_log": True},
+                "VMD1"        : {"xaxis_label" : "V_{MD,sublead}"      , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": 137.64/59.83, "yaxis_log": True},
+                "VMD2"        : {"xaxis_label" : "V_{MD,trail}"        , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": 137.64/59.83, "yaxis_log": True},
+                "VMD2"        : {"xaxis_label" : "V_{MD,trail}"        , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": 137.64/59.83, "yaxis_log": True},
+                "Yield"       : {"xaxis_label" : "Yield"               , "xaxis_ndivisions" : 505, "nbins": 1 , "signal_scale": 137.64/59.83, "yaxis_log": True},
+                "NbLoose"     : {"xaxis_label" : "NbLoose"             , "xaxis_ndivisions" : 505, "nbins": 7 , "signal_scale": 137.64/59.83, "yaxis_log": True},
+                "NbMedium"    : {"xaxis_label" : "NbMedium"            , "xaxis_ndivisions" : 505, "nbins": 7 , "signal_scale": 137.64/59.83, "yaxis_log": True},
+                "NbTight"     : {"xaxis_label" : "NbTight"             , "xaxis_ndivisions" : 505, "nbins": 7 , "signal_scale": 137.64/59.83, "yaxis_log": True},
+                "NoORNbLoose" : {"xaxis_label" : "NoORNbLoose"         , "xaxis_ndivisions" : 505, "nbins": 7 , "signal_scale": 137.64/59.83, "yaxis_log": False},
+                "NoORNbMedium": {"xaxis_label" : "NoORNbMedium"        , "xaxis_ndivisions" : 505, "nbins": 7 , "signal_scale": 137.64/59.83, "yaxis_log": False},
+                "NoORNbTight" : {"xaxis_label" : "NoORNbTight"         , "xaxis_ndivisions" : 505, "nbins": 7 , "signal_scale": 137.64/59.83, "yaxis_log": False},
+                "MVVX"        : {"xaxis_label" : "MVVX"                , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": 137.64/59.83, "yaxis_log": False},
                 }
 
-        cut_regions = ["ZL3FJA", "ZL3FJB", "ZL3FJC", "ZL3FJD", "ZL3FJE", "ZL3FJF", "ZL3FJAEFTIDX14", "ZL3FJAFT0"]
+        cut_regions = ["ZL3FJ", "ZL3FJPresel", "ZL3FJM150", "ZL3FJA", "ZL3FJB", "ZL3FJC", "ZL3FJD", "ZL3FJE", "ZL3FJF", "ZL3FJAEFTIDX12", "ZL3FJAFT0"]
         filter_patterns = []
         for hist_name in histxaxislabeloptions.keys():
             for cut_region in cut_regions:
@@ -43,7 +51,7 @@ for syst in systs:
                 histxaxislabeloptions = histxaxislabeloptions,
                 )
 
-        cut_regions = ["ZL3FJA", "ZL3FJE", "ZL3FJAEFTIDX14", "ZL3FJAFT0"]
+        cut_regions = ["ZL3FJA", "ZL3FJE", "ZL3FJAEFTIDX12", "ZL3FJAFT0"]
         filter_patterns = []
         for hist_name in histxaxislabeloptions.keys():
             if hist_name not in ["SR2SumPtFJ", "SR1SumPtFJ"]:

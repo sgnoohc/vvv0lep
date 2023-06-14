@@ -3,8 +3,16 @@
 import os
 import glob
 import json
-from systematics import systs
+# from systematics import systs
 import plot_config as c
+import sys
+import socket
+
+systs = ["Nominal"]
+
+run_test = False
+if len(sys.argv) > 1:
+    run_test = True
 
 nchunk = 1.5e6
 jobconfigs = glob.glob(f"data/samples/{c.tag}/*.json")
@@ -36,6 +44,10 @@ for jobconfig in jobconfigs:
     process = j["process"]
     output_dir = j["output_dir"]
 
+    if run_test:
+        if "Dim" not in process:
+            continue
+
     for job_index in range(len(cs)):
         for syst in systs:
             output_name = f"output_{job_index}.root"
@@ -47,4 +59,7 @@ for jobconfig in jobconfigs:
 
 jobs.close()
 
-os.system("xargs.sh .jobs.txt")
+if "uaf-2" in socket.gethostname():
+    os.system("xargs.sh .jobs.txt")
+else:
+    os.system("xargs.sh .jobs.txt")

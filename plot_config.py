@@ -1,6 +1,11 @@
-lumi_value = 59.83
-tag = "VVV0TreeV6"
+import socket
+
+if "uaf-2" in socket.gethostname():
+    tag = "VVV0TreeV9_3FJ"
+else:
+    tag = "VVV0TreeV8"
 year = "Run2"
+lumi_value = 59.83
 mdir = lambda syst: f"output/{tag}/{year}/merged/{syst}"
 
 ddfnames = lambda syst: [
