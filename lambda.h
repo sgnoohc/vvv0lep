@@ -104,15 +104,15 @@ auto highMSD = [&](LorentzVector fj)
     return (fj.mass() > 65 && fj.mass() < 150);
 };
 
-auto WMD_TIGHT = [&](float vmd)
+auto WMD_TIGHT = [&](float wmd)
 {
-    return (vmd > WWP("tight"));
+    return (wmd > WWP("tight"));
 };
 
 
-auto WMD_LOOSE = [&](float vmd)
+auto WMD_LOOSE = [&](float wmd)
 {
-    return (vmd > WWP("loose"));
+    return (wmd > WWP("loose"));
 };
 
 

@@ -27,6 +27,9 @@ public:
     // If there are N events, and was asked to split 2 ways, then depending on job_index, it will run over first half or latter half
     int nsplit_jobs;
 
+    //default eft index 
+    int eft_idx; 
+
     // Job index (assuming nsplit_jobs is set, the job_index determine where to loop over)
     int job_index;
 
@@ -70,6 +73,7 @@ int main(int argc, char** argv)
         ("i,input"       , "Comma separated input file list OR if just a directory is provided it will glob all in the directory BUT must end with '/' for the path", cxxopts::value<std::string>())
         ("t,tree"        , "Name of the tree in the root file to open and loop over"                                             , cxxopts::value<std::string>())
         ("s,syst"        , "Syst variation name"                                                                                 , cxxopts::value<std::string>())
+        ("e,eftidx"      , "EFT index that signal will be reweighted to"                                                         , cxxopts::value<int>())
         ("o,output"      , "Output file name"                                                                                    , cxxopts::value<std::string>())
         ("n,nevents"     , "N events to loop over"                                                                               , cxxopts::value<int>()->default_value("-1"))
         ("j,nsplit_jobs" , "Enable splitting jobs by N blocks (--job_index must be set)"                                         , cxxopts::value<int>())
@@ -139,6 +143,18 @@ int main(int argc, char** argv)
     else
     {
         ana.syst_name = "";
+    }
+
+    //_______________________________________________________________________________
+    // --eftidx
+    if (result.count("eftidx"))
+    {
+        ana.eft_idx = result["eftidx"].as<int>();
+    }
+    else
+    {
+        std::cout << "No EFT index set -- setting to 0 (SM)" << std::endl;
+        ana.eft_idx = 0;
     }
 
     //_______________________________________________________________________________
@@ -543,6 +559,16 @@ int main(int argc, char** argv)
     ana.cutflow.addCutToLastActiveCut("ZL2FJF"    , [&]() { 
         return (   signalMSD(FJ0()) and highMSD(FJ1()) and ( WMD_LOOSE(WMD0()) and !WMD_TIGHT(WMD0()) ) and WMD_TIGHT(WMD1()) ); }, UNITY);  
 
+    ana.cutflow.addCutToLastActiveCut("ZL3FJF", [&]() { return is_shell_3d() and vmd_reg_3d() != 8; }, UNITY);
+    for (unsigned int ieft = 0; ieft < 91; ++ieft)
+    {
+        // The various EFT regions
+        ana.cutflow.getCut("ZL3FJA");
+        ana.cutflow.addCutToLastActiveCut(TString::Format("ZL3FJAEFTIDX%d", ieft), UNITY, [&, is_eft, ieft]() { if (is_eft) return LHEReweightingWeight()[ieft] / LHEReweightingWeight()[0]; else return 1.f; });
+    }
+
+
+
     //===============================================================================================================================================================
     // Zero lepton + three fat-jet region
     ana.cutflow.getCut("ZL");
@@ -565,7 +591,11 @@ int main(int argc, char** argv)
     {
         // The various EFT regions
         ana.cutflow.getCut("ZL3FJA");
-        ana.cutflow.addCutToLastActiveCut(TString::Format("ZL3FJAEFTIDX%d", ieft), UNITY, [&, is_eft, ieft]() { if (is_eft) return LHEReweightingWeight()[ieft] / LHEReweightingWeight()[0]; else return 1.f; });
+        ana.cutflow.addCutToLastActiveCut(TString::Format("ZL3FJAEFTIDX%d", ieft), UNITY, [&, is_eft, ieft]() { if (is_eft) return LHEReweightingWeight()[ieft] / LHEReweightingWeight()[eft_idx]; else return 1.f; });
+        
+        ana.cutflow.getCut("ZL2FJA");
+        ana.cutflow.addCutToLastActiveCut(TString::Format("ZL2FJAEFTIDX%d", ieft), UNITY, [&, is_eft, ieft]() { if (is_eft) return LHEReweightingWeight()[ieft] / LHEReweightingWeight()[eft_idx]; else return 1.f; });
+    
     }
     // Dim8 (87 / 135 = FT0=1)
     ana.cutflow.getCut("ZL3FJA");
@@ -575,11 +605,11 @@ int main(int argc, char** argv)
                                           {
                                               if (process.Contains("WWW_"))
                                               {
-                                                  return LHEReweightingWeight()[91] / LHEReweightingWeight()[0];
+                                                  return LHEReweightingWeight()[91] / LHEReweightingWeight()[eft_idx];
                                               }
                                               else
                                               {
-                                                  return LHEReweightingWeight()[139] / LHEReweightingWeight()[0];
+                                                  return LHEReweightingWeight()[139] / LHEReweightingWeight()[eft_idx];
                                               }
                                           }
                                           else
@@ -598,6 +628,7 @@ int main(int argc, char** argv)
     histograms_FJ0.addHistogram("Phi0"   , 180 , -3.1416 , 3.1416 , [&]() { return FJ0().phi(); } );
     histograms_FJ0.addHistogram("Mass0"  , 180 , 0       , 250    , [&]() { return FJ0().mass(); } );
     histograms_FJ0.addHistogram("VMD0"   , 180 , 0       , 1      , [&]() { return VMD0(); } );
+    histograms_FJ0.addHistogram("WMD0"   , 180 , 0       , 1      , [&]() { return WMD0(); } );
     histograms_FJ0.addHistogram("NQGen0" , 7   , 0       , 7      , [&]() { return NQGen0(); } );
     histograms_FJ0.addHistogram("NBGen0" , 7   , 0       , 7      , [&]() { return NBGen0(); } );
     histograms_FJ0.addHistogram("NLGen0" , 7   , 0       , 7      , [&]() { return NLGen0(); } );
@@ -607,6 +638,7 @@ int main(int argc, char** argv)
     histograms_FJ1.addHistogram("Phi1"   , 180 , -3.1416 , 3.1416 , [&]() { return FJ1().phi(); } );
     histograms_FJ1.addHistogram("Mass1"  , 180 , 0       , 250    , [&]() { return FJ1().mass(); } );
     histograms_FJ1.addHistogram("VMD1"   , 180 , 0       , 1      , [&]() { return VMD1(); } );
+    histograms_FJ1.addHistogram("WMD1"   , 180 , 0       , 1      , [&]() { return WMD1(); } );
     histograms_FJ1.addHistogram("NQGen1" , 7   , 0       , 7      , [&]() { return NQGen1(); } );
     histograms_FJ1.addHistogram("NBGen1" , 7   , 0       , 7      , [&]() { return NBGen1(); } );
     histograms_FJ1.addHistogram("NLGen1" , 7   , 0       , 7      , [&]() { return NLGen1(); } );
@@ -619,6 +651,7 @@ int main(int argc, char** argv)
     histograms_FJ2.addHistogram("NQGen2" , 7   , 0       , 7      , [&]() { return NQGen2(); } );
     histograms_FJ2.addHistogram("NBGen2" , 7   , 0       , 7      , [&]() { return NBGen2(); } );
     histograms_FJ2.addHistogram("NLGen2" , 7   , 0       , 7      , [&]() { return NLGen2(); } );
+    histograms_FJ2.add2DHistogram("VMD2" , 180 , 0       , 1,       , [&]() { return NLGen2(); } );
     RooUtil::Histograms histograms_event;
     histograms_event.addHistogram("Yield"        , 1   , 0 , 1    , [&]() { return 0.f; } );
     histograms_event.addHistogram("NbLoose"      , 7   , 0 , 7    , [&]() { return NbLoose(); } );
@@ -644,7 +677,7 @@ int main(int argc, char** argv)
     histograms_3FJ_SR.addHistogram("SR1SumPtFJ", {1250, 1500, 1750, 2000, 2500, 3000, 4000} , [&]() { if (SumPtFJ() < 3500) return SumPtFJ(); else return 3500.f; } );
     histograms_3FJ_SR.addHistogram("SR2SumPtFJ", {1250, 1500, 1750, 2000, 3000} , [&]() { if (SumPtFJ() < 2500) return SumPtFJ(); else return 2500.f; } );
     RooUtil::Histograms histograms_2FJ_SR;
-    histograms_2FJ_SR.addHistogram("HT_binned", {1100,2500,4000} , [&]() { return HT(); } );
+    histograms_2FJ_SR.addHistogram("HT_binned", {1100,2500,4000,140000} , [&]() { return HT(); } );
     // Book cutflows
     // ana.cutflow.bookCutflows(); // This slow things down so try to keep it commented out and use only when necessary
 
