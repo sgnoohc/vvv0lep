@@ -1,11 +1,20 @@
 import socket
 
 if "uaf-2" in socket.gethostname():
-    tag = "VVV0TreeV9_3FJ"
+    tag = "VVV0TreeV10_3FJ"
 else:
     tag = "VVV0TreeV8"
 year = "Run2"
-lumi_value = 59.83
+if year == "Run2":
+    lumi_value = 137.64
+elif year == "2006":
+    lumi_value = 19.52
+elif year == "2016":
+    lumi_value = 16.81
+elif year == "2017":
+    lumi_value = 41.48
+elif year == "2018":
+    lumi_value = 59.83
 mdir = lambda syst: f"output/{tag}/{year}/merged/{syst}"
 
 ddfnames = lambda syst: [

@@ -4,6 +4,7 @@ import ROOT as r
 import plot_config as c
 import sys
 from systematics import systs
+import json
 
 def suffix(syst):
     if "JESUp" in syst: return "_jes_Up"
@@ -22,12 +23,12 @@ def suffix(syst):
     elif "trigWgtDn" in syst: return "_trigger_weight_Down"
     else: return ""
 
-stat_file_name = "VVV.0L_3FJ.DataCard_Yields.v4.root"
+stat_file_name = "~/public_html/dump/forCole/VVV.0L_3FJ.DataCard_Yields.v9.root"
 stat_file = r.TFile(stat_file_name, "RECREATE")
 
 samples = ["WW", "WZ", "ZZ", "ttV", "QCD", "WJets", "DY", "TTbar"]
 
-hist_name = "ZL3FJA__SR2SumPtFJ"
+hist_name = "ZL3FJA__SR1SumPtFJ"
 
 for s in samples:
     for syst in systs:
@@ -41,42 +42,21 @@ for s in samples:
         stat_file.cd()
         h.Write()
 
-eft_names = [
-"cW_0p0",
-"cW_m10p0",
-"cW_m5p0",
-"cW_m1p0",
-"cW_m0p7",
-"cW_m0p5",
-"cW_m0p3",
-"cW_m0p1",
-"cW_m0p05",
-"cW_m0p01",
-"cW_0p01",
-"cW_0p05",
-"cW_0p1",
-"cW_0p3",
-"cW_0p5",
-"cW_0p7",
-"cW_1p0",
-"cW_5p0",
-"cW_10p0",
-]
-
-# signals = ["wwwdim6", "wwzdim6", "wzzdim6", "zzzdim6", "vvvdim6"]
-# signames = {"wwwdim6": "WWW", "wwzdim6": "WWZ", "wzzdim6": "WZZ", "zzzdim6": "ZZZ", "vvvdim6": "VVV"}
+f_eft_idx_information = open("data/dim6_eft_information.txt")
+j = json.loads(f_eft_idx_information.read())
 
 signals = ["vvvdim6"]
 signames = {"vvvdim6": "WWW"}
 
-for eft_idx, eft_name in enumerate(eft_names):
+for eft_idx in range(91):
     for s in signals:
         for syst in systs:
             syst_suffix = suffix(syst)
             dirname = f'{c.mdir(syst)}'
             f = r.TFile(f"{dirname}/{s}.root")
             idx = eft_idx
-            hist_name = f"ZL3FJAEFTIDX{idx}__SR2SumPtFJ"
+            eft_name = j[str(eft_idx)]
+            hist_name = f"ZL3FJAEFTIDX{idx}__SR1SumPtFJ"
             h = f.Get(hist_name).Clone()
             h.SetName(f"h_{signames[s]}_{eft_name}{syst_suffix}")
             h.SetDirectory(stat_file)

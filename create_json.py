@@ -7,7 +7,7 @@ import json
 import socket
 
 if "uaf-2" in socket.gethostname():
-    tag = "VVV0TreeV9_3FJ"
+    tag = "VVV0TreeV10_3FJ"
     sample_dirs = glob.glob(f"/data/userdata/phchang/VVV0LepAnalysis/{tag}/*_{tag}")
 else:
     tag = "VVV0TreeV8"
