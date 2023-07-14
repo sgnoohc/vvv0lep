@@ -33,7 +33,7 @@ def zero_out_negative(h):
 def write_cards(version, channel, hn):
 
     hist_name = f"ZL{channel}A__{hn}"
-    stat_file_name = f"~/public_html/dump/forCole/VVV.0L_{channel}.DataCard_Yields.{version}.root"
+    stat_file_name = f"datacards/VVV.0L_{channel}.DataCard_Yields.{version}.root"
     stat_file = r.TFile(stat_file_name, "RECREATE")
 
     samples = ["WW", "WZ", "ZZ", "ttV", "QCD", "WJets", "DY", "TTbar"]
