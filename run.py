@@ -3,12 +3,9 @@
 import os
 import glob
 import json
-# from systematics import systs
 import plot_config as c
 import sys
 import socket
-
-systs = ["Nominal"]
 
 run_test = False
 if len(sys.argv) > 1:
@@ -49,13 +46,12 @@ for jobconfig in jobconfigs:
             continue
 
     for job_index in range(len(cs)):
-        for syst in systs:
-            output_name = f"output_{job_index}.root"
-            output_fullpath = f"{output_dir}/{syst}/{output_name}"
-            os.system(f"mkdir -p {output_dir}/{syst}")
-            output_log_fullpath = output_fullpath.replace(".root", ".log")
-            inputs = ",".join(cs[job_index])
-            jobs.write(f"./doAnalysis --json {jobconfig} -i {inputs} -o {output_fullpath} -t t -s {syst} > {output_log_fullpath} 2>&1\n")
+        output_name = f"output_{job_index}.root"
+        output_fullpath = f"{output_dir}/{output_name}"
+        os.system(f"mkdir -p {output_dir}/")
+        output_log_fullpath = output_fullpath.replace(".root", ".log")
+        inputs = ",".join(cs[job_index])
+        jobs.write(f"./doAnalysis --json {jobconfig} -i {inputs} -o {output_fullpath} -t t > {output_log_fullpath} 2>&1\n")
 
 jobs.close()
 

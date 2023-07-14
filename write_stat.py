@@ -6,6 +6,8 @@ import sys
 from systematics import systs
 import json
 
+systs = ["Nominal"]
+
 def suffix(syst):
     if "JESUp" in syst: return "_jes_Up"
     elif "JESDn" in syst: return "_jes_Down"
@@ -23,47 +25,65 @@ def suffix(syst):
     elif "trigWgtDn" in syst: return "_trigger_weight_Down"
     else: return ""
 
-stat_file_name = "~/public_html/dump/forCole/VVV.0L_3FJ.DataCard_Yields.v9.root"
-stat_file = r.TFile(stat_file_name, "RECREATE")
+def zero_out_negative(h):
+    for i in range(0, h.GetNbinsX()+2):
+        if h.GetBinContent(i) < 0:
+            h.SetBinContent(i, 0)
 
-samples = ["WW", "WZ", "ZZ", "ttV", "QCD", "WJets", "DY", "TTbar"]
+def write_cards(version, channel, hn):
 
-hist_name = "ZL3FJA__SR1SumPtFJ"
+    hist_name = f"ZL{channel}A__{hn}"
+    stat_file_name = f"~/public_html/dump/forCole/VVV.0L_{channel}.DataCard_Yields.{version}.root"
+    stat_file = r.TFile(stat_file_name, "RECREATE")
 
-for s in samples:
-    for syst in systs:
-        dirname = f"{c.mdir(syst)}"
-        bg_files = c.ddfnames(f"{syst}")
-        syst_suffix = suffix(syst)
-        f = r.TFile(f"{dirname}/{s}.root")
-        h = f.Get(hist_name).Clone()
-        h.SetName(f"h_{s}{syst_suffix}")
-        h.SetDirectory(stat_file)
-        stat_file.cd()
-        h.Write()
+    samples = ["WW", "WZ", "ZZ", "ttV", "QCD", "WJets", "DY", "TTbar"]
 
-f_eft_idx_information = open("data/dim6_eft_information.txt")
-j = json.loads(f_eft_idx_information.read())
-
-signals = ["vvvdim6"]
-signames = {"vvvdim6": "WWW"}
-
-for eft_idx in range(91):
-    for s in signals:
+    for s in samples:
         for syst in systs:
+            dirname = f"{c.mdir}"
+            bg_files = c.ddfnames
             syst_suffix = suffix(syst)
-            dirname = f'{c.mdir(syst)}'
             f = r.TFile(f"{dirname}/{s}.root")
-            idx = eft_idx
-            eft_name = j[str(eft_idx)]
-            hist_name = f"ZL3FJAEFTIDX{idx}__SR1SumPtFJ"
             h = f.Get(hist_name).Clone()
-            h.SetName(f"h_{signames[s]}_{eft_name}{syst_suffix}")
+            h.SetName(f"h_{s}{syst_suffix}")
+            print("before")
+            h.Print("all")
+            zero_out_negative(h)
+            print("before")
+            h.Print("all")
             h.SetDirectory(stat_file)
-            h.Scale(137.64/59.83)
             stat_file.cd()
             h.Write()
 
+    f_eft_idx_information = open("data/dim6_eft_information.txt")
+    j = json.loads(f_eft_idx_information.read())
 
-stat_file.Close()
+    signals = ["vvvdim6"]
+    signames = {"vvvdim6": "WWW"}
 
+    for eft_idx in range(91):
+        for s in signals:
+            for syst in systs:
+                syst_suffix = suffix(syst)
+                dirname = f'{c.mdir}'
+                f = r.TFile(f"{dirname}/{s}.root")
+                idx = eft_idx
+                eft_name = j[str(eft_idx)]
+                hist_name = f"ZL{channel}AEFTIDX{idx}__{hn}"
+                h = f.Get(hist_name).Clone()
+                h.SetName(f"h_{signames[s]}_{eft_name}{syst_suffix}")
+                h.SetDirectory(stat_file)
+                h.Scale(137.64/59.83)
+                stat_file.cd()
+                h.Write()
+
+
+    stat_file.Close()
+
+if __name__ == "__main__":
+
+    version = "v11"
+    write_cards(version, "2FJ", "HTJ_binned")
+    # write_cards(version, "2FJLMET", "HTJ_binned")
+    # write_cards(version, "2FJHMET", "HTJ_binned")
+    write_cards(version, "3FJ", "SR1SumPtFJ")

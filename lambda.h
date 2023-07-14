@@ -101,7 +101,7 @@ auto lowMSD = [&](LorentzVector fj)
 
 auto highMSD = [&](LorentzVector fj)
 {
-    return (fj.mass() > 65 && fj.mass() < 150);
+    return (fj.mass() > 105 && fj.mass() < 150);
 };
 
 auto WMD_TIGHT = [&](float wmd)
@@ -148,6 +148,41 @@ auto is_inside_2d = [&] () { return dist_2d(85) < 35; };
 auto is_outside_2d = [&] () { return dist_2d(85) > 50; };
 auto is_shell_2d = [&] () { return dist_2d(85) >= 35 and dist_2d(85) <= 50; };
 
+//===============================================================================================================================================================
+// Based on the score cut define 8 regions region 8 == all pass region 1 == all fail and 5 - 7 is when two passes 2 - 4 is when only one pass
+// This is to define side-bands
+auto vmd_reg_2d = [&](TString syst_name="Nominal")
+{
+    if (NFJ(syst_name) != 2)
+    {
+        return 0;
+    }
+    else
+    {
+        bool pass0 = VMD0(syst_name) > VWP();
+        bool pass1 = VMD1(syst_name) > VWP();
+        if (pass0 and pass1)
+        {
+            return 4;
+        }
+        else if (pass0 and not pass1)
+        {
+            return 3;
+        }
+        else if (not pass0 and pass1)
+        {
+            return 2;
+        }
+        else if (not pass0 and not pass1)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0; // technically should never be here
+        }
+    }
+};
 
 
 
