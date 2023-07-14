@@ -4,3 +4,4 @@
 ./plot_3fj.py
 ./cutflow.py
 sh cutflow.sh
+./write_stat.py

@@ -5,6 +5,7 @@ import plot_config as c
 import sys
 from systematics import systs
 import json
+import os
 
 systs = ["Nominal"]
 
@@ -31,6 +32,8 @@ def zero_out_negative(h):
             h.SetBinContent(i, 0)
 
 def write_cards(version, channel, hn):
+
+    os.system("mkdir -p datacards")
 
     hist_name = f"ZL{channel}A__{hn}"
     stat_file_name = f"datacards/VVV.0L_{channel}.DataCard_Yields.{version}.root"
