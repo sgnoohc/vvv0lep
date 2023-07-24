@@ -74,19 +74,21 @@ for sig in ["dim6"]:
 
     ## MC Out-of-the-box
     c.extraoptions["yaxis_log"] = False
-    # p.dump_plot(
-    #         fnames = c.fnames,
-    #         legend_labels = c.legend_labels,
-    #         sig_fnames = c.sig_fnames_dim8 if sig == "dim8" else c.sig_fnames_dim6,
-    #         signal_labels = c.signal_labels_dim8 if sig == "dim8" else c.signal_labels_dim6,
-    #         data_fname = data_fname,
-    #         usercolors = c.usercolors,
-    #         filter_pattern = filter_pattern,
-    #         dirname = f"plots/ZL/{c.tag}/{sig}/mc",
-    #         dogrep = False,
-    #         extraoptions = c.extraoptions,
-    #         histxaxislabeloptions = histxaxislabeloptions,
-    #         )
+
+    ## MC out-of-the-box
+    p.dump_plot(
+            fnames = c.fnames,
+            legend_labels = c.legend_labels,
+            sig_fnames = c.sig_fnames_dim8 if sig == "dim8" else c.sig_fnames_dim6,
+            signal_labels = c.signal_labels_dim8 if sig == "dim8" else c.signal_labels_dim6,
+            data_fname = data_fname,
+            usercolors = c.usercolors,
+            filter_pattern = filter_pattern,
+            dirname = f"plots/ZL/{c.tag}/{sig}/mc",
+            dogrep = False,
+            extraoptions = c.extraoptions,
+            histxaxislabeloptions = histxaxislabeloptions,
+            )
 
     ## Data-Driven histograms (there are only a few)
     histograms = [
@@ -104,20 +106,20 @@ for sig in ["dim6"]:
             filter_patterns.append(f"{hist}")
     filter_pattern = ",".join(filter_patterns)
 
-    # ## Data Driven
-    # p.dump_plot(
-    #         fnames = c.ddfnames,
-    #         legend_labels = c.ddlegend_labels,
-    #         sig_fnames = c.sig_fnames_dim8 if sig == "dim8" else c.sig_fnames_dim6,
-    #         signal_labels = c.signal_labels_dim8 if sig == "dim8" else c.signal_labels_dim6,
-    #         data_fname = data_fname,
-    #         usercolors = c.ddusercolors,
-    #         filter_pattern = filter_pattern,
-    #         dirname = f"plots/ZL/{c.tag}/{sig}/abcd",
-    #         dogrep = False,
-    #         extraoptions = c.extraoptions,
-    #         histxaxislabeloptions = histxaxislabeloptions,
-    #         )
+    ## Data Driven
+    p.dump_plot(
+            fnames = c.ddfnames,
+            legend_labels = c.ddlegend_labels,
+            sig_fnames = c.sig_fnames_dim8 if sig == "dim8" else c.sig_fnames_dim6,
+            signal_labels = c.signal_labels_dim8 if sig == "dim8" else c.signal_labels_dim6,
+            data_fname = data_fname,
+            usercolors = c.ddusercolors,
+            filter_pattern = filter_pattern,
+            dirname = f"plots/ZL/{c.tag}/{sig}/abcd",
+            dogrep = False,
+            extraoptions = c.extraoptions,
+            histxaxislabeloptions = histxaxislabeloptions,
+            )
 
     ## Data-Driven Fitted histograms
     histograms = [
