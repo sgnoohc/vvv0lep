@@ -6,3 +6,5 @@
 doAnalysis
 output/
 plots/
+fit/*.pdf
+fit/*.png
