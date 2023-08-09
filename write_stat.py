@@ -39,7 +39,7 @@ def write_cards(version, channel, hn):
     stat_file_name = f"datacards/VVV.0L_{channel}.DataCard_Yields.{version}.root"
     stat_file = r.TFile(stat_file_name, "RECREATE")
 
-    samples = ["WW", "WZ", "ZZ", "ttV", "QCD", "WJets", "DY", "TTbar"]
+    samples = ["WW", "WZ", "ZZ", "ttV", "QCDFIT", "WJets", "DY", "TTbar"]
 
     for s in samples:
         for syst in systs:
@@ -62,7 +62,7 @@ def write_cards(version, channel, hn):
     j = json.loads(f_eft_idx_information.read())
 
     signals = ["vvvdim6"]
-    signames = {"vvvdim6": "WWW"}
+    signames = {"vvvdim6": "VVV"}
 
     for eft_idx in range(91):
         for s in signals:

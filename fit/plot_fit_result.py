@@ -37,12 +37,14 @@ def draw(histname, fithistname):
             sigs=[th1_extrapolated],
             data=data,
             legend_labels=["QCD Data Driven"],
+            sig_labels=["Pred. in SR binning"],
             colors=[4003],
             options={
                 "output_name": f"fitresult/{histname}_result.pdf",
                 "yaxis_log": True,
                 "legend_scalex": 2.,
-                "xaxis_label": "H_{T,Fat-Jet} [GeV]",
+                "xaxis_label": "H_{T} [GeV]",
+                "legend_datalabel": "Pred. from Fit",
                 "print_yield": True,
                 "ratio_range": [0., 2.],
                 },
@@ -57,5 +59,7 @@ if __name__ == "__main__":
 
     draw("ZL3FJE__SR1SumPtFJ", "ZL3FJE__SR1SumPtFJ")
     draw("ZL3FJA__SR1SumPtFJ", "ZL3FJA__SR1SumPtFJ")
+    # draw("ZL2FJLMETE__SR2HT", "ZL2FJLMETE__HTFit")
+    # draw("ZL2FJLMETA__SR2HTFJ", "ZL2FJLMETA__HTFJFit")
     draw("ZL2FJE__HTJ_binned", "ZL2FJE__HTJFit")
     draw("ZL2FJA__HTJ_binned", "ZL2FJA__HTJFit")

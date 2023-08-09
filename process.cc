@@ -154,7 +154,7 @@ int main(int argc, char** argv)
     else
     {
         std::cout << "No EFT index set -- setting to 12 (cW = 0.1 TeV^-2)" << std::endl;
-        ana.eft_idx = 12;
+        ana.eft_idx = 15;
     }
 
     //_______________________________________________________________________________
@@ -543,24 +543,23 @@ int main(int argc, char** argv)
 
     std::vector<std::function<bool()>> cuts_2fj = 
     {
-        [&]() { return HT() > 1100; },
+        [&]() { return HTJ() > 1100; },
         [&]() { return FJ0().pt() > 500.; },
         [&]() { return FJ0().mass() < 150.; },
         [&]() { return FJ1().mass() < 150.; },
-        [&]() { return NbMedium() == 0.; },
+        [&]() { return NoORNbMedium() == 0.; },
         [&]() { return signalMSD(FJ0()); },
         [&]() { return WMD_TIGHT(WMD1()); },
         [&]() { return WMD_LOOSE(WMD0()); },
-        // [&]() { return MET().pt() < 400.; },
     };
 
     std::vector<std::function<bool()>> cuts_2fj_lowmet = 
     {
-        [&]() { return HT() > 1100; },
+        [&]() { return HTJ() > 1100; },
         [&]() { return FJ0().pt() > 500.; },
         [&]() { return FJ0().mass() < 150.; },
         [&]() { return FJ1().mass() < 150.; },
-        [&]() { return NbMedium() == 0.; },
+        [&]() { return NoORNbMedium() == 0.; },
         [&]() { return signalMSD(FJ0()); },
         [&]() { return WMD_TIGHT(WMD1()); },
         [&]() { return WMD_LOOSE(WMD0()); },
@@ -569,7 +568,7 @@ int main(int argc, char** argv)
 
     std::vector<std::function<bool()>> cuts_2fj_highmet = 
     {
-        [&]() { return HT() > 1100; },
+        [&]() { return HTJ() > 1100; },
         [&]() { return FJ0().pt() > 500.; },
         [&]() { return FJ0().mass() < 150.; },
         [&]() { return FJ1().mass() < 150.; },
@@ -755,6 +754,7 @@ int main(int argc, char** argv)
     histograms_event.addHistogram("SumPtFJFit"   , 180 , 0 , 9000 , [&]() { return SumPtFJ(); } );
     histograms_event.addHistogram("SumPtFJFit2"  , {0., 1000., 1100., 1200., 1300., 1400., 1500., 1600., 1700., 1800., 1900., 2000., 2100., 2200., 2300., 2400., 2500., 2600., 2700., 2800., 2900., 3000., 3250., 3500., 3750., 4000., 5000., 7000.} , [&]() { return SumPtFJ(); } );
     histograms_event.addHistogram("HTFJFit"      , 180 , 0 , 9000 , [&]() { return HTFJ(); } );
+    histograms_event.addHistogram("HTFit"        , 180 , 0 , 9000 , [&]() { return HT(); } );
     histograms_event.addHistogram("HTFJFit2"     , {0., 1000., 1100., 1200., 1300., 1400., 1500., 1600., 1700., 1800., 1900., 2000., 2100., 2200., 2300., 2400., 2500., 2600., 2700., 2800., 2900., 3000., 3250., 3500., 3750., 4000., 5000., 7000.} , [&]() { return HTFJ(); } );
     RooUtil::Histograms histograms_onelep;
     histograms_onelep.addHistogram("LPt"     , 180 , 0       , 1000   , [&]() { return Lep().pt(); } );
@@ -768,8 +768,10 @@ int main(int argc, char** argv)
     histograms_3FJ_SR.addHistogram("SR2SumPtFJ", {1250, 1500, 1750, 2000, 3000} , [&]() { if (SumPtFJ() < 2500) return SumPtFJ(); else return 2499.f; } );
     RooUtil::Histograms histograms_2FJ_SR;
     histograms_2FJ_SR.addHistogram("HTJ_binned", {1100, 2500, 4000, 6000} , [&]() { if (HTJ() < 6000) return HTJ(); else return 5999.f; } );
-    histograms_2FJ_SR.addHistogram("SR1HTFJ", {1100, 1500, 2000, 2500, 3000} , [&]() { if (HT() < 3000) return HT(); else return 2999.f; } );
-    histograms_2FJ_SR.addHistogram("SR2HTFJ", {1100, 1500, 2000, 2500, 3000, 3500, 4000, 5000} , [&]() { if (HT() < 5000) return HT(); else return 4999.f; } );
+    histograms_2FJ_SR.addHistogram("SR1HT", {1100, 1500, 2000, 2500, 3000} , [&]() { if (HT() < 3000) return HT(); else return 2999.f; } );
+    histograms_2FJ_SR.addHistogram("SR2HT", {1100, 1500, 2000, 2500, 3000, 3500, 4000, 5000} , [&]() { if (HT() < 5000) return HT(); else return 4999.f; } );
+    histograms_2FJ_SR.addHistogram("SR1HTFJ", {1100, 1500, 2000, 2500, 3000} , [&]() { if (HTFJ() < 3000) return HTFJ(); else return 2999.f; } );
+    histograms_2FJ_SR.addHistogram("SR2HTFJ", {1100, 1500, 2000, 2500, 3000, 3500, 4000, 5000} , [&]() { if (HTFJ() < 5000) return HTFJ(); else return 4999.f; } );
     histograms_2FJ_SR.addHistogram("SR1SumPtFJ", {1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3500, 4000, 5000, 6000} , [&]() { if (SumPtFJ() < 6000) return SumPtFJ(); else return 5999.f; } );
     histograms_2FJ_SR.addHistogram("SR2SumPtFJ", {1250, 1500, 1750, 2000, 2500, 3000, 4000} , [&]() { if (SumPtFJ() < 4000) return SumPtFJ(); else return 3999.f; } );
 

@@ -155,6 +155,10 @@ int run_fit(TString filename, TString histname, TString newhist, double min, dou
     g->SetLineWidth(4);
     g->SetLineColor(4);
 
+    g->SetParameter(0,      17.096);
+    g->SetParameter(1,  -0.0095376);
+    g->SetParameter(2, 1.20822e-06);
+
     // Perform fit
     TFitResultPtr fr = h->Fit("graph", "RVS");
     fr->Print("V");
@@ -186,7 +190,7 @@ int run_fit(TString filename, TString histname, TString newhist, double min, dou
 
     TH1F* ratio = (TH1F*) ho->Clone();
 
-    for (unsigned int ibin = 1; ibin <= ratio->GetNbinsX(); ibin++)
+    for (int ibin = 1; ibin <= ratio->GetNbinsX(); ibin++)
     {
         double y = ratio->GetBinContent(ibin);
         double yerr = ratio->GetBinError(ibin);
@@ -242,7 +246,7 @@ int run_fit(TString filename, TString histname, TString newhist, double min, dou
         double ysum = 0;
         double yerrsqsum = 0;
         double prev_y = 99999;
-        for (unsigned islice = 0; islice < nslice; ++islice)
+        for (int islice = 0; islice < nslice; ++islice)
         {
             double x = bl + fbw / 2  + fbw * islice;
             double y = func(params, x, fitfunc);
@@ -294,6 +298,9 @@ int main(int argc, char** argv)
 {
     run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJA__HTJFit", "ZL2FJA__HTJ_binned", 1100, 2500, 1);
     run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJE__HTJFit", "ZL2FJE__HTJ_binned", 1100, 2500, 1);
+    // run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJLMETA__HTFJFit", "ZL2FJLMETA__SR2HTFJ", 1100, 2500, 1);
+    // run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJLMETE__HTFJFit", "ZL2FJLMETE__SR2HTFJ", 1100, 2500, 1);
+    // run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJLMETE__HTFJFit", "ZL2FJLMETE__SR2HTFJ", 1100, 2500, 1);
     run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL3FJA__SR1SumPtFJ", "ZL3FJA__SR1SumPtFJ", 1100, 2500, 1);
     run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL3FJE__SR1SumPtFJ", "ZL3FJE__SR1SumPtFJ", 1100, 2500, 1);
     return 0;

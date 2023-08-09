@@ -4,7 +4,7 @@
     "sum_genWeight": 167893.4062266968,
     "nfiles": 1,
     "files": [
-        "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV7/WWZ_NoFilter_NoGGPartons_Dim6_RunIISummer20UL18NanoAODv9_NANOAODSIM_VVV0TreeV7/output_1.root"
+        "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/WWZ_NoFilter_NoGGPartons_Dim6_RunIISummer20UL18NanoAODv9_NANOAODSIM_VVV0TreeV7/output_1.root"
     ],
     "nevents": [
         165524
@@ -13,7 +13,7 @@
     "is_bkg": 0,
     "is_data": 0,
     "is_eft": 1,
-    "dir": "/ceph/cms/store/user/phchang/VVV0LepAnalysis/VVV0TreeV7/WWZ_NoFilter_NoGGPartons_Dim6_RunIISummer20UL18NanoAODv9_NANOAODSIM_VVV0TreeV7",
+    "dir": "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/WWZ_NoFilter_NoGGPartons_Dim6_RunIISummer20UL18NanoAODv9_NANOAODSIM_VVV0TreeV7",
     "name": "WWZ_NoFilter_NoGGPartons_Dim6_RunIISummer20UL18NanoAODv9_NANOAODSIM",
     "process": "WWZ_NoFilter_NoGGPartons_Dim6",
     "xsec": 0.1651,

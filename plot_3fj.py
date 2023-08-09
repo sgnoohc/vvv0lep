@@ -22,6 +22,8 @@ for sig in ["dim6"]:
             "HT"          : {"xaxis_label" : "H_{T} [GeV]"            , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
             "SR1HTFJ"     : {"xaxis_label" : "H_{T,Fat-Jet,MET} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
             "SR2HTFJ"     : {"xaxis_label" : "H_{T,Fat-Jet,MET} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
+            "SR1HT"       : {"xaxis_label" : "H_{T,Fat-Jet,MET} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
+            "SR2HT"       : {"xaxis_label" : "H_{T,Fat-Jet,MET} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
             "HTFJ"        : {"xaxis_label" : "H_{T,Fat-Jet,MET} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
             "SumPtFJ"     : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]"    , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True },
             "SumPtJ"      : {"xaxis_label" : "H_{T,AK4Jet} [GeV]"     , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True },
@@ -125,6 +127,10 @@ for sig in ["dim6"]:
     histograms = [
             "ZL3FJA__SR1SumPtFJ",
             "ZL3FJE__SR1SumPtFJ",
+            "ZL2FJA__HTJ_binned",
+            "ZL2FJE__HTJ_binned",
+            # "ZL2FJLMETA__SR2HTFJ",
+            # "ZL2FJLMETE__SR2HTFJ",
             ]
     filter_patterns = []
     for hist in histograms:
