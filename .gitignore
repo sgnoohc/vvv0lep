@@ -8,3 +8,6 @@ output/
 plots/
 fit/*.pdf
 fit/*.png
+cutflows/
+fit/fitresult
+__pycache__/
