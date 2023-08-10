@@ -401,9 +401,9 @@
     "is_eft": 0,
     "dir": "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/SingleMuon_Run2018D-UL2018_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7",
     "name": "SingleMuon_Run2018D-UL2018_MiniAODv2_NanoAODv9-v1_NANOAOD",
-    "process": "SingleMuon_Run2018D",
+    "process": "SingleMuon_Run2018D-UL2018",
     "xsec": 1,
     "lumi": 1,
     "year": 2018,
-    "output_dir": "output/VVV0TreeV7/2018/SingleMuon_Run2018D"
+    "output_dir": "output/VVV0TreeV7/2018/SingleMuon_Run2018D-UL2018"
 }

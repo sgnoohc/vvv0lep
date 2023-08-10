@@ -15,9 +15,9 @@
     "is_eft": 0,
     "dir": "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/SingleElectron_Run2016B-ver1_HIPM_UL2016_MiniAODv2_NanoAODv9-v2_NANOAOD_VVV0TreeV7",
     "name": "SingleElectron_Run2016B-ver1_HIPM_UL2016_MiniAODv2_NanoAODv9-v2_NANOAOD",
-    "process": "SingleElectron_Run2016B",
+    "process": "SingleElectron_Run2016B-ver1",
     "xsec": 1,
     "lumi": 1,
     "year": 2006,
-    "output_dir": "output/VVV0TreeV7/2006/SingleElectron_Run2016B"
+    "output_dir": "output/VVV0TreeV7/2006/SingleElectron_Run2016B-ver1"
 }

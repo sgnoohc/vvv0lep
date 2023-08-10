@@ -129,9 +129,9 @@
     "is_eft": 0,
     "dir": "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/JetHT_Run2017E-UL2017_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7",
     "name": "JetHT_Run2017E-UL2017_MiniAODv2_NanoAODv9-v1_NANOAOD",
-    "process": "JetHT_Run2017E",
+    "process": "JetHT_Run2017E-UL2017",
     "xsec": 1,
     "lumi": 1,
     "year": 2017,
-    "output_dir": "output/VVV0TreeV7/2017/JetHT_Run2017E"
+    "output_dir": "output/VVV0TreeV7/2017/JetHT_Run2017E-UL2017"
 }

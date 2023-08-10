@@ -62,7 +62,7 @@ def get_sample_name(name, json):
     if json["is_bkg"] or json["is_sig"]:
         json["process"] = json["name"].split("_RunII")[0]
     else:
-        json["process"] = json["name"].split("_Run201")[0] + "_Run201" + json["name"].split("_Run201")[1][0:2]
+        json["process"] = json["name"].split("_Run201")[0] + "_Run201" + json["name"].split("_Run201")[1].split("_")[0]
 
 def get_sample_dir(name, json):
     json["dir"] = name
