@@ -30,3 +30,15 @@ echo "plotting..."
 
 #####################################
 python3 find_cW_limit.py
+
+# Cleaning up
+rm ${channel}_${version}.root
+rm ${channel}_${version}.txt
+rm breakdown.pdf
+rm breakdown.png
+rm breakdown.root
+rm combine_logger.out
+rm fit.pdf
+rm higgsCombineTest.MultiDimFit.mH125.root
+rm r_limit.txt
+
