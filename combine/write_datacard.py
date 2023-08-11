@@ -8,8 +8,8 @@ def set_title(h):
     print(h)
     h.SetTitle(h.GetName().replace("h_", ""))
 
-channel = "2FJ"
-version = "v11"
+channel = sys.argv[1]
+version = sys.argv[2]
 
 f = r.TFile(f"../datacards/VVV.0L_{channel}.DataCard_Yields.{version}.root")
 

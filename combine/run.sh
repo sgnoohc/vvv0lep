@@ -1,7 +1,11 @@
-python3 write_datacard.py
+#!/bin bash
 
 version=v11
 channel=2FJ
+
+rm -rf ${channel}_${version}/
+
+python3 write_datacard.py ${channel} ${version}
 
 #####################################
 echo "combining data cards"
