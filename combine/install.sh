@@ -1,7 +1,6 @@
 # Do this in a new terminal in uaf-10
 # uaf-2 is rhel8, and higgs combine does not work with RHEL8
 # uaf-10 is slc7, and it works
-
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 cmsrel CMSSW_11_3_4
 cd CMSSW_11_3_4/src
@@ -17,11 +16,3 @@ bash <(curl -s https://raw.githubusercontent.com/cms-analysis/CombineHarvester/m
 cd CMSSW_11_3_4/src/
 scramv1 b -j
 cd ../../
-
-# next time
-source /cvmfs/cms.cern.ch/cmsset_default.sh
-cmsrel CMSSW_11_3_4
-cd CMSSW_11_3_4/src
-cmsenv
-cd ../../
-
