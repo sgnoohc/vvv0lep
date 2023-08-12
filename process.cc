@@ -154,7 +154,7 @@ int main(int argc, char** argv)
     else
     {
         std::cout << "No EFT index set -- setting to 12 (cW = 0.1 TeV^-2)" << std::endl;
-        ana.eft_idx = 0;
+        ana.eft_idx = 12;
     }
 
     //_______________________________________________________________________________
