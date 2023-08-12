@@ -17,7 +17,7 @@
     "name": "WZZ_1Jet_NoFilter_Dim6_RunIISummer20UL18NanoAODv9_NANOAODSIM",
     "process": "WZZ_1Jet_NoFilter_Dim6",
     "xsec": 0.05565,
-    "lumi": 59.83,
+    "lumi": 137.64,
     "year": 2018,
     "output_dir": "output/VVV0TreeV7/2018/WZZ_1Jet_NoFilter_Dim6"
 }

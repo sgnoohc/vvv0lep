@@ -75,7 +75,10 @@ def get_xsec(d, json):
 
 def get_lumi_and_year(d, json):
     if json["is_bkg"] or json["is_sig"]:
-        if "UL16NanoAODAPVv9" in json["name"]:
+        if "Dim6" in json["process"]:
+            json["lumi"] = 137.64
+            json["year"] = 2018
+        elif "UL16NanoAODAPVv9" in json["name"]:
             json["lumi"] = 19.52
             json["year"] = 2006
         elif "UL16NanoAODv9" in json["name"]:

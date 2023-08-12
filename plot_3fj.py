@@ -8,9 +8,9 @@ for sig in ["dim6"]:
 
     data_fname = f"{c.mdir}/jetht.root"
 
-    signal_scale = 137.64/59.83
+    # signal_scale = 137.64/59.83
     # signal_scale = "auto"
-    # signal_scale = 1
+    signal_scale = 1
 
     histxaxislabeloptions = {
             "SR3SumPtFJ"  : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]"    , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},

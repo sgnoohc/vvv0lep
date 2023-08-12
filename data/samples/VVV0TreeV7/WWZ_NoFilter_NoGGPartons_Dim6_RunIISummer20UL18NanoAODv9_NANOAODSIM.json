@@ -17,7 +17,7 @@
     "name": "WWZ_NoFilter_NoGGPartons_Dim6_RunIISummer20UL18NanoAODv9_NANOAODSIM",
     "process": "WWZ_NoFilter_NoGGPartons_Dim6",
     "xsec": 0.1651,
-    "lumi": 59.83,
+    "lumi": 137.64,
     "year": 2018,
     "output_dir": "output/VVV0TreeV7/2018/WWZ_NoFilter_NoGGPartons_Dim6"
 }
