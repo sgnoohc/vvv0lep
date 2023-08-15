@@ -40,6 +40,16 @@ def write_cards(version, channel, hn):
     stat_file = r.TFile(stat_file_name, "RECREATE")
 
     samples = ["WW", "WZ", "ZZ", "ttV", "QCDFIT", "WJets", "DY", "TTbar"]
+    samplenames = {
+            "WW": "WW",
+            "WZ": "WZ",
+            "ZZ": "ZZ",
+            "ttV": "ttV",
+            "QCDFIT": "QCD",
+            "WJets": "WJets",
+            "DY": "DY",
+            "TTbar": "TTbar",
+            }
 
     for s in samples:
         for syst in systs:
@@ -48,7 +58,7 @@ def write_cards(version, channel, hn):
             syst_suffix = suffix(syst)
             f = r.TFile(f"{dirname}/{s}.root")
             h = f.Get(hist_name).Clone()
-            h.SetName(f"h_{s}{syst_suffix}")
+            h.SetName(f"h_{samplenames[s]}{syst_suffix}")
             print("before")
             h.Print("all")
             zero_out_negative(h)
@@ -61,8 +71,8 @@ def write_cards(version, channel, hn):
     f_eft_idx_information = open("data/dim6_eft_information.txt")
     j = json.loads(f_eft_idx_information.read())
 
-    signals = ["vvvdim6"]
-    signames = {"vvvdim6": "VVV"}
+    signals = ["vvv1jdim6"]
+    signames = {"vvv1jdim6": "VVV"}
 
     for eft_idx in range(91):
         for s in signals:
@@ -85,7 +95,7 @@ def write_cards(version, channel, hn):
 
 if __name__ == "__main__":
 
-    version = "v11"
+    version = "v12"
     write_cards(version, "2FJ", "HTJ_binned")
     # write_cards(version, "2FJLMET", "HTJ_binned")
     # write_cards(version, "2FJHMET", "HTJ_binned")

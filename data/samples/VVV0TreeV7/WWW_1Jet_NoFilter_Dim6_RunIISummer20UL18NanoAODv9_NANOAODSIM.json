@@ -105,8 +105,8 @@
         3072,
         3132
     ],
-    "is_sig": 0,
-    "is_bkg": 1,
+    "is_sig": 1,
+    "is_bkg": 0,
     "is_data": 0,
     "is_eft": 1,
     "dir": "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/WWW_1Jet_NoFilter_Dim6_RunIISummer20UL18NanoAODv9_NANOAODSIM_VVV0TreeV7",

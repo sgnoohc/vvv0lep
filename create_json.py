@@ -36,6 +36,10 @@ def parse_sample_category(name, json):
             "WWZ_4F",
             "WZZ_Tune",
             "ZZZ_Tune",
+            "WWW_1Jet_NoFilter",
+            "WWZ_1Jet_NoFilter",
+            "WZZ_1Jet_NoFilter",
+            "ZZZ_1Jet_NoFilter",
             ]
     for sp in signal_patterns:
         if sp in name:
