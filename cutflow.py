@@ -42,7 +42,7 @@ for sig in ["dim6"]:
             ]
     for cut_region in cut_regions:
         filter_patterns.append(f"{cut_region}__Yield")
-        filter_patterns.append(f"{cut_region}__HTJ_binned")
+        filter_patterns.append(f"{cut_region}__HTFJ_binned")
     cut_regions = [
             "ZL2FJLMETA",
             "ZL2FJLMETB",

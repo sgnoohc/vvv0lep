@@ -19,6 +19,7 @@ for sig in ["dim6"]:
             "SumPtFJFit"  : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]"    , "xaxis_ndivisions" : 505, "nbins": 60, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
             "HT_binned"   : {"xaxis_label" : "H_{T} [GeV]"            , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
             "HTJ_binned"  : {"xaxis_label" : "H_{T} [GeV]"            , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
+            "HTFJ_binned" : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]"    , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
             "HT"          : {"xaxis_label" : "H_{T} [GeV]"            , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
             "SR1HTFJ"     : {"xaxis_label" : "H_{T,Fat-Jet,MET} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
             "SR2HTFJ"     : {"xaxis_label" : "H_{T,Fat-Jet,MET} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
@@ -98,8 +99,8 @@ for sig in ["dim6"]:
             "ZL3FJA__SumPtFJFit",
             "ZL3FJE__SR1SumPtFJ",
             "ZL3FJE__SumPtFJFit",
-            "ZL2FJA__HTJ_binned",
-            "ZL2FJE__HTJ_binned",
+            "ZL2FJA__HTFJ_binned",
+            "ZL2FJE__HTFJ_binned",
             "ZL2FJLMETA__SR2HTFJ",
             "ZL2FJLMETE__SR2HTFJ",
             ]
@@ -127,8 +128,8 @@ for sig in ["dim6"]:
     histograms = [
             "ZL3FJA__SR1SumPtFJ",
             "ZL3FJE__SR1SumPtFJ",
-            "ZL2FJA__HTJ_binned",
-            "ZL2FJE__HTJ_binned",
+            "ZL2FJA__HTFJ_binned",
+            "ZL2FJE__HTFJ_binned",
             # "ZL2FJLMETA__SR2HTFJ",
             # "ZL2FJLMETE__SR2HTFJ",
             ]

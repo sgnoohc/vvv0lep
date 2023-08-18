@@ -47,7 +47,8 @@ c = tf1.GetParameter(0) - y_limit
 b = tf1.GetParameter(1)
 a = tf1.GetParameter(2)
 
-x_limit = (-b + (b ** 2 - 4 * a * c) ** 0.5) / (2 * a)
+hi_x_limit = (-b + (b ** 2 - 4 * a * c) ** 0.5) / (2 * a)
+lo_x_limit = (-b - (b ** 2 - 4 * a * c) ** 0.5) / (2 * a)
 
 c = r.TCanvas()
 
@@ -56,4 +57,5 @@ g.Draw("alp")
 c.SaveAs("fit.pdf")
 
 
-print("cW limit:", x_limit)
+print("cW limit:", hi_x_limit)
+print("cW limit:", lo_x_limit)

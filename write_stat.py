@@ -68,13 +68,15 @@ def write_cards(version, channel, hn):
             stat_file.cd()
             h.Write()
 
-    f_eft_idx_information = open("data/dim6_eft_information.txt")
+    f_eft_idx_information = open("data/dim61j_eft_information.txt")
     j = json.loads(f_eft_idx_information.read())
 
+    # signals = ["vvv1jdim6", "www1jdim6", "wwz1jdim6", "wzz1jdim6", "zzz1jdim6"]
+    # signames = {"vvv1jdim6": "VVV", "www1jdim6" : "WWW", "wwz1jdim6" : "WWZ", "wzz1jdim6" : "WZZ", "zzz1jdim6" : "ZZZ"}
     signals = ["vvv1jdim6"]
-    signames = {"vvv1jdim6": "VVV"}
+    signames = {"vvv1jdim6": "VVV", "www1jdim6" : "WWW", "wwz1jdim6" : "WWZ", "wzz1jdim6" : "WZZ", "zzz1jdim6" : "ZZZ"}
 
-    for eft_idx in range(91):
+    for eft_idx in range(216):
         for s in signals:
             for syst in systs:
                 syst_suffix = suffix(syst)
@@ -86,7 +88,7 @@ def write_cards(version, channel, hn):
                 h = f.Get(hist_name).Clone()
                 h.SetName(f"h_{signames[s]}_{eft_name}{syst_suffix}")
                 h.SetDirectory(stat_file)
-                h.Scale(137.64/59.83)
+                # h.Scale(137.64/59.83)
                 stat_file.cd()
                 h.Write()
 
@@ -96,7 +98,7 @@ def write_cards(version, channel, hn):
 if __name__ == "__main__":
 
     version = "v12"
-    write_cards(version, "2FJ", "HTJ_binned")
+    write_cards(version, "2FJ", "HTFJ_binned")
     # write_cards(version, "2FJLMET", "HTJ_binned")
     # write_cards(version, "2FJHMET", "HTJ_binned")
     write_cards(version, "3FJ", "SR1SumPtFJ")

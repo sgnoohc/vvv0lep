@@ -296,8 +296,8 @@ int run_fit(TString filename, TString histname, TString newhist, double min, dou
 
 int main(int argc, char** argv)
 {
-    run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJA__HTJFit", "ZL2FJA__HTJ_binned", 1100, 2500, 1);
-    run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJE__HTJFit", "ZL2FJE__HTJ_binned", 1100, 2500, 1);
+    run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJA__HTFJFit", "ZL2FJA__HTFJ_binned", 1100, 2000, 1);
+    run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJE__HTFJFit", "ZL2FJE__HTFJ_binned", 1100, 2000, 1);
     // run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJLMETA__HTFJFit", "ZL2FJLMETA__SR2HTFJ", 1100, 2500, 1);
     // run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJLMETE__HTFJFit", "ZL2FJLMETE__SR2HTFJ", 1100, 2500, 1);
     // run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJLMETE__HTFJFit", "ZL2FJLMETE__SR2HTFJ", 1100, 2500, 1);

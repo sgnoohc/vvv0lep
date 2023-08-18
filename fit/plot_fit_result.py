@@ -21,13 +21,21 @@ def draw(histname, fithistname):
     b = math.log(a / th1.GetBinWidth(1))
     tf1.SetParameter(0, b)
     tf1.SetLineColor(4)
-    tf1.SetRange(0, 90000)
 
     data = th1.Clone()
 
+    xmax = 0
+
     for i in range(th1.GetNbinsX()):
+        y = tf1.Eval(data.GetBinCenter(i+1))
+        prevy = tf1.Eval(data.GetBinCenter(i))
+        if prevy < y:
+            xmax = data.GetBinCenter(i)
+            break
         data.SetBinContent(i+1, tf1.Eval(data.GetBinCenter(i+1)))
         data.SetBinError(i+1, math.sqrt(tf1.Eval(data.GetBinCenter(i+1))*th1.GetBinWidth(1))/th1.GetBinWidth(1))
+
+    tf1.SetRange(0, xmax)
 
     p.divide_by_bin_width([th1, th1_extrapolated])
 
@@ -61,5 +69,5 @@ if __name__ == "__main__":
     draw("ZL3FJA__SR1SumPtFJ", "ZL3FJA__SR1SumPtFJ")
     # draw("ZL2FJLMETE__SR2HT", "ZL2FJLMETE__HTFit")
     # draw("ZL2FJLMETA__SR2HTFJ", "ZL2FJLMETA__HTFJFit")
-    draw("ZL2FJE__HTJ_binned", "ZL2FJE__HTJFit")
-    draw("ZL2FJA__HTJ_binned", "ZL2FJA__HTJFit")
+    draw("ZL2FJE__HTFJ_binned", "ZL2FJE__HTFJFit")
+    draw("ZL2FJA__HTFJ_binned", "ZL2FJA__HTFJFit")

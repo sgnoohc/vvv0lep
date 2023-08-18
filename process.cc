@@ -543,7 +543,7 @@ int main(int argc, char** argv)
 
     std::vector<std::function<bool()>> cuts_2fj = 
     {
-        [&]() { return HTJ() > 1100; },
+        [&]() { return HTFJ() > 1100; },
         [&]() { return FJ0().pt() > 500.; },
         [&]() { return FJ0().mass() < 150.; },
         [&]() { return FJ1().mass() < 150.; },
@@ -555,7 +555,7 @@ int main(int argc, char** argv)
 
     std::vector<std::function<bool()>> cuts_2fj_lowmet = 
     {
-        [&]() { return HTJ() > 1100; },
+        [&]() { return HTFJ() > 1100; },
         [&]() { return FJ0().pt() > 500.; },
         [&]() { return FJ0().mass() < 150.; },
         [&]() { return FJ1().mass() < 150.; },
@@ -568,7 +568,7 @@ int main(int argc, char** argv)
 
     std::vector<std::function<bool()>> cuts_2fj_highmet = 
     {
-        [&]() { return HTJ() > 1100; },
+        [&]() { return HTFJ() > 1100; },
         [&]() { return FJ0().pt() > 500.; },
         [&]() { return FJ0().mass() < 150.; },
         [&]() { return FJ1().mass() < 150.; },
@@ -676,7 +676,7 @@ int main(int argc, char** argv)
     // The various EFT regions
     if (is_sig)
     {
-        for (unsigned ieft = 0; ieft < 91; ++ieft)
+        for (unsigned ieft = 0; ieft < 216; ++ieft)
         {
             ana.cutflow.getCut("ZL3FJA");
             ana.cutflow.addCutToLastActiveCut(TString::Format("ZL3FJAEFTIDX%d", ieft), UNITY, [&, is_eft, ieft, ana]() { if (is_eft) return LHEReweightingWeight()[ieft] / LHEReweightingWeight()[ana.eft_idx]; else return 1.f; });
@@ -768,6 +768,7 @@ int main(int argc, char** argv)
     histograms_3FJ_SR.addHistogram("SR2SumPtFJ", {1250, 1500, 1750, 2000, 3000} , [&]() { if (SumPtFJ() < 2500) return SumPtFJ(); else return 2499.f; } );
     RooUtil::Histograms histograms_2FJ_SR;
     histograms_2FJ_SR.addHistogram("HTJ_binned", {1100, 2500, 4000, 6000} , [&]() { if (HTJ() < 6000) return HTJ(); else return 5999.f; } );
+    histograms_2FJ_SR.addHistogram("HTFJ_binned", {1100, 2000, 2500, 3000} , [&]() { if (HTFJ() < 3000) return HTFJ(); else return 2999.f; } );
     histograms_2FJ_SR.addHistogram("SR1HT", {1100, 1500, 2000, 2500, 3000} , [&]() { if (HT() < 3000) return HT(); else return 2999.f; } );
     histograms_2FJ_SR.addHistogram("SR2HT", {1100, 1500, 2000, 2500, 3000, 3500, 4000, 5000} , [&]() { if (HT() < 5000) return HT(); else return 4999.f; } );
     histograms_2FJ_SR.addHistogram("SR1HTFJ", {1100, 1500, 2000, 2500, 3000} , [&]() { if (HTFJ() < 3000) return HTFJ(); else return 2999.f; } );

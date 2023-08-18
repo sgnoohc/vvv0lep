@@ -72,9 +72,9 @@ done
 ${PYTHON} ${CONVERTER}  plots/ZL/VVV0TreeV7/dim6/mc/ZL3FJA__SR1SumPtFJ.txt > cutflows/ZL3FJA_SR1SumPtFJ_MCOnly.csv
 
 # echo "----------------------------"
-# echo "ZL2FJA HTJ_binned (MC Only Yields)"
+# echo "ZL2FJA HTFJ_binned (MC Only Yields)"
 # echo "----------------------------"
-${PYTHON} ${CONVERTER}  plots/ZL/VVV0TreeV7/dim6/mc/ZL2FJA__HTJ_binned.txt > cutflows/ZL2FJA_HTJ_binned_MCOnly.csv
+${PYTHON} ${CONVERTER}  plots/ZL/VVV0TreeV7/dim6/mc/ZL2FJA__HTFJ_binned.txt > cutflows/ZL2FJA_HTFJ_binned_MCOnly.csv
 
 # echo "----------------------------"
 # echo "ZL2FJA Low MET SR2HTFJ (MC Only Yields)"
@@ -102,19 +102,19 @@ ${PYTHON} ${CONVERTER}  plots/ZL/VVV0TreeV7/dim6/fit/ZL3FJA__SR1SumPtFJ.txt > cu
 ${PYTHON} ${CONVERTER}  plots/ZL/VVV0TreeV7/dim6/fit/ZL3FJE__SR1SumPtFJ.txt > cutflows/ZL3FJE_SR1SumPtFJ_Fitted.csv
 
 # echo "----------------------------"
-# echo "ZL2FJA ABCD HTJ_binned (Data Driven)"
+# echo "ZL2FJA ABCD HTFJ_binned (Data Driven)"
 # echo "----------------------------"
-${PYTHON} ${CONVERTER}  plots/ZL/VVV0TreeV7/dim6/abcd/ZL2FJA__HTJ_binned.txt > cutflows/ZL2FJA_HTJ_binned_DataDriven.csv
+${PYTHON} ${CONVERTER}  plots/ZL/VVV0TreeV7/dim6/abcd/ZL2FJA__HTFJ_binned.txt > cutflows/ZL2FJA_HTFJ_binned_DataDriven.csv
 
 # echo "----------------------------"
-# echo "ZL2FJA ABCD HTJ_binned (Data Driven + fitting)"
+# echo "ZL2FJA ABCD HTFJ_binned (Data Driven + fitting)"
 # echo "----------------------------"
-${PYTHON} ${CONVERTER}  plots/ZL/VVV0TreeV7/dim6/fit/ZL2FJA__HTJ_binned.txt > cutflows/ZL2FJA_HTJ_binned_Fitted.csv
+${PYTHON} ${CONVERTER}  plots/ZL/VVV0TreeV7/dim6/fit/ZL2FJA__HTFJ_binned.txt > cutflows/ZL2FJA_HTFJ_binned_Fitted.csv
 
 # echo "----------------------------"
-# echo "ZL2FJE ABCD HTJ_binned (Data Driven + fitting)"
+# echo "ZL2FJE ABCD HTFJ_binned (Data Driven + fitting)"
 # echo "----------------------------"
-${PYTHON} ${CONVERTER}  plots/ZL/VVV0TreeV7/dim6/fit/ZL2FJE__HTJ_binned.txt > cutflows/ZL2FJE_HTJ_binned_Fitted.csv
+${PYTHON} ${CONVERTER}  plots/ZL/VVV0TreeV7/dim6/fit/ZL2FJE__HTFJ_binned.txt > cutflows/ZL2FJE_HTFJ_binned_Fitted.csv
 
 # echo "----------------------------"
 # echo "ZL3FJ ABCDEF SR1SumPtFJ"
@@ -132,17 +132,17 @@ for CUT in ${CUTS}; do
 done
 
 # echo "----------------------------"
-# echo "ZL2FJ ABCDEF HTJ_binned"
+# echo "ZL2FJ ABCDEF HTFJ_binned"
 # echo "----------------------------"
 HEADER=$(${PYTHON} ${CONVERTER}  plots/Cutflows/VVV0TreeV7/dim6/mc/ZL2FJA__Yield.txt | head -n 1)
-echo ${HEADER} >> cutflows/ZL2FJ_HTJ_binned_ABCDEF_Full.csv
+echo ${HEADER} >> cutflows/ZL2FJ_HTFJ_binned_ABCDEF_Full.csv
 CUTS="ZL2FJA ZL2FJB ZL2FJC ZL2FJD ZL2FJE ZL2FJF"
-NLINERAW=$(${PYTHON} ${CONVERTER}  plots/Cutflows/VVV0TreeV7/dim6/mc/ZL2FJA__HTJ_binned.txt | wc -l)
+NLINERAW=$(${PYTHON} ${CONVERTER}  plots/Cutflows/VVV0TreeV7/dim6/mc/ZL2FJA__HTFJ_binned.txt | wc -l)
 NLINE=$((NLINERAW-4))
 NLINEONE=$((NLINE+1))
 for CUT in ${CUTS}; do
-    echo ${CUT} >> cutflows/ZL2FJ_HTJ_binned_ABCDEF_Full.csv
-    LINE=$(${PYTHON} ${CONVERTER}  plots/Cutflows/VVV0TreeV7/dim6/mc/${CUT}__HTJ_binned.txt | tail -n ${NLINEONE} | head -n ${NLINE})
-    echo ${LINE} | tr ' ' '\n' >> cutflows/ZL2FJ_HTJ_binned_ABCDEF_Full.csv
+    echo ${CUT} >> cutflows/ZL2FJ_HTFJ_binned_ABCDEF_Full.csv
+    LINE=$(${PYTHON} ${CONVERTER}  plots/Cutflows/VVV0TreeV7/dim6/mc/${CUT}__HTFJ_binned.txt | tail -n ${NLINEONE} | head -n ${NLINE})
+    echo ${LINE} | tr ' ' '\n' >> cutflows/ZL2FJ_HTFJ_binned_ABCDEF_Full.csv
 done
 
