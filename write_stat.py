@@ -39,12 +39,13 @@ def write_cards(version, channel, hn):
     stat_file_name = f"datacards/VVV.0L_{channel}.DataCard_Yields.{version}.root"
     stat_file = r.TFile(stat_file_name, "RECREATE")
 
-    samples = ["WW", "WZ", "ZZ", "ttV", "QCDFIT", "WJets", "DY", "TTbar"]
+    samples = ["WW", "WZ", "ZZ", "ttV", "QCD", "WJets", "DY", "TTbar"]
     samplenames = {
             "WW": "WW",
             "WZ": "WZ",
             "ZZ": "ZZ",
             "ttV": "ttV",
+            "QCD": "QCD",
             "QCDFIT": "QCD",
             "WJets": "WJets",
             "DY": "DY",
@@ -72,7 +73,6 @@ def write_cards(version, channel, hn):
     j = json.loads(f_eft_idx_information.read())
 
     # signals = ["vvv1jdim6", "www1jdim6", "wwz1jdim6", "wzz1jdim6", "zzz1jdim6"]
-    # signames = {"vvv1jdim6": "VVV", "www1jdim6" : "WWW", "wwz1jdim6" : "WWZ", "wzz1jdim6" : "WZZ", "zzz1jdim6" : "ZZZ"}
     signals = ["vvv1jdim6"]
     signames = {"vvv1jdim6": "VVV", "www1jdim6" : "WWW", "wwz1jdim6" : "WWZ", "wzz1jdim6" : "WZZ", "zzz1jdim6" : "ZZZ"}
 
@@ -97,8 +97,9 @@ def write_cards(version, channel, hn):
 
 if __name__ == "__main__":
 
-    version = "v12"
-    write_cards(version, "2FJ", "HTFJ_binned")
+    version = "v14"
+    # write_cards(version, "2FJ", "HTFJ_binned")
+    write_cards(version, "2FJ", "SRMET")
     # write_cards(version, "2FJLMET", "HTJ_binned")
     # write_cards(version, "2FJHMET", "HTJ_binned")
     write_cards(version, "3FJ", "SR1SumPtFJ")

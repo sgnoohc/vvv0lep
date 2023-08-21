@@ -1,7 +1,7 @@
 #!/bin bash
 
-version=v13
-channel=3FJ
+version=v14
+channel=2FJ
 
 rm -rf ${channel}_${version}/
 

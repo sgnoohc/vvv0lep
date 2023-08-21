@@ -144,9 +144,9 @@ auto dist_2d = [&] (float center)
 
 //===============================================================================================================================================================
 // In, out, shell of the sphere
-auto is_inside_2d = [&] () { return dist_2d(85) < 35; };
-auto is_outside_2d = [&] () { return dist_2d(85) > 50; };
-auto is_shell_2d = [&] () { return dist_2d(85) >= 35 and dist_2d(85) <= 50; };
+auto is_inside_2d = [&] () { return dist_2d(87.5) < 17.5; };
+auto is_outside_2d = [&] () { return dist_2d(87.5) > 50; };
+auto is_shell_2d = [&] () { return dist_2d(87.5) >= 17.5 and dist_2d(85) <= 50; };
 
 //===============================================================================================================================================================
 // Based on the score cut define 8 regions region 8 == all pass region 1 == all fail and 5 - 7 is when two passes 2 - 4 is when only one pass

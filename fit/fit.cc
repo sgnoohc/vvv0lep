@@ -142,22 +142,43 @@ int run_fit(TString filename, TString histname, TString newhist, double min, dou
     TH1F* h = (TH1F*) f->Get(hist.Data())->Clone();
     TH1F* h2 = (TH1F*) h->Clone();
 
+    // h->Rebin(4);
+
     TCanvas* c = new TCanvas();
 
     TString funcdefn;
     if (fitfunc == 0)
         funcdefn = "expo(0)";
     else
-        funcdefn = "TMath::Exp([0]+[1]*x+[2]*x^2)";
+    {
+        // funcdefn = "TMath::Exp([0]+[1]*x+[2]*x^2)";
+        funcdefn = "TMath::Exp([0]+[1]*x+[2]*x^2+[3]*x^3)";
+    }
 
     TF1* g = new TF1("graph", funcdefn.Data(), min, max);
     TF1* g2 = new TF1("graph2", funcdefn.Data(), 0, 3500);
     g->SetLineWidth(4);
     g->SetLineColor(4);
 
-    g->SetParameter(0,      17.096);
-    g->SetParameter(1,  -0.0095376);
-    g->SetParameter(2, 1.20822e-06);
+    if (fitfunc == 0)
+    {
+        g->SetParameter(0,      1000.096);
+        g->SetParameter(1,  -0.0095376);
+    }
+    else
+    {
+        g->SetParameter(0,      17.096);
+        g->SetParameter(1,  -0.0095376);
+        g->SetParameter(2, 1.20822e-06);
+        // g->SetParameter(0,  1.73931e+01);
+        // g->SetParameter(1, -8.14906e-03);
+        // g->SetParameter(2,  8.53974e-07);
+        // g->SetParameter(2,  8.53974e-07);
+        // g->SetParameter(0,  2.42900e+01);
+        // g->SetParameter(1, -1.59178e-02);
+        // g->SetParameter(2,  4.84089e-06);
+        // g->SetParameter(3, -6.33725e-10);
+    }
 
     // Perform fit
     TFitResultPtr fr = h->Fit("graph", "RVS");
@@ -296,12 +317,12 @@ int run_fit(TString filename, TString histname, TString newhist, double min, dou
 
 int main(int argc, char** argv)
 {
-    run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJA__HTFJFit", "ZL2FJA__HTFJ_binned", 1100, 2000, 1);
-    run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJE__HTFJFit", "ZL2FJE__HTFJ_binned", 1100, 2000, 1);
+    run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJA__HTFJFit", "ZL2FJA__HTFJ_binned", 2000, 3500, 1);
+    run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJE__HTFJFit", "ZL2FJE__HTFJ_binned", 2000, 3500, 1);
     // run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJLMETA__HTFJFit", "ZL2FJLMETA__SR2HTFJ", 1100, 2500, 1);
     // run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJLMETE__HTFJFit", "ZL2FJLMETE__SR2HTFJ", 1100, 2500, 1);
     // run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL2FJLMETE__HTFJFit", "ZL2FJLMETE__SR2HTFJ", 1100, 2500, 1);
-    run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL3FJA__SR1SumPtFJ", "ZL3FJA__SR1SumPtFJ", 1100, 2500, 1);
-    run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL3FJE__SR1SumPtFJ", "ZL3FJE__SR1SumPtFJ", 1100, 2500, 1);
+    // run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL3FJA__SR1SumPtFJ", "ZL3FJA__SR1SumPtFJ", 1100, 2500, 1);
+    // run_fit("../output/VVV0TreeV7/Run2/merged/QCD.root", "ZL3FJE__SR1SumPtFJ", "ZL3FJE__SR1SumPtFJ", 1100, 2500, 1);
     return 0;
 }

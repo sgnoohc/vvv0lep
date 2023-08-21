@@ -35,7 +35,7 @@ def draw(histname, fithistname):
         data.SetBinContent(i+1, tf1.Eval(data.GetBinCenter(i+1)))
         data.SetBinError(i+1, math.sqrt(tf1.Eval(data.GetBinCenter(i+1))*th1.GetBinWidth(1))/th1.GetBinWidth(1))
 
-    tf1.SetRange(0, xmax)
+    # tf1.SetRange(0, xmax)
 
     p.divide_by_bin_width([th1, th1_extrapolated])
 
@@ -43,7 +43,7 @@ def draw(histname, fithistname):
     c = p.plot_hist(
             bgs=[th1],
             sigs=[th1_extrapolated],
-            data=data,
+            # data=data,
             legend_labels=["QCD Data Driven"],
             sig_labels=["Pred. in SR binning"],
             colors=[4003],

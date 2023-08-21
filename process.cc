@@ -541,16 +541,28 @@ int main(int argc, char** argv)
     ana.cutflow.getCut("ZL");
     ana.cutflow.addCutToLastActiveCut("ZL2FJ", [&]() { return NFJ() == 2; }, UNITY);
 
+    // std::vector<std::function<bool()>> cuts_2fj = 
+    // {
+    //     [&]() { return HTFJ() > 1100; },
+    //     [&]() { return FJ0().pt() > 500.; },
+    //     [&]() { return FJ0().mass() < 150.; },
+    //     [&]() { return FJ1().mass() < 150.; },
+    //     [&]() { return NoORNbMedium() == 0.; },
+    //     [&]() { return signalMSD(FJ0()); },
+    //     [&]() { return WMD_TIGHT(WMD1()); },
+    //     [&]() { return WMD_LOOSE(WMD0()); },
+    // };
+
     std::vector<std::function<bool()>> cuts_2fj = 
     {
         [&]() { return HTFJ() > 1100; },
         [&]() { return FJ0().pt() > 500.; },
         [&]() { return FJ0().mass() < 150.; },
         [&]() { return FJ1().mass() < 150.; },
-        [&]() { return NoORNbMedium() == 0.; },
-        [&]() { return signalMSD(FJ0()); },
-        [&]() { return WMD_TIGHT(WMD1()); },
-        [&]() { return WMD_LOOSE(WMD0()); },
+        // [&]() { return NoORNbMedium() == 0.; },
+        // [&]() { return signalMSD(FJ0()); },
+        // [&]() { return WMD_TIGHT(WMD1()); },
+        // [&]() { return WMD_LOOSE(WMD0()); },
     };
 
     std::vector<std::function<bool()>> cuts_2fj_lowmet = 
@@ -559,10 +571,10 @@ int main(int argc, char** argv)
         [&]() { return FJ0().pt() > 500.; },
         [&]() { return FJ0().mass() < 150.; },
         [&]() { return FJ1().mass() < 150.; },
-        [&]() { return NoORNbMedium() == 0.; },
-        [&]() { return signalMSD(FJ0()); },
-        [&]() { return WMD_TIGHT(WMD1()); },
-        [&]() { return WMD_LOOSE(WMD0()); },
+        // [&]() { return NoORNbMedium() == 0.; },
+        // [&]() { return signalMSD(FJ0()); },
+        // [&]() { return WMD_TIGHT(WMD1()); },
+        // [&]() { return WMD_LOOSE(WMD0()); },
         [&]() { return MET().pt() < 400.; },
     };
 
@@ -572,25 +584,36 @@ int main(int argc, char** argv)
         [&]() { return FJ0().pt() > 500.; },
         [&]() { return FJ0().mass() < 150.; },
         [&]() { return FJ1().mass() < 150.; },
-        [&]() { return signalMSD(FJ0()); },
-        [&]() { return WMD_TIGHT(WMD1()); },
-        [&]() { return WMD_LOOSE(WMD0()); },
+        // [&]() { return signalMSD(FJ0()); },
+        // [&]() { return WMD_TIGHT(WMD1()); },
+        // [&]() { return WMD_LOOSE(WMD0()); },
         [&]() { return MET().pt() >= 400.; },
     };
 
+    // std::vector<std::function<bool()>> abcdef_2fj = 
+    // {
+    //     [&]() { return signalMSD(FJ0()) and signalMSD(FJ1()) and WMD_TIGHT(WMD0())                           and WMD_TIGHT(WMD1()) ; },
+    //     [&]() { return signalMSD(FJ0()) and signalMSD(FJ1()) and WMD_LOOSE(WMD0()) and not WMD_TIGHT(WMD0()) and WMD_TIGHT(WMD1()) ; },
+    //     [&]() { return signalMSD(FJ0()) and lowMSD(FJ1())    and WMD_TIGHT(WMD0())                           and WMD_TIGHT(WMD1()) ; },
+    //     [&]() { return signalMSD(FJ0()) and lowMSD(FJ1())    and WMD_LOOSE(WMD0()) and not WMD_TIGHT(WMD0()) and WMD_TIGHT(WMD1()) ; },
+    //     [&]() { return signalMSD(FJ0()) and highMSD(FJ1())   and WMD_TIGHT(WMD0())                           and WMD_TIGHT(WMD1()) ; },
+    //     [&]() { return signalMSD(FJ0()) and highMSD(FJ1())   and WMD_LOOSE(WMD0()) and not WMD_TIGHT(WMD0()) and WMD_TIGHT(WMD1()) ; },
+    // };
+
     std::vector<std::function<bool()>> abcdef_2fj = 
     {
-        [&]() { return signalMSD(FJ0()) and signalMSD(FJ1()) and WMD_TIGHT(WMD0())                           and WMD_TIGHT(WMD1()) ; },
-        [&]() { return signalMSD(FJ0()) and signalMSD(FJ1()) and WMD_LOOSE(WMD0()) and not WMD_TIGHT(WMD0()) and WMD_TIGHT(WMD1()) ; },
-        [&]() { return signalMSD(FJ0()) and lowMSD(FJ1())    and WMD_TIGHT(WMD0())                           and WMD_TIGHT(WMD1()) ; },
-        [&]() { return signalMSD(FJ0()) and lowMSD(FJ1())    and WMD_LOOSE(WMD0()) and not WMD_TIGHT(WMD0()) and WMD_TIGHT(WMD1()) ; },
-        [&]() { return signalMSD(FJ0()) and highMSD(FJ1())   and WMD_TIGHT(WMD0())                           and WMD_TIGHT(WMD1()) ; },
-        [&]() { return signalMSD(FJ0()) and highMSD(FJ1())   and WMD_LOOSE(WMD0()) and not WMD_TIGHT(WMD0()) and WMD_TIGHT(WMD1()) ; },
+        [&]() { return is_inside_2d()  and vmd_reg_2d() == 4; },
+        [&]() { return is_inside_2d()  and vmd_reg_2d() != 4; },
+        [&]() { return is_outside_2d() and vmd_reg_2d() == 4; },
+        [&]() { return is_outside_2d() and vmd_reg_2d() != 4; },
+        [&]() { return is_shell_2d()   and vmd_reg_2d() == 4; },
+        [&]() { return is_shell_2d()   and vmd_reg_2d() != 4; },
     };
 
     std::vector<std::function<float()>> abcdef_wgt_2fj = 
     {
-        BLIND,
+        // BLIND,
+        UNITY,
         UNITY,
         UNITY,
         UNITY,
@@ -768,7 +791,7 @@ int main(int argc, char** argv)
     histograms_3FJ_SR.addHistogram("SR2SumPtFJ", {1250, 1500, 1750, 2000, 3000} , [&]() { if (SumPtFJ() < 2500) return SumPtFJ(); else return 2499.f; } );
     RooUtil::Histograms histograms_2FJ_SR;
     histograms_2FJ_SR.addHistogram("HTJ_binned", {1100, 2500, 4000, 6000} , [&]() { if (HTJ() < 6000) return HTJ(); else return 5999.f; } );
-    histograms_2FJ_SR.addHistogram("HTFJ_binned", {1100, 2000, 2500, 3000} , [&]() { if (HTFJ() < 3000) return HTFJ(); else return 2999.f; } );
+    histograms_2FJ_SR.addHistogram("HTFJ_binned", {1100, 2000, 2500, 3000, 3500} , [&]() { if (HTFJ() < 3500) return HTFJ(); else return 3499.f; } );
     histograms_2FJ_SR.addHistogram("SR1HT", {1100, 1500, 2000, 2500, 3000} , [&]() { if (HT() < 3000) return HT(); else return 2999.f; } );
     histograms_2FJ_SR.addHistogram("SR2HT", {1100, 1500, 2000, 2500, 3000, 3500, 4000, 5000} , [&]() { if (HT() < 5000) return HT(); else return 4999.f; } );
     histograms_2FJ_SR.addHistogram("SR1HTFJ", {1100, 1500, 2000, 2500, 3000} , [&]() { if (HTFJ() < 3000) return HTFJ(); else return 2999.f; } );

@@ -8,6 +8,8 @@ import plot_config as c
 hist_names = [
         ("ZL3FJ", "SR1SumPtFJ"),
         ("ZL2FJ", "HTFJ_binned"),
+        ("ZL2FJ", "SR2SumPtFJ"),
+        ("ZL2FJ", "SRMET"),
         ("ZL2FJLMET", "HTFJFit"),
         ("ZL2FJLMET", "HTFJFit"),
         ("ZL2FJLMET", "SR2HTFJ"),
