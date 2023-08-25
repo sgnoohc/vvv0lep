@@ -9,6 +9,7 @@
     "nevents": [
         197101
     ],
+    "eft_benchmark": 139,
     "is_sig": 1,
     "is_bkg": 0,
     "is_data": 0,
@@ -17,7 +18,7 @@
     "name": "WZZ_NoFilter_Dim8_RunIISummer20UL18NanoAODv9_NANOAODSIM",
     "process": "WZZ_NoFilter_Dim8",
     "xsec": 0.05565,
-    "lumi": 59.83,
+    "lumi": 137.64,
     "year": 2018,
     "output_dir": "output/VVV0TreeV7/2018/WZZ_NoFilter_Dim8"
 }

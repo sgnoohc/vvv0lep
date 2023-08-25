@@ -9,6 +9,7 @@
     "nevents": [
         192736
     ],
+    "eft_benchmark": 91,
     "is_sig": 1,
     "is_bkg": 0,
     "is_data": 0,
@@ -17,7 +18,7 @@
     "name": "WWW_NoFilter_Dim8_RunIISummer20UL18NanoAODv9_NANOAODSIM",
     "process": "WWW_NoFilter_Dim8",
     "xsec": 0.2086,
-    "lumi": 59.83,
+    "lumi": 137.64,
     "year": 2018,
     "output_dir": "output/VVV0TreeV7/2018/WWW_NoFilter_Dim8"
 }

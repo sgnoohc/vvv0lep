@@ -163,6 +163,7 @@
         4054,
         4862
     ],
+    "eft_benchmark": 0,
     "is_sig": 0,
     "is_bkg": 0,
     "is_data": 1,

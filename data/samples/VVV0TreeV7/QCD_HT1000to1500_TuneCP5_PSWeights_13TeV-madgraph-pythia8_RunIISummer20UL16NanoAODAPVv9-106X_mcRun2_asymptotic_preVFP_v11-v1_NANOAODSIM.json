@@ -29,6 +29,7 @@
         147735,
         127569
     ],
+    "eft_benchmark": 0,
     "is_sig": 0,
     "is_bkg": 1,
     "is_data": 0,

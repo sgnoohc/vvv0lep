@@ -56,6 +56,6 @@ for jobconfig in jobconfigs:
 jobs.close()
 
 if "uaf-2" in socket.gethostname():
-    os.system("xargs.sh .jobs.txt")
+    os.system("xargs.sh -n 90 .jobs.txt")
 else:
     os.system("xargs.sh .jobs.txt")

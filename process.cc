@@ -429,6 +429,27 @@ int main(int argc, char** argv)
     TString process = j["process"];
     int sm_eft_idx = 0;
     int year = j["year"];
+    int eft_idx_benchmark = j["eft_benchmark"];
+
+    std::ifstream eftjj("data/eft_idx_database.json"); //
+    json eftnames;
+    eftjj >> eftnames;
+
+    TString eftname_db_key = "";
+    if (process.Contains("Dim6"))
+        eftname_db_key = "Dim61J";
+    if (process.Contains("Dim8") and process.Contains("WWW"))
+        eftname_db_key = "WWWD8";
+    if (process.Contains("Dim8") and process.Contains("WWZ"))
+        eftname_db_key = "WWZD8";
+    if (process.Contains("Dim8") and process.Contains("WZZ"))
+        eftname_db_key = "WZZD8";
+    if (process.Contains("Dim8") and process.Contains("ZZZ"))
+        eftname_db_key = "ZZZD8";
+
+    int neftidxs = eftname_db_key.IsNull() ? 0 : eftnames[eftname_db_key.Data()].size();
+
+    std::cout <<  " neftidxs: " << neftidxs <<  std::endl;
 
     bool do_systematics = false;
     //===============================================================================================================================================================
@@ -454,7 +475,7 @@ int main(int argc, char** argv)
                                return true;
                            }
                        },
-                       [&, ana, is_data, is_sig, is_eft, sm_eft_idx, lumi, xsec, sum_genWeight]()
+                       [&, ana, is_data, is_sig, is_eft, sm_eft_idx, lumi, xsec, sum_genWeight, eft_idx_benchmark]()
                        {
                            if (is_data)
                            {
@@ -466,7 +487,7 @@ int main(int argc, char** argv)
                                if (is_eft)
                                {
                                    if (LHEReweightingWeight().size() != 0)
-                                       return LHEReweightingWeight()[ana.eft_idx] * wgt;
+                                       return LHEReweightingWeight()[eft_idx_benchmark] * wgt;
                                    else
                                        return 0.f;
                                }
@@ -612,8 +633,7 @@ int main(int argc, char** argv)
 
     std::vector<std::function<float()>> abcdef_wgt_2fj = 
     {
-        // BLIND,
-        UNITY,
+        BLIND,
         UNITY,
         UNITY,
         UNITY,
@@ -699,16 +719,17 @@ int main(int argc, char** argv)
     // The various EFT regions
     if (is_sig)
     {
-        for (unsigned ieft = 0; ieft < 216; ++ieft)
+        for (unsigned ieft = 0; ieft < neftidxs; ++ieft)
         {
+            TString eftname = eftnames[eftname_db_key.Data()][TString::Format("%d", ieft).Data()];
             ana.cutflow.getCut("ZL3FJA");
-            ana.cutflow.addCutToLastActiveCut(TString::Format("ZL3FJAEFTIDX%d", ieft), UNITY, [&, is_eft, ieft, ana]() { if (is_eft) return LHEReweightingWeight()[ieft] / LHEReweightingWeight()[ana.eft_idx]; else return 1.f; });
+            ana.cutflow.addCutToLastActiveCut(TString::Format("ZL3FJAEFT_%s", eftname.Data()), UNITY, [&, is_eft, ieft, ana, eft_idx_benchmark]() { if (is_eft) return LHEReweightingWeight()[ieft] / LHEReweightingWeight()[eft_idx_benchmark]; else return 1.f; });
             ana.cutflow.getCut("ZL2FJA");
-            ana.cutflow.addCutToLastActiveCut(TString::Format("ZL2FJAEFTIDX%d", ieft), UNITY, [&, is_eft, ieft, ana]() { if (is_eft) return LHEReweightingWeight()[ieft] / LHEReweightingWeight()[ana.eft_idx]; else return 1.f; });
+            ana.cutflow.addCutToLastActiveCut(TString::Format("ZL2FJAEFT_%s", eftname.Data()), UNITY, [&, is_eft, ieft, ana, eft_idx_benchmark]() { if (is_eft) return LHEReweightingWeight()[ieft] / LHEReweightingWeight()[eft_idx_benchmark]; else return 1.f; });
             ana.cutflow.getCut("ZL2FJLMETA");
-            ana.cutflow.addCutToLastActiveCut(TString::Format("ZL2FJLMETAEFTIDX%d", ieft), UNITY, [&, is_eft, ieft, ana]() { if (is_eft) return LHEReweightingWeight()[ieft] / LHEReweightingWeight()[ana.eft_idx]; else return 1.f; });
+            ana.cutflow.addCutToLastActiveCut(TString::Format("ZL2FJLMETAEFT_%s", eftname.Data()), UNITY, [&, is_eft, ieft, ana, eft_idx_benchmark]() { if (is_eft) return LHEReweightingWeight()[ieft] / LHEReweightingWeight()[eft_idx_benchmark]; else return 1.f; });
             ana.cutflow.getCut("ZL2FJHMETA");
-            ana.cutflow.addCutToLastActiveCut(TString::Format("ZL2FJHMETAEFTIDX%d", ieft), UNITY, [&, is_eft, ieft, ana]() { if (is_eft) return LHEReweightingWeight()[ieft] / LHEReweightingWeight()[ana.eft_idx]; else return 1.f; });
+            ana.cutflow.addCutToLastActiveCut(TString::Format("ZL2FJHMETAEFT_%s", eftname.Data()), UNITY, [&, is_eft, ieft, ana, eft_idx_benchmark]() { if (is_eft) return LHEReweightingWeight()[ieft] / LHEReweightingWeight()[eft_idx_benchmark]; else return 1.f; });
         }
     }
 

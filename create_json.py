@@ -82,6 +82,9 @@ def get_lumi_and_year(d, json):
         if "Dim6" in json["process"]:
             json["lumi"] = 137.64
             json["year"] = 2018
+        elif "Dim8" in json["process"]:
+            json["lumi"] = 137.64
+            json["year"] = 2018
         elif "UL16NanoAODAPVv9" in json["name"]:
             json["lumi"] = 19.52
             json["year"] = 2006
@@ -113,6 +116,16 @@ def get_lumi_and_year(d, json):
 def build_output_dir(d, json):
     json["output_dir"] = f'output/{json["tag"]}/{json["year"]}/{json["process"]}'
 
+def parse_eft_benchmark(d, json):
+    if "WWW_NoFilter_Dim8" in json["process"]: json["eft_benchmark"] = 91
+    if "WWZ_NoFilter_Dim8" in json["process"]: json["eft_benchmark"] = 139
+    if "WZZ_NoFilter_Dim8" in json["process"]: json["eft_benchmark"] = 139
+    if "ZZZ_NoFilter_Dim8" in json["process"]: json["eft_benchmark"] = 139
+    if "WWW_NoFilter_Dim6" in json["process"]: json["eft_benchmark"] = 12
+    if "WWZ_NoFilter_Dim6" in json["process"]: json["eft_benchmark"] = 12
+    if "WZZ_NoFilter_Dim6" in json["process"]: json["eft_benchmark"] = 12
+    if "ZZZ_NoFilter_Dim6" in json["process"]: json["eft_benchmark"] = 12
+
 def parse_sample(d, j):
     parse_sample_category(d, j)
     parse_eft_sample(d, j)
@@ -121,6 +134,7 @@ def parse_sample(d, j):
     get_xsec(d, j)
     get_lumi_and_year(d, j)
     build_output_dir(d, j)
+    parse_eft_benchmark(d, j)
 
 def main():
 
@@ -134,6 +148,7 @@ def main():
         j["nfiles"] = len(rootfiles)
         j["files"] = rootfiles
         j["nevents"] = []
+        j["eft_benchmark"] = 0
         parse_sample(d, j)
         # if not j["process"] == "WWZ_NoFilter_NoGGPartons_Dim6":
         #     continue
