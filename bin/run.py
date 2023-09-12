@@ -12,6 +12,7 @@ run_test = False
 if len(sys.argv) > 1:
     run_test = True
 
+basedir = "/data/userdata/phchang/VVV0LepAnalysis"
 nchunk = 1.5e6
 jobconfigs = glob.glob(f"data/samples/{c.tag}/*.json")
 os.system("rm -f .jobs.txt")
@@ -21,16 +22,20 @@ def chunks(j, nchunk):
     tmp = 0
     cs = []
     c = []
+    ns = []
     for n, f in zip(j["nevents"], j["files"]):
         tmp += n
-        c.append(f)
+        ff = f"{basedir}/{f}"
+        c.append(ff)
         if tmp > nchunk:
             cs.append(c)
+            ns.append(tmp)
             c = []
             tmp = 0
     if len(c) != 0:
         cs.append(c)
-    return cs
+        ns.append(tmp)
+    return cs, ns
 
 for jobconfig in jobconfigs:
     f = open(jobconfig)
@@ -43,7 +48,7 @@ for jobconfig in jobconfigs:
     if "Dim" in jobconfig:
         nc = 50000
 
-    cs = chunks(j, nchunk)
+    cs, ns = chunks(j, nc)
 
     tag = j["tag"];
     process = j["process"]
@@ -59,7 +64,15 @@ for jobconfig in jobconfigs:
         os.system(f"mkdir -p {output_dir}/")
         output_log_fullpath = output_fullpath.replace(".root", ".log")
         inputs = ",".join(cs[job_index])
-        jobs.write(f"./doAnalysis --json {jobconfig} -i {inputs} -o {output_fullpath} -t t > {output_log_fullpath} 2>&1\n")
+        tn = ns[job_index]
+        if "Dim" in jobconfig and len(cs) == 1 and len(cs[0]) == 1: # If the signal is all merged in one file we split further
+            nsplit = 6
+            for isplit in range(nsplit):
+                output_fullpath_with_isplit = output_fullpath.replace(".root", f"_i{isplit}.root")
+                output_log_fullpath_with_isplit = output_log_fullpath.replace(".log", f"_i{isplit}.log")
+                jobs.write(f"./doAnalysis -j {nsplit} -I {isplit} --json {jobconfig} -i {inputs} -o {output_fullpath_with_isplit} -t t > {output_log_fullpath_with_isplit} 2>&1\n")
+        else:
+            jobs.write(f"./doAnalysis --json {jobconfig} -i {inputs} -o {output_fullpath} -t t > {output_log_fullpath} 2>&1\n")
 
 jobs.close()
 

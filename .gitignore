@@ -11,3 +11,6 @@ fit/*.png
 cutflows/
 fit/fitresult
 __pycache__/
+combine/*FJ*
+combine/CMSSW_11_3_4/
+trash/

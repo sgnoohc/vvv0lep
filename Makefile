@@ -2,7 +2,7 @@
 
 EXE=doAnalysis
 
-SOURCES=$(wildcard *.cc)
+SOURCES=$(wildcard src/*.cc)
 OBJECTS=$(SOURCES:.cc=.o)
 HEADERS=$(SOURCES:.cc=.h)
 
@@ -23,10 +23,10 @@ EXTRAFLAGS  = -fPIC -ITMultiDrawTreePlayer -Wunused-variable -lTMVA -lEG -lGenVe
 
 all: $(ROOUTILDIR) $(EXE)
 
-$(EXE): $(OBJECTS) VVV0Tree.o lambda.h variable.h
+$(EXE): $(OBJECTS) src/VVV0Tree.o src/lambda.h src/variable.h
 	$(LD) $(CXXFLAGS) $(LDFLAGS) $(OBJECTS) $(ROOTLIBS) $(EXTRAFLAGS) -o $@
 
-process.o: process.cc lambda.h variable.h
+src/process.o: src/process.cc src/lambda.h src/variable.h
 	$(CC) $(CFLAGS) $(EXTRACFLAGS) $< -c -o $@
 
 %.o: %.cc
