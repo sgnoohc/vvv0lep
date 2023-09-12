@@ -125,6 +125,10 @@ def parse_eft_benchmark(d, json):
     if "WWZ_NoFilter_Dim6" in json["process"]: json["eft_benchmark"] = 12
     if "WZZ_NoFilter_Dim6" in json["process"]: json["eft_benchmark"] = 12
     if "ZZZ_NoFilter_Dim6" in json["process"]: json["eft_benchmark"] = 12
+    if "WWW_1Jet_NoFilter_Dim6" in json["process"]: json["eft_benchmark"] = 12
+    if "WWZ_1Jet_NoFilter_Dim6" in json["process"]: json["eft_benchmark"] = 12
+    if "WZZ_1Jet_NoFilter_Dim6" in json["process"]: json["eft_benchmark"] = 12
+    if "ZZZ_1Jet_NoFilter_Dim6" in json["process"]: json["eft_benchmark"] = 12
 
 def parse_sample(d, j):
     parse_sample_category(d, j)

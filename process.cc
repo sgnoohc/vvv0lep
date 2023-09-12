@@ -580,6 +580,12 @@ int main(int argc, char** argv)
         [&]() { return FJ0().pt() > 500.; },
         [&]() { return FJ0().mass() < 150.; },
         [&]() { return FJ1().mass() < 150.; },
+        // [&]() { return HTFJ() > 2500; },
+        // [&]() { return is_inside_scaled_2d(); },
+        // [&]() { return vmd_reg_2d() == 4; },
+        // [&]() { return VMD0() > 0.7; },
+        // [&]() { return VMD1() > 0.7; },
+        // [&]() { return scaled_dist_2d(82.5) < 4.; },
         // [&]() { return NoORNbMedium() == 0.; },
         // [&]() { return signalMSD(FJ0()); },
         // [&]() { return WMD_TIGHT(WMD1()); },
@@ -623,12 +629,18 @@ int main(int argc, char** argv)
 
     std::vector<std::function<bool()>> abcdef_2fj = 
     {
-        [&]() { return is_inside_2d()  and vmd_reg_2d() == 4; },
-        [&]() { return is_inside_2d()  and vmd_reg_2d() != 4; },
-        [&]() { return is_outside_2d() and vmd_reg_2d() == 4; },
-        [&]() { return is_outside_2d() and vmd_reg_2d() != 4; },
-        [&]() { return is_shell_2d()   and vmd_reg_2d() == 4; },
-        [&]() { return is_shell_2d()   and vmd_reg_2d() != 4; },
+        // [&]() { return is_inside_2d()  and vmd_reg_2d() == 4; },
+        // [&]() { return is_inside_2d()  and vmd_reg_2d() != 4; },
+        // [&]() { return is_outside_2d() and vmd_reg_2d() == 4; },
+        // [&]() { return is_outside_2d() and vmd_reg_2d() != 4; },
+        // [&]() { return is_shell_2d()   and vmd_reg_2d() == 4; },
+        // [&]() { return is_shell_2d()   and vmd_reg_2d() != 4; },
+        [&]() { return is_inside_scaled_2d()  and vmd_reg_2d() == 4; },
+        [&]() { return is_inside_scaled_2d()  and vmd_reg_2d() != 4; },
+        [&]() { return is_shell_scaled_2d()   and vmd_reg_2d() == 4; },
+        [&]() { return is_shell_scaled_2d()   and vmd_reg_2d() != 4; },
+        [&]() { return is_outside_scaled_2d() and vmd_reg_2d() == 4; },
+        [&]() { return is_outside_scaled_2d() and vmd_reg_2d() != 4; },
     };
 
     std::vector<std::function<float()>> abcdef_wgt_2fj = 
@@ -670,16 +682,29 @@ int main(int argc, char** argv)
         [&]() { return FJ0().mass() < 150.; },
         [&]() { return FJ1().mass() < 150.; },
         [&]() { return FJ2().mass() < 150.; },
+        // [&]() { return is_inside_scaled_3d(); },
+        // [&]() { return SumPtFJ() > 2500; },
+        // [&]() { return vmd_reg_3d() == 8; },
+        // [&]() { return VMD0() > 0.6; },
+        // [&]() { return VMD1() > 0.6; },
+        // [&]() { return VMD2() > 0.6; },
+        // [&]() { return SumPtFJ() > 2500; },
     };
 
     std::vector<std::function<bool()>> abcdef_3fj = 
     {
-        [&]() { return is_inside_3d()  and vmd_reg_3d() == 8; },
-        [&]() { return is_inside_3d()  and vmd_reg_3d() != 8; },
-        [&]() { return is_outside_3d() and vmd_reg_3d() == 8; },
-        [&]() { return is_outside_3d() and vmd_reg_3d() != 8; },
-        [&]() { return is_shell_3d()   and vmd_reg_3d() == 8; },
-        [&]() { return is_shell_3d()   and vmd_reg_3d() != 8; },
+        // [&]() { return is_inside_3d()  and vmd_reg_3d() == 8; },
+        // [&]() { return is_inside_3d()  and vmd_reg_3d() != 8; },
+        // [&]() { return is_shell_3d()   and vmd_reg_3d() == 8; },
+        // [&]() { return is_shell_3d()   and vmd_reg_3d() != 8; },
+        // [&]() { return is_outside_3d() and vmd_reg_3d() == 8; },
+        // [&]() { return is_outside_3d() and vmd_reg_3d() != 8; },
+        [&]() { return is_inside_scaled_3d()  and vmd_reg_3d() == 8; },
+        [&]() { return is_inside_scaled_3d()  and vmd_reg_3d() != 8; },
+        [&]() { return is_shell_scaled_3d()   and vmd_reg_3d() == 8; },
+        [&]() { return is_shell_scaled_3d()   and vmd_reg_3d() != 8; },
+        [&]() { return is_outside_scaled_3d() and vmd_reg_3d() == 8; },
+        [&]() { return is_outside_scaled_3d() and vmd_reg_3d() != 8; },
     };
 
     std::vector<std::function<float()>> abcdef_wgt_3fj = 
@@ -761,6 +786,11 @@ int main(int argc, char** argv)
     histograms_FJ1.addHistogram("Pt01"   , 180 , 0       , 4500   , [&]() { return (FJ0() + FJ1()).pt(); } );
     histograms_FJ1.addHistogram("Mass01" , 180 , 0       , 4500   , [&]() { return (FJ0() + FJ1()).mass(); } );
     histograms_FJ1.addHistogram("DPhi01" , 180 , 0       , 3.1416 , [&]() { return fabs(RooUtil::Calc::DeltaPhi(FJ0(), FJ1())); } );
+    histograms_FJ1.addHistogram("D01"    , 180 , 0       , 10     , [&]() { return scaled_dist_2d(82.5); } );
+    histograms_FJ1.addHistogram("MinVMD1", 180 , 0       , 1      , [&]() { return min(VMD0(), VMD1()); } );
+    histograms_FJ1.add2DHistogram("Mass0" , 90 , 40 , 150, "Mass1" , 90 , 40 , 150, [&]() { return (FJ0()).mass(); }, [&]() { return (FJ1()).mass(); } );
+    histograms_FJ1.add2DHistogram("MassR01" , 90 , 0 , 8, "MinVMD" , 90 , 0 , 1, [&]() { return scaled_dist_2d(82.5); }, [&]() { return min(VMD0(), VMD1()); } );
+    histograms_FJ1.add2DHistogram("MassR01Coarse" ,  8 , 0 , 8, "MinVMDCoarse" , 10 , 0 , 1, [&]() { return scaled_dist_2d(82.5); }, [&]() { return min(VMD0(), VMD1()); } );
     RooUtil::Histograms histograms_FJ2;
     histograms_FJ2.addHistogram("Pt2"    , 180 , 0       , 1500   , [&]() { return FJ2().pt(); } );
     histograms_FJ2.addHistogram("Eta2"   , 180 , -5      , 5      , [&]() { return FJ2().eta(); } );
@@ -775,6 +805,11 @@ int main(int argc, char** argv)
     histograms_FJ2.addHistogram("Mass12" , 180 , 0       , 2500   , [&]() { return (FJ1() + FJ2()).mass(); } );
     histograms_FJ2.addHistogram("DPhi02" , 180 , 0       , 3.1416 , [&]() { return fabs(RooUtil::Calc::DeltaPhi(FJ0(), FJ2())); } );
     histograms_FJ2.addHistogram("DPhi12" , 180 , 0       , 3.1416 , [&]() { return fabs(RooUtil::Calc::DeltaPhi(FJ1(), FJ2())); } );
+    histograms_FJ2.addHistogram("MinVMD2", 180 , 0       , 1      , [&]() { return min(min(VMD0(), VMD1()), VMD2()); } );
+    histograms_FJ2.add2DHistogram("Mass0" , 90 , 40 , 150, "Mass1" , 90 , 40 , 150, [&]() { return (FJ0()).mass(); }, [&]() { return (FJ1()).mass(); } );
+    histograms_FJ2.add2DHistogram("Mass0" , 90 , 40 , 150, "Mass2" , 90 , 40 , 150, [&]() { return (FJ0()).mass(); }, [&]() { return (FJ2()).mass(); } );
+    histograms_FJ2.add2DHistogram("Mass1" , 90 , 40 , 150, "Mass2" , 90 , 40 , 150, [&]() { return (FJ1()).mass(); }, [&]() { return (FJ2()).mass(); } );
+    histograms_FJ2.addHistogram("D012"    , 180 , 0       , 10      , [&]() { return scaled_dist_3d(85); } );
     RooUtil::Histograms histograms_event;
     histograms_event.addHistogram("Yield"        , 1   , 0 , 1    , [&]() { return 0.f; } );
     histograms_event.addHistogram("NFJ"          , 7   , 0 , 7    , [&]() { return NFJ(); } );

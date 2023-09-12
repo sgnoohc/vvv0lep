@@ -89,25 +89,21 @@ signal_labels_dim8 = [
 
 # signal names
 sig_fnames_dim6 = [
-            f"{mdir}/vvvdim6.root",
             f"{mdir}/vvv1jdim6.root",
-            f"{mdir}/sm.root",
-            # f"{mdir}/wwwdim6.root",
-            # f"{mdir}/wwzdim6.root",
-            # f"{mdir}/wzzdim6.root",
-            # f"{mdir}/zzzdim6.root",
+            # f"{mdir}/www1jdim6.root",
             # f"{mdir}/wwz1jdim6.root",
+            # f"{mdir}/wzz1jdim6.root",
+            # f"{mdir}/zzz1jdim6.root",
+            f"{mdir}/vvvdim8.root",
             ]
 
 signal_labels_dim6 = [
             "VVV D6",
-            "VVV1J D6",
-            "SM",
             # "WWW D6",
             # "WWZ D6",
             # "WZZ D6",
             # "ZZZ D6",
-            # "WWZ 1J D6",
+            "VVV D8",
             ]
 
 usercolors = [

@@ -10,36 +10,39 @@ for sig in ["dim6"]:
 
     # signal_scale = 137.64/59.83
     signal_scale = "auto"
-    # signal_scale = 1
+    signal_scale = 1
+    # signal_scale = 5000
 
     histxaxislabeloptions = {
+            "D01"         : {"xaxis_label" : "D01"                    , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": False },
+            "D012"        : {"xaxis_label" : "D012"                   , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": False },
             "SR3SumPtFJ"  : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]"    , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
             "SR2SumPtFJ"  : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]"    , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
-            "SR1SumPtFJ"  : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]"    , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
+            "SR1SumPtFJ"  : {"xaxis_label" : "#Sigma p_{T,Fat-Jet} [GeV]"    , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False, "blind": True},
             "SumPtFJFit"  : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]"    , "xaxis_ndivisions" : 505, "nbins": 60, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
             "HT_binned"   : {"xaxis_label" : "H_{T} [GeV]"            , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
             "HTJ_binned"  : {"xaxis_label" : "H_{T} [GeV]"            , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
-            "HTFJ_binned" : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]"    , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
+            "HTFJ_binned" : {"xaxis_label" : "H_{T} [GeV]"    , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False, "blind": True},
             "HT"          : {"xaxis_label" : "H_{T} [GeV]"            , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
             "SR1HTFJ"     : {"xaxis_label" : "H_{T,Fat-Jet,MET} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
             "SR2HTFJ"     : {"xaxis_label" : "H_{T,Fat-Jet,MET} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
             "SR1HT"       : {"xaxis_label" : "H_{T,Fat-Jet,MET} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
             "SR2HT"       : {"xaxis_label" : "H_{T,Fat-Jet,MET} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
-            "HTFJ"        : {"xaxis_label" : "H_{T,Fat-Jet,MET} [GeV]", "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False},
-            "SumPtFJ"     : {"xaxis_label" : "H_{T,Fat-Jet} [GeV]"    , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True },
+            "HTFJ"        : {"xaxis_label" : "H_{T,Fat-Jet,MET} [GeV]", "xaxis_ndivisions" : 505, "nbins": 10, "signal_scale": signal_scale, "yaxis_log": True , "divide_by_bin_width": False, "blind": True},
+            "SumPtFJ"     : {"xaxis_label" : "#Sigma p_{T,Fat-Jet} [GeV]"    , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True , "blind": True},
             "SumPtJ"      : {"xaxis_label" : "H_{T,AK4Jet} [GeV]"     , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True },
-            "VMD0"        : {"xaxis_label" : "V_{MD,lead}"            , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": False},
-            "VMD1"        : {"xaxis_label" : "V_{MD,sublead}"         , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": False},
-            "VMD2"        : {"xaxis_label" : "V_{MD,trail}"           , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": False},
+            "VMD0"        : {"xaxis_label" : "V_{MD,lead}"            , "xaxis_ndivisions" : 505, "nbins": 60, "signal_scale": signal_scale, "yaxis_log": False },
+            "VMD1"        : {"xaxis_label" : "V_{MD,sublead}"         , "xaxis_ndivisions" : 505, "nbins": 60, "signal_scale": signal_scale, "yaxis_log": False },
+            "VMD2"        : {"xaxis_label" : "V_{MD,trail}"           , "xaxis_ndivisions" : 505, "nbins": 60, "signal_scale": signal_scale, "yaxis_log": False },
             "WMD0"        : {"xaxis_label" : "W_{MD,lead}"            , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": False},
             "WMD1"        : {"xaxis_label" : "W_{MD,sublead}"         , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": False},
             "Pt01"        : {"xaxis_label" : "p_{T,01} [GeV]"         , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True },
             "Pt0"         : {"xaxis_label" : "p_{T,lead} [GeV]"       , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True },
             "Pt1"         : {"xaxis_label" : "p_{T,sublead} [GeV]"    , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True },
             "Pt2"         : {"xaxis_label" : "p_{T,trail} [GeV]"      , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": False},
-            "Mass0"       : {"xaxis_label" : "M_{lead} [GeV]"         , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": False},
-            "Mass1"       : {"xaxis_label" : "M_{sublead} [GeV]"      , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": False},
-            "Mass2"       : {"xaxis_label" : "M_{trail} [GeV]"        , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": False},
+            "Mass0"       : {"xaxis_label" : "M_{lead} [GeV]"         , "xaxis_ndivisions" : 505, "nbins": 60, "signal_scale": signal_scale, "yaxis_log": False },
+            "Mass1"       : {"xaxis_label" : "M_{sublead} [GeV]"      , "xaxis_ndivisions" : 505, "nbins": 60, "signal_scale": signal_scale, "yaxis_log": False },
+            "Mass2"       : {"xaxis_label" : "M_{trail} [GeV]"        , "xaxis_ndivisions" : 505, "nbins": 60, "signal_scale": signal_scale, "yaxis_log": False },
             "Mass01"      : {"xaxis_label" : "M_{01} [GeV]"           , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": True },
             "Mass02"      : {"xaxis_label" : "M_{02} [GeV]"           , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": False},
             "Mass12"      : {"xaxis_label" : "M_{12} [GeV]"           , "xaxis_ndivisions" : 505, "nbins": 20, "signal_scale": signal_scale, "yaxis_log": False},
@@ -58,7 +61,9 @@ for sig in ["dim6"]:
             "Yield"       : {"xaxis_label" : "Yield"                  , "xaxis_ndivisions" : 505, "nbins": 1 , "signal_scale": signal_scale, "yaxis_log": False},
             }
 
-    cut_subregions = ["Presel", "A", "B", "C", "D", "E", "F"]
+    # cut_subregions = ["Presel", "A", "B", "C", "D", "E", "F"]
+    cut_subregions = ["Presel", "A"]
+    # cut_subregions = ["Presel"]
     cut_channels = ["ZL3FJ", "ZL2FJ"]
 
     # Creating cut region names
@@ -78,33 +83,33 @@ for sig in ["dim6"]:
     ## MC Out-of-the-box
     c.extraoptions["yaxis_log"] = False
 
-    # ## MC out-of-the-box
-    # p.dump_plot(
-    #         fnames = c.fnames,
-    #         legend_labels = c.legend_labels,
-    #         sig_fnames = c.sig_fnames_dim8 if sig == "dim8" else c.sig_fnames_dim6,
-    #         signal_labels = c.signal_labels_dim8 if sig == "dim8" else c.signal_labels_dim6,
-    #         data_fname = data_fname,
-    #         usercolors = c.usercolors,
-    #         filter_pattern = filter_pattern,
-    #         dirname = f"plots/ZL/{c.tag}/{sig}/mc",
-    #         dogrep = False,
-    #         extraoptions = c.extraoptions,
-    #         histxaxislabeloptions = histxaxislabeloptions,
-    #         )
+    ## MC out-of-the-box
+    p.dump_plot(
+            fnames = c.fnames,
+            legend_labels = c.legend_labels,
+            sig_fnames = c.sig_fnames_dim8 if sig == "dim8" else c.sig_fnames_dim6,
+            signal_labels = c.signal_labels_dim8 if sig == "dim8" else c.signal_labels_dim6,
+            data_fname = data_fname,
+            usercolors = c.usercolors,
+            filter_pattern = filter_pattern,
+            dirname = f"plots/ZL/{c.tag}/{sig}/mc",
+            dogrep = False,
+            extraoptions = c.extraoptions,
+            histxaxislabeloptions = histxaxislabeloptions,
+            )
 
     ## Data-Driven histograms (there are only a few)
     histograms = [
             "ZL3FJA__SR1SumPtFJ",
-            "ZL3FJA__SumPtFJFit",
-            "ZL3FJE__SR1SumPtFJ",
-            "ZL3FJE__SumPtFJFit",
+            # "ZL3FJA__SumPtFJFit",
+            # "ZL3FJE__SR1SumPtFJ",
+            # "ZL3FJE__SumPtFJFit",
             "ZL2FJA__HTFJ_binned",
-            "ZL2FJE__HTFJ_binned",
-            "ZL2FJA__SR2SumPtFJ",
-            "ZL2FJE__SR2SumPtFJ",
-            "ZL2FJLMETA__SR2HTFJ",
-            "ZL2FJLMETE__SR2HTFJ",
+            # "ZL2FJE__HTFJ_binned",
+            # "ZL2FJA__SR2SumPtFJ",
+            # "ZL2FJE__SR2SumPtFJ",
+            # "ZL2FJLMETA__SR2HTFJ",
+            # "ZL2FJLMETE__SR2HTFJ",
             ]
     filter_patterns = []
     for hist in histograms:

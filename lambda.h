@@ -65,6 +65,15 @@ auto VWP = [&, year]()
     else return 999.f;
 };
 
+auto VWP3FJ = [&, year]()
+{
+    if (year == 2006) return 0.65f;
+    else if (year == 2016) return 0.65f;
+    else if (year == 2017) return 0.65f;
+    else if (year == 2018) return 0.65f;
+    else return 999.f;
+};
+
 auto WWP = [&, year](std::string WP)
 {
     if( WP == "loose"){
@@ -143,10 +152,26 @@ auto dist_2d = [&] (float center)
 };
 
 //===============================================================================================================================================================
+// Distance in 2d space of FJi.mass from a provided center (x, x) where x is all same e.g. (85 GeV, 85 GeV)
+auto scaled_dist_2d = [&] (float center)
+{
+    if (NFJ() < 2)
+        return -999.f;
+    else
+        return float(sqrt(pow((FJ0().mass() - center - 2)/(0.08 * FJ0().mass()), 2) + pow((FJ1().mass() - center)/(0.10 * FJ1().mass()), 2)));
+};
+
+//===============================================================================================================================================================
 // In, out, shell of the sphere
-auto is_inside_2d = [&] () { return dist_2d(87.5) < 17.5; };
-auto is_outside_2d = [&] () { return dist_2d(87.5) > 50; };
-auto is_shell_2d = [&] () { return dist_2d(87.5) >= 17.5 and dist_2d(85) <= 50; };
+auto is_inside_2d = [&] () { return dist_2d(85) < 17.5; };
+auto is_outside_2d = [&] () { return dist_2d(85) > 50; };
+auto is_shell_2d = [&] () { return dist_2d(85) >= 17.5 and dist_2d(85) <= 50; };
+
+//===============================================================================================================================================================
+// In, out, shell of the sphere
+auto is_inside_scaled_2d = [&] () { return scaled_dist_2d(82.5) < 2.5; };
+auto is_outside_scaled_2d = [&] () { return scaled_dist_2d(82.5) > 4.0; };
+auto is_shell_scaled_2d = [&] () { return scaled_dist_2d(82.5) >= 2.5 and scaled_dist_2d(82.5) < 4; };
 
 //===============================================================================================================================================================
 // Based on the score cut define 8 regions region 8 == all pass region 1 == all fail and 5 - 7 is when two passes 2 - 4 is when only one pass
@@ -215,6 +240,29 @@ auto dist_3d = [&] (float center, TString syst_name="Nominal")
 };
 
 //===============================================================================================================================================================
+// Distance in 3d space of FJi.mass from a provided center (x, x, x) where x is all same e.g. (85 GeV, 85 GeV, 85 GeV)
+auto scaled_dist_3d = [&] (float center, TString syst_name="Nominal")
+{
+    if (NFJ(syst_name) < 3)
+        return -999.f;
+    else
+    {
+        const float smudge0 = 0.1;
+        const float hi_smudge1 = 0.1;
+        const float hi_smudge2 = 0.1;
+        const float lo_smudge1 = 0.11;
+        const float lo_smudge2 = 0.13;
+        return float(
+            sqrt(
+                pow((FJ0(syst_name).mass() - center) / (smudge0 * FJ0(syst_name).mass()), 2)
+              + pow((FJ1(syst_name).mass() - center) / ( (FJ1(syst_name).mass() - center) < 0 ? ((150 * lo_smudge1) - lo_smudge1 * FJ1(syst_name).mass()) : (hi_smudge1 * FJ1(syst_name).mass())  ), 2)
+              + pow((FJ2(syst_name).mass() - center) / ( (FJ2(syst_name).mass() - center) < 0 ? ((150 * lo_smudge2) - lo_smudge2 * FJ2(syst_name).mass()) : (hi_smudge2 * FJ2(syst_name).mass())  ), 2)
+              )
+            );
+    }
+};
+
+//===============================================================================================================================================================
 // Minimum distance to the center for any of the FJ
 auto min_dist_3d = [&] (float center, TString syst_name="Nominal")
 {
@@ -239,7 +287,11 @@ auto is_outside_3d = [&](TString syst_name="Nominal") { return dist_3d(85, syst_
 auto is_shell_3d   = [&](TString syst_name="Nominal") { return dist_3d(85, syst_name) >= 35 and dist_3d(85, syst_name) <= 50; };
 auto is_atleast_onetop_3d  = [&](TString syst_name="Nominal") { return min_dist_3d(175, syst_name) < 35; };
 
-//===============================================================================================================================================================
+auto is_inside_scaled_3d  = [&](TString syst_name="Nominal") { return scaled_dist_3d(85, syst_name) < 2.5; };
+auto is_outside_scaled_3d = [&](TString syst_name="Nominal") { return scaled_dist_3d(85, syst_name) > 4.0; };
+auto is_shell_scaled_3d   = [&](TString syst_name="Nominal") { return scaled_dist_3d(85, syst_name) >= 2.5 and scaled_dist_3d(85, syst_name) <= 4.0; };
+
+//============================================================================================================================85===============================
 // Based on the score cut define 8 regions region 8 == all pass region 1 == all fail and 5 - 7 is when two passes 2 - 4 is when only one pass
 // This is to define side-bands
 auto vmd_reg_3d = [&](TString syst_name="Nominal")
@@ -250,9 +302,9 @@ auto vmd_reg_3d = [&](TString syst_name="Nominal")
     }
     else
     {
-        bool pass0 = VMD0(syst_name) > VWP();
-        bool pass1 = VMD1(syst_name) > VWP();
-        bool pass2 = VMD2(syst_name) > VWP();
+        bool pass0 = VMD0(syst_name) > VWP3FJ();
+        bool pass1 = VMD1(syst_name) > VWP3FJ();
+        bool pass2 = VMD2(syst_name) > VWP3FJ();
         if (pass0 and pass1 and pass2)
         {
             return 8;

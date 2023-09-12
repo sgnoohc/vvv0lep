@@ -7,6 +7,7 @@ import plot_config as c
 import sys
 import socket
 
+
 run_test = False
 if len(sys.argv) > 1:
     run_test = True
@@ -34,6 +35,13 @@ def chunks(j, nchunk):
 for jobconfig in jobconfigs:
     f = open(jobconfig)
     j = json.loads(f.read())
+
+    # if "QCD" not in jobconfig and "Dim" not in jobconfig :
+    #     continue
+
+    nc = nchunk
+    if "Dim" in jobconfig:
+        nc = 50000
 
     cs = chunks(j, nchunk)
 

@@ -8,19 +8,21 @@ import plot_config as c
 hist_names = [
         ("ZL3FJ", "SR1SumPtFJ"),
         ("ZL2FJ", "HTFJ_binned"),
-        ("ZL2FJ", "SR2SumPtFJ"),
-        ("ZL2FJ", "SRMET"),
-        ("ZL2FJLMET", "HTFJFit"),
-        ("ZL2FJLMET", "HTFJFit"),
-        ("ZL2FJLMET", "SR2HTFJ"),
-        ("ZL3FJ", "SumPtFJFit"),
-        ("ZL3FJ", "SumPtFJFit2"),
         ("ZL2FJ", "HTFJFit"),
-        ("ZL2FJ", "HTJFit2"),
-        ("ZL2FJ", "HTFJFit2"),
+        # ("ZL2FJ", "SR2SumPtFJ"),
+        # ("ZL2FJ", "SRMET"),
+        # ("ZL2FJLMET", "HTFJFit"),
+        # ("ZL2FJLMET", "HTFJFit"),
+        # ("ZL2FJLMET", "SR2HTFJ"),
+        ("ZL3FJ", "SumPtFJFit"),
+        # ("ZL3FJ", "SumPtFJFit2"),
+        # ("ZL2FJ", "HTFJFit"),
+        # ("ZL2FJ", "HTJFit2"),
+        # ("ZL2FJ", "HTFJFit2"),
         ]
 
-for year in [2006, 2016, 2017, 2018, "Run2"]:
+# for year in [2006, 2016, 2017, 2018, "Run2"]:
+for year in ["Run2"]:
 
     # Configuration
     dirname = f"output/{c.tag}/{year}/merged/"
@@ -48,6 +50,7 @@ for year in [2006, 2016, 2017, 2018, "Run2"]:
     regs = ["A", "B", "C", "D", "E", "F"]
 
     of = r.TFile(f"{dirname}/QCD.root", "recreate")
+    of_closure = r.TFile(f"{dirname}/qcd_closure.root", "recreate")
 
     for channel, hist_name in hist_names:
 
@@ -63,49 +66,61 @@ for year in [2006, 2016, 2017, 2018, "Run2"]:
                     tf = r.TFile(f)
                     th1 = tf.Get(f"{channel}{reg}__{hist_name}")
                     if not h[categ][reg]:
-                        print(f)
-                        print(f"{channel}{reg}__{hist_name}")
-                        print(th1)
+                        # print(f)
+                        # print(f"{channel}{reg}__{hist_name}")
+                        # print(th1)
                         h[categ][reg] = th1.Clone()
-                        print(categ, reg, h[categ][reg])
+                        # print(categ, reg, h[categ][reg])
                         h[categ][reg].SetDirectory(0)
                     else:
                         h[categ][reg].Add(th1, p)
 
         # Compute A = B * C / D
         for categ in categs:
-            # if categ != "qcd":
-            #     print(categ)
-            #     print("A")
-            #     h[categ]["A"].Print("all")
-            #     print("B")
-            #     h[categ]["B"].Print("all")
-            #     print("C")
-            #     h[categ]["C"].Print("all")
-            #     print("D")
-            #     h[categ]["D"].Print("all")
-            #     print("E")
-            #     h[categ]["E"].Print("all")
-            #     print("F")
-            #     h[categ]["F"].Print("all")
+            if categ == "qcd":
+                print(categ, hist_name, channel, year)
+                print("A")
+                h[categ]["A"].Print("all")
+                print("B")
+                h[categ]["B"].Print("all")
+                print("C")
+                h[categ]["C"].Print("all")
+                print("D")
+                h[categ]["D"].Print("all")
+                # print("E")
+                # h[categ]["E"].Print("all")
+                # print("F")
+                # h[categ]["F"].Print("all")
             h[categ]["PredA"] = h[categ]["B"].Clone()
             h[categ]["PredA"].Multiply(h[categ]["C"])
             h[categ]["PredA"].Divide(h[categ]["D"])
             h[categ]["PredE"] = h[categ]["F"].Clone()
             h[categ]["PredE"].Multiply(h[categ]["C"])
             h[categ]["PredE"].Divide(h[categ]["D"])
-            print("PredA")
-            h[categ]["PredA"].Print("all")
-            print("PredE")
-            h[categ]["PredE"].Print("all")
+            # print("PredA")
+            # h[categ]["PredA"].Print("all")
+            # print("PredE")
+            # h[categ]["PredE"].Print("all")
 
         # Save to file
-        h[categ]["PredA"].SetName(f"{channel}A__{hist_name}")
-        h[categ]["PredE"].SetName(f"{channel}E__{hist_name}")
-        h[categ]["PredA"].SetDirectory(of)
-        h[categ]["PredE"].SetDirectory(of)
         of.cd()
-        h[categ]["PredA"].Write()
-        h[categ]["PredE"].Write()
+        h["ddqcd"]["PredA"].SetName(f"{channel}A__{hist_name}")
+        h["ddqcd"]["PredE"].SetName(f"{channel}E__{hist_name}")
+        h["ddqcd"]["PredA"].SetDirectory(of)
+        h["ddqcd"]["PredE"].SetDirectory(of)
+        of.cd()
+        h["ddqcd"]["PredA"].Write()
+        h["ddqcd"]["PredE"].Write()
+
+        # Save to file
+        of_closure.cd()
+        h["qcd"]["PredA"].SetName(f"{channel}A__{hist_name}")
+        h["qcd"]["PredE"].SetName(f"{channel}E__{hist_name}")
+        h["qcd"]["PredA"].SetDirectory(of_closure)
+        h["qcd"]["PredE"].SetDirectory(of_closure)
+        of_closure.cd()
+        h["qcd"]["PredA"].Write()
+        h["qcd"]["PredE"].Write()
 
     of.Close()
+    of_closure.Close()

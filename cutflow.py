@@ -7,7 +7,8 @@ for sig in ["dim6"]:
 
     data_fname = f"{c.mdir}/jetht.root"
 
-    signal_scale = 137.64/59.83
+    # signal_scale = 137.64/59.83
+    signal_scale = 1.
 
     c.extraoptions["signal_scale"] = signal_scale
     c.extraoptions["yield_prec"] = 10
