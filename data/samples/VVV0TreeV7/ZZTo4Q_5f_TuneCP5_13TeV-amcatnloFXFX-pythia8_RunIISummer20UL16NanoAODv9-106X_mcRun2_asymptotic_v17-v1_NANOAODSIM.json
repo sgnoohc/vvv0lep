@@ -4,27 +4,27 @@
     "sum_genWeight": 7271593.6682395935,
     "nfiles": 6,
     "files": [
-        "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_4.root",
-        "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_3.root",
-        "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_6.root",
-        "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_5.root",
-        "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_2.root",
-        "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_1.root"
+        "VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_6.root",
+        "VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_1.root",
+        "VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_5.root",
+        "VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_3.root",
+        "VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_4.root",
+        "VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_2.root"
     ],
     "nevents": [
-        7,
-        523,
         11,
+        331,
         774,
-        3700,
-        331
+        523,
+        7,
+        3700
     ],
     "eft_benchmark": 0,
     "is_sig": 0,
     "is_bkg": 1,
     "is_data": 0,
     "is_eft": 0,
-    "dir": "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7",
+    "dir": "VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7",
     "name": "ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM",
     "process": "ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8",
     "xsec": 3.276,

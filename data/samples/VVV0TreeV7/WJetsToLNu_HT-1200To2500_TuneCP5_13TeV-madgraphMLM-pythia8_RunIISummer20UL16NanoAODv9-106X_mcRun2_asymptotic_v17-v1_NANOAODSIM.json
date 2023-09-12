@@ -4,21 +4,21 @@
     "sum_genWeight": 2090561.0,
     "nfiles": 3,
     "files": [
-        "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_2.root",
-        "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_3.root",
-        "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_1.root"
+        "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_1.root",
+        "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_3.root",
+        "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_2.root"
     ],
     "nevents": [
-        165377,
+        272941,
         249428,
-        272941
+        165377
     ],
     "eft_benchmark": 0,
     "is_sig": 0,
     "is_bkg": 1,
     "is_data": 0,
     "is_eft": 0,
-    "dir": "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7",
+    "dir": "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7",
     "name": "WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM",
     "process": "WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8",
     "xsec": 1.074,

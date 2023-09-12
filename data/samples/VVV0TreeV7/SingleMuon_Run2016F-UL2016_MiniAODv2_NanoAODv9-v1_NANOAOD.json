@@ -4,25 +4,25 @@
     "sum_genWeight": 0,
     "nfiles": 5,
     "files": [
-        "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/SingleMuon_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7/output_3.root",
-        "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/SingleMuon_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7/output_2.root",
-        "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/SingleMuon_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7/output_5.root",
-        "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/SingleMuon_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7/output_4.root",
-        "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/SingleMuon_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7/output_1.root"
+        "VVV0TreeV7/SingleMuon_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7/output_1.root",
+        "VVV0TreeV7/SingleMuon_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7/output_5.root",
+        "VVV0TreeV7/SingleMuon_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7/output_3.root",
+        "VVV0TreeV7/SingleMuon_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7/output_4.root",
+        "VVV0TreeV7/SingleMuon_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7/output_2.root"
     ],
     "nevents": [
-        925,
-        3095,
+        4149,
         2753,
+        925,
         2318,
-        4149
+        3095
     ],
     "eft_benchmark": 0,
     "is_sig": 0,
     "is_bkg": 0,
     "is_data": 1,
     "is_eft": 0,
-    "dir": "/data/userdata/phchang/VVV0LepAnalysis/VVV0TreeV7/SingleMuon_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7",
+    "dir": "VVV0TreeV7/SingleMuon_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7",
     "name": "SingleMuon_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD",
     "process": "SingleMuon_Run2016F-UL2016",
     "xsec": 1,

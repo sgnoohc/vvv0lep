@@ -6,12 +6,10 @@ import os
 import json
 import socket
 
-if "uaf-2" in socket.gethostname():
-    tag = "VVV0TreeV7"
-    sample_dirs = glob.glob(f"/data/userdata/phchang/VVV0LepAnalysis/{tag}/*_{tag}")
-else:
-    tag = "VVV0TreeV11"
-    sample_dirs = glob.glob(f"/ceph/cms/store/user/phchang/VVV0LepAnalysis/{tag}/*_{tag}")
+tag = "VVV0TreeV7"
+basedir = "/cmsuf/data/store/user/phchang/VVV0LepAnalysis"
+sample_dirs = glob.glob(f"/blue/p.chang/p.chang/{tag}/*_{tag}")
+
 os.system(f"mkdir -p data/samples/{tag}")
 
 xsec_json_file = open("data/MCxsec.json")
@@ -69,7 +67,7 @@ def get_sample_name(name, json):
         json["process"] = json["name"].split("_Run201")[0] + "_Run201" + json["name"].split("_Run201")[1].split("_")[0]
 
 def get_sample_dir(name, json):
-    json["dir"] = name
+    json["dir"] = json["tag"] + json["tag"].join(name.split(json["tag"])[1:])
 
 def get_xsec(d, json):
     if json["is_bkg"] or json["is_sig"]:
@@ -146,6 +144,7 @@ def main():
         print(f"Processing sample: {d}")
         j = dict()
         rootfiles = glob.glob(f"{d}/*.root")
+        rootfiles = [ tag + tag.join(x.split(tag)[1:]) for x in rootfiles ]
         j["tag"] = tag
         j["noriginalevents"] = int(0)
         j["sum_genWeight"] = 0
@@ -156,7 +155,8 @@ def main():
         parse_sample(d, j)
         # if not j["process"] == "WWZ_NoFilter_NoGGPartons_Dim6":
         #     continue
-        for rf in rootfiles:
+        for rf_raw in rootfiles:
+            rf = basedir + "/" + rf_raw
             print(f"  Processing file: {rf}")
             f = r.TFile(rf)
             j["nevents"].append(f.Get("t").GetEntries())
