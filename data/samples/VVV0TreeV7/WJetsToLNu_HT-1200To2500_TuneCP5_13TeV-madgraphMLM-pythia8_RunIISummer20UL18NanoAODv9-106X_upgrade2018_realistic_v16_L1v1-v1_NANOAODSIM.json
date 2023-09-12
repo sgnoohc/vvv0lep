@@ -4,24 +4,24 @@
     "sum_genWeight": 6481518.0,
     "nfiles": 8,
     "files": [
-        "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1_NANOAODSIM_VVV0TreeV7/output_6.root",
+        "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1_NANOAODSIM_VVV0TreeV7/output_3.root",
         "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1_NANOAODSIM_VVV0TreeV7/output_1.root",
         "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1_NANOAODSIM_VVV0TreeV7/output_5.root",
-        "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1_NANOAODSIM_VVV0TreeV7/output_3.root",
+        "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1_NANOAODSIM_VVV0TreeV7/output_2.root",
+        "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1_NANOAODSIM_VVV0TreeV7/output_6.root",
         "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1_NANOAODSIM_VVV0TreeV7/output_8.root",
         "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1_NANOAODSIM_VVV0TreeV7/output_4.root",
-        "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1_NANOAODSIM_VVV0TreeV7/output_7.root",
-        "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1_NANOAODSIM_VVV0TreeV7/output_2.root"
+        "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1_NANOAODSIM_VVV0TreeV7/output_7.root"
     ],
     "nevents": [
-        244014,
+        22150,
         331990,
         221333,
-        22150,
+        375835,
+        244014,
         332183,
         251117,
-        375163,
-        375835
+        375163
     ],
     "eft_benchmark": 0,
     "is_sig": 0,

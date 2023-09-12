@@ -4,14 +4,14 @@
     "sum_genWeight": 2090561.0,
     "nfiles": 3,
     "files": [
-        "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_1.root",
+        "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_2.root",
         "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_3.root",
-        "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_2.root"
+        "VVV0TreeV7/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_1.root"
     ],
     "nevents": [
-        272941,
+        165377,
         249428,
-        165377
+        272941
     ],
     "eft_benchmark": 0,
     "is_sig": 0,

@@ -4,20 +4,20 @@
     "sum_genWeight": 7271593.6682395935,
     "nfiles": 6,
     "files": [
-        "VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_6.root",
-        "VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_1.root",
-        "VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_5.root",
-        "VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_3.root",
         "VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_4.root",
-        "VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_2.root"
+        "VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_3.root",
+        "VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_6.root",
+        "VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_5.root",
+        "VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_2.root",
+        "VVV0TreeV7/ZZTo4Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_1.root"
     ],
     "nevents": [
-        11,
-        331,
-        774,
-        523,
         7,
-        3700
+        523,
+        11,
+        774,
+        3700,
+        331
     ],
     "eft_benchmark": 0,
     "is_sig": 0,

@@ -4,18 +4,18 @@
     "sum_genWeight": 74624668.1187439,
     "nfiles": 5,
     "files": [
-        "VVV0TreeV7/ST_tW_top_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8_RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1_NANOAODSIM_VVV0TreeV7/output_1.root",
-        "VVV0TreeV7/ST_tW_top_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8_RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1_NANOAODSIM_VVV0TreeV7/output_5.root",
-        "VVV0TreeV7/ST_tW_top_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8_RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1_NANOAODSIM_VVV0TreeV7/output_3.root",
         "VVV0TreeV7/ST_tW_top_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8_RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1_NANOAODSIM_VVV0TreeV7/output_4.root",
-        "VVV0TreeV7/ST_tW_top_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8_RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1_NANOAODSIM_VVV0TreeV7/output_2.root"
+        "VVV0TreeV7/ST_tW_top_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8_RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1_NANOAODSIM_VVV0TreeV7/output_3.root",
+        "VVV0TreeV7/ST_tW_top_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8_RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1_NANOAODSIM_VVV0TreeV7/output_1.root",
+        "VVV0TreeV7/ST_tW_top_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8_RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1_NANOAODSIM_VVV0TreeV7/output_2.root",
+        "VVV0TreeV7/ST_tW_top_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8_RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1_NANOAODSIM_VVV0TreeV7/output_5.root"
     ],
     "nevents": [
-        14690,
-        17028,
-        135,
         2639,
-        9233
+        135,
+        14690,
+        9233,
+        17028
     ],
     "eft_benchmark": 0,
     "is_sig": 0,

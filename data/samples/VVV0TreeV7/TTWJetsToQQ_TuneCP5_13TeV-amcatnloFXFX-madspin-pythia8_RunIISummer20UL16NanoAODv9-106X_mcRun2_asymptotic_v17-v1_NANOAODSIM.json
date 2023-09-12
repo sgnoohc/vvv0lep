@@ -5,23 +5,23 @@
     "nfiles": 8,
     "files": [
         "VVV0TreeV7/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_6.root",
-        "VVV0TreeV7/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_1.root",
-        "VVV0TreeV7/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_5.root",
+        "VVV0TreeV7/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_2.root",
         "VVV0TreeV7/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_3.root",
-        "VVV0TreeV7/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_8.root",
-        "VVV0TreeV7/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_4.root",
         "VVV0TreeV7/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_7.root",
-        "VVV0TreeV7/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_2.root"
+        "VVV0TreeV7/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_5.root",
+        "VVV0TreeV7/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_1.root",
+        "VVV0TreeV7/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_4.root",
+        "VVV0TreeV7/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1_NANOAODSIM_VVV0TreeV7/output_8.root"
     ],
     "nevents": [
         12,
-        111,
-        657,
+        258,
         811,
-        31571,
-        226,
         98,
-        258
+        657,
+        111,
+        226,
+        31571
     ],
     "eft_benchmark": 0,
     "is_sig": 0,

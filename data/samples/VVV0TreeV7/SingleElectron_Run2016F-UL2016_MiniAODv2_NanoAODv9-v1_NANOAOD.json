@@ -4,18 +4,18 @@
     "sum_genWeight": 0,
     "nfiles": 5,
     "files": [
+        "VVV0TreeV7/SingleElectron_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7/output_3.root",
         "VVV0TreeV7/SingleElectron_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7/output_1.root",
         "VVV0TreeV7/SingleElectron_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7/output_5.root",
-        "VVV0TreeV7/SingleElectron_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7/output_3.root",
-        "VVV0TreeV7/SingleElectron_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7/output_4.root",
-        "VVV0TreeV7/SingleElectron_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7/output_2.root"
+        "VVV0TreeV7/SingleElectron_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7/output_2.root",
+        "VVV0TreeV7/SingleElectron_Run2016F-UL2016_MiniAODv2_NanoAODv9-v1_NANOAOD_VVV0TreeV7/output_4.root"
     ],
     "nevents": [
+        788,
         1117,
         923,
-        788,
-        842,
-        778
+        778,
+        842
     ],
     "eft_benchmark": 0,
     "is_sig": 0,

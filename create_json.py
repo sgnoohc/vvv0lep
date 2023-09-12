@@ -7,8 +7,8 @@ import json
 import socket
 
 tag = "VVV0TreeV7"
-basedir = "/cmsuf/data/store/user/phchang/VVV0LepAnalysis"
-sample_dirs = glob.glob(f"/blue/p.chang/p.chang/{tag}/*_{tag}")
+basedir = "/data/userdata/phchang/VVV0LepAnalysis"
+sample_dirs = glob.glob(f"{basedir}/{tag}/*_{tag}")
 
 os.system(f"mkdir -p data/samples/{tag}")
 
