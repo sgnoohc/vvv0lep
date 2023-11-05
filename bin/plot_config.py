@@ -1,7 +1,8 @@
 import socket
 
 if "uaf-2" in socket.gethostname():
-    tag = "VVV0TreeV7"
+    tag = "VVV0TreeV12"
+    # tag = "VVV0TreeV7"
 else:
     tag = "VVV0TreeV7"
 year = "Run2"
@@ -130,7 +131,7 @@ extraoptions = {
             "nbins"            : 60,
             # "autobin"          : True,
             "print_yield"      : True,
-            "yield_prec"       : 10,
+            "yield_prec"       : 5,
             "yaxis_log"        : False,
             "legend_scalex"    : 2,
             "legend_ncolumns"  : 3,

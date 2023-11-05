@@ -7,18 +7,12 @@ import plot_config as c
 
 hist_names = [
         ("ZL3FJ", "SR1SumPtFJ"),
-        ("ZL2FJ", "HTFJ_binned"),
-        ("ZL2FJ", "HTFJFit"),
-        # ("ZL2FJ", "SR2SumPtFJ"),
-        # ("ZL2FJ", "SRMET"),
-        # ("ZL2FJLMET", "HTFJFit"),
-        # ("ZL2FJLMET", "HTFJFit"),
-        # ("ZL2FJLMET", "SR2HTFJ"),
         ("ZL3FJ", "SumPtFJFit"),
-        # ("ZL3FJ", "SumPtFJFit2"),
-        # ("ZL2FJ", "HTFJFit"),
-        # ("ZL2FJ", "HTJFit2"),
-        # ("ZL2FJ", "HTFJFit2"),
+        ("ZL3FJ", "SumPtFJZoom"),
+        ("ZL3FJ", "SumPtFJFit2"),
+        ("ZL2FJ", "HTFJ_binned"),
+        ("ZL2FJ", "HTFJFit2"),
+        ("ZL2FJ", "HTFJFit"),
         ]
 
 # for year in [2006, 2016, 2017, 2018, "Run2"]:
@@ -77,16 +71,16 @@ for year in ["Run2"]:
 
         # Compute A = B * C / D
         for categ in categs:
-            if categ == "qcd":
-                print(categ, hist_name, channel, year)
-                print("A")
-                h[categ]["A"].Print("all")
-                print("B")
-                h[categ]["B"].Print("all")
-                print("C")
-                h[categ]["C"].Print("all")
-                print("D")
-                h[categ]["D"].Print("all")
+            # if categ == "qcd":
+                # print(categ, hist_name, channel, year)
+                # print("A")
+                # h[categ]["A"].Print("all")
+                # print("B")
+                # h[categ]["B"].Print("all")
+                # print("C")
+                # h[categ]["C"].Print("all")
+                # print("D")
+                # h[categ]["D"].Print("all")
                 # print("E")
                 # h[categ]["E"].Print("all")
                 # print("F")
@@ -111,6 +105,7 @@ for year in ["Run2"]:
         of.cd()
         h["ddqcd"]["PredA"].Write()
         h["ddqcd"]["PredE"].Write()
+        h["ddqcd"]["PredA"].Write()
 
         # Save to file
         of_closure.cd()
@@ -121,6 +116,20 @@ for year in ["Run2"]:
         of_closure.cd()
         h["qcd"]["PredA"].Write()
         h["qcd"]["PredE"].Write()
+
+        # Compute systematics from closure
+        h["qcd"]["syst"] = h["qcd"]["PredA"].Clone()
+        h["qcd"]["syst"].Divide(h["qcd"]["A"])
+        h["ddqcd"]["PredASyst"] = h["ddqcd"]["PredA"].Clone()
+        h["ddqcd"]["PredASyst"].SetName(f"{channel}A__{hist_name}_ABCDSyst")
+        for i in range(0, h["qcd"]["syst"].GetNbinsX()+2):
+            bc = h["qcd"]["syst"].GetBinContent(i)
+            be = h["qcd"]["syst"].GetBinError(i)
+            bc = abs(bc-1)
+            syst = bc if bc > be else be
+            h["ddqcd"]["PredASyst"].SetBinError(i, h["ddqcd"]["PredASyst"].GetBinContent(i) * syst)
+        of.cd()
+        h["ddqcd"]["PredASyst"].Write()
 
     of.Close()
     of_closure.Close()

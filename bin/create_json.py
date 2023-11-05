@@ -6,7 +6,7 @@ import os
 import json
 import socket
 
-tag = "VVV0TreeV7"
+tag = "VVV0TreeV12"
 basedir = "/data/userdata/phchang/VVV0LepAnalysis"
 sample_dirs = glob.glob(f"{basedir}/{tag}/*_{tag}")
 

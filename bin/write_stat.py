@@ -106,8 +106,6 @@ def write_cards(version, channel, hn):
 
 if __name__ == "__main__":
 
-    version = "v16"
+    version = "v17"
     write_cards(version, "2FJ", "HTFJ_binned")
-    # write_cards(version, "2FJLMET", "HTJ_binned")
-    # write_cards(version, "2FJHMET", "HTJ_binned")
     write_cards(version, "3FJ", "SR1SumPtFJ")

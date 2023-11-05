@@ -9,4 +9,4 @@
 
 ## Running
 
-    sh arun.sh
+    sh bin/arun.sh

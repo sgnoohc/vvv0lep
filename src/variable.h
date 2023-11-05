@@ -1,4 +1,5 @@
-auto NFJ = [&](TString syst_name="Nominal")
+#define VARIATION "Nominal"
+auto NFJ = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NFJ();
@@ -22,7 +23,7 @@ auto NFJ = [&](TString syst_name="Nominal")
         return vvv.NFJ();
 };
 
-auto FJ0 = [&](TString syst_name="Nominal")
+auto FJ0 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.FJ0();
@@ -46,7 +47,7 @@ auto FJ0 = [&](TString syst_name="Nominal")
         return vvv.FJ0();
 };
 
-auto FJ1 = [&](TString syst_name="Nominal")
+auto FJ1 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.FJ1();
@@ -70,7 +71,7 @@ auto FJ1 = [&](TString syst_name="Nominal")
         return vvv.FJ1();
 };
 
-auto FJ2 = [&](TString syst_name="Nominal")
+auto FJ2 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.FJ2();
@@ -94,7 +95,7 @@ auto FJ2 = [&](TString syst_name="Nominal")
         return vvv.FJ2();
 };
 
-auto FJ3 = [&](TString syst_name="Nominal")
+auto FJ3 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.FJ3();
@@ -118,7 +119,7 @@ auto FJ3 = [&](TString syst_name="Nominal")
         return vvv.FJ3();
 };
 
-auto FJ4 = [&](TString syst_name="Nominal")
+auto FJ4 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.FJ4();
@@ -142,7 +143,7 @@ auto FJ4 = [&](TString syst_name="Nominal")
         return vvv.FJ4();
 };
 
-auto VMD0 = [&](TString syst_name="Nominal")
+auto VMD0 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.VMD0();
@@ -166,7 +167,7 @@ auto VMD0 = [&](TString syst_name="Nominal")
         return vvv.VMD0();
 };
 
-auto VMD1 = [&](TString syst_name="Nominal")
+auto VMD1 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.VMD1();
@@ -190,7 +191,7 @@ auto VMD1 = [&](TString syst_name="Nominal")
         return vvv.VMD1();
 };
 
-auto VMD2 = [&](TString syst_name="Nominal")
+auto VMD2 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.VMD2();
@@ -214,7 +215,7 @@ auto VMD2 = [&](TString syst_name="Nominal")
         return vvv.VMD2();
 };
 
-auto VMD3 = [&](TString syst_name="Nominal")
+auto VMD3 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.VMD3();
@@ -238,7 +239,7 @@ auto VMD3 = [&](TString syst_name="Nominal")
         return vvv.VMD3();
 };
 
-auto VMD4 = [&](TString syst_name="Nominal")
+auto VMD4 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.VMD4();
@@ -262,7 +263,7 @@ auto VMD4 = [&](TString syst_name="Nominal")
         return vvv.VMD4();
 };
 
-auto WMD0 = [&](TString syst_name="Nominal")
+auto WMD0 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.WMD0();
@@ -286,7 +287,7 @@ auto WMD0 = [&](TString syst_name="Nominal")
         return vvv.WMD0();
 };
 
-auto WMD1 = [&](TString syst_name="Nominal")
+auto WMD1 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.WMD1();
@@ -310,7 +311,7 @@ auto WMD1 = [&](TString syst_name="Nominal")
         return vvv.WMD1();
 };
 
-auto WMD2 = [&](TString syst_name="Nominal")
+auto WMD2 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.WMD2();
@@ -334,7 +335,7 @@ auto WMD2 = [&](TString syst_name="Nominal")
         return vvv.WMD2();
 };
 
-auto WMD3 = [&](TString syst_name="Nominal")
+auto WMD3 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.WMD3();
@@ -358,7 +359,7 @@ auto WMD3 = [&](TString syst_name="Nominal")
         return vvv.WMD3();
 };
 
-auto WMD4 = [&](TString syst_name="Nominal")
+auto WMD4 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.WMD4();
@@ -382,7 +383,7 @@ auto WMD4 = [&](TString syst_name="Nominal")
         return vvv.WMD4();
 };
 
-auto NQGen0 = [&](TString syst_name="Nominal")
+auto NQGen0 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NQGen0();
@@ -406,7 +407,7 @@ auto NQGen0 = [&](TString syst_name="Nominal")
         return vvv.NQGen0();
 };
 
-auto NQGen1 = [&](TString syst_name="Nominal")
+auto NQGen1 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NQGen1();
@@ -430,7 +431,7 @@ auto NQGen1 = [&](TString syst_name="Nominal")
         return vvv.NQGen1();
 };
 
-auto NQGen2 = [&](TString syst_name="Nominal")
+auto NQGen2 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NQGen2();
@@ -454,7 +455,7 @@ auto NQGen2 = [&](TString syst_name="Nominal")
         return vvv.NQGen2();
 };
 
-auto NQGen3 = [&](TString syst_name="Nominal")
+auto NQGen3 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NQGen3();
@@ -478,7 +479,7 @@ auto NQGen3 = [&](TString syst_name="Nominal")
         return vvv.NQGen3();
 };
 
-auto NQGen4 = [&](TString syst_name="Nominal")
+auto NQGen4 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NQGen4();
@@ -502,7 +503,7 @@ auto NQGen4 = [&](TString syst_name="Nominal")
         return vvv.NQGen4();
 };
 
-auto NBGen0 = [&](TString syst_name="Nominal")
+auto NBGen0 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NBGen0();
@@ -526,7 +527,7 @@ auto NBGen0 = [&](TString syst_name="Nominal")
         return vvv.NBGen0();
 };
 
-auto NBGen1 = [&](TString syst_name="Nominal")
+auto NBGen1 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NBGen1();
@@ -550,7 +551,7 @@ auto NBGen1 = [&](TString syst_name="Nominal")
         return vvv.NBGen1();
 };
 
-auto NBGen2 = [&](TString syst_name="Nominal")
+auto NBGen2 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NBGen2();
@@ -574,7 +575,7 @@ auto NBGen2 = [&](TString syst_name="Nominal")
         return vvv.NBGen2();
 };
 
-auto NBGen3 = [&](TString syst_name="Nominal")
+auto NBGen3 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NBGen3();
@@ -598,7 +599,7 @@ auto NBGen3 = [&](TString syst_name="Nominal")
         return vvv.NBGen3();
 };
 
-auto NBGen4 = [&](TString syst_name="Nominal")
+auto NBGen4 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NBGen4();
@@ -622,7 +623,7 @@ auto NBGen4 = [&](TString syst_name="Nominal")
         return vvv.NBGen4();
 };
 
-auto NLGen0 = [&](TString syst_name="Nominal")
+auto NLGen0 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NLGen0();
@@ -646,7 +647,7 @@ auto NLGen0 = [&](TString syst_name="Nominal")
         return vvv.NLGen0();
 };
 
-auto NLGen1 = [&](TString syst_name="Nominal")
+auto NLGen1 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NLGen1();
@@ -670,7 +671,7 @@ auto NLGen1 = [&](TString syst_name="Nominal")
         return vvv.NLGen1();
 };
 
-auto NLGen2 = [&](TString syst_name="Nominal")
+auto NLGen2 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NLGen2();
@@ -694,7 +695,7 @@ auto NLGen2 = [&](TString syst_name="Nominal")
         return vvv.NLGen2();
 };
 
-auto NLGen3 = [&](TString syst_name="Nominal")
+auto NLGen3 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NLGen3();
@@ -718,7 +719,7 @@ auto NLGen3 = [&](TString syst_name="Nominal")
         return vvv.NLGen3();
 };
 
-auto NLGen4 = [&](TString syst_name="Nominal")
+auto NLGen4 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NLGen4();
@@ -742,7 +743,7 @@ auto NLGen4 = [&](TString syst_name="Nominal")
         return vvv.NLGen4();
 };
 
-auto NiFJ = [&](TString syst_name="Nominal")
+auto NiFJ = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NiFJ();
@@ -766,7 +767,7 @@ auto NiFJ = [&](TString syst_name="Nominal")
         return vvv.NiFJ();
 };
 
-auto iFJ0 = [&](TString syst_name="Nominal")
+auto iFJ0 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.iFJ0();
@@ -790,7 +791,7 @@ auto iFJ0 = [&](TString syst_name="Nominal")
         return vvv.iFJ0();
 };
 
-auto iFJ1 = [&](TString syst_name="Nominal")
+auto iFJ1 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.iFJ1();
@@ -814,7 +815,7 @@ auto iFJ1 = [&](TString syst_name="Nominal")
         return vvv.iFJ1();
 };
 
-auto iFJ2 = [&](TString syst_name="Nominal")
+auto iFJ2 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.iFJ2();
@@ -838,7 +839,7 @@ auto iFJ2 = [&](TString syst_name="Nominal")
         return vvv.iFJ2();
 };
 
-auto iFJ3 = [&](TString syst_name="Nominal")
+auto iFJ3 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.iFJ3();
@@ -862,7 +863,7 @@ auto iFJ3 = [&](TString syst_name="Nominal")
         return vvv.iFJ3();
 };
 
-auto iFJ4 = [&](TString syst_name="Nominal")
+auto iFJ4 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.iFJ4();
@@ -886,7 +887,7 @@ auto iFJ4 = [&](TString syst_name="Nominal")
         return vvv.iFJ4();
 };
 
-auto iVMD0 = [&](TString syst_name="Nominal")
+auto iVMD0 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.iVMD0();
@@ -910,7 +911,7 @@ auto iVMD0 = [&](TString syst_name="Nominal")
         return vvv.iVMD0();
 };
 
-auto iVMD1 = [&](TString syst_name="Nominal")
+auto iVMD1 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.iVMD1();
@@ -934,7 +935,7 @@ auto iVMD1 = [&](TString syst_name="Nominal")
         return vvv.iVMD1();
 };
 
-auto iVMD2 = [&](TString syst_name="Nominal")
+auto iVMD2 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.iVMD2();
@@ -958,7 +959,7 @@ auto iVMD2 = [&](TString syst_name="Nominal")
         return vvv.iVMD2();
 };
 
-auto iVMD3 = [&](TString syst_name="Nominal")
+auto iVMD3 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.iVMD3();
@@ -982,7 +983,7 @@ auto iVMD3 = [&](TString syst_name="Nominal")
         return vvv.iVMD3();
 };
 
-auto iVMD4 = [&](TString syst_name="Nominal")
+auto iVMD4 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.iVMD4();
@@ -1006,7 +1007,7 @@ auto iVMD4 = [&](TString syst_name="Nominal")
         return vvv.iVMD4();
 };
 
-auto iWMD0 = [&](TString syst_name="Nominal")
+auto iWMD0 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.iWMD0();
@@ -1030,7 +1031,7 @@ auto iWMD0 = [&](TString syst_name="Nominal")
         return vvv.iWMD0();
 };
 
-auto iWMD1 = [&](TString syst_name="Nominal")
+auto iWMD1 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.iWMD1();
@@ -1054,7 +1055,7 @@ auto iWMD1 = [&](TString syst_name="Nominal")
         return vvv.iWMD1();
 };
 
-auto iWMD2 = [&](TString syst_name="Nominal")
+auto iWMD2 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.iWMD2();
@@ -1078,7 +1079,7 @@ auto iWMD2 = [&](TString syst_name="Nominal")
         return vvv.iWMD2();
 };
 
-auto iWMD3 = [&](TString syst_name="Nominal")
+auto iWMD3 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.iWMD3();
@@ -1102,7 +1103,7 @@ auto iWMD3 = [&](TString syst_name="Nominal")
         return vvv.iWMD3();
 };
 
-auto iWMD4 = [&](TString syst_name="Nominal")
+auto iWMD4 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.iWMD4();
@@ -1126,7 +1127,7 @@ auto iWMD4 = [&](TString syst_name="Nominal")
         return vvv.iWMD4();
 };
 
-auto MET = [&](TString syst_name="Nominal")
+auto MET = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.MET();
@@ -1150,7 +1151,7 @@ auto MET = [&](TString syst_name="Nominal")
         return vvv.MET();
 };
 
-auto Nu = [&](TString syst_name="Nominal")
+auto Nu = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.Nu();
@@ -1174,7 +1175,7 @@ auto Nu = [&](TString syst_name="Nominal")
         return vvv.Nu();
 };
 
-auto NJ = [&](TString syst_name="Nominal")
+auto NJ = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NJ();
@@ -1198,7 +1199,7 @@ auto NJ = [&](TString syst_name="Nominal")
         return vvv.NJ();
 };
 
-auto NbLoose = [&](TString syst_name="Nominal")
+auto NbLoose = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NbLoose();
@@ -1222,7 +1223,7 @@ auto NbLoose = [&](TString syst_name="Nominal")
         return vvv.NbLoose();
 };
 
-auto NbMedium = [&](TString syst_name="Nominal")
+auto NbMedium = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NbMedium();
@@ -1246,7 +1247,7 @@ auto NbMedium = [&](TString syst_name="Nominal")
         return vvv.NbMedium();
 };
 
-auto NbTight = [&](TString syst_name="Nominal")
+auto NbTight = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NbTight();
@@ -1270,7 +1271,7 @@ auto NbTight = [&](TString syst_name="Nominal")
         return vvv.NbTight();
 };
 
-auto NoORNbLoose = [&](TString syst_name="Nominal")
+auto NoORNbLoose = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NoORNbLoose();
@@ -1294,7 +1295,7 @@ auto NoORNbLoose = [&](TString syst_name="Nominal")
         return vvv.NoORNbLoose();
 };
 
-auto NoORNbMedium = [&](TString syst_name="Nominal")
+auto NoORNbMedium = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NoORNbMedium();
@@ -1318,7 +1319,7 @@ auto NoORNbMedium = [&](TString syst_name="Nominal")
         return vvv.NoORNbMedium();
 };
 
-auto NoORNbTight = [&](TString syst_name="Nominal")
+auto NoORNbTight = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.NoORNbTight();
@@ -1342,7 +1343,7 @@ auto NoORNbTight = [&](TString syst_name="Nominal")
         return vvv.NoORNbTight();
 };
 
-auto J0 = [&](TString syst_name="Nominal")
+auto J0 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.J0();
@@ -1366,7 +1367,7 @@ auto J0 = [&](TString syst_name="Nominal")
         return vvv.J0();
 };
 
-auto J1 = [&](TString syst_name="Nominal")
+auto J1 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.J1();
@@ -1390,7 +1391,7 @@ auto J1 = [&](TString syst_name="Nominal")
         return vvv.J1();
 };
 
-auto J2 = [&](TString syst_name="Nominal")
+auto J2 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.J2();
@@ -1414,7 +1415,7 @@ auto J2 = [&](TString syst_name="Nominal")
         return vvv.J2();
 };
 
-auto J3 = [&](TString syst_name="Nominal")
+auto J3 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.J3();
@@ -1438,7 +1439,7 @@ auto J3 = [&](TString syst_name="Nominal")
         return vvv.J3();
 };
 
-auto J4 = [&](TString syst_name="Nominal")
+auto J4 = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.J4();
@@ -1462,7 +1463,7 @@ auto J4 = [&](TString syst_name="Nominal")
         return vvv.J4();
 };
 
-auto MVVX = [&](TString syst_name="Nominal")
+auto MVVX = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.MVVX();
@@ -1486,7 +1487,7 @@ auto MVVX = [&](TString syst_name="Nominal")
         return vvv.MVVX();
 };
 
-auto PtVVX = [&](TString syst_name="Nominal")
+auto PtVVX = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.PtVVX();
@@ -1510,7 +1511,7 @@ auto PtVVX = [&](TString syst_name="Nominal")
         return vvv.PtVVX();
 };
 
-auto HT = [&](TString syst_name="Nominal")
+auto HT = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.HT();
@@ -1534,7 +1535,7 @@ auto HT = [&](TString syst_name="Nominal")
         return vvv.HT();
 };
 
-auto HTJ = [&](TString syst_name="Nominal")
+auto HTJ = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.HTJ();
@@ -1558,7 +1559,7 @@ auto HTJ = [&](TString syst_name="Nominal")
         return vvv.HTJ();
 };
 
-auto HTFJ = [&](TString syst_name="Nominal")
+auto HTFJ = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.HTFJ();
@@ -1582,7 +1583,7 @@ auto HTFJ = [&](TString syst_name="Nominal")
         return vvv.HTFJ();
 };
 
-auto SumPtFJ = [&](TString syst_name="Nominal")
+auto SumPtFJ = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.SumPtFJ();
@@ -1606,7 +1607,7 @@ auto SumPtFJ = [&](TString syst_name="Nominal")
         return vvv.SumPtFJ();
 };
 
-auto SumPtJ = [&](TString syst_name="Nominal")
+auto SumPtJ = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))
         return vvv.SumPtJ();
@@ -1743,6 +1744,16 @@ auto GenF20 = [&]()
 auto GenF21 = [&]()
 {
     return vvv.GenF21();
+};
+
+auto QCDScale = [&]()
+{
+    return vvv.QCDScale();
+};
+
+auto PDF = [&]()
+{
+    return vvv.PDF();
 };
 
 auto prefireWgt = [&]()

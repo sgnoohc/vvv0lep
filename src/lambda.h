@@ -58,10 +58,10 @@ auto fjcateg = [&]()
 
 auto VWP = [&, year]()
 {
-    if (year == 2006) return 0.8f;
-    else if (year == 2016) return 0.8f;
-    else if (year == 2017) return 0.8f;
-    else if (year == 2018) return 0.8f;
+    if (year == 2006) return 0.85f;
+    else if (year == 2016) return 0.85f;
+    else if (year == 2017) return 0.85f;
+    else if (year == 2018) return 0.85f;
     else return 999.f;
 };
 

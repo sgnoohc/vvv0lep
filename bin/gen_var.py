@@ -1,5 +1,7 @@
 #!/bin/env python3
 
+import sys
+
 var_wo_syst = ["isData",
 "run",
 # "lumi",
@@ -25,6 +27,8 @@ var_wo_syst = ["isData",
 "GenF11",
 "GenF20",
 "GenF21",
+"QCDScale",
+"PDF",
 ]
 
 var_w_syst = ["NFJ",
@@ -108,7 +112,7 @@ wgt_syst = ["prefireWgt",
 # "trigWgtDn",
 ]
 
-syst_template = lambda VAR: f"""auto {VAR} = [&](TString syst_name="Nominal")
+syst_template = lambda VAR: f"""auto {VAR} = [&](TString syst_name=VARIATION)
 {{
     if (syst_name.EqualTo("Nominal"))
         return vvv.{VAR}();
@@ -165,7 +169,11 @@ wgt_syst_strs = []
 for v in wgt_syst:
     wgt_syst_strs.append(wgt_syst_template(v))
 
-f = open("variable.h", "w")
+f = open("src/variable.h", "w")
+
+sys.argv[1]
+
+f.write("#define VARIATION \"Nominal\"\n")
 
 for i in var_w_syst_strs:
     f.write(i)
