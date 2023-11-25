@@ -275,7 +275,6 @@ auto min_dist_3d = [&] (float center, TString syst_name="Nominal")
         float dtop0 = FJ0(syst_name).mass() - center;
         float dtop1 = FJ1(syst_name).mass() - center;
         float dtop2 = 10000;
-        float test = min(min(abs(dtop0), abs(dtop1)), abs(dtop2));
         return min(min(abs(dtop0), abs(dtop1)), abs(dtop2));
     }
 };

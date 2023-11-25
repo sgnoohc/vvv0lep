@@ -12,7 +12,7 @@ run_test = False
 if len(sys.argv) > 2:
     run_test = True
 
-idx = 1
+idx = -1
 if len(sys.argv) > 1:
     idx = int(sys.argv[1])
 
@@ -74,7 +74,7 @@ for jobconfig in jobconfigs:
         for isplit in range(nsplit):
             output_fullpath_with_isplit = output_fullpath.replace(".root", f"_i{isplit}.root")
             output_log_fullpath_with_isplit = output_log_fullpath.replace(".log", f"_i{isplit}.log")
-            jobs.write(f"./doAnalysis -j {nsplit} -I {isplit} --eftidx {idx} --json {jobconfig} -i {inputs} -o {output_fullpath_with_isplit} -t t > {output_log_fullpath_with_isplit} 2>&1\n")
+            jobs.write(f"./doAnalysis -j {nsplit} -I {isplit} --systidx {idx} --json {jobconfig} -i {inputs} -o {output_fullpath_with_isplit} -t t > {output_log_fullpath_with_isplit} 2>&1\n")
 
         # if "Dim" in jobconfig and len(cs) == 1 and len(cs[0]) == 1: # If the signal is all merged in one file we split further
         #     nsplit = 6
@@ -88,6 +88,6 @@ for jobconfig in jobconfigs:
 jobs.close()
 
 if "uaf-2" in socket.gethostname():
-    os.system("xargs.sh -n 90 .jobs.txt PostProcessed")
+    os.system("xargs.sh -n 90 .jobs.txt")
 else:
     os.system("xargs.sh .jobs.txt")

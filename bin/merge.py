@@ -55,4 +55,4 @@ for key in to_be_merged:
 
 merge_jobs_command_file.close()
 
-os.system("xargs.sh .merge.txt vvv1jdim6.root")
+os.system("xargs.sh .merge.txt")

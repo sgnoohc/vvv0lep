@@ -7,12 +7,12 @@ import plot_config as c
 
 hist_names = [
         ("ZL3FJ", "SR1SumPtFJ"),
-        ("ZL3FJ", "SumPtFJFit"),
-        ("ZL3FJ", "SumPtFJZoom"),
-        ("ZL3FJ", "SumPtFJFit2"),
+        # ("ZL3FJ", "SumPtFJFit"),
+        # ("ZL3FJ", "SumPtFJZoom"),
+        # ("ZL3FJ", "SumPtFJFit2"),
         ("ZL2FJ", "HTFJ_binned"),
         ("ZL2FJ", "HTFJFit2"),
-        ("ZL2FJ", "HTFJFit"),
+        # ("ZL2FJ", "HTFJFit"),
         ]
 
 # for year in [2006, 2016, 2017, 2018, "Run2"]:
