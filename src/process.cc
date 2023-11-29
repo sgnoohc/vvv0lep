@@ -471,7 +471,7 @@ int main(int argc, char** argv)
                                return true;
                            }
                        },
-                       [&, ana, is_data, is_sig, is_eft, sm_eft_idx, lumi, xsec, sum_genWeight, eft_idx_benchmark]()
+                       [&, is_data, is_sig, is_eft, sm_eft_idx, lumi, xsec, sum_genWeight, eft_idx_benchmark]()
                        {
                            if (is_data)
                            {
@@ -572,70 +572,13 @@ int main(int argc, char** argv)
     ana.cutflow.getCut("ZL");
     ana.cutflow.addCutToLastActiveCut("ZL2FJ", [&]() { return NFJ() == 2; }, UNITY);
 
-    // std::vector<std::function<bool()>> cuts_2fj = 
-    // {
-    //     [&]() { return HTFJ() > 1100; },
-    //     [&]() { return FJ0().pt() > 500.; },
-    //     [&]() { return FJ0().mass() < 150.; },
-    //     [&]() { return FJ1().mass() < 150.; },
-    //     [&]() { return NoORNbMedium() == 0.; },
-    //     [&]() { return signalMSD(FJ0()); },
-    //     [&]() { return WMD_TIGHT(WMD1()); },
-    //     [&]() { return WMD_LOOSE(WMD0()); },
-    // };
-
     std::vector<std::function<bool()>> cuts_2fj = 
     {
         [&]() { return HTFJ() > 1100; },
         [&]() { return FJ0().pt() > 500.; },
         [&]() { return FJ0().mass() < 150.; },
         [&]() { return FJ1().mass() < 150.; },
-        // [&]() { return HTFJ() > 2000; },
-        // [&]() { return is_inside_scaled_2d(); },
-        // [&]() { return vmd_reg_2d() == 4; },
-        // [&]() { return VMD0() > 0.7; },
-        // [&]() { return VMD1() > 0.7; },
-        // [&]() { return scaled_dist_2d(82.5) < 4.; },
-        // [&]() { return NoORNbMedium() == 0.; },
-        // [&]() { return signalMSD(FJ0()); },
-        // [&]() { return WMD_TIGHT(WMD1()); },
-        // [&]() { return WMD_LOOSE(WMD0()); },
     };
-
-    std::vector<std::function<bool()>> cuts_2fj_lowmet = 
-    {
-        [&]() { return HTFJ() > 1100; },
-        [&]() { return FJ0().pt() > 500.; },
-        [&]() { return FJ0().mass() < 150.; },
-        [&]() { return FJ1().mass() < 150.; },
-        // [&]() { return NoORNbMedium() == 0.; },
-        // [&]() { return signalMSD(FJ0()); },
-        // [&]() { return WMD_TIGHT(WMD1()); },
-        // [&]() { return WMD_LOOSE(WMD0()); },
-        [&]() { return MET().pt() < 400.; },
-    };
-
-    std::vector<std::function<bool()>> cuts_2fj_highmet = 
-    {
-        [&]() { return HTFJ() > 1100; },
-        [&]() { return FJ0().pt() > 500.; },
-        [&]() { return FJ0().mass() < 150.; },
-        [&]() { return FJ1().mass() < 150.; },
-        // [&]() { return signalMSD(FJ0()); },
-        // [&]() { return WMD_TIGHT(WMD1()); },
-        // [&]() { return WMD_LOOSE(WMD0()); },
-        [&]() { return MET().pt() >= 400.; },
-    };
-
-    // std::vector<std::function<bool()>> abcdef_2fj = 
-    // {
-    //     [&]() { return signalMSD(FJ0()) and signalMSD(FJ1()) and WMD_TIGHT(WMD0())                           and WMD_TIGHT(WMD1()) ; },
-    //     [&]() { return signalMSD(FJ0()) and signalMSD(FJ1()) and WMD_LOOSE(WMD0()) and not WMD_TIGHT(WMD0()) and WMD_TIGHT(WMD1()) ; },
-    //     [&]() { return signalMSD(FJ0()) and lowMSD(FJ1())    and WMD_TIGHT(WMD0())                           and WMD_TIGHT(WMD1()) ; },
-    //     [&]() { return signalMSD(FJ0()) and lowMSD(FJ1())    and WMD_LOOSE(WMD0()) and not WMD_TIGHT(WMD0()) and WMD_TIGHT(WMD1()) ; },
-    //     [&]() { return signalMSD(FJ0()) and highMSD(FJ1())   and WMD_TIGHT(WMD0())                           and WMD_TIGHT(WMD1()) ; },
-    //     [&]() { return signalMSD(FJ0()) and highMSD(FJ1())   and WMD_LOOSE(WMD0()) and not WMD_TIGHT(WMD0()) and WMD_TIGHT(WMD1()) ; },
-    // };
 
     std::vector<std::function<bool()>> abcdef_2fj = 
     {
@@ -645,12 +588,6 @@ int main(int argc, char** argv)
         [&]() { return is_outside_2d() and vmd_reg_2d() != 4; },
         [&]() { return is_shell_2d()   and vmd_reg_2d() == 4; },
         [&]() { return is_shell_2d()   and vmd_reg_2d() != 4; },
-        // [&]() { return is_inside_scaled_2d()  and vmd_reg_2d() == 4; },
-        // [&]() { return is_inside_scaled_2d()  and vmd_reg_2d() != 4; },
-        // [&]() { return is_shell_scaled_2d()   and vmd_reg_2d() == 4; },
-        // [&]() { return is_shell_scaled_2d()   and vmd_reg_2d() != 4; },
-        // [&]() { return is_outside_scaled_2d() and vmd_reg_2d() == 4; },
-        // [&]() { return is_outside_scaled_2d() and vmd_reg_2d() != 4; },
     };
 
     std::vector<std::function<float()>> abcdef_wgt_2fj = 
@@ -665,19 +602,11 @@ int main(int argc, char** argv)
 
     ana.cutflow.getCut("ZL2FJ");
     ana.cutflow.addCutToLastActiveCut("ZL2FJPresel", [&, cuts_2fj]() { for (auto& cut : cuts_2fj) { if (not cut()) return false; } return true; }, UNITY);
-    // ana.cutflow.getCut("ZL2FJ");
-    // ana.cutflow.addCutToLastActiveCut("ZL2FJLMETPresel", [&, cuts_2fj_lowmet]() { for (auto& cut : cuts_2fj_lowmet) { if (not cut()) return false; } return true; }, UNITY);
-    // ana.cutflow.getCut("ZL2FJ");
-    // ana.cutflow.addCutToLastActiveCut("ZL2FJHMETPresel", [&, cuts_2fj_highmet]() { for (auto& cut : cuts_2fj_highmet) { if (not cut()) return false; } return true; }, UNITY);
 
     for (unsigned int ireg = 0; ireg < regions.size(); ++ireg)
     {
         ana.cutflow.getCut("ZL2FJPresel");
         ana.cutflow.addCutToLastActiveCut(TString::Format("ZL2FJ%s", regions[ireg].Data()), abcdef_2fj[ireg], abcdef_wgt_2fj[ireg]);
-        // ana.cutflow.getCut("ZL2FJLMETPresel");
-        // ana.cutflow.addCutToLastActiveCut(TString::Format("ZL2FJLMET%s", regions[ireg].Data()), abcdef_2fj[ireg], abcdef_wgt_2fj[ireg]);
-        // ana.cutflow.getCut("ZL2FJHMETPresel");
-        // ana.cutflow.addCutToLastActiveCut(TString::Format("ZL2FJHMET%s", regions[ireg].Data()), abcdef_2fj[ireg], abcdef_wgt_2fj[ireg]);
     }
 
     //===============================================================================================================================================================
@@ -705,10 +634,10 @@ int main(int argc, char** argv)
     {
         [&]() { return is_inside_3d()  and vmd_reg_3d() == 8; },
         [&]() { return is_inside_3d()  and vmd_reg_3d() != 8; },
-        [&]() { return is_shell_3d()   and vmd_reg_3d() == 8; },
-        [&]() { return is_shell_3d()   and vmd_reg_3d() != 8; },
         [&]() { return is_outside_3d() and vmd_reg_3d() == 8; },
         [&]() { return is_outside_3d() and vmd_reg_3d() != 8; },
+        [&]() { return is_shell_3d()   and vmd_reg_3d() == 8; },
+        [&]() { return is_shell_3d()   and vmd_reg_3d() != 8; },
         // [&]() { return is_inside_scaled_3d()  and vmd_reg_3d() == 8; },
         // [&]() { return is_inside_scaled_3d()  and vmd_reg_3d() != 8; },
         // [&]() { return is_shell_scaled_3d()   and vmd_reg_3d() == 8; },
@@ -768,6 +697,75 @@ int main(int argc, char** argv)
     //     }
     // }
 
+    for (auto& syst : systs)
+    {
+        for (auto& var : vars)
+        {
+            TString systvar = TString::Format("%s%s", syst.Data(), var.Data());
+            ana.cutflow.addCutSyst(systvar, {"ZL3FJPresel", "ZL3FJA"});
+            ana.cutflow.setCutSyst("ZL3FJPresel", systvar,
+                                          [&, systvar]()
+                                          {
+                                              return NFJ(systvar) >= 3 and
+                                                  SumPtFJ(systvar) > 1250 and
+                                                  FJ0(systvar).pt() > 500. and
+                                                  FJ0(systvar).mass() < 150. and
+                                                  FJ1(systvar).mass() < 150. and
+                                                  FJ2(systvar).mass() < 150.;
+                                          }, UNITY);
+            ana.cutflow.setCutSyst("ZL3FJA", systvar, [&, systvar]() { return is_inside_3d(systvar)  and vmd_reg_3d(systvar) == 8; }, UNITY);
+        }
+    }
+
+    // for (auto& syst : systs)
+    // {
+    //     for (auto& var : vars)
+    //     {
+    //         TString systvar = TString::Format("%s%s", syst.Data(), var.Data());
+    //         ana.cutflow.addCutSyst(systvar, {"ZL3FJPresel", "ZL3FJA", "ZL3FJB", "ZL3FJC", "ZL3FJD", "ZL3FJE", "ZL3FJF"});
+    //         ana.cutflow.setCutSyst("ZL3FJPresel", systvar,
+    //                                       [&, systvar]()
+    //                                       {
+    //                                           return NFJ(systvar) >= 3 and
+    //                                               SumPtFJ(systvar) > 1250 and
+    //                                               FJ0(systvar).pt() > 500. and
+    //                                               FJ0(systvar).mass() < 150. and
+    //                                               FJ1(systvar).mass() < 150. and
+    //                                               FJ2(systvar).mass() < 150.;
+    //                                       }, UNITY);
+    //         ana.cutflow.setCutSyst("ZL3FJA", systvar, [&, systvar]() { return is_inside_3d(systvar)  and vmd_reg_3d(systvar) == 8; }, UNITY);
+    //         ana.cutflow.setCutSyst("ZL3FJB", systvar, [&, systvar]() { return is_inside_3d(systvar)  and vmd_reg_3d(systvar) != 8; }, UNITY);
+    //         ana.cutflow.setCutSyst("ZL3FJC", systvar, [&, systvar]() { return is_outside_3d(systvar) and vmd_reg_3d(systvar) == 8; }, UNITY);
+    //         ana.cutflow.setCutSyst("ZL3FJD", systvar, [&, systvar]() { return is_outside_3d(systvar) and vmd_reg_3d(systvar) != 8; }, UNITY);
+    //         ana.cutflow.setCutSyst("ZL3FJE", systvar, [&, systvar]() { return is_shell_3d(systvar)   and vmd_reg_3d(systvar) == 8; }, UNITY);
+    //         ana.cutflow.setCutSyst("ZL3FJF", systvar, [&, systvar]() { return is_shell_3d(systvar)   and vmd_reg_3d(systvar) != 8; }, UNITY);
+    //     }
+    // }
+
+    // for (auto& syst : systs)
+    // {
+    //     for (auto& var : vars)
+    //     {
+    //         TString systvar = TString::Format("%s%s", syst.Data(), var.Data());
+    //         ana.cutflow.addCutSyst(systvar, {"ZL2FJPresel", "ZL2FJA", "ZL2FJB", "ZL2FJC", "ZL2FJD", "ZL2FJE", "ZL2FJF"});
+    //         ana.cutflow.setCutSyst("ZL2FJPresel", systvar,
+    //                                       [&, systvar]()
+    //                                       {
+    //                                           return NFJ(systvar) == 2 and
+    //                                               HTFJ(systvar) > 1100 and
+    //                                               FJ0(systvar).pt() > 500. and
+    //                                               FJ0(systvar).mass() < 150. and
+    //                                               FJ1(systvar).mass() < 150.;
+    //                                       }, UNITY);
+    //         ana.cutflow.setCutSyst("ZL2FJA", systvar, [&, systvar]() { return is_inside_2d(systvar)  and vmd_reg_2d(systvar) == 4; }, UNITY);
+    //         ana.cutflow.setCutSyst("ZL2FJB", systvar, [&, systvar]() { return is_inside_2d(systvar)  and vmd_reg_2d(systvar) != 4; }, UNITY);
+    //         ana.cutflow.setCutSyst("ZL2FJC", systvar, [&, systvar]() { return is_outside_2d(systvar) and vmd_reg_2d(systvar) == 4; }, UNITY);
+    //         ana.cutflow.setCutSyst("ZL2FJD", systvar, [&, systvar]() { return is_outside_2d(systvar) and vmd_reg_2d(systvar) != 4; }, UNITY);
+    //         ana.cutflow.setCutSyst("ZL2FJE", systvar, [&, systvar]() { return is_shell_2d(systvar)   and vmd_reg_2d(systvar) == 4; }, UNITY);
+    //         ana.cutflow.setCutSyst("ZL2FJF", systvar, [&, systvar]() { return is_shell_2d(systvar)   and vmd_reg_2d(systvar) != 4; }, UNITY);
+    //     }
+    // }
+
     //===============================================================================================================================================================
     // Print cut structure
     ana.cutflow.printCuts();
@@ -799,47 +797,35 @@ int main(int argc, char** argv)
     RooUtil::Histograms histograms_FJ0_SF;
     histograms_FJ0_SF.addHistogram("SFVMD0" , 10000  , 0     , 1     , [&]() { return VMD0(); } );
 
-    // The length of the weight variations will be NPDF + NQCDScale + NLHEReweight with 1 empty spots in between
-    std::cout <<  " PDF().size(): " << PDF().size() <<  std::endl;
-    int n_wgt_syst = PDF().size() + 1
-                   + QCDScale().size() + 1
-                   + 2 + 1 // prefireweight
-                   + 2 + 1 // puwgt
-                   + 2 + 1 // trigwgt
-                   + LHEReweightingWeight().size()
-                   ;
-    std::cout <<  " n_wgt_syst: " << n_wgt_syst <<  std::endl;
-    auto nweight = [&, n_wgt_syst]() { std::vector<float> rtn(n_wgt_syst); std::iota(rtn.begin(), rtn.end(), 0); return rtn; };
-    auto wgtvec = [&]() {
-                        std::vector<float> rtn = PDF();
-                        rtn.push_back(0);
-                        std::vector<float> rtn2 = QCDScale();
-                        rtn.insert(rtn.end(), rtn2.begin(), rtn2.end());
-                        rtn.push_back(0);
-                        rtn.push_back(vvv.prefireWgtUp());
-                        rtn.push_back(vvv.prefireWgtDn());
-                        rtn.push_back(0);
-                        rtn.push_back(vvv.puWgtUp());
-                        rtn.push_back(vvv.puWgtDn());
-                        rtn.push_back(0);
-                        rtn.push_back(vvv.trigWgtUp());
-                        rtn.push_back(vvv.trigWgtDn());
-                        std::vector<float> rtn3 = LHEReweightingWeight();
-                        rtn.insert(rtn.end(), rtn3.begin(), rtn3.end());
-                        return rtn;
-                    };
-
     RooUtil::Histograms histograms_3FJ_SR;
-    histograms_3FJ_SR.addHistogram("SR1SumPtFJ"     , {1250, 1500, 1750, 2000, 2250, 2500, 3000, 4000}, [&]() { return SumPtFJ() < 4000 ? SumPtFJ() : 3999.f; } );
-    histograms_3FJ_SR.add2DVecHistogram("SR1SumPtFJ", {1250, 1500, 1750, 2000, 2250, 2500, 3000, 4000}, "Wgts", n_wgt_syst, 0., (float) n_wgt_syst,
-                                        [&, n_wgt_syst]() { float var = SumPtFJ() < 4000 ? SumPtFJ() : 3999.f; std::vector<float> rtn(n_wgt_syst, var); return rtn; },
-                                        nweight, wgtvec);
+    histograms_3FJ_SR.addHistogram("SR1SumPtFJ", SR1SumPtFJ_bins, SR1SumPtFJ_var["Nominal"] );
+    histograms_3FJ_SR.add2DVecHistogram("SR1SumPtFJ", SR1SumPtFJ_bins, "Wgts", n_wgt_syst, 0., (float) n_wgt_syst, SR1SumPtFJ_var_w_wgt["Nominal"], nweight, wgtvec);
 
     RooUtil::Histograms histograms_2FJ_SR;
-    histograms_2FJ_SR.addHistogram("HTFJ_binned"     , {1100, 1500, 2000, 2500, 3000, 3500} , [&]() { return HTFJ() < 3500 ? HTFJ() : 3499.f; } );
-    histograms_2FJ_SR.add2DVecHistogram("HTFJ_binned", {1100, 1500, 2000, 2500, 3000, 3500}, "Wgts", PDF().size(), 0., (float) PDF().size(),
-                                        [&, n_wgt_syst]() { float var = HTFJ() < 3500 ? HTFJ() : 3499.f; std::vector<float> rtn(n_wgt_syst, var); return rtn; },
-                                        nweight, wgtvec);
+    histograms_2FJ_SR.addHistogram("HTFJ_binned", HTFJ_bins, HTFJ_var["Nominal"] );
+    histograms_2FJ_SR.add2DVecHistogram("HTFJ_binned", HTFJ_bins, "Wgts", n_wgt_syst, 0., (float) n_wgt_syst, HTFJ_var_w_wgt["Nominal"], nweight, wgtvec);
+
+    RooUtil::Histograms syst_hists_3FJ_SR;
+    for (auto& syst : systs)
+    {
+        for (auto& var : vars)
+        {
+            TString systvar = TString::Format("%s%s", syst.Data(), var.Data());
+            syst_hists_3FJ_SR.addHistogram(TString::Format("SR1SumPtFJ%s", systvar.Data()), SR1SumPtFJ_bins, SR1SumPtFJ_var[systvar]);
+            syst_hists_3FJ_SR.add2DVecHistogram(TString::Format("SR1SumPtFJ%s", systvar.Data()), SR1SumPtFJ_bins, "Wgts", n_wgt_syst, 0., (float) n_wgt_syst, SR1SumPtFJ_var_w_wgt[systvar], nweight, wgtvec);
+        }
+    }
+
+    RooUtil::Histograms syst_hists_2FJ_SR;
+    for (auto& syst : systs)
+    {
+        for (auto& var : vars)
+        {
+            TString systvar = TString::Format("%s%s", syst.Data(), var.Data());
+            syst_hists_2FJ_SR.addHistogram(TString::Format("HTFJ%s", systvar.Data()), HTFJ_bins, HTFJ_var[systvar]);
+            syst_hists_2FJ_SR.add2DVecHistogram(TString::Format("HTFJ%s", systvar.Data()), HTFJ_bins, "Wgts", n_wgt_syst, 0., (float) n_wgt_syst, HTFJ_var_w_wgt[systvar], nweight, wgtvec);
+        }
+    }
 
     RooUtil::Histograms histograms_onelep;
     histograms_onelep.addHistogram("LPt"     , 180 , 0       , 1000   , [&]() { return Lep().pt(); } );
@@ -889,6 +875,16 @@ int main(int argc, char** argv)
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ2, "ZL3FJTop");
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_event, "ZL3FJTop");
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_3FJ_SR, "ZL3FJTop");
+
+    for (auto& cut : syst_cut_to_book_3fj)
+    {
+        ana.cutflow.bookHistogramsForCut(syst_hists_3FJ_SR, cut);
+    }
+
+    for (auto& cut : syst_cut_to_book_2fj)
+    {
+        ana.cutflow.bookHistogramsForCut(syst_hists_2FJ_SR, cut);
+    }
 
     // Looping input file
     while (ana.looper.nextEvent())

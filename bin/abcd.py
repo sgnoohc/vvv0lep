@@ -61,7 +61,7 @@ for year in ["Run2"]:
                     th1 = tf.Get(f"{channel}{reg}__{hist_name}")
                     if not h[categ][reg]:
                         # print(f)
-                        # print(f"{channel}{reg}__{hist_name}")
+                        print(f"{channel}{reg}__{hist_name}")
                         # print(th1)
                         h[categ][reg] = th1.Clone()
                         # print(categ, reg, h[categ][reg])

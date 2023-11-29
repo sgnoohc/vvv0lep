@@ -1,4 +1,5 @@
 #include "variable.h"
+#include "histvariable.h"
 
 //***************************************************************************************************************************************************************
 //
@@ -143,12 +144,12 @@ auto WMD_LOOSE = [&](float wmd)
 
 //===============================================================================================================================================================
 // Distance in 2d space of FJi.mass from a provided center (x, x) where x is all same e.g. (85 GeV, 85 GeV)
-auto dist_2d = [&] (float center)
+auto dist_2d = [&] (float center, TString syst_name="Nominal")
 {
-    if (NFJ() < 2)
+    if (NFJ(syst_name) < 2)
         return -999.f;
     else
-        return float(sqrt(pow(FJ0().mass() - center, 2) + pow(FJ1().mass() - center, 2)));
+        return float(sqrt(pow(FJ0(syst_name).mass() - center, 2) + pow(FJ1(syst_name).mass() - center, 2)));
 };
 
 //===============================================================================================================================================================
@@ -163,9 +164,9 @@ auto scaled_dist_2d = [&] (float center)
 
 //===============================================================================================================================================================
 // In, out, shell of the sphere
-auto is_inside_2d = [&] () { return dist_2d(85) < 17.5; };
-auto is_outside_2d = [&] () { return dist_2d(85) > 50; };
-auto is_shell_2d = [&] () { return dist_2d(85) >= 17.5 and dist_2d(85) <= 50; };
+auto is_inside_2d = [&] (TString syst_name="Nominal") { return dist_2d(85, syst_name) < 17.5; };
+auto is_outside_2d = [&] (TString syst_name="Nominal") { return dist_2d(85, syst_name) > 50; };
+auto is_shell_2d = [&] (TString syst_name="Nominal") { return dist_2d(85, syst_name) >= 17.5 and dist_2d(85, syst_name) <= 50; };
 
 //===============================================================================================================================================================
 // In, out, shell of the sphere
