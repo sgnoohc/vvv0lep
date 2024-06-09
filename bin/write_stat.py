@@ -72,40 +72,54 @@ def write_cards(version, channel, hn):
     f_eft_idx_information = open("data/dim61j_eft_information.txt")
     j = json.loads(f_eft_idx_information.read())
 
-    signals = ["vvv1jdim6", "vvvdim8"]
+    # signals = ["vvv1jdim6", "vvvdim8"]
+    signals = ["vvv1jdim6"]
     signames = {"vvvdim8": "VVV", "vvv1jdim6": "VVV", "www1jdim6" : "WWW", "wwz1jdim6" : "WWZ", "wzz1jdim6" : "WZZ", "zzz1jdim6" : "ZZZ"}
     efts = ["cT0", "cM0", "cW", "cHbox", "cHDD", "cHW", "cHB", "cHWB", "cHl3", "cHq1", "cHq3", "cHu", "cHd", "cll1"]
+
+    hist_name = f"ZL{channel}A__{hn}_v_Wgts"
 
     for s in signals:
         for syst in systs:
             syst_suffix = suffix(syst)
             dirname = f'{c.mdir}'
             f = r.TFile(f"{dirname}/{s}.root")
-            good_eft_names = []
-            for key in f.GetListOfKeys():
-                histkey = str(key.GetName())
-                if f"ZL{channel}AEFT" not in histkey:
-                    continue
-                eft_name = histkey.split("AEFT_")[1].split("__")[0]
-                eft_op_name = eft_name.split("_")[0]
-                if eft_op_name not in efts:
-                    continue
-                good_eft_names.append(eft_name)
-            good_eft_names = list(set(good_eft_names))
-            good_eft_names.sort()
-            for eft_name in good_eft_names:
-                hist_name = f"ZL{channel}AEFT_{eft_name}__{hn}"
-                h = f.Get(hist_name).Clone()
-                h.SetName(f"h_{signames[s]}_{eft_name}{syst_suffix}")
-                h.SetDirectory(stat_file)
-                # h.Scale(137.64/59.83)
+            h = f.Get(hist_name).Clone()
+            for idx in range(121, 338):
+                eftname = j[str(idx-121)]
+                hh = r.TH1F(f"h_{signames[s]}_{eftname}", f"h_{signames[s]}_{eftname}", h.GetNbinsX(), 0, h.GetNbinsX())
+                for ibin in range(h.GetNbinsX()):
+                    hh.SetBinContent(1 + ibin, h.GetBinContent(1 + ibin, idx))
+                    hh.SetBinError(1 + ibin, h.GetBinError(1 + ibin, idx))
+                hh.SetDirectory(stat_file)
                 stat_file.cd()
-                h.Write()
+                hh.Write()
+
+            # good_eft_names = []
+            # for key in f.GetListOfKeys():
+            #     histkey = str(key.GetName())
+            #     if f"ZL{channel}AEFT" not in histkey:
+            #         continue
+            #     eft_name = histkey.split("AEFT_")[1].split("__")[0]
+            #     eft_op_name = eft_name.split("_")[0]
+            #     if eft_op_name not in efts:
+            #         continue
+            #     good_eft_names.append(eft_name)
+            # good_eft_names = list(set(good_eft_names))
+            # good_eft_names.sort()
+            # for eft_name in good_eft_names:
+            #     hist_name = f"ZL{channel}AEFT_{eft_name}__{hn}"
+            #     h = f.Get(hist_name).Clone()
+            #     h.SetName(f"h_{signames[s]}_{eft_name}{syst_suffix}")
+            #     h.SetDirectory(stat_file)
+            #     # h.Scale(137.64/59.83)
+            #     stat_file.cd()
+            #     h.Write()
 
     stat_file.Close()
 
 if __name__ == "__main__":
 
-    version = "v17"
+    version = "v18"
     write_cards(version, "2FJ", "HTFJ_binned")
     write_cards(version, "3FJ", "SR1SumPtFJ")

@@ -1,8 +1,7 @@
 import socket
 
-if "uaf-2" in socket.gethostname():
-    tag = "VVV0TreeV12"
-    # tag = "VVV0TreeV7"
+if "uaf-2" in socket.gethostname() or "uaf-4" in socket.gethostname():
+    tag = "VVV0TreeV13.2"
 else:
     tag = "VVV0TreeV7"
 year = "Run2"
@@ -95,7 +94,7 @@ sig_fnames_dim6 = [
             # f"{mdir}/wwz1jdim6.root",
             # f"{mdir}/wzz1jdim6.root",
             # f"{mdir}/zzz1jdim6.root",
-            f"{mdir}/vvvdim8.root",
+            # f"{mdir}/vvvdim8.root",
             ]
 
 signal_labels_dim6 = [
@@ -104,7 +103,7 @@ signal_labels_dim6 = [
             # "WWZ D6",
             # "WZZ D6",
             # "ZZZ D6",
-            "VVV D8",
+            # "VVV D8",
             ]
 
 usercolors = [

@@ -75,6 +75,24 @@ auto VWP3FJ = [&, year]()
     else return 999.f;
 };
 
+auto WWP2FJ = [&, year]()
+{
+    if (year == 2006) return 0.85f;
+    else if (year == 2016) return 0.84f;
+    else if (year == 2017) return 0.81f;
+    else if (year == 2018) return 0.82f;
+    else return 999.f;
+};
+
+auto WWP3FJ = [&, year]()
+{
+    if (year == 2006) return 0.64f;
+    else if (year == 2016) return 0.64f;
+    else if (year == 2017) return 0.58f;
+    else if (year == 2018) return 0.59f;
+    else return 999.f;
+};
+
 auto WWP = [&, year](std::string WP)
 {
     if( WP == "loose"){
@@ -210,6 +228,42 @@ auto vmd_reg_2d = [&](TString syst_name="Nominal")
     }
 };
 
+//===============================================================================================================================================================
+// Based on the score cut define 8 regions region 8 == all pass region 1 == all fail and 5 - 7 is when two passes 2 - 4 is when only one pass
+// This is to define side-bands
+auto wmd_reg_2d = [&](TString syst_name="Nominal")
+{
+    if (NFJ(syst_name) != 2)
+    {
+        return 0;
+    }
+    else
+    {
+        bool pass0 = WMD0(syst_name) > WWP2FJ();
+        bool pass1 = WMD1(syst_name) > WWP2FJ();
+        if (pass0 and pass1)
+        {
+            return 4;
+        }
+        else if (pass0 and not pass1)
+        {
+            return 3;
+        }
+        else if (not pass0 and pass1)
+        {
+            return 2;
+        }
+        else if (not pass0 and not pass1)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0; // technically should never be here
+        }
+    }
+};
+
 
 
 
@@ -305,6 +359,59 @@ auto vmd_reg_3d = [&](TString syst_name="Nominal")
         bool pass0 = VMD0(syst_name) > VWP3FJ();
         bool pass1 = VMD1(syst_name) > VWP3FJ();
         bool pass2 = VMD2(syst_name) > VWP3FJ();
+        if (pass0 and pass1 and pass2)
+        {
+            return 8;
+        }
+        else if (pass0 and pass1 and not pass2)
+        {
+            return 7;
+        }
+        else if (pass0 and not pass1 and pass2)
+        {
+            return 6;
+        }
+        else if (not pass0 and pass1 and pass2)
+        {
+            return 5;
+        }
+        else if (pass0 and not pass1 and not pass2)
+        {
+            return 4;
+        }
+        else if (not pass0 and pass1 and not pass2)
+        {
+            return 3;
+        }
+        else if (not pass0 and not pass1 and pass2)
+        {
+            return 2;
+        }
+        else if (not pass0 and not pass1 and not pass2)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0; // technically should never be here
+        }
+    }
+};
+
+//============================================================================================================================85===============================
+// Based on the score cut define 8 regions region 8 == all pass region 1 == all fail and 5 - 7 is when two passes 2 - 4 is when only one pass
+// This is to define side-bands
+auto wmd_reg_3d = [&](TString syst_name="Nominal")
+{
+    if (NFJ(syst_name) < 3)
+    {
+        return 0;
+    }
+    else
+    {
+        bool pass0 = WMD0(syst_name) > WWP3FJ();
+        bool pass1 = WMD1(syst_name) > WWP3FJ();
+        bool pass2 = WMD2(syst_name) > WWP3FJ();
         if (pass0 and pass1 and pass2)
         {
             return 8;

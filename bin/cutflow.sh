@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ "${HOSTNAME}" == *"uaf-2"* ]]; then
+if [[ "${HOSTNAME}" == *"uaf-2"* ]] || [[ "${HOSTNAME}" == *"uaf-4"* ]]; then
     PYTHON=python3
     CONVERTER=rooutil/python/yield_for_keynote3.py
 else
@@ -8,7 +8,7 @@ else
     CONVERTER=rooutil/python/yield_for_keynote.py
 fi
 
-VERSION=V12
+VERSION=V13.2
 
 mkdir -p cutflows/
 

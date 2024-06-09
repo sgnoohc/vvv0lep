@@ -6,7 +6,7 @@ import os
 import json
 import socket
 
-tag = "VVV0TreeV12"
+tag = "VVV0TreeV13.2"
 basedir = "/data/userdata/phchang/VVV0LepAnalysis"
 sample_dirs = glob.glob(f"{basedir}/{tag}/*_{tag}")
 
@@ -143,7 +143,8 @@ def main():
     for d in sample_dirs:
         print(f"Processing sample: {d}")
         j = dict()
-        rootfiles = glob.glob(f"{d}/*.root")
+        # rootfiles = glob.glob(f"{d}/*.root")
+        rootfiles = glob.glob(f"{d}/merged/merged*.root")
         rootfiles = [ tag + tag.join(x.split(tag)[1:]) for x in rootfiles ]
         j["tag"] = tag
         j["noriginalevents"] = int(0)

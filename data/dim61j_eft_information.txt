@@ -1,6 +1,6 @@
 {
     "original_card" : "https://raw.githubusercontent.com/Saptaparna/EFTAnalysis/master/SampleGenerationDim6/CardsWithAdditionalOperators/ZZZ_1Jet_xqcut15_12Operators_4F/ZZZ_1Jet_xqcut15_12Operators_4F_reweight_card.dat",
-    "0"   : "SM",
+    "0"   : "sm",
     "1"   : "cW_m10p0",
     "2"   : "cW_m5p0",
     "3"   : "cW_m1p0",

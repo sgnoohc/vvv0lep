@@ -112,6 +112,8 @@ wgt_syst = ["prefireWgt",
 # "trigWgtDn",
 ]
 
+# Systematic Variations {"Nominal", "JESUp", "JESDn", "JERUp", "JERDn", "JMSUp", "JMSDn", "JMRUp", "JMRDn", "jesAbsoluteStatup", "jesAbsoluteStatdn", "jesAbsoluteScaleup", "jesAbsoluteScaledn", "jesAbsoluteMPFBiasup", "jesAbsoluteMPFBiasdn", "jesFragmentationup", "jesFragmentationdn", "jesSinglePionECALup", "jesSinglePionECALdn", "jesSinglePionHCALup", "jesSinglePionHCALdn", "jesFlavorQCDup", "jesFlavorQCDdn", "jesTimePtEtaup", "jesTimePtEtadn", "jesRelativeJEREC1up", "jesRelativeJEREC1dn", "jesRelativeJEREC2up", "jesRelativeJEREC2dn", "jesRelativeJERHFup", "jesRelativeJERHFdn", "jesRelativePtBBup", "jesRelativePtBBdn", "jesRelativePtEC1up", "jesRelativePtEC1dn", "jesRelativePtEC2up", "jesRelativePtEC2dn", "jesRelativePtHFup", "jesRelativePtHFdn", "jesRelativeBalup", "jesRelativeBaldn", "jesRelativeSampleup", "jesRelativeSampledn", "jesRelativeFSRup", "jesRelativeFSRdn", "jesRelativeStatFSRup", "jesRelativeStatFSRdn", "jesRelativeStatECup", "jesRelativeStatECdn", "jesRelativeStatHFup", "jesRelativeStatHFdn", "jesPileUpDataMCup", "jesPileUpDataMCdn", "jesPileUpPtRefup", "jesPileUpPtRefdn", "jesPileUpPtBBup", "jesPileUpPtBBdn", "jesPileUpPtEC1up", "jesPileUpPtEC1dn", "jesPileUpPtEC2up", "jesPileUpPtEC2dn", "jesPileUpPtHFup", "jesPileUpPtHFdn"};
+
 syst_template = lambda VAR: f"""auto {VAR} = [&](TString syst_name=VARIATION)
 {{
     if (syst_name.EqualTo("Nominal"))
@@ -171,7 +173,7 @@ for v in wgt_syst:
 
 f = open("src/variable.h", "w")
 
-sys.argv[1]
+# sys.argv[1]
 
 f.write("#define VARIATION \"Nominal\"\n")
 
