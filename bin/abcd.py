@@ -10,6 +10,8 @@ hist_names = [
         # ("ZL3FJ", "SumPtFJFit"),
         # ("ZL3FJ", "SumPtFJZoom"),
         # ("ZL3FJ", "SumPtFJFit2"),
+        ("ZL3FJ", "SumPtFJ"),
+        ("ZL2FJ", "HTFJ"),
         ("ZL2FJ", "HTFJ_binned"),
         ("ZL2FJ", "HTFJFit2"),
         # ("ZL2FJ", "HTFJFit"),

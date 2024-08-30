@@ -74,7 +74,7 @@ int main(int argc, char** argv)
         ("i,input"       , "Comma separated input file list OR if just a directory is provided it will glob all in the directory BUT must end with '/' for the path", cxxopts::value<std::string>())
         ("t,tree"        , "Name of the tree in the root file to open and loop over"                                             , cxxopts::value<std::string>())
         ("s,syst"        , "Syst variation name"                                                                                 , cxxopts::value<std::string>())
-        ("e,systidx"     , "Syst index"                                                                                           , cxxopts::value<int>())
+        ("e,systidx"     , "Syst index"                                                                                          , cxxopts::value<int>())
         ("o,output"      , "Output file name"                                                                                    , cxxopts::value<std::string>())
         ("n,nevents"     , "N events to loop over"                                                                               , cxxopts::value<int>()->default_value("-1"))
         ("j,nsplit_jobs" , "Enable splitting jobs by N blocks (--job_index must be set)"                                         , cxxopts::value<int>())
@@ -355,7 +355,7 @@ int main(int argc, char** argv)
                            else
                            {
 
-                               float wgt = genWeight() * lumi * xsec * 1000.0 / sum_genWeight;
+                               float wgt = genWeight() * FJSFMedium() * FJSFLoose() * lumi * xsec * 1000.0 / sum_genWeight;
 
                                if (is_eft)
                                {
@@ -376,7 +376,7 @@ int main(int argc, char** argv)
     //===============================================================================================================================================================
     // Zero lepton region
     ana.cutflow.getCut("Base");
-    ana.cutflow.addCutToLastActiveCut("ZL", [&]() { return is0Lep(); }, UNITY);
+    ana.cutflow.addCutToLastActiveCut("ZL", [&]() { return is0Lep() and trigger(); }, UNITY);
     ana.cutflow.getCut("ZL");
     ana.cutflow.addCutToLastActiveCut("ZL2FJ", [&]() { return NFJ() == 2; }, UNITY);
     ana.cutflow.getCut("ZL");
@@ -394,7 +394,7 @@ int main(int argc, char** argv)
                                               std::vector<std::function<bool()>> cuts_2fj = 
                                               {
                                                   [&, syst]() { return HTFJ(syst) > 1100; },
-                                                  [&, syst]() { return FJ0(syst).pt() > 500.; },
+                                                  [&, syst]() { return FJ0(syst).pt() > 600.; },
                                                   [&, syst]() { return FJ0(syst).mass() < 150.; },
                                                   [&, syst]() { return FJ1(syst).mass() < 150.; },
                                               };
@@ -419,7 +419,7 @@ int main(int argc, char** argv)
                                               std::vector<std::function<bool()>> cuts_3fj = 
                                               {
                                                   [&, syst]() { return SumPtFJ(syst) > 1250; },
-                                                  [&, syst]() { return FJ0(syst).pt() > 500.; },
+                                                  [&, syst]() { return FJ0(syst).pt() > 600.; },
                                                   [&, syst]() { return FJ0(syst).mass() < 150.; },
                                                   [&, syst]() { return FJ1(syst).mass() < 150.; },
                                                   [&, syst]() { return FJ2(syst).mass() < 150.; },
@@ -465,18 +465,24 @@ int main(int argc, char** argv)
     histograms_FJ0.addHistogram("Eta0"   , 180 , -5      , 5      , [&]() { return FJ0().eta(); } );
     histograms_FJ0.addHistogram("Mass0"  , 180 , 0       , 250    , [&]() { return FJ0().mass(); } );
     histograms_FJ0.addHistogram("VMD0"   , 180 , 0       , 1      , [&]() { return VMD0(); } );
+    histograms_FJ0.addHistogram("NL0"    , 3   , 0       , 3      , [&]() { return NLGen0(); } );
+    histograms_FJ0.addHistogram("NB0"    , 3   , 0       , 3      , [&]() { return NBGen0(); } );
 
     RooUtil::Histograms histograms_FJ1;
     histograms_FJ1.addHistogram("Pt1"    , 180 , 0       , 2500   , [&]() { return FJ1().pt(); } );
     histograms_FJ1.addHistogram("Eta1"   , 180 , -5      , 5      , [&]() { return FJ1().eta(); } );
     histograms_FJ1.addHistogram("Mass1"  , 180 , 0       , 250    , [&]() { return FJ1().mass(); } );
     histograms_FJ1.addHistogram("VMD1"   , 180 , 0       , 1      , [&]() { return VMD1(); } );
+    histograms_FJ1.addHistogram("NL1"    , 3   , 0       , 3      , [&]() { return NLGen1(); } );
+    histograms_FJ1.addHistogram("NB1"    , 3   , 0       , 3      , [&]() { return NBGen1(); } );
 
     RooUtil::Histograms histograms_FJ2;
     histograms_FJ2.addHistogram("Pt2"    , 180 , 0       , 1500   , [&]() { return FJ2().pt(); } );
     histograms_FJ2.addHistogram("Eta2"   , 180 , -5      , 5      , [&]() { return FJ2().eta(); } );
     histograms_FJ2.addHistogram("Mass2"  , 180 , 0       , 250    , [&]() { return FJ2().mass(); } );
     histograms_FJ2.addHistogram("VMD2"   , 180 , 0       , 1      , [&]() { return VMD2(); } );
+    histograms_FJ2.addHistogram("NL2"    , 3   , 0       , 3      , [&]() { return NLGen2(); } );
+    histograms_FJ2.addHistogram("NB2"    , 3   , 0       , 3      , [&]() { return NBGen2(); } );
 
     RooUtil::Histograms histograms_event;
     histograms_event.addHistogram("HTFJ"         , 180 , 0 , 5000 , [&]() { return HTFJ(); } );
@@ -562,17 +568,11 @@ int main(int argc, char** argv)
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_event, "ZL2FJPresel");
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_2FJ_SR, "ZL2FJPresel");
 
-    // ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ0, "ZL3FJPresel");
-    // ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ1, "ZL3FJPresel");
-    // ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ2, "ZL3FJPresel");
-    // ana.cutflow.bookHistogramsForCutAndBelow(histograms_event, "ZL3FJPresel");
-    // ana.cutflow.bookHistogramsForCutAndBelow(histograms_3FJ_SR, "ZL3FJPresel");
-
-    ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ0, "ZL3FJ");
-    ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ1, "ZL3FJ");
-    ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ2, "ZL3FJ");
-    ana.cutflow.bookHistogramsForCutAndBelow(histograms_event, "ZL3FJ");
-    ana.cutflow.bookHistogramsForCutAndBelow(histograms_3FJ_SR, "ZL3FJ");
+    ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ0, "ZL3FJPresel");
+    ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ1, "ZL3FJPresel");
+    ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ2, "ZL3FJPresel");
+    ana.cutflow.bookHistogramsForCutAndBelow(histograms_event, "ZL3FJPresel");
+    ana.cutflow.bookHistogramsForCutAndBelow(histograms_3FJ_SR, "ZL3FJPresel");
 
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ0, "ZL3FJTop");
     ana.cutflow.bookHistogramsForCutAndBelow(histograms_FJ1, "ZL3FJTop");

@@ -2773,6 +2773,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3_branch) NLGen3_branch->SetAddress(&NLGen3_);
   NLGen4_branch = tree->GetBranch("NLGen4");
   if (NLGen4_branch) NLGen4_branch->SetAddress(&NLGen4_);
+  NVQGen0_branch = tree->GetBranch("NVQGen0");
+  if (NVQGen0_branch) NVQGen0_branch->SetAddress(&NVQGen0_);
+  NVQGen1_branch = tree->GetBranch("NVQGen1");
+  if (NVQGen1_branch) NVQGen1_branch->SetAddress(&NVQGen1_);
+  NVQGen2_branch = tree->GetBranch("NVQGen2");
+  if (NVQGen2_branch) NVQGen2_branch->SetAddress(&NVQGen2_);
+  NVQGen3_branch = tree->GetBranch("NVQGen3");
+  if (NVQGen3_branch) NVQGen3_branch->SetAddress(&NVQGen3_);
+  NVQGen4_branch = tree->GetBranch("NVQGen4");
+  if (NVQGen4_branch) NVQGen4_branch->SetAddress(&NVQGen4_);
   NiFJ_branch = tree->GetBranch("NiFJ");
   if (NiFJ_branch) NiFJ_branch->SetAddress(&NiFJ_);
   iVMD0_branch = tree->GetBranch("iVMD0");
@@ -2881,6 +2891,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3JESUp_branch) NLGen3JESUp_branch->SetAddress(&NLGen3JESUp_);
   NLGen4JESUp_branch = tree->GetBranch("NLGen4JESUp");
   if (NLGen4JESUp_branch) NLGen4JESUp_branch->SetAddress(&NLGen4JESUp_);
+  NVQGen0JESUp_branch = tree->GetBranch("NVQGen0JESUp");
+  if (NVQGen0JESUp_branch) NVQGen0JESUp_branch->SetAddress(&NVQGen0JESUp_);
+  NVQGen1JESUp_branch = tree->GetBranch("NVQGen1JESUp");
+  if (NVQGen1JESUp_branch) NVQGen1JESUp_branch->SetAddress(&NVQGen1JESUp_);
+  NVQGen2JESUp_branch = tree->GetBranch("NVQGen2JESUp");
+  if (NVQGen2JESUp_branch) NVQGen2JESUp_branch->SetAddress(&NVQGen2JESUp_);
+  NVQGen3JESUp_branch = tree->GetBranch("NVQGen3JESUp");
+  if (NVQGen3JESUp_branch) NVQGen3JESUp_branch->SetAddress(&NVQGen3JESUp_);
+  NVQGen4JESUp_branch = tree->GetBranch("NVQGen4JESUp");
+  if (NVQGen4JESUp_branch) NVQGen4JESUp_branch->SetAddress(&NVQGen4JESUp_);
   NiFJJESUp_branch = tree->GetBranch("NiFJJESUp");
   if (NiFJJESUp_branch) NiFJJESUp_branch->SetAddress(&NiFJJESUp_);
   iVMD0JESUp_branch = tree->GetBranch("iVMD0JESUp");
@@ -2989,6 +3009,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3JESDn_branch) NLGen3JESDn_branch->SetAddress(&NLGen3JESDn_);
   NLGen4JESDn_branch = tree->GetBranch("NLGen4JESDn");
   if (NLGen4JESDn_branch) NLGen4JESDn_branch->SetAddress(&NLGen4JESDn_);
+  NVQGen0JESDn_branch = tree->GetBranch("NVQGen0JESDn");
+  if (NVQGen0JESDn_branch) NVQGen0JESDn_branch->SetAddress(&NVQGen0JESDn_);
+  NVQGen1JESDn_branch = tree->GetBranch("NVQGen1JESDn");
+  if (NVQGen1JESDn_branch) NVQGen1JESDn_branch->SetAddress(&NVQGen1JESDn_);
+  NVQGen2JESDn_branch = tree->GetBranch("NVQGen2JESDn");
+  if (NVQGen2JESDn_branch) NVQGen2JESDn_branch->SetAddress(&NVQGen2JESDn_);
+  NVQGen3JESDn_branch = tree->GetBranch("NVQGen3JESDn");
+  if (NVQGen3JESDn_branch) NVQGen3JESDn_branch->SetAddress(&NVQGen3JESDn_);
+  NVQGen4JESDn_branch = tree->GetBranch("NVQGen4JESDn");
+  if (NVQGen4JESDn_branch) NVQGen4JESDn_branch->SetAddress(&NVQGen4JESDn_);
   NiFJJESDn_branch = tree->GetBranch("NiFJJESDn");
   if (NiFJJESDn_branch) NiFJJESDn_branch->SetAddress(&NiFJJESDn_);
   iVMD0JESDn_branch = tree->GetBranch("iVMD0JESDn");
@@ -3097,6 +3127,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3JERUp_branch) NLGen3JERUp_branch->SetAddress(&NLGen3JERUp_);
   NLGen4JERUp_branch = tree->GetBranch("NLGen4JERUp");
   if (NLGen4JERUp_branch) NLGen4JERUp_branch->SetAddress(&NLGen4JERUp_);
+  NVQGen0JERUp_branch = tree->GetBranch("NVQGen0JERUp");
+  if (NVQGen0JERUp_branch) NVQGen0JERUp_branch->SetAddress(&NVQGen0JERUp_);
+  NVQGen1JERUp_branch = tree->GetBranch("NVQGen1JERUp");
+  if (NVQGen1JERUp_branch) NVQGen1JERUp_branch->SetAddress(&NVQGen1JERUp_);
+  NVQGen2JERUp_branch = tree->GetBranch("NVQGen2JERUp");
+  if (NVQGen2JERUp_branch) NVQGen2JERUp_branch->SetAddress(&NVQGen2JERUp_);
+  NVQGen3JERUp_branch = tree->GetBranch("NVQGen3JERUp");
+  if (NVQGen3JERUp_branch) NVQGen3JERUp_branch->SetAddress(&NVQGen3JERUp_);
+  NVQGen4JERUp_branch = tree->GetBranch("NVQGen4JERUp");
+  if (NVQGen4JERUp_branch) NVQGen4JERUp_branch->SetAddress(&NVQGen4JERUp_);
   NiFJJERUp_branch = tree->GetBranch("NiFJJERUp");
   if (NiFJJERUp_branch) NiFJJERUp_branch->SetAddress(&NiFJJERUp_);
   iVMD0JERUp_branch = tree->GetBranch("iVMD0JERUp");
@@ -3205,6 +3245,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3JERDn_branch) NLGen3JERDn_branch->SetAddress(&NLGen3JERDn_);
   NLGen4JERDn_branch = tree->GetBranch("NLGen4JERDn");
   if (NLGen4JERDn_branch) NLGen4JERDn_branch->SetAddress(&NLGen4JERDn_);
+  NVQGen0JERDn_branch = tree->GetBranch("NVQGen0JERDn");
+  if (NVQGen0JERDn_branch) NVQGen0JERDn_branch->SetAddress(&NVQGen0JERDn_);
+  NVQGen1JERDn_branch = tree->GetBranch("NVQGen1JERDn");
+  if (NVQGen1JERDn_branch) NVQGen1JERDn_branch->SetAddress(&NVQGen1JERDn_);
+  NVQGen2JERDn_branch = tree->GetBranch("NVQGen2JERDn");
+  if (NVQGen2JERDn_branch) NVQGen2JERDn_branch->SetAddress(&NVQGen2JERDn_);
+  NVQGen3JERDn_branch = tree->GetBranch("NVQGen3JERDn");
+  if (NVQGen3JERDn_branch) NVQGen3JERDn_branch->SetAddress(&NVQGen3JERDn_);
+  NVQGen4JERDn_branch = tree->GetBranch("NVQGen4JERDn");
+  if (NVQGen4JERDn_branch) NVQGen4JERDn_branch->SetAddress(&NVQGen4JERDn_);
   NiFJJERDn_branch = tree->GetBranch("NiFJJERDn");
   if (NiFJJERDn_branch) NiFJJERDn_branch->SetAddress(&NiFJJERDn_);
   iVMD0JERDn_branch = tree->GetBranch("iVMD0JERDn");
@@ -3313,6 +3363,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3JMSUp_branch) NLGen3JMSUp_branch->SetAddress(&NLGen3JMSUp_);
   NLGen4JMSUp_branch = tree->GetBranch("NLGen4JMSUp");
   if (NLGen4JMSUp_branch) NLGen4JMSUp_branch->SetAddress(&NLGen4JMSUp_);
+  NVQGen0JMSUp_branch = tree->GetBranch("NVQGen0JMSUp");
+  if (NVQGen0JMSUp_branch) NVQGen0JMSUp_branch->SetAddress(&NVQGen0JMSUp_);
+  NVQGen1JMSUp_branch = tree->GetBranch("NVQGen1JMSUp");
+  if (NVQGen1JMSUp_branch) NVQGen1JMSUp_branch->SetAddress(&NVQGen1JMSUp_);
+  NVQGen2JMSUp_branch = tree->GetBranch("NVQGen2JMSUp");
+  if (NVQGen2JMSUp_branch) NVQGen2JMSUp_branch->SetAddress(&NVQGen2JMSUp_);
+  NVQGen3JMSUp_branch = tree->GetBranch("NVQGen3JMSUp");
+  if (NVQGen3JMSUp_branch) NVQGen3JMSUp_branch->SetAddress(&NVQGen3JMSUp_);
+  NVQGen4JMSUp_branch = tree->GetBranch("NVQGen4JMSUp");
+  if (NVQGen4JMSUp_branch) NVQGen4JMSUp_branch->SetAddress(&NVQGen4JMSUp_);
   NiFJJMSUp_branch = tree->GetBranch("NiFJJMSUp");
   if (NiFJJMSUp_branch) NiFJJMSUp_branch->SetAddress(&NiFJJMSUp_);
   iVMD0JMSUp_branch = tree->GetBranch("iVMD0JMSUp");
@@ -3421,6 +3481,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3JMSDn_branch) NLGen3JMSDn_branch->SetAddress(&NLGen3JMSDn_);
   NLGen4JMSDn_branch = tree->GetBranch("NLGen4JMSDn");
   if (NLGen4JMSDn_branch) NLGen4JMSDn_branch->SetAddress(&NLGen4JMSDn_);
+  NVQGen0JMSDn_branch = tree->GetBranch("NVQGen0JMSDn");
+  if (NVQGen0JMSDn_branch) NVQGen0JMSDn_branch->SetAddress(&NVQGen0JMSDn_);
+  NVQGen1JMSDn_branch = tree->GetBranch("NVQGen1JMSDn");
+  if (NVQGen1JMSDn_branch) NVQGen1JMSDn_branch->SetAddress(&NVQGen1JMSDn_);
+  NVQGen2JMSDn_branch = tree->GetBranch("NVQGen2JMSDn");
+  if (NVQGen2JMSDn_branch) NVQGen2JMSDn_branch->SetAddress(&NVQGen2JMSDn_);
+  NVQGen3JMSDn_branch = tree->GetBranch("NVQGen3JMSDn");
+  if (NVQGen3JMSDn_branch) NVQGen3JMSDn_branch->SetAddress(&NVQGen3JMSDn_);
+  NVQGen4JMSDn_branch = tree->GetBranch("NVQGen4JMSDn");
+  if (NVQGen4JMSDn_branch) NVQGen4JMSDn_branch->SetAddress(&NVQGen4JMSDn_);
   NiFJJMSDn_branch = tree->GetBranch("NiFJJMSDn");
   if (NiFJJMSDn_branch) NiFJJMSDn_branch->SetAddress(&NiFJJMSDn_);
   iVMD0JMSDn_branch = tree->GetBranch("iVMD0JMSDn");
@@ -3529,6 +3599,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3JMRUp_branch) NLGen3JMRUp_branch->SetAddress(&NLGen3JMRUp_);
   NLGen4JMRUp_branch = tree->GetBranch("NLGen4JMRUp");
   if (NLGen4JMRUp_branch) NLGen4JMRUp_branch->SetAddress(&NLGen4JMRUp_);
+  NVQGen0JMRUp_branch = tree->GetBranch("NVQGen0JMRUp");
+  if (NVQGen0JMRUp_branch) NVQGen0JMRUp_branch->SetAddress(&NVQGen0JMRUp_);
+  NVQGen1JMRUp_branch = tree->GetBranch("NVQGen1JMRUp");
+  if (NVQGen1JMRUp_branch) NVQGen1JMRUp_branch->SetAddress(&NVQGen1JMRUp_);
+  NVQGen2JMRUp_branch = tree->GetBranch("NVQGen2JMRUp");
+  if (NVQGen2JMRUp_branch) NVQGen2JMRUp_branch->SetAddress(&NVQGen2JMRUp_);
+  NVQGen3JMRUp_branch = tree->GetBranch("NVQGen3JMRUp");
+  if (NVQGen3JMRUp_branch) NVQGen3JMRUp_branch->SetAddress(&NVQGen3JMRUp_);
+  NVQGen4JMRUp_branch = tree->GetBranch("NVQGen4JMRUp");
+  if (NVQGen4JMRUp_branch) NVQGen4JMRUp_branch->SetAddress(&NVQGen4JMRUp_);
   NiFJJMRUp_branch = tree->GetBranch("NiFJJMRUp");
   if (NiFJJMRUp_branch) NiFJJMRUp_branch->SetAddress(&NiFJJMRUp_);
   iVMD0JMRUp_branch = tree->GetBranch("iVMD0JMRUp");
@@ -3637,6 +3717,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3JMRDn_branch) NLGen3JMRDn_branch->SetAddress(&NLGen3JMRDn_);
   NLGen4JMRDn_branch = tree->GetBranch("NLGen4JMRDn");
   if (NLGen4JMRDn_branch) NLGen4JMRDn_branch->SetAddress(&NLGen4JMRDn_);
+  NVQGen0JMRDn_branch = tree->GetBranch("NVQGen0JMRDn");
+  if (NVQGen0JMRDn_branch) NVQGen0JMRDn_branch->SetAddress(&NVQGen0JMRDn_);
+  NVQGen1JMRDn_branch = tree->GetBranch("NVQGen1JMRDn");
+  if (NVQGen1JMRDn_branch) NVQGen1JMRDn_branch->SetAddress(&NVQGen1JMRDn_);
+  NVQGen2JMRDn_branch = tree->GetBranch("NVQGen2JMRDn");
+  if (NVQGen2JMRDn_branch) NVQGen2JMRDn_branch->SetAddress(&NVQGen2JMRDn_);
+  NVQGen3JMRDn_branch = tree->GetBranch("NVQGen3JMRDn");
+  if (NVQGen3JMRDn_branch) NVQGen3JMRDn_branch->SetAddress(&NVQGen3JMRDn_);
+  NVQGen4JMRDn_branch = tree->GetBranch("NVQGen4JMRDn");
+  if (NVQGen4JMRDn_branch) NVQGen4JMRDn_branch->SetAddress(&NVQGen4JMRDn_);
   NiFJJMRDn_branch = tree->GetBranch("NiFJJMRDn");
   if (NiFJJMRDn_branch) NiFJJMRDn_branch->SetAddress(&NiFJJMRDn_);
   iVMD0JMRDn_branch = tree->GetBranch("iVMD0JMRDn");
@@ -3745,6 +3835,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesAbsoluteStatup_branch) NLGen3jesAbsoluteStatup_branch->SetAddress(&NLGen3jesAbsoluteStatup_);
   NLGen4jesAbsoluteStatup_branch = tree->GetBranch("NLGen4jesAbsoluteStatup");
   if (NLGen4jesAbsoluteStatup_branch) NLGen4jesAbsoluteStatup_branch->SetAddress(&NLGen4jesAbsoluteStatup_);
+  NVQGen0jesAbsoluteStatup_branch = tree->GetBranch("NVQGen0jesAbsoluteStatup");
+  if (NVQGen0jesAbsoluteStatup_branch) NVQGen0jesAbsoluteStatup_branch->SetAddress(&NVQGen0jesAbsoluteStatup_);
+  NVQGen1jesAbsoluteStatup_branch = tree->GetBranch("NVQGen1jesAbsoluteStatup");
+  if (NVQGen1jesAbsoluteStatup_branch) NVQGen1jesAbsoluteStatup_branch->SetAddress(&NVQGen1jesAbsoluteStatup_);
+  NVQGen2jesAbsoluteStatup_branch = tree->GetBranch("NVQGen2jesAbsoluteStatup");
+  if (NVQGen2jesAbsoluteStatup_branch) NVQGen2jesAbsoluteStatup_branch->SetAddress(&NVQGen2jesAbsoluteStatup_);
+  NVQGen3jesAbsoluteStatup_branch = tree->GetBranch("NVQGen3jesAbsoluteStatup");
+  if (NVQGen3jesAbsoluteStatup_branch) NVQGen3jesAbsoluteStatup_branch->SetAddress(&NVQGen3jesAbsoluteStatup_);
+  NVQGen4jesAbsoluteStatup_branch = tree->GetBranch("NVQGen4jesAbsoluteStatup");
+  if (NVQGen4jesAbsoluteStatup_branch) NVQGen4jesAbsoluteStatup_branch->SetAddress(&NVQGen4jesAbsoluteStatup_);
   NiFJjesAbsoluteStatup_branch = tree->GetBranch("NiFJjesAbsoluteStatup");
   if (NiFJjesAbsoluteStatup_branch) NiFJjesAbsoluteStatup_branch->SetAddress(&NiFJjesAbsoluteStatup_);
   iVMD0jesAbsoluteStatup_branch = tree->GetBranch("iVMD0jesAbsoluteStatup");
@@ -3853,6 +3953,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesAbsoluteStatdn_branch) NLGen3jesAbsoluteStatdn_branch->SetAddress(&NLGen3jesAbsoluteStatdn_);
   NLGen4jesAbsoluteStatdn_branch = tree->GetBranch("NLGen4jesAbsoluteStatdn");
   if (NLGen4jesAbsoluteStatdn_branch) NLGen4jesAbsoluteStatdn_branch->SetAddress(&NLGen4jesAbsoluteStatdn_);
+  NVQGen0jesAbsoluteStatdn_branch = tree->GetBranch("NVQGen0jesAbsoluteStatdn");
+  if (NVQGen0jesAbsoluteStatdn_branch) NVQGen0jesAbsoluteStatdn_branch->SetAddress(&NVQGen0jesAbsoluteStatdn_);
+  NVQGen1jesAbsoluteStatdn_branch = tree->GetBranch("NVQGen1jesAbsoluteStatdn");
+  if (NVQGen1jesAbsoluteStatdn_branch) NVQGen1jesAbsoluteStatdn_branch->SetAddress(&NVQGen1jesAbsoluteStatdn_);
+  NVQGen2jesAbsoluteStatdn_branch = tree->GetBranch("NVQGen2jesAbsoluteStatdn");
+  if (NVQGen2jesAbsoluteStatdn_branch) NVQGen2jesAbsoluteStatdn_branch->SetAddress(&NVQGen2jesAbsoluteStatdn_);
+  NVQGen3jesAbsoluteStatdn_branch = tree->GetBranch("NVQGen3jesAbsoluteStatdn");
+  if (NVQGen3jesAbsoluteStatdn_branch) NVQGen3jesAbsoluteStatdn_branch->SetAddress(&NVQGen3jesAbsoluteStatdn_);
+  NVQGen4jesAbsoluteStatdn_branch = tree->GetBranch("NVQGen4jesAbsoluteStatdn");
+  if (NVQGen4jesAbsoluteStatdn_branch) NVQGen4jesAbsoluteStatdn_branch->SetAddress(&NVQGen4jesAbsoluteStatdn_);
   NiFJjesAbsoluteStatdn_branch = tree->GetBranch("NiFJjesAbsoluteStatdn");
   if (NiFJjesAbsoluteStatdn_branch) NiFJjesAbsoluteStatdn_branch->SetAddress(&NiFJjesAbsoluteStatdn_);
   iVMD0jesAbsoluteStatdn_branch = tree->GetBranch("iVMD0jesAbsoluteStatdn");
@@ -3961,6 +4071,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesAbsoluteScaleup_branch) NLGen3jesAbsoluteScaleup_branch->SetAddress(&NLGen3jesAbsoluteScaleup_);
   NLGen4jesAbsoluteScaleup_branch = tree->GetBranch("NLGen4jesAbsoluteScaleup");
   if (NLGen4jesAbsoluteScaleup_branch) NLGen4jesAbsoluteScaleup_branch->SetAddress(&NLGen4jesAbsoluteScaleup_);
+  NVQGen0jesAbsoluteScaleup_branch = tree->GetBranch("NVQGen0jesAbsoluteScaleup");
+  if (NVQGen0jesAbsoluteScaleup_branch) NVQGen0jesAbsoluteScaleup_branch->SetAddress(&NVQGen0jesAbsoluteScaleup_);
+  NVQGen1jesAbsoluteScaleup_branch = tree->GetBranch("NVQGen1jesAbsoluteScaleup");
+  if (NVQGen1jesAbsoluteScaleup_branch) NVQGen1jesAbsoluteScaleup_branch->SetAddress(&NVQGen1jesAbsoluteScaleup_);
+  NVQGen2jesAbsoluteScaleup_branch = tree->GetBranch("NVQGen2jesAbsoluteScaleup");
+  if (NVQGen2jesAbsoluteScaleup_branch) NVQGen2jesAbsoluteScaleup_branch->SetAddress(&NVQGen2jesAbsoluteScaleup_);
+  NVQGen3jesAbsoluteScaleup_branch = tree->GetBranch("NVQGen3jesAbsoluteScaleup");
+  if (NVQGen3jesAbsoluteScaleup_branch) NVQGen3jesAbsoluteScaleup_branch->SetAddress(&NVQGen3jesAbsoluteScaleup_);
+  NVQGen4jesAbsoluteScaleup_branch = tree->GetBranch("NVQGen4jesAbsoluteScaleup");
+  if (NVQGen4jesAbsoluteScaleup_branch) NVQGen4jesAbsoluteScaleup_branch->SetAddress(&NVQGen4jesAbsoluteScaleup_);
   NiFJjesAbsoluteScaleup_branch = tree->GetBranch("NiFJjesAbsoluteScaleup");
   if (NiFJjesAbsoluteScaleup_branch) NiFJjesAbsoluteScaleup_branch->SetAddress(&NiFJjesAbsoluteScaleup_);
   iVMD0jesAbsoluteScaleup_branch = tree->GetBranch("iVMD0jesAbsoluteScaleup");
@@ -4069,6 +4189,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesAbsoluteScaledn_branch) NLGen3jesAbsoluteScaledn_branch->SetAddress(&NLGen3jesAbsoluteScaledn_);
   NLGen4jesAbsoluteScaledn_branch = tree->GetBranch("NLGen4jesAbsoluteScaledn");
   if (NLGen4jesAbsoluteScaledn_branch) NLGen4jesAbsoluteScaledn_branch->SetAddress(&NLGen4jesAbsoluteScaledn_);
+  NVQGen0jesAbsoluteScaledn_branch = tree->GetBranch("NVQGen0jesAbsoluteScaledn");
+  if (NVQGen0jesAbsoluteScaledn_branch) NVQGen0jesAbsoluteScaledn_branch->SetAddress(&NVQGen0jesAbsoluteScaledn_);
+  NVQGen1jesAbsoluteScaledn_branch = tree->GetBranch("NVQGen1jesAbsoluteScaledn");
+  if (NVQGen1jesAbsoluteScaledn_branch) NVQGen1jesAbsoluteScaledn_branch->SetAddress(&NVQGen1jesAbsoluteScaledn_);
+  NVQGen2jesAbsoluteScaledn_branch = tree->GetBranch("NVQGen2jesAbsoluteScaledn");
+  if (NVQGen2jesAbsoluteScaledn_branch) NVQGen2jesAbsoluteScaledn_branch->SetAddress(&NVQGen2jesAbsoluteScaledn_);
+  NVQGen3jesAbsoluteScaledn_branch = tree->GetBranch("NVQGen3jesAbsoluteScaledn");
+  if (NVQGen3jesAbsoluteScaledn_branch) NVQGen3jesAbsoluteScaledn_branch->SetAddress(&NVQGen3jesAbsoluteScaledn_);
+  NVQGen4jesAbsoluteScaledn_branch = tree->GetBranch("NVQGen4jesAbsoluteScaledn");
+  if (NVQGen4jesAbsoluteScaledn_branch) NVQGen4jesAbsoluteScaledn_branch->SetAddress(&NVQGen4jesAbsoluteScaledn_);
   NiFJjesAbsoluteScaledn_branch = tree->GetBranch("NiFJjesAbsoluteScaledn");
   if (NiFJjesAbsoluteScaledn_branch) NiFJjesAbsoluteScaledn_branch->SetAddress(&NiFJjesAbsoluteScaledn_);
   iVMD0jesAbsoluteScaledn_branch = tree->GetBranch("iVMD0jesAbsoluteScaledn");
@@ -4177,6 +4307,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesAbsoluteMPFBiasup_branch) NLGen3jesAbsoluteMPFBiasup_branch->SetAddress(&NLGen3jesAbsoluteMPFBiasup_);
   NLGen4jesAbsoluteMPFBiasup_branch = tree->GetBranch("NLGen4jesAbsoluteMPFBiasup");
   if (NLGen4jesAbsoluteMPFBiasup_branch) NLGen4jesAbsoluteMPFBiasup_branch->SetAddress(&NLGen4jesAbsoluteMPFBiasup_);
+  NVQGen0jesAbsoluteMPFBiasup_branch = tree->GetBranch("NVQGen0jesAbsoluteMPFBiasup");
+  if (NVQGen0jesAbsoluteMPFBiasup_branch) NVQGen0jesAbsoluteMPFBiasup_branch->SetAddress(&NVQGen0jesAbsoluteMPFBiasup_);
+  NVQGen1jesAbsoluteMPFBiasup_branch = tree->GetBranch("NVQGen1jesAbsoluteMPFBiasup");
+  if (NVQGen1jesAbsoluteMPFBiasup_branch) NVQGen1jesAbsoluteMPFBiasup_branch->SetAddress(&NVQGen1jesAbsoluteMPFBiasup_);
+  NVQGen2jesAbsoluteMPFBiasup_branch = tree->GetBranch("NVQGen2jesAbsoluteMPFBiasup");
+  if (NVQGen2jesAbsoluteMPFBiasup_branch) NVQGen2jesAbsoluteMPFBiasup_branch->SetAddress(&NVQGen2jesAbsoluteMPFBiasup_);
+  NVQGen3jesAbsoluteMPFBiasup_branch = tree->GetBranch("NVQGen3jesAbsoluteMPFBiasup");
+  if (NVQGen3jesAbsoluteMPFBiasup_branch) NVQGen3jesAbsoluteMPFBiasup_branch->SetAddress(&NVQGen3jesAbsoluteMPFBiasup_);
+  NVQGen4jesAbsoluteMPFBiasup_branch = tree->GetBranch("NVQGen4jesAbsoluteMPFBiasup");
+  if (NVQGen4jesAbsoluteMPFBiasup_branch) NVQGen4jesAbsoluteMPFBiasup_branch->SetAddress(&NVQGen4jesAbsoluteMPFBiasup_);
   NiFJjesAbsoluteMPFBiasup_branch = tree->GetBranch("NiFJjesAbsoluteMPFBiasup");
   if (NiFJjesAbsoluteMPFBiasup_branch) NiFJjesAbsoluteMPFBiasup_branch->SetAddress(&NiFJjesAbsoluteMPFBiasup_);
   iVMD0jesAbsoluteMPFBiasup_branch = tree->GetBranch("iVMD0jesAbsoluteMPFBiasup");
@@ -4285,6 +4425,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesAbsoluteMPFBiasdn_branch) NLGen3jesAbsoluteMPFBiasdn_branch->SetAddress(&NLGen3jesAbsoluteMPFBiasdn_);
   NLGen4jesAbsoluteMPFBiasdn_branch = tree->GetBranch("NLGen4jesAbsoluteMPFBiasdn");
   if (NLGen4jesAbsoluteMPFBiasdn_branch) NLGen4jesAbsoluteMPFBiasdn_branch->SetAddress(&NLGen4jesAbsoluteMPFBiasdn_);
+  NVQGen0jesAbsoluteMPFBiasdn_branch = tree->GetBranch("NVQGen0jesAbsoluteMPFBiasdn");
+  if (NVQGen0jesAbsoluteMPFBiasdn_branch) NVQGen0jesAbsoluteMPFBiasdn_branch->SetAddress(&NVQGen0jesAbsoluteMPFBiasdn_);
+  NVQGen1jesAbsoluteMPFBiasdn_branch = tree->GetBranch("NVQGen1jesAbsoluteMPFBiasdn");
+  if (NVQGen1jesAbsoluteMPFBiasdn_branch) NVQGen1jesAbsoluteMPFBiasdn_branch->SetAddress(&NVQGen1jesAbsoluteMPFBiasdn_);
+  NVQGen2jesAbsoluteMPFBiasdn_branch = tree->GetBranch("NVQGen2jesAbsoluteMPFBiasdn");
+  if (NVQGen2jesAbsoluteMPFBiasdn_branch) NVQGen2jesAbsoluteMPFBiasdn_branch->SetAddress(&NVQGen2jesAbsoluteMPFBiasdn_);
+  NVQGen3jesAbsoluteMPFBiasdn_branch = tree->GetBranch("NVQGen3jesAbsoluteMPFBiasdn");
+  if (NVQGen3jesAbsoluteMPFBiasdn_branch) NVQGen3jesAbsoluteMPFBiasdn_branch->SetAddress(&NVQGen3jesAbsoluteMPFBiasdn_);
+  NVQGen4jesAbsoluteMPFBiasdn_branch = tree->GetBranch("NVQGen4jesAbsoluteMPFBiasdn");
+  if (NVQGen4jesAbsoluteMPFBiasdn_branch) NVQGen4jesAbsoluteMPFBiasdn_branch->SetAddress(&NVQGen4jesAbsoluteMPFBiasdn_);
   NiFJjesAbsoluteMPFBiasdn_branch = tree->GetBranch("NiFJjesAbsoluteMPFBiasdn");
   if (NiFJjesAbsoluteMPFBiasdn_branch) NiFJjesAbsoluteMPFBiasdn_branch->SetAddress(&NiFJjesAbsoluteMPFBiasdn_);
   iVMD0jesAbsoluteMPFBiasdn_branch = tree->GetBranch("iVMD0jesAbsoluteMPFBiasdn");
@@ -4393,6 +4543,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesFragmentationup_branch) NLGen3jesFragmentationup_branch->SetAddress(&NLGen3jesFragmentationup_);
   NLGen4jesFragmentationup_branch = tree->GetBranch("NLGen4jesFragmentationup");
   if (NLGen4jesFragmentationup_branch) NLGen4jesFragmentationup_branch->SetAddress(&NLGen4jesFragmentationup_);
+  NVQGen0jesFragmentationup_branch = tree->GetBranch("NVQGen0jesFragmentationup");
+  if (NVQGen0jesFragmentationup_branch) NVQGen0jesFragmentationup_branch->SetAddress(&NVQGen0jesFragmentationup_);
+  NVQGen1jesFragmentationup_branch = tree->GetBranch("NVQGen1jesFragmentationup");
+  if (NVQGen1jesFragmentationup_branch) NVQGen1jesFragmentationup_branch->SetAddress(&NVQGen1jesFragmentationup_);
+  NVQGen2jesFragmentationup_branch = tree->GetBranch("NVQGen2jesFragmentationup");
+  if (NVQGen2jesFragmentationup_branch) NVQGen2jesFragmentationup_branch->SetAddress(&NVQGen2jesFragmentationup_);
+  NVQGen3jesFragmentationup_branch = tree->GetBranch("NVQGen3jesFragmentationup");
+  if (NVQGen3jesFragmentationup_branch) NVQGen3jesFragmentationup_branch->SetAddress(&NVQGen3jesFragmentationup_);
+  NVQGen4jesFragmentationup_branch = tree->GetBranch("NVQGen4jesFragmentationup");
+  if (NVQGen4jesFragmentationup_branch) NVQGen4jesFragmentationup_branch->SetAddress(&NVQGen4jesFragmentationup_);
   NiFJjesFragmentationup_branch = tree->GetBranch("NiFJjesFragmentationup");
   if (NiFJjesFragmentationup_branch) NiFJjesFragmentationup_branch->SetAddress(&NiFJjesFragmentationup_);
   iVMD0jesFragmentationup_branch = tree->GetBranch("iVMD0jesFragmentationup");
@@ -4501,6 +4661,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesFragmentationdn_branch) NLGen3jesFragmentationdn_branch->SetAddress(&NLGen3jesFragmentationdn_);
   NLGen4jesFragmentationdn_branch = tree->GetBranch("NLGen4jesFragmentationdn");
   if (NLGen4jesFragmentationdn_branch) NLGen4jesFragmentationdn_branch->SetAddress(&NLGen4jesFragmentationdn_);
+  NVQGen0jesFragmentationdn_branch = tree->GetBranch("NVQGen0jesFragmentationdn");
+  if (NVQGen0jesFragmentationdn_branch) NVQGen0jesFragmentationdn_branch->SetAddress(&NVQGen0jesFragmentationdn_);
+  NVQGen1jesFragmentationdn_branch = tree->GetBranch("NVQGen1jesFragmentationdn");
+  if (NVQGen1jesFragmentationdn_branch) NVQGen1jesFragmentationdn_branch->SetAddress(&NVQGen1jesFragmentationdn_);
+  NVQGen2jesFragmentationdn_branch = tree->GetBranch("NVQGen2jesFragmentationdn");
+  if (NVQGen2jesFragmentationdn_branch) NVQGen2jesFragmentationdn_branch->SetAddress(&NVQGen2jesFragmentationdn_);
+  NVQGen3jesFragmentationdn_branch = tree->GetBranch("NVQGen3jesFragmentationdn");
+  if (NVQGen3jesFragmentationdn_branch) NVQGen3jesFragmentationdn_branch->SetAddress(&NVQGen3jesFragmentationdn_);
+  NVQGen4jesFragmentationdn_branch = tree->GetBranch("NVQGen4jesFragmentationdn");
+  if (NVQGen4jesFragmentationdn_branch) NVQGen4jesFragmentationdn_branch->SetAddress(&NVQGen4jesFragmentationdn_);
   NiFJjesFragmentationdn_branch = tree->GetBranch("NiFJjesFragmentationdn");
   if (NiFJjesFragmentationdn_branch) NiFJjesFragmentationdn_branch->SetAddress(&NiFJjesFragmentationdn_);
   iVMD0jesFragmentationdn_branch = tree->GetBranch("iVMD0jesFragmentationdn");
@@ -4609,6 +4779,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesSinglePionECALup_branch) NLGen3jesSinglePionECALup_branch->SetAddress(&NLGen3jesSinglePionECALup_);
   NLGen4jesSinglePionECALup_branch = tree->GetBranch("NLGen4jesSinglePionECALup");
   if (NLGen4jesSinglePionECALup_branch) NLGen4jesSinglePionECALup_branch->SetAddress(&NLGen4jesSinglePionECALup_);
+  NVQGen0jesSinglePionECALup_branch = tree->GetBranch("NVQGen0jesSinglePionECALup");
+  if (NVQGen0jesSinglePionECALup_branch) NVQGen0jesSinglePionECALup_branch->SetAddress(&NVQGen0jesSinglePionECALup_);
+  NVQGen1jesSinglePionECALup_branch = tree->GetBranch("NVQGen1jesSinglePionECALup");
+  if (NVQGen1jesSinglePionECALup_branch) NVQGen1jesSinglePionECALup_branch->SetAddress(&NVQGen1jesSinglePionECALup_);
+  NVQGen2jesSinglePionECALup_branch = tree->GetBranch("NVQGen2jesSinglePionECALup");
+  if (NVQGen2jesSinglePionECALup_branch) NVQGen2jesSinglePionECALup_branch->SetAddress(&NVQGen2jesSinglePionECALup_);
+  NVQGen3jesSinglePionECALup_branch = tree->GetBranch("NVQGen3jesSinglePionECALup");
+  if (NVQGen3jesSinglePionECALup_branch) NVQGen3jesSinglePionECALup_branch->SetAddress(&NVQGen3jesSinglePionECALup_);
+  NVQGen4jesSinglePionECALup_branch = tree->GetBranch("NVQGen4jesSinglePionECALup");
+  if (NVQGen4jesSinglePionECALup_branch) NVQGen4jesSinglePionECALup_branch->SetAddress(&NVQGen4jesSinglePionECALup_);
   NiFJjesSinglePionECALup_branch = tree->GetBranch("NiFJjesSinglePionECALup");
   if (NiFJjesSinglePionECALup_branch) NiFJjesSinglePionECALup_branch->SetAddress(&NiFJjesSinglePionECALup_);
   iVMD0jesSinglePionECALup_branch = tree->GetBranch("iVMD0jesSinglePionECALup");
@@ -4717,6 +4897,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesSinglePionECALdn_branch) NLGen3jesSinglePionECALdn_branch->SetAddress(&NLGen3jesSinglePionECALdn_);
   NLGen4jesSinglePionECALdn_branch = tree->GetBranch("NLGen4jesSinglePionECALdn");
   if (NLGen4jesSinglePionECALdn_branch) NLGen4jesSinglePionECALdn_branch->SetAddress(&NLGen4jesSinglePionECALdn_);
+  NVQGen0jesSinglePionECALdn_branch = tree->GetBranch("NVQGen0jesSinglePionECALdn");
+  if (NVQGen0jesSinglePionECALdn_branch) NVQGen0jesSinglePionECALdn_branch->SetAddress(&NVQGen0jesSinglePionECALdn_);
+  NVQGen1jesSinglePionECALdn_branch = tree->GetBranch("NVQGen1jesSinglePionECALdn");
+  if (NVQGen1jesSinglePionECALdn_branch) NVQGen1jesSinglePionECALdn_branch->SetAddress(&NVQGen1jesSinglePionECALdn_);
+  NVQGen2jesSinglePionECALdn_branch = tree->GetBranch("NVQGen2jesSinglePionECALdn");
+  if (NVQGen2jesSinglePionECALdn_branch) NVQGen2jesSinglePionECALdn_branch->SetAddress(&NVQGen2jesSinglePionECALdn_);
+  NVQGen3jesSinglePionECALdn_branch = tree->GetBranch("NVQGen3jesSinglePionECALdn");
+  if (NVQGen3jesSinglePionECALdn_branch) NVQGen3jesSinglePionECALdn_branch->SetAddress(&NVQGen3jesSinglePionECALdn_);
+  NVQGen4jesSinglePionECALdn_branch = tree->GetBranch("NVQGen4jesSinglePionECALdn");
+  if (NVQGen4jesSinglePionECALdn_branch) NVQGen4jesSinglePionECALdn_branch->SetAddress(&NVQGen4jesSinglePionECALdn_);
   NiFJjesSinglePionECALdn_branch = tree->GetBranch("NiFJjesSinglePionECALdn");
   if (NiFJjesSinglePionECALdn_branch) NiFJjesSinglePionECALdn_branch->SetAddress(&NiFJjesSinglePionECALdn_);
   iVMD0jesSinglePionECALdn_branch = tree->GetBranch("iVMD0jesSinglePionECALdn");
@@ -4825,6 +5015,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesSinglePionHCALup_branch) NLGen3jesSinglePionHCALup_branch->SetAddress(&NLGen3jesSinglePionHCALup_);
   NLGen4jesSinglePionHCALup_branch = tree->GetBranch("NLGen4jesSinglePionHCALup");
   if (NLGen4jesSinglePionHCALup_branch) NLGen4jesSinglePionHCALup_branch->SetAddress(&NLGen4jesSinglePionHCALup_);
+  NVQGen0jesSinglePionHCALup_branch = tree->GetBranch("NVQGen0jesSinglePionHCALup");
+  if (NVQGen0jesSinglePionHCALup_branch) NVQGen0jesSinglePionHCALup_branch->SetAddress(&NVQGen0jesSinglePionHCALup_);
+  NVQGen1jesSinglePionHCALup_branch = tree->GetBranch("NVQGen1jesSinglePionHCALup");
+  if (NVQGen1jesSinglePionHCALup_branch) NVQGen1jesSinglePionHCALup_branch->SetAddress(&NVQGen1jesSinglePionHCALup_);
+  NVQGen2jesSinglePionHCALup_branch = tree->GetBranch("NVQGen2jesSinglePionHCALup");
+  if (NVQGen2jesSinglePionHCALup_branch) NVQGen2jesSinglePionHCALup_branch->SetAddress(&NVQGen2jesSinglePionHCALup_);
+  NVQGen3jesSinglePionHCALup_branch = tree->GetBranch("NVQGen3jesSinglePionHCALup");
+  if (NVQGen3jesSinglePionHCALup_branch) NVQGen3jesSinglePionHCALup_branch->SetAddress(&NVQGen3jesSinglePionHCALup_);
+  NVQGen4jesSinglePionHCALup_branch = tree->GetBranch("NVQGen4jesSinglePionHCALup");
+  if (NVQGen4jesSinglePionHCALup_branch) NVQGen4jesSinglePionHCALup_branch->SetAddress(&NVQGen4jesSinglePionHCALup_);
   NiFJjesSinglePionHCALup_branch = tree->GetBranch("NiFJjesSinglePionHCALup");
   if (NiFJjesSinglePionHCALup_branch) NiFJjesSinglePionHCALup_branch->SetAddress(&NiFJjesSinglePionHCALup_);
   iVMD0jesSinglePionHCALup_branch = tree->GetBranch("iVMD0jesSinglePionHCALup");
@@ -4933,6 +5133,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesSinglePionHCALdn_branch) NLGen3jesSinglePionHCALdn_branch->SetAddress(&NLGen3jesSinglePionHCALdn_);
   NLGen4jesSinglePionHCALdn_branch = tree->GetBranch("NLGen4jesSinglePionHCALdn");
   if (NLGen4jesSinglePionHCALdn_branch) NLGen4jesSinglePionHCALdn_branch->SetAddress(&NLGen4jesSinglePionHCALdn_);
+  NVQGen0jesSinglePionHCALdn_branch = tree->GetBranch("NVQGen0jesSinglePionHCALdn");
+  if (NVQGen0jesSinglePionHCALdn_branch) NVQGen0jesSinglePionHCALdn_branch->SetAddress(&NVQGen0jesSinglePionHCALdn_);
+  NVQGen1jesSinglePionHCALdn_branch = tree->GetBranch("NVQGen1jesSinglePionHCALdn");
+  if (NVQGen1jesSinglePionHCALdn_branch) NVQGen1jesSinglePionHCALdn_branch->SetAddress(&NVQGen1jesSinglePionHCALdn_);
+  NVQGen2jesSinglePionHCALdn_branch = tree->GetBranch("NVQGen2jesSinglePionHCALdn");
+  if (NVQGen2jesSinglePionHCALdn_branch) NVQGen2jesSinglePionHCALdn_branch->SetAddress(&NVQGen2jesSinglePionHCALdn_);
+  NVQGen3jesSinglePionHCALdn_branch = tree->GetBranch("NVQGen3jesSinglePionHCALdn");
+  if (NVQGen3jesSinglePionHCALdn_branch) NVQGen3jesSinglePionHCALdn_branch->SetAddress(&NVQGen3jesSinglePionHCALdn_);
+  NVQGen4jesSinglePionHCALdn_branch = tree->GetBranch("NVQGen4jesSinglePionHCALdn");
+  if (NVQGen4jesSinglePionHCALdn_branch) NVQGen4jesSinglePionHCALdn_branch->SetAddress(&NVQGen4jesSinglePionHCALdn_);
   NiFJjesSinglePionHCALdn_branch = tree->GetBranch("NiFJjesSinglePionHCALdn");
   if (NiFJjesSinglePionHCALdn_branch) NiFJjesSinglePionHCALdn_branch->SetAddress(&NiFJjesSinglePionHCALdn_);
   iVMD0jesSinglePionHCALdn_branch = tree->GetBranch("iVMD0jesSinglePionHCALdn");
@@ -5041,6 +5251,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesFlavorQCDup_branch) NLGen3jesFlavorQCDup_branch->SetAddress(&NLGen3jesFlavorQCDup_);
   NLGen4jesFlavorQCDup_branch = tree->GetBranch("NLGen4jesFlavorQCDup");
   if (NLGen4jesFlavorQCDup_branch) NLGen4jesFlavorQCDup_branch->SetAddress(&NLGen4jesFlavorQCDup_);
+  NVQGen0jesFlavorQCDup_branch = tree->GetBranch("NVQGen0jesFlavorQCDup");
+  if (NVQGen0jesFlavorQCDup_branch) NVQGen0jesFlavorQCDup_branch->SetAddress(&NVQGen0jesFlavorQCDup_);
+  NVQGen1jesFlavorQCDup_branch = tree->GetBranch("NVQGen1jesFlavorQCDup");
+  if (NVQGen1jesFlavorQCDup_branch) NVQGen1jesFlavorQCDup_branch->SetAddress(&NVQGen1jesFlavorQCDup_);
+  NVQGen2jesFlavorQCDup_branch = tree->GetBranch("NVQGen2jesFlavorQCDup");
+  if (NVQGen2jesFlavorQCDup_branch) NVQGen2jesFlavorQCDup_branch->SetAddress(&NVQGen2jesFlavorQCDup_);
+  NVQGen3jesFlavorQCDup_branch = tree->GetBranch("NVQGen3jesFlavorQCDup");
+  if (NVQGen3jesFlavorQCDup_branch) NVQGen3jesFlavorQCDup_branch->SetAddress(&NVQGen3jesFlavorQCDup_);
+  NVQGen4jesFlavorQCDup_branch = tree->GetBranch("NVQGen4jesFlavorQCDup");
+  if (NVQGen4jesFlavorQCDup_branch) NVQGen4jesFlavorQCDup_branch->SetAddress(&NVQGen4jesFlavorQCDup_);
   NiFJjesFlavorQCDup_branch = tree->GetBranch("NiFJjesFlavorQCDup");
   if (NiFJjesFlavorQCDup_branch) NiFJjesFlavorQCDup_branch->SetAddress(&NiFJjesFlavorQCDup_);
   iVMD0jesFlavorQCDup_branch = tree->GetBranch("iVMD0jesFlavorQCDup");
@@ -5149,6 +5369,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesFlavorQCDdn_branch) NLGen3jesFlavorQCDdn_branch->SetAddress(&NLGen3jesFlavorQCDdn_);
   NLGen4jesFlavorQCDdn_branch = tree->GetBranch("NLGen4jesFlavorQCDdn");
   if (NLGen4jesFlavorQCDdn_branch) NLGen4jesFlavorQCDdn_branch->SetAddress(&NLGen4jesFlavorQCDdn_);
+  NVQGen0jesFlavorQCDdn_branch = tree->GetBranch("NVQGen0jesFlavorQCDdn");
+  if (NVQGen0jesFlavorQCDdn_branch) NVQGen0jesFlavorQCDdn_branch->SetAddress(&NVQGen0jesFlavorQCDdn_);
+  NVQGen1jesFlavorQCDdn_branch = tree->GetBranch("NVQGen1jesFlavorQCDdn");
+  if (NVQGen1jesFlavorQCDdn_branch) NVQGen1jesFlavorQCDdn_branch->SetAddress(&NVQGen1jesFlavorQCDdn_);
+  NVQGen2jesFlavorQCDdn_branch = tree->GetBranch("NVQGen2jesFlavorQCDdn");
+  if (NVQGen2jesFlavorQCDdn_branch) NVQGen2jesFlavorQCDdn_branch->SetAddress(&NVQGen2jesFlavorQCDdn_);
+  NVQGen3jesFlavorQCDdn_branch = tree->GetBranch("NVQGen3jesFlavorQCDdn");
+  if (NVQGen3jesFlavorQCDdn_branch) NVQGen3jesFlavorQCDdn_branch->SetAddress(&NVQGen3jesFlavorQCDdn_);
+  NVQGen4jesFlavorQCDdn_branch = tree->GetBranch("NVQGen4jesFlavorQCDdn");
+  if (NVQGen4jesFlavorQCDdn_branch) NVQGen4jesFlavorQCDdn_branch->SetAddress(&NVQGen4jesFlavorQCDdn_);
   NiFJjesFlavorQCDdn_branch = tree->GetBranch("NiFJjesFlavorQCDdn");
   if (NiFJjesFlavorQCDdn_branch) NiFJjesFlavorQCDdn_branch->SetAddress(&NiFJjesFlavorQCDdn_);
   iVMD0jesFlavorQCDdn_branch = tree->GetBranch("iVMD0jesFlavorQCDdn");
@@ -5257,6 +5487,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesTimePtEtaup_branch) NLGen3jesTimePtEtaup_branch->SetAddress(&NLGen3jesTimePtEtaup_);
   NLGen4jesTimePtEtaup_branch = tree->GetBranch("NLGen4jesTimePtEtaup");
   if (NLGen4jesTimePtEtaup_branch) NLGen4jesTimePtEtaup_branch->SetAddress(&NLGen4jesTimePtEtaup_);
+  NVQGen0jesTimePtEtaup_branch = tree->GetBranch("NVQGen0jesTimePtEtaup");
+  if (NVQGen0jesTimePtEtaup_branch) NVQGen0jesTimePtEtaup_branch->SetAddress(&NVQGen0jesTimePtEtaup_);
+  NVQGen1jesTimePtEtaup_branch = tree->GetBranch("NVQGen1jesTimePtEtaup");
+  if (NVQGen1jesTimePtEtaup_branch) NVQGen1jesTimePtEtaup_branch->SetAddress(&NVQGen1jesTimePtEtaup_);
+  NVQGen2jesTimePtEtaup_branch = tree->GetBranch("NVQGen2jesTimePtEtaup");
+  if (NVQGen2jesTimePtEtaup_branch) NVQGen2jesTimePtEtaup_branch->SetAddress(&NVQGen2jesTimePtEtaup_);
+  NVQGen3jesTimePtEtaup_branch = tree->GetBranch("NVQGen3jesTimePtEtaup");
+  if (NVQGen3jesTimePtEtaup_branch) NVQGen3jesTimePtEtaup_branch->SetAddress(&NVQGen3jesTimePtEtaup_);
+  NVQGen4jesTimePtEtaup_branch = tree->GetBranch("NVQGen4jesTimePtEtaup");
+  if (NVQGen4jesTimePtEtaup_branch) NVQGen4jesTimePtEtaup_branch->SetAddress(&NVQGen4jesTimePtEtaup_);
   NiFJjesTimePtEtaup_branch = tree->GetBranch("NiFJjesTimePtEtaup");
   if (NiFJjesTimePtEtaup_branch) NiFJjesTimePtEtaup_branch->SetAddress(&NiFJjesTimePtEtaup_);
   iVMD0jesTimePtEtaup_branch = tree->GetBranch("iVMD0jesTimePtEtaup");
@@ -5365,6 +5605,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesTimePtEtadn_branch) NLGen3jesTimePtEtadn_branch->SetAddress(&NLGen3jesTimePtEtadn_);
   NLGen4jesTimePtEtadn_branch = tree->GetBranch("NLGen4jesTimePtEtadn");
   if (NLGen4jesTimePtEtadn_branch) NLGen4jesTimePtEtadn_branch->SetAddress(&NLGen4jesTimePtEtadn_);
+  NVQGen0jesTimePtEtadn_branch = tree->GetBranch("NVQGen0jesTimePtEtadn");
+  if (NVQGen0jesTimePtEtadn_branch) NVQGen0jesTimePtEtadn_branch->SetAddress(&NVQGen0jesTimePtEtadn_);
+  NVQGen1jesTimePtEtadn_branch = tree->GetBranch("NVQGen1jesTimePtEtadn");
+  if (NVQGen1jesTimePtEtadn_branch) NVQGen1jesTimePtEtadn_branch->SetAddress(&NVQGen1jesTimePtEtadn_);
+  NVQGen2jesTimePtEtadn_branch = tree->GetBranch("NVQGen2jesTimePtEtadn");
+  if (NVQGen2jesTimePtEtadn_branch) NVQGen2jesTimePtEtadn_branch->SetAddress(&NVQGen2jesTimePtEtadn_);
+  NVQGen3jesTimePtEtadn_branch = tree->GetBranch("NVQGen3jesTimePtEtadn");
+  if (NVQGen3jesTimePtEtadn_branch) NVQGen3jesTimePtEtadn_branch->SetAddress(&NVQGen3jesTimePtEtadn_);
+  NVQGen4jesTimePtEtadn_branch = tree->GetBranch("NVQGen4jesTimePtEtadn");
+  if (NVQGen4jesTimePtEtadn_branch) NVQGen4jesTimePtEtadn_branch->SetAddress(&NVQGen4jesTimePtEtadn_);
   NiFJjesTimePtEtadn_branch = tree->GetBranch("NiFJjesTimePtEtadn");
   if (NiFJjesTimePtEtadn_branch) NiFJjesTimePtEtadn_branch->SetAddress(&NiFJjesTimePtEtadn_);
   iVMD0jesTimePtEtadn_branch = tree->GetBranch("iVMD0jesTimePtEtadn");
@@ -5473,6 +5723,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativeJEREC1up_branch) NLGen3jesRelativeJEREC1up_branch->SetAddress(&NLGen3jesRelativeJEREC1up_);
   NLGen4jesRelativeJEREC1up_branch = tree->GetBranch("NLGen4jesRelativeJEREC1up");
   if (NLGen4jesRelativeJEREC1up_branch) NLGen4jesRelativeJEREC1up_branch->SetAddress(&NLGen4jesRelativeJEREC1up_);
+  NVQGen0jesRelativeJEREC1up_branch = tree->GetBranch("NVQGen0jesRelativeJEREC1up");
+  if (NVQGen0jesRelativeJEREC1up_branch) NVQGen0jesRelativeJEREC1up_branch->SetAddress(&NVQGen0jesRelativeJEREC1up_);
+  NVQGen1jesRelativeJEREC1up_branch = tree->GetBranch("NVQGen1jesRelativeJEREC1up");
+  if (NVQGen1jesRelativeJEREC1up_branch) NVQGen1jesRelativeJEREC1up_branch->SetAddress(&NVQGen1jesRelativeJEREC1up_);
+  NVQGen2jesRelativeJEREC1up_branch = tree->GetBranch("NVQGen2jesRelativeJEREC1up");
+  if (NVQGen2jesRelativeJEREC1up_branch) NVQGen2jesRelativeJEREC1up_branch->SetAddress(&NVQGen2jesRelativeJEREC1up_);
+  NVQGen3jesRelativeJEREC1up_branch = tree->GetBranch("NVQGen3jesRelativeJEREC1up");
+  if (NVQGen3jesRelativeJEREC1up_branch) NVQGen3jesRelativeJEREC1up_branch->SetAddress(&NVQGen3jesRelativeJEREC1up_);
+  NVQGen4jesRelativeJEREC1up_branch = tree->GetBranch("NVQGen4jesRelativeJEREC1up");
+  if (NVQGen4jesRelativeJEREC1up_branch) NVQGen4jesRelativeJEREC1up_branch->SetAddress(&NVQGen4jesRelativeJEREC1up_);
   NiFJjesRelativeJEREC1up_branch = tree->GetBranch("NiFJjesRelativeJEREC1up");
   if (NiFJjesRelativeJEREC1up_branch) NiFJjesRelativeJEREC1up_branch->SetAddress(&NiFJjesRelativeJEREC1up_);
   iVMD0jesRelativeJEREC1up_branch = tree->GetBranch("iVMD0jesRelativeJEREC1up");
@@ -5581,6 +5841,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativeJEREC1dn_branch) NLGen3jesRelativeJEREC1dn_branch->SetAddress(&NLGen3jesRelativeJEREC1dn_);
   NLGen4jesRelativeJEREC1dn_branch = tree->GetBranch("NLGen4jesRelativeJEREC1dn");
   if (NLGen4jesRelativeJEREC1dn_branch) NLGen4jesRelativeJEREC1dn_branch->SetAddress(&NLGen4jesRelativeJEREC1dn_);
+  NVQGen0jesRelativeJEREC1dn_branch = tree->GetBranch("NVQGen0jesRelativeJEREC1dn");
+  if (NVQGen0jesRelativeJEREC1dn_branch) NVQGen0jesRelativeJEREC1dn_branch->SetAddress(&NVQGen0jesRelativeJEREC1dn_);
+  NVQGen1jesRelativeJEREC1dn_branch = tree->GetBranch("NVQGen1jesRelativeJEREC1dn");
+  if (NVQGen1jesRelativeJEREC1dn_branch) NVQGen1jesRelativeJEREC1dn_branch->SetAddress(&NVQGen1jesRelativeJEREC1dn_);
+  NVQGen2jesRelativeJEREC1dn_branch = tree->GetBranch("NVQGen2jesRelativeJEREC1dn");
+  if (NVQGen2jesRelativeJEREC1dn_branch) NVQGen2jesRelativeJEREC1dn_branch->SetAddress(&NVQGen2jesRelativeJEREC1dn_);
+  NVQGen3jesRelativeJEREC1dn_branch = tree->GetBranch("NVQGen3jesRelativeJEREC1dn");
+  if (NVQGen3jesRelativeJEREC1dn_branch) NVQGen3jesRelativeJEREC1dn_branch->SetAddress(&NVQGen3jesRelativeJEREC1dn_);
+  NVQGen4jesRelativeJEREC1dn_branch = tree->GetBranch("NVQGen4jesRelativeJEREC1dn");
+  if (NVQGen4jesRelativeJEREC1dn_branch) NVQGen4jesRelativeJEREC1dn_branch->SetAddress(&NVQGen4jesRelativeJEREC1dn_);
   NiFJjesRelativeJEREC1dn_branch = tree->GetBranch("NiFJjesRelativeJEREC1dn");
   if (NiFJjesRelativeJEREC1dn_branch) NiFJjesRelativeJEREC1dn_branch->SetAddress(&NiFJjesRelativeJEREC1dn_);
   iVMD0jesRelativeJEREC1dn_branch = tree->GetBranch("iVMD0jesRelativeJEREC1dn");
@@ -5689,6 +5959,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativeJEREC2up_branch) NLGen3jesRelativeJEREC2up_branch->SetAddress(&NLGen3jesRelativeJEREC2up_);
   NLGen4jesRelativeJEREC2up_branch = tree->GetBranch("NLGen4jesRelativeJEREC2up");
   if (NLGen4jesRelativeJEREC2up_branch) NLGen4jesRelativeJEREC2up_branch->SetAddress(&NLGen4jesRelativeJEREC2up_);
+  NVQGen0jesRelativeJEREC2up_branch = tree->GetBranch("NVQGen0jesRelativeJEREC2up");
+  if (NVQGen0jesRelativeJEREC2up_branch) NVQGen0jesRelativeJEREC2up_branch->SetAddress(&NVQGen0jesRelativeJEREC2up_);
+  NVQGen1jesRelativeJEREC2up_branch = tree->GetBranch("NVQGen1jesRelativeJEREC2up");
+  if (NVQGen1jesRelativeJEREC2up_branch) NVQGen1jesRelativeJEREC2up_branch->SetAddress(&NVQGen1jesRelativeJEREC2up_);
+  NVQGen2jesRelativeJEREC2up_branch = tree->GetBranch("NVQGen2jesRelativeJEREC2up");
+  if (NVQGen2jesRelativeJEREC2up_branch) NVQGen2jesRelativeJEREC2up_branch->SetAddress(&NVQGen2jesRelativeJEREC2up_);
+  NVQGen3jesRelativeJEREC2up_branch = tree->GetBranch("NVQGen3jesRelativeJEREC2up");
+  if (NVQGen3jesRelativeJEREC2up_branch) NVQGen3jesRelativeJEREC2up_branch->SetAddress(&NVQGen3jesRelativeJEREC2up_);
+  NVQGen4jesRelativeJEREC2up_branch = tree->GetBranch("NVQGen4jesRelativeJEREC2up");
+  if (NVQGen4jesRelativeJEREC2up_branch) NVQGen4jesRelativeJEREC2up_branch->SetAddress(&NVQGen4jesRelativeJEREC2up_);
   NiFJjesRelativeJEREC2up_branch = tree->GetBranch("NiFJjesRelativeJEREC2up");
   if (NiFJjesRelativeJEREC2up_branch) NiFJjesRelativeJEREC2up_branch->SetAddress(&NiFJjesRelativeJEREC2up_);
   iVMD0jesRelativeJEREC2up_branch = tree->GetBranch("iVMD0jesRelativeJEREC2up");
@@ -5797,6 +6077,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativeJEREC2dn_branch) NLGen3jesRelativeJEREC2dn_branch->SetAddress(&NLGen3jesRelativeJEREC2dn_);
   NLGen4jesRelativeJEREC2dn_branch = tree->GetBranch("NLGen4jesRelativeJEREC2dn");
   if (NLGen4jesRelativeJEREC2dn_branch) NLGen4jesRelativeJEREC2dn_branch->SetAddress(&NLGen4jesRelativeJEREC2dn_);
+  NVQGen0jesRelativeJEREC2dn_branch = tree->GetBranch("NVQGen0jesRelativeJEREC2dn");
+  if (NVQGen0jesRelativeJEREC2dn_branch) NVQGen0jesRelativeJEREC2dn_branch->SetAddress(&NVQGen0jesRelativeJEREC2dn_);
+  NVQGen1jesRelativeJEREC2dn_branch = tree->GetBranch("NVQGen1jesRelativeJEREC2dn");
+  if (NVQGen1jesRelativeJEREC2dn_branch) NVQGen1jesRelativeJEREC2dn_branch->SetAddress(&NVQGen1jesRelativeJEREC2dn_);
+  NVQGen2jesRelativeJEREC2dn_branch = tree->GetBranch("NVQGen2jesRelativeJEREC2dn");
+  if (NVQGen2jesRelativeJEREC2dn_branch) NVQGen2jesRelativeJEREC2dn_branch->SetAddress(&NVQGen2jesRelativeJEREC2dn_);
+  NVQGen3jesRelativeJEREC2dn_branch = tree->GetBranch("NVQGen3jesRelativeJEREC2dn");
+  if (NVQGen3jesRelativeJEREC2dn_branch) NVQGen3jesRelativeJEREC2dn_branch->SetAddress(&NVQGen3jesRelativeJEREC2dn_);
+  NVQGen4jesRelativeJEREC2dn_branch = tree->GetBranch("NVQGen4jesRelativeJEREC2dn");
+  if (NVQGen4jesRelativeJEREC2dn_branch) NVQGen4jesRelativeJEREC2dn_branch->SetAddress(&NVQGen4jesRelativeJEREC2dn_);
   NiFJjesRelativeJEREC2dn_branch = tree->GetBranch("NiFJjesRelativeJEREC2dn");
   if (NiFJjesRelativeJEREC2dn_branch) NiFJjesRelativeJEREC2dn_branch->SetAddress(&NiFJjesRelativeJEREC2dn_);
   iVMD0jesRelativeJEREC2dn_branch = tree->GetBranch("iVMD0jesRelativeJEREC2dn");
@@ -5905,6 +6195,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativeJERHFup_branch) NLGen3jesRelativeJERHFup_branch->SetAddress(&NLGen3jesRelativeJERHFup_);
   NLGen4jesRelativeJERHFup_branch = tree->GetBranch("NLGen4jesRelativeJERHFup");
   if (NLGen4jesRelativeJERHFup_branch) NLGen4jesRelativeJERHFup_branch->SetAddress(&NLGen4jesRelativeJERHFup_);
+  NVQGen0jesRelativeJERHFup_branch = tree->GetBranch("NVQGen0jesRelativeJERHFup");
+  if (NVQGen0jesRelativeJERHFup_branch) NVQGen0jesRelativeJERHFup_branch->SetAddress(&NVQGen0jesRelativeJERHFup_);
+  NVQGen1jesRelativeJERHFup_branch = tree->GetBranch("NVQGen1jesRelativeJERHFup");
+  if (NVQGen1jesRelativeJERHFup_branch) NVQGen1jesRelativeJERHFup_branch->SetAddress(&NVQGen1jesRelativeJERHFup_);
+  NVQGen2jesRelativeJERHFup_branch = tree->GetBranch("NVQGen2jesRelativeJERHFup");
+  if (NVQGen2jesRelativeJERHFup_branch) NVQGen2jesRelativeJERHFup_branch->SetAddress(&NVQGen2jesRelativeJERHFup_);
+  NVQGen3jesRelativeJERHFup_branch = tree->GetBranch("NVQGen3jesRelativeJERHFup");
+  if (NVQGen3jesRelativeJERHFup_branch) NVQGen3jesRelativeJERHFup_branch->SetAddress(&NVQGen3jesRelativeJERHFup_);
+  NVQGen4jesRelativeJERHFup_branch = tree->GetBranch("NVQGen4jesRelativeJERHFup");
+  if (NVQGen4jesRelativeJERHFup_branch) NVQGen4jesRelativeJERHFup_branch->SetAddress(&NVQGen4jesRelativeJERHFup_);
   NiFJjesRelativeJERHFup_branch = tree->GetBranch("NiFJjesRelativeJERHFup");
   if (NiFJjesRelativeJERHFup_branch) NiFJjesRelativeJERHFup_branch->SetAddress(&NiFJjesRelativeJERHFup_);
   iVMD0jesRelativeJERHFup_branch = tree->GetBranch("iVMD0jesRelativeJERHFup");
@@ -6013,6 +6313,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativeJERHFdn_branch) NLGen3jesRelativeJERHFdn_branch->SetAddress(&NLGen3jesRelativeJERHFdn_);
   NLGen4jesRelativeJERHFdn_branch = tree->GetBranch("NLGen4jesRelativeJERHFdn");
   if (NLGen4jesRelativeJERHFdn_branch) NLGen4jesRelativeJERHFdn_branch->SetAddress(&NLGen4jesRelativeJERHFdn_);
+  NVQGen0jesRelativeJERHFdn_branch = tree->GetBranch("NVQGen0jesRelativeJERHFdn");
+  if (NVQGen0jesRelativeJERHFdn_branch) NVQGen0jesRelativeJERHFdn_branch->SetAddress(&NVQGen0jesRelativeJERHFdn_);
+  NVQGen1jesRelativeJERHFdn_branch = tree->GetBranch("NVQGen1jesRelativeJERHFdn");
+  if (NVQGen1jesRelativeJERHFdn_branch) NVQGen1jesRelativeJERHFdn_branch->SetAddress(&NVQGen1jesRelativeJERHFdn_);
+  NVQGen2jesRelativeJERHFdn_branch = tree->GetBranch("NVQGen2jesRelativeJERHFdn");
+  if (NVQGen2jesRelativeJERHFdn_branch) NVQGen2jesRelativeJERHFdn_branch->SetAddress(&NVQGen2jesRelativeJERHFdn_);
+  NVQGen3jesRelativeJERHFdn_branch = tree->GetBranch("NVQGen3jesRelativeJERHFdn");
+  if (NVQGen3jesRelativeJERHFdn_branch) NVQGen3jesRelativeJERHFdn_branch->SetAddress(&NVQGen3jesRelativeJERHFdn_);
+  NVQGen4jesRelativeJERHFdn_branch = tree->GetBranch("NVQGen4jesRelativeJERHFdn");
+  if (NVQGen4jesRelativeJERHFdn_branch) NVQGen4jesRelativeJERHFdn_branch->SetAddress(&NVQGen4jesRelativeJERHFdn_);
   NiFJjesRelativeJERHFdn_branch = tree->GetBranch("NiFJjesRelativeJERHFdn");
   if (NiFJjesRelativeJERHFdn_branch) NiFJjesRelativeJERHFdn_branch->SetAddress(&NiFJjesRelativeJERHFdn_);
   iVMD0jesRelativeJERHFdn_branch = tree->GetBranch("iVMD0jesRelativeJERHFdn");
@@ -6121,6 +6431,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativePtBBup_branch) NLGen3jesRelativePtBBup_branch->SetAddress(&NLGen3jesRelativePtBBup_);
   NLGen4jesRelativePtBBup_branch = tree->GetBranch("NLGen4jesRelativePtBBup");
   if (NLGen4jesRelativePtBBup_branch) NLGen4jesRelativePtBBup_branch->SetAddress(&NLGen4jesRelativePtBBup_);
+  NVQGen0jesRelativePtBBup_branch = tree->GetBranch("NVQGen0jesRelativePtBBup");
+  if (NVQGen0jesRelativePtBBup_branch) NVQGen0jesRelativePtBBup_branch->SetAddress(&NVQGen0jesRelativePtBBup_);
+  NVQGen1jesRelativePtBBup_branch = tree->GetBranch("NVQGen1jesRelativePtBBup");
+  if (NVQGen1jesRelativePtBBup_branch) NVQGen1jesRelativePtBBup_branch->SetAddress(&NVQGen1jesRelativePtBBup_);
+  NVQGen2jesRelativePtBBup_branch = tree->GetBranch("NVQGen2jesRelativePtBBup");
+  if (NVQGen2jesRelativePtBBup_branch) NVQGen2jesRelativePtBBup_branch->SetAddress(&NVQGen2jesRelativePtBBup_);
+  NVQGen3jesRelativePtBBup_branch = tree->GetBranch("NVQGen3jesRelativePtBBup");
+  if (NVQGen3jesRelativePtBBup_branch) NVQGen3jesRelativePtBBup_branch->SetAddress(&NVQGen3jesRelativePtBBup_);
+  NVQGen4jesRelativePtBBup_branch = tree->GetBranch("NVQGen4jesRelativePtBBup");
+  if (NVQGen4jesRelativePtBBup_branch) NVQGen4jesRelativePtBBup_branch->SetAddress(&NVQGen4jesRelativePtBBup_);
   NiFJjesRelativePtBBup_branch = tree->GetBranch("NiFJjesRelativePtBBup");
   if (NiFJjesRelativePtBBup_branch) NiFJjesRelativePtBBup_branch->SetAddress(&NiFJjesRelativePtBBup_);
   iVMD0jesRelativePtBBup_branch = tree->GetBranch("iVMD0jesRelativePtBBup");
@@ -6229,6 +6549,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativePtBBdn_branch) NLGen3jesRelativePtBBdn_branch->SetAddress(&NLGen3jesRelativePtBBdn_);
   NLGen4jesRelativePtBBdn_branch = tree->GetBranch("NLGen4jesRelativePtBBdn");
   if (NLGen4jesRelativePtBBdn_branch) NLGen4jesRelativePtBBdn_branch->SetAddress(&NLGen4jesRelativePtBBdn_);
+  NVQGen0jesRelativePtBBdn_branch = tree->GetBranch("NVQGen0jesRelativePtBBdn");
+  if (NVQGen0jesRelativePtBBdn_branch) NVQGen0jesRelativePtBBdn_branch->SetAddress(&NVQGen0jesRelativePtBBdn_);
+  NVQGen1jesRelativePtBBdn_branch = tree->GetBranch("NVQGen1jesRelativePtBBdn");
+  if (NVQGen1jesRelativePtBBdn_branch) NVQGen1jesRelativePtBBdn_branch->SetAddress(&NVQGen1jesRelativePtBBdn_);
+  NVQGen2jesRelativePtBBdn_branch = tree->GetBranch("NVQGen2jesRelativePtBBdn");
+  if (NVQGen2jesRelativePtBBdn_branch) NVQGen2jesRelativePtBBdn_branch->SetAddress(&NVQGen2jesRelativePtBBdn_);
+  NVQGen3jesRelativePtBBdn_branch = tree->GetBranch("NVQGen3jesRelativePtBBdn");
+  if (NVQGen3jesRelativePtBBdn_branch) NVQGen3jesRelativePtBBdn_branch->SetAddress(&NVQGen3jesRelativePtBBdn_);
+  NVQGen4jesRelativePtBBdn_branch = tree->GetBranch("NVQGen4jesRelativePtBBdn");
+  if (NVQGen4jesRelativePtBBdn_branch) NVQGen4jesRelativePtBBdn_branch->SetAddress(&NVQGen4jesRelativePtBBdn_);
   NiFJjesRelativePtBBdn_branch = tree->GetBranch("NiFJjesRelativePtBBdn");
   if (NiFJjesRelativePtBBdn_branch) NiFJjesRelativePtBBdn_branch->SetAddress(&NiFJjesRelativePtBBdn_);
   iVMD0jesRelativePtBBdn_branch = tree->GetBranch("iVMD0jesRelativePtBBdn");
@@ -6337,6 +6667,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativePtEC1up_branch) NLGen3jesRelativePtEC1up_branch->SetAddress(&NLGen3jesRelativePtEC1up_);
   NLGen4jesRelativePtEC1up_branch = tree->GetBranch("NLGen4jesRelativePtEC1up");
   if (NLGen4jesRelativePtEC1up_branch) NLGen4jesRelativePtEC1up_branch->SetAddress(&NLGen4jesRelativePtEC1up_);
+  NVQGen0jesRelativePtEC1up_branch = tree->GetBranch("NVQGen0jesRelativePtEC1up");
+  if (NVQGen0jesRelativePtEC1up_branch) NVQGen0jesRelativePtEC1up_branch->SetAddress(&NVQGen0jesRelativePtEC1up_);
+  NVQGen1jesRelativePtEC1up_branch = tree->GetBranch("NVQGen1jesRelativePtEC1up");
+  if (NVQGen1jesRelativePtEC1up_branch) NVQGen1jesRelativePtEC1up_branch->SetAddress(&NVQGen1jesRelativePtEC1up_);
+  NVQGen2jesRelativePtEC1up_branch = tree->GetBranch("NVQGen2jesRelativePtEC1up");
+  if (NVQGen2jesRelativePtEC1up_branch) NVQGen2jesRelativePtEC1up_branch->SetAddress(&NVQGen2jesRelativePtEC1up_);
+  NVQGen3jesRelativePtEC1up_branch = tree->GetBranch("NVQGen3jesRelativePtEC1up");
+  if (NVQGen3jesRelativePtEC1up_branch) NVQGen3jesRelativePtEC1up_branch->SetAddress(&NVQGen3jesRelativePtEC1up_);
+  NVQGen4jesRelativePtEC1up_branch = tree->GetBranch("NVQGen4jesRelativePtEC1up");
+  if (NVQGen4jesRelativePtEC1up_branch) NVQGen4jesRelativePtEC1up_branch->SetAddress(&NVQGen4jesRelativePtEC1up_);
   NiFJjesRelativePtEC1up_branch = tree->GetBranch("NiFJjesRelativePtEC1up");
   if (NiFJjesRelativePtEC1up_branch) NiFJjesRelativePtEC1up_branch->SetAddress(&NiFJjesRelativePtEC1up_);
   iVMD0jesRelativePtEC1up_branch = tree->GetBranch("iVMD0jesRelativePtEC1up");
@@ -6445,6 +6785,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativePtEC1dn_branch) NLGen3jesRelativePtEC1dn_branch->SetAddress(&NLGen3jesRelativePtEC1dn_);
   NLGen4jesRelativePtEC1dn_branch = tree->GetBranch("NLGen4jesRelativePtEC1dn");
   if (NLGen4jesRelativePtEC1dn_branch) NLGen4jesRelativePtEC1dn_branch->SetAddress(&NLGen4jesRelativePtEC1dn_);
+  NVQGen0jesRelativePtEC1dn_branch = tree->GetBranch("NVQGen0jesRelativePtEC1dn");
+  if (NVQGen0jesRelativePtEC1dn_branch) NVQGen0jesRelativePtEC1dn_branch->SetAddress(&NVQGen0jesRelativePtEC1dn_);
+  NVQGen1jesRelativePtEC1dn_branch = tree->GetBranch("NVQGen1jesRelativePtEC1dn");
+  if (NVQGen1jesRelativePtEC1dn_branch) NVQGen1jesRelativePtEC1dn_branch->SetAddress(&NVQGen1jesRelativePtEC1dn_);
+  NVQGen2jesRelativePtEC1dn_branch = tree->GetBranch("NVQGen2jesRelativePtEC1dn");
+  if (NVQGen2jesRelativePtEC1dn_branch) NVQGen2jesRelativePtEC1dn_branch->SetAddress(&NVQGen2jesRelativePtEC1dn_);
+  NVQGen3jesRelativePtEC1dn_branch = tree->GetBranch("NVQGen3jesRelativePtEC1dn");
+  if (NVQGen3jesRelativePtEC1dn_branch) NVQGen3jesRelativePtEC1dn_branch->SetAddress(&NVQGen3jesRelativePtEC1dn_);
+  NVQGen4jesRelativePtEC1dn_branch = tree->GetBranch("NVQGen4jesRelativePtEC1dn");
+  if (NVQGen4jesRelativePtEC1dn_branch) NVQGen4jesRelativePtEC1dn_branch->SetAddress(&NVQGen4jesRelativePtEC1dn_);
   NiFJjesRelativePtEC1dn_branch = tree->GetBranch("NiFJjesRelativePtEC1dn");
   if (NiFJjesRelativePtEC1dn_branch) NiFJjesRelativePtEC1dn_branch->SetAddress(&NiFJjesRelativePtEC1dn_);
   iVMD0jesRelativePtEC1dn_branch = tree->GetBranch("iVMD0jesRelativePtEC1dn");
@@ -6553,6 +6903,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativePtEC2up_branch) NLGen3jesRelativePtEC2up_branch->SetAddress(&NLGen3jesRelativePtEC2up_);
   NLGen4jesRelativePtEC2up_branch = tree->GetBranch("NLGen4jesRelativePtEC2up");
   if (NLGen4jesRelativePtEC2up_branch) NLGen4jesRelativePtEC2up_branch->SetAddress(&NLGen4jesRelativePtEC2up_);
+  NVQGen0jesRelativePtEC2up_branch = tree->GetBranch("NVQGen0jesRelativePtEC2up");
+  if (NVQGen0jesRelativePtEC2up_branch) NVQGen0jesRelativePtEC2up_branch->SetAddress(&NVQGen0jesRelativePtEC2up_);
+  NVQGen1jesRelativePtEC2up_branch = tree->GetBranch("NVQGen1jesRelativePtEC2up");
+  if (NVQGen1jesRelativePtEC2up_branch) NVQGen1jesRelativePtEC2up_branch->SetAddress(&NVQGen1jesRelativePtEC2up_);
+  NVQGen2jesRelativePtEC2up_branch = tree->GetBranch("NVQGen2jesRelativePtEC2up");
+  if (NVQGen2jesRelativePtEC2up_branch) NVQGen2jesRelativePtEC2up_branch->SetAddress(&NVQGen2jesRelativePtEC2up_);
+  NVQGen3jesRelativePtEC2up_branch = tree->GetBranch("NVQGen3jesRelativePtEC2up");
+  if (NVQGen3jesRelativePtEC2up_branch) NVQGen3jesRelativePtEC2up_branch->SetAddress(&NVQGen3jesRelativePtEC2up_);
+  NVQGen4jesRelativePtEC2up_branch = tree->GetBranch("NVQGen4jesRelativePtEC2up");
+  if (NVQGen4jesRelativePtEC2up_branch) NVQGen4jesRelativePtEC2up_branch->SetAddress(&NVQGen4jesRelativePtEC2up_);
   NiFJjesRelativePtEC2up_branch = tree->GetBranch("NiFJjesRelativePtEC2up");
   if (NiFJjesRelativePtEC2up_branch) NiFJjesRelativePtEC2up_branch->SetAddress(&NiFJjesRelativePtEC2up_);
   iVMD0jesRelativePtEC2up_branch = tree->GetBranch("iVMD0jesRelativePtEC2up");
@@ -6661,6 +7021,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativePtEC2dn_branch) NLGen3jesRelativePtEC2dn_branch->SetAddress(&NLGen3jesRelativePtEC2dn_);
   NLGen4jesRelativePtEC2dn_branch = tree->GetBranch("NLGen4jesRelativePtEC2dn");
   if (NLGen4jesRelativePtEC2dn_branch) NLGen4jesRelativePtEC2dn_branch->SetAddress(&NLGen4jesRelativePtEC2dn_);
+  NVQGen0jesRelativePtEC2dn_branch = tree->GetBranch("NVQGen0jesRelativePtEC2dn");
+  if (NVQGen0jesRelativePtEC2dn_branch) NVQGen0jesRelativePtEC2dn_branch->SetAddress(&NVQGen0jesRelativePtEC2dn_);
+  NVQGen1jesRelativePtEC2dn_branch = tree->GetBranch("NVQGen1jesRelativePtEC2dn");
+  if (NVQGen1jesRelativePtEC2dn_branch) NVQGen1jesRelativePtEC2dn_branch->SetAddress(&NVQGen1jesRelativePtEC2dn_);
+  NVQGen2jesRelativePtEC2dn_branch = tree->GetBranch("NVQGen2jesRelativePtEC2dn");
+  if (NVQGen2jesRelativePtEC2dn_branch) NVQGen2jesRelativePtEC2dn_branch->SetAddress(&NVQGen2jesRelativePtEC2dn_);
+  NVQGen3jesRelativePtEC2dn_branch = tree->GetBranch("NVQGen3jesRelativePtEC2dn");
+  if (NVQGen3jesRelativePtEC2dn_branch) NVQGen3jesRelativePtEC2dn_branch->SetAddress(&NVQGen3jesRelativePtEC2dn_);
+  NVQGen4jesRelativePtEC2dn_branch = tree->GetBranch("NVQGen4jesRelativePtEC2dn");
+  if (NVQGen4jesRelativePtEC2dn_branch) NVQGen4jesRelativePtEC2dn_branch->SetAddress(&NVQGen4jesRelativePtEC2dn_);
   NiFJjesRelativePtEC2dn_branch = tree->GetBranch("NiFJjesRelativePtEC2dn");
   if (NiFJjesRelativePtEC2dn_branch) NiFJjesRelativePtEC2dn_branch->SetAddress(&NiFJjesRelativePtEC2dn_);
   iVMD0jesRelativePtEC2dn_branch = tree->GetBranch("iVMD0jesRelativePtEC2dn");
@@ -6769,6 +7139,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativePtHFup_branch) NLGen3jesRelativePtHFup_branch->SetAddress(&NLGen3jesRelativePtHFup_);
   NLGen4jesRelativePtHFup_branch = tree->GetBranch("NLGen4jesRelativePtHFup");
   if (NLGen4jesRelativePtHFup_branch) NLGen4jesRelativePtHFup_branch->SetAddress(&NLGen4jesRelativePtHFup_);
+  NVQGen0jesRelativePtHFup_branch = tree->GetBranch("NVQGen0jesRelativePtHFup");
+  if (NVQGen0jesRelativePtHFup_branch) NVQGen0jesRelativePtHFup_branch->SetAddress(&NVQGen0jesRelativePtHFup_);
+  NVQGen1jesRelativePtHFup_branch = tree->GetBranch("NVQGen1jesRelativePtHFup");
+  if (NVQGen1jesRelativePtHFup_branch) NVQGen1jesRelativePtHFup_branch->SetAddress(&NVQGen1jesRelativePtHFup_);
+  NVQGen2jesRelativePtHFup_branch = tree->GetBranch("NVQGen2jesRelativePtHFup");
+  if (NVQGen2jesRelativePtHFup_branch) NVQGen2jesRelativePtHFup_branch->SetAddress(&NVQGen2jesRelativePtHFup_);
+  NVQGen3jesRelativePtHFup_branch = tree->GetBranch("NVQGen3jesRelativePtHFup");
+  if (NVQGen3jesRelativePtHFup_branch) NVQGen3jesRelativePtHFup_branch->SetAddress(&NVQGen3jesRelativePtHFup_);
+  NVQGen4jesRelativePtHFup_branch = tree->GetBranch("NVQGen4jesRelativePtHFup");
+  if (NVQGen4jesRelativePtHFup_branch) NVQGen4jesRelativePtHFup_branch->SetAddress(&NVQGen4jesRelativePtHFup_);
   NiFJjesRelativePtHFup_branch = tree->GetBranch("NiFJjesRelativePtHFup");
   if (NiFJjesRelativePtHFup_branch) NiFJjesRelativePtHFup_branch->SetAddress(&NiFJjesRelativePtHFup_);
   iVMD0jesRelativePtHFup_branch = tree->GetBranch("iVMD0jesRelativePtHFup");
@@ -6877,6 +7257,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativePtHFdn_branch) NLGen3jesRelativePtHFdn_branch->SetAddress(&NLGen3jesRelativePtHFdn_);
   NLGen4jesRelativePtHFdn_branch = tree->GetBranch("NLGen4jesRelativePtHFdn");
   if (NLGen4jesRelativePtHFdn_branch) NLGen4jesRelativePtHFdn_branch->SetAddress(&NLGen4jesRelativePtHFdn_);
+  NVQGen0jesRelativePtHFdn_branch = tree->GetBranch("NVQGen0jesRelativePtHFdn");
+  if (NVQGen0jesRelativePtHFdn_branch) NVQGen0jesRelativePtHFdn_branch->SetAddress(&NVQGen0jesRelativePtHFdn_);
+  NVQGen1jesRelativePtHFdn_branch = tree->GetBranch("NVQGen1jesRelativePtHFdn");
+  if (NVQGen1jesRelativePtHFdn_branch) NVQGen1jesRelativePtHFdn_branch->SetAddress(&NVQGen1jesRelativePtHFdn_);
+  NVQGen2jesRelativePtHFdn_branch = tree->GetBranch("NVQGen2jesRelativePtHFdn");
+  if (NVQGen2jesRelativePtHFdn_branch) NVQGen2jesRelativePtHFdn_branch->SetAddress(&NVQGen2jesRelativePtHFdn_);
+  NVQGen3jesRelativePtHFdn_branch = tree->GetBranch("NVQGen3jesRelativePtHFdn");
+  if (NVQGen3jesRelativePtHFdn_branch) NVQGen3jesRelativePtHFdn_branch->SetAddress(&NVQGen3jesRelativePtHFdn_);
+  NVQGen4jesRelativePtHFdn_branch = tree->GetBranch("NVQGen4jesRelativePtHFdn");
+  if (NVQGen4jesRelativePtHFdn_branch) NVQGen4jesRelativePtHFdn_branch->SetAddress(&NVQGen4jesRelativePtHFdn_);
   NiFJjesRelativePtHFdn_branch = tree->GetBranch("NiFJjesRelativePtHFdn");
   if (NiFJjesRelativePtHFdn_branch) NiFJjesRelativePtHFdn_branch->SetAddress(&NiFJjesRelativePtHFdn_);
   iVMD0jesRelativePtHFdn_branch = tree->GetBranch("iVMD0jesRelativePtHFdn");
@@ -6985,6 +7375,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativeBalup_branch) NLGen3jesRelativeBalup_branch->SetAddress(&NLGen3jesRelativeBalup_);
   NLGen4jesRelativeBalup_branch = tree->GetBranch("NLGen4jesRelativeBalup");
   if (NLGen4jesRelativeBalup_branch) NLGen4jesRelativeBalup_branch->SetAddress(&NLGen4jesRelativeBalup_);
+  NVQGen0jesRelativeBalup_branch = tree->GetBranch("NVQGen0jesRelativeBalup");
+  if (NVQGen0jesRelativeBalup_branch) NVQGen0jesRelativeBalup_branch->SetAddress(&NVQGen0jesRelativeBalup_);
+  NVQGen1jesRelativeBalup_branch = tree->GetBranch("NVQGen1jesRelativeBalup");
+  if (NVQGen1jesRelativeBalup_branch) NVQGen1jesRelativeBalup_branch->SetAddress(&NVQGen1jesRelativeBalup_);
+  NVQGen2jesRelativeBalup_branch = tree->GetBranch("NVQGen2jesRelativeBalup");
+  if (NVQGen2jesRelativeBalup_branch) NVQGen2jesRelativeBalup_branch->SetAddress(&NVQGen2jesRelativeBalup_);
+  NVQGen3jesRelativeBalup_branch = tree->GetBranch("NVQGen3jesRelativeBalup");
+  if (NVQGen3jesRelativeBalup_branch) NVQGen3jesRelativeBalup_branch->SetAddress(&NVQGen3jesRelativeBalup_);
+  NVQGen4jesRelativeBalup_branch = tree->GetBranch("NVQGen4jesRelativeBalup");
+  if (NVQGen4jesRelativeBalup_branch) NVQGen4jesRelativeBalup_branch->SetAddress(&NVQGen4jesRelativeBalup_);
   NiFJjesRelativeBalup_branch = tree->GetBranch("NiFJjesRelativeBalup");
   if (NiFJjesRelativeBalup_branch) NiFJjesRelativeBalup_branch->SetAddress(&NiFJjesRelativeBalup_);
   iVMD0jesRelativeBalup_branch = tree->GetBranch("iVMD0jesRelativeBalup");
@@ -7093,6 +7493,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativeBaldn_branch) NLGen3jesRelativeBaldn_branch->SetAddress(&NLGen3jesRelativeBaldn_);
   NLGen4jesRelativeBaldn_branch = tree->GetBranch("NLGen4jesRelativeBaldn");
   if (NLGen4jesRelativeBaldn_branch) NLGen4jesRelativeBaldn_branch->SetAddress(&NLGen4jesRelativeBaldn_);
+  NVQGen0jesRelativeBaldn_branch = tree->GetBranch("NVQGen0jesRelativeBaldn");
+  if (NVQGen0jesRelativeBaldn_branch) NVQGen0jesRelativeBaldn_branch->SetAddress(&NVQGen0jesRelativeBaldn_);
+  NVQGen1jesRelativeBaldn_branch = tree->GetBranch("NVQGen1jesRelativeBaldn");
+  if (NVQGen1jesRelativeBaldn_branch) NVQGen1jesRelativeBaldn_branch->SetAddress(&NVQGen1jesRelativeBaldn_);
+  NVQGen2jesRelativeBaldn_branch = tree->GetBranch("NVQGen2jesRelativeBaldn");
+  if (NVQGen2jesRelativeBaldn_branch) NVQGen2jesRelativeBaldn_branch->SetAddress(&NVQGen2jesRelativeBaldn_);
+  NVQGen3jesRelativeBaldn_branch = tree->GetBranch("NVQGen3jesRelativeBaldn");
+  if (NVQGen3jesRelativeBaldn_branch) NVQGen3jesRelativeBaldn_branch->SetAddress(&NVQGen3jesRelativeBaldn_);
+  NVQGen4jesRelativeBaldn_branch = tree->GetBranch("NVQGen4jesRelativeBaldn");
+  if (NVQGen4jesRelativeBaldn_branch) NVQGen4jesRelativeBaldn_branch->SetAddress(&NVQGen4jesRelativeBaldn_);
   NiFJjesRelativeBaldn_branch = tree->GetBranch("NiFJjesRelativeBaldn");
   if (NiFJjesRelativeBaldn_branch) NiFJjesRelativeBaldn_branch->SetAddress(&NiFJjesRelativeBaldn_);
   iVMD0jesRelativeBaldn_branch = tree->GetBranch("iVMD0jesRelativeBaldn");
@@ -7201,6 +7611,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativeSampleup_branch) NLGen3jesRelativeSampleup_branch->SetAddress(&NLGen3jesRelativeSampleup_);
   NLGen4jesRelativeSampleup_branch = tree->GetBranch("NLGen4jesRelativeSampleup");
   if (NLGen4jesRelativeSampleup_branch) NLGen4jesRelativeSampleup_branch->SetAddress(&NLGen4jesRelativeSampleup_);
+  NVQGen0jesRelativeSampleup_branch = tree->GetBranch("NVQGen0jesRelativeSampleup");
+  if (NVQGen0jesRelativeSampleup_branch) NVQGen0jesRelativeSampleup_branch->SetAddress(&NVQGen0jesRelativeSampleup_);
+  NVQGen1jesRelativeSampleup_branch = tree->GetBranch("NVQGen1jesRelativeSampleup");
+  if (NVQGen1jesRelativeSampleup_branch) NVQGen1jesRelativeSampleup_branch->SetAddress(&NVQGen1jesRelativeSampleup_);
+  NVQGen2jesRelativeSampleup_branch = tree->GetBranch("NVQGen2jesRelativeSampleup");
+  if (NVQGen2jesRelativeSampleup_branch) NVQGen2jesRelativeSampleup_branch->SetAddress(&NVQGen2jesRelativeSampleup_);
+  NVQGen3jesRelativeSampleup_branch = tree->GetBranch("NVQGen3jesRelativeSampleup");
+  if (NVQGen3jesRelativeSampleup_branch) NVQGen3jesRelativeSampleup_branch->SetAddress(&NVQGen3jesRelativeSampleup_);
+  NVQGen4jesRelativeSampleup_branch = tree->GetBranch("NVQGen4jesRelativeSampleup");
+  if (NVQGen4jesRelativeSampleup_branch) NVQGen4jesRelativeSampleup_branch->SetAddress(&NVQGen4jesRelativeSampleup_);
   NiFJjesRelativeSampleup_branch = tree->GetBranch("NiFJjesRelativeSampleup");
   if (NiFJjesRelativeSampleup_branch) NiFJjesRelativeSampleup_branch->SetAddress(&NiFJjesRelativeSampleup_);
   iVMD0jesRelativeSampleup_branch = tree->GetBranch("iVMD0jesRelativeSampleup");
@@ -7309,6 +7729,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativeSampledn_branch) NLGen3jesRelativeSampledn_branch->SetAddress(&NLGen3jesRelativeSampledn_);
   NLGen4jesRelativeSampledn_branch = tree->GetBranch("NLGen4jesRelativeSampledn");
   if (NLGen4jesRelativeSampledn_branch) NLGen4jesRelativeSampledn_branch->SetAddress(&NLGen4jesRelativeSampledn_);
+  NVQGen0jesRelativeSampledn_branch = tree->GetBranch("NVQGen0jesRelativeSampledn");
+  if (NVQGen0jesRelativeSampledn_branch) NVQGen0jesRelativeSampledn_branch->SetAddress(&NVQGen0jesRelativeSampledn_);
+  NVQGen1jesRelativeSampledn_branch = tree->GetBranch("NVQGen1jesRelativeSampledn");
+  if (NVQGen1jesRelativeSampledn_branch) NVQGen1jesRelativeSampledn_branch->SetAddress(&NVQGen1jesRelativeSampledn_);
+  NVQGen2jesRelativeSampledn_branch = tree->GetBranch("NVQGen2jesRelativeSampledn");
+  if (NVQGen2jesRelativeSampledn_branch) NVQGen2jesRelativeSampledn_branch->SetAddress(&NVQGen2jesRelativeSampledn_);
+  NVQGen3jesRelativeSampledn_branch = tree->GetBranch("NVQGen3jesRelativeSampledn");
+  if (NVQGen3jesRelativeSampledn_branch) NVQGen3jesRelativeSampledn_branch->SetAddress(&NVQGen3jesRelativeSampledn_);
+  NVQGen4jesRelativeSampledn_branch = tree->GetBranch("NVQGen4jesRelativeSampledn");
+  if (NVQGen4jesRelativeSampledn_branch) NVQGen4jesRelativeSampledn_branch->SetAddress(&NVQGen4jesRelativeSampledn_);
   NiFJjesRelativeSampledn_branch = tree->GetBranch("NiFJjesRelativeSampledn");
   if (NiFJjesRelativeSampledn_branch) NiFJjesRelativeSampledn_branch->SetAddress(&NiFJjesRelativeSampledn_);
   iVMD0jesRelativeSampledn_branch = tree->GetBranch("iVMD0jesRelativeSampledn");
@@ -7417,6 +7847,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativeFSRup_branch) NLGen3jesRelativeFSRup_branch->SetAddress(&NLGen3jesRelativeFSRup_);
   NLGen4jesRelativeFSRup_branch = tree->GetBranch("NLGen4jesRelativeFSRup");
   if (NLGen4jesRelativeFSRup_branch) NLGen4jesRelativeFSRup_branch->SetAddress(&NLGen4jesRelativeFSRup_);
+  NVQGen0jesRelativeFSRup_branch = tree->GetBranch("NVQGen0jesRelativeFSRup");
+  if (NVQGen0jesRelativeFSRup_branch) NVQGen0jesRelativeFSRup_branch->SetAddress(&NVQGen0jesRelativeFSRup_);
+  NVQGen1jesRelativeFSRup_branch = tree->GetBranch("NVQGen1jesRelativeFSRup");
+  if (NVQGen1jesRelativeFSRup_branch) NVQGen1jesRelativeFSRup_branch->SetAddress(&NVQGen1jesRelativeFSRup_);
+  NVQGen2jesRelativeFSRup_branch = tree->GetBranch("NVQGen2jesRelativeFSRup");
+  if (NVQGen2jesRelativeFSRup_branch) NVQGen2jesRelativeFSRup_branch->SetAddress(&NVQGen2jesRelativeFSRup_);
+  NVQGen3jesRelativeFSRup_branch = tree->GetBranch("NVQGen3jesRelativeFSRup");
+  if (NVQGen3jesRelativeFSRup_branch) NVQGen3jesRelativeFSRup_branch->SetAddress(&NVQGen3jesRelativeFSRup_);
+  NVQGen4jesRelativeFSRup_branch = tree->GetBranch("NVQGen4jesRelativeFSRup");
+  if (NVQGen4jesRelativeFSRup_branch) NVQGen4jesRelativeFSRup_branch->SetAddress(&NVQGen4jesRelativeFSRup_);
   NiFJjesRelativeFSRup_branch = tree->GetBranch("NiFJjesRelativeFSRup");
   if (NiFJjesRelativeFSRup_branch) NiFJjesRelativeFSRup_branch->SetAddress(&NiFJjesRelativeFSRup_);
   iVMD0jesRelativeFSRup_branch = tree->GetBranch("iVMD0jesRelativeFSRup");
@@ -7525,6 +7965,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativeFSRdn_branch) NLGen3jesRelativeFSRdn_branch->SetAddress(&NLGen3jesRelativeFSRdn_);
   NLGen4jesRelativeFSRdn_branch = tree->GetBranch("NLGen4jesRelativeFSRdn");
   if (NLGen4jesRelativeFSRdn_branch) NLGen4jesRelativeFSRdn_branch->SetAddress(&NLGen4jesRelativeFSRdn_);
+  NVQGen0jesRelativeFSRdn_branch = tree->GetBranch("NVQGen0jesRelativeFSRdn");
+  if (NVQGen0jesRelativeFSRdn_branch) NVQGen0jesRelativeFSRdn_branch->SetAddress(&NVQGen0jesRelativeFSRdn_);
+  NVQGen1jesRelativeFSRdn_branch = tree->GetBranch("NVQGen1jesRelativeFSRdn");
+  if (NVQGen1jesRelativeFSRdn_branch) NVQGen1jesRelativeFSRdn_branch->SetAddress(&NVQGen1jesRelativeFSRdn_);
+  NVQGen2jesRelativeFSRdn_branch = tree->GetBranch("NVQGen2jesRelativeFSRdn");
+  if (NVQGen2jesRelativeFSRdn_branch) NVQGen2jesRelativeFSRdn_branch->SetAddress(&NVQGen2jesRelativeFSRdn_);
+  NVQGen3jesRelativeFSRdn_branch = tree->GetBranch("NVQGen3jesRelativeFSRdn");
+  if (NVQGen3jesRelativeFSRdn_branch) NVQGen3jesRelativeFSRdn_branch->SetAddress(&NVQGen3jesRelativeFSRdn_);
+  NVQGen4jesRelativeFSRdn_branch = tree->GetBranch("NVQGen4jesRelativeFSRdn");
+  if (NVQGen4jesRelativeFSRdn_branch) NVQGen4jesRelativeFSRdn_branch->SetAddress(&NVQGen4jesRelativeFSRdn_);
   NiFJjesRelativeFSRdn_branch = tree->GetBranch("NiFJjesRelativeFSRdn");
   if (NiFJjesRelativeFSRdn_branch) NiFJjesRelativeFSRdn_branch->SetAddress(&NiFJjesRelativeFSRdn_);
   iVMD0jesRelativeFSRdn_branch = tree->GetBranch("iVMD0jesRelativeFSRdn");
@@ -7633,6 +8083,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativeStatFSRup_branch) NLGen3jesRelativeStatFSRup_branch->SetAddress(&NLGen3jesRelativeStatFSRup_);
   NLGen4jesRelativeStatFSRup_branch = tree->GetBranch("NLGen4jesRelativeStatFSRup");
   if (NLGen4jesRelativeStatFSRup_branch) NLGen4jesRelativeStatFSRup_branch->SetAddress(&NLGen4jesRelativeStatFSRup_);
+  NVQGen0jesRelativeStatFSRup_branch = tree->GetBranch("NVQGen0jesRelativeStatFSRup");
+  if (NVQGen0jesRelativeStatFSRup_branch) NVQGen0jesRelativeStatFSRup_branch->SetAddress(&NVQGen0jesRelativeStatFSRup_);
+  NVQGen1jesRelativeStatFSRup_branch = tree->GetBranch("NVQGen1jesRelativeStatFSRup");
+  if (NVQGen1jesRelativeStatFSRup_branch) NVQGen1jesRelativeStatFSRup_branch->SetAddress(&NVQGen1jesRelativeStatFSRup_);
+  NVQGen2jesRelativeStatFSRup_branch = tree->GetBranch("NVQGen2jesRelativeStatFSRup");
+  if (NVQGen2jesRelativeStatFSRup_branch) NVQGen2jesRelativeStatFSRup_branch->SetAddress(&NVQGen2jesRelativeStatFSRup_);
+  NVQGen3jesRelativeStatFSRup_branch = tree->GetBranch("NVQGen3jesRelativeStatFSRup");
+  if (NVQGen3jesRelativeStatFSRup_branch) NVQGen3jesRelativeStatFSRup_branch->SetAddress(&NVQGen3jesRelativeStatFSRup_);
+  NVQGen4jesRelativeStatFSRup_branch = tree->GetBranch("NVQGen4jesRelativeStatFSRup");
+  if (NVQGen4jesRelativeStatFSRup_branch) NVQGen4jesRelativeStatFSRup_branch->SetAddress(&NVQGen4jesRelativeStatFSRup_);
   NiFJjesRelativeStatFSRup_branch = tree->GetBranch("NiFJjesRelativeStatFSRup");
   if (NiFJjesRelativeStatFSRup_branch) NiFJjesRelativeStatFSRup_branch->SetAddress(&NiFJjesRelativeStatFSRup_);
   iVMD0jesRelativeStatFSRup_branch = tree->GetBranch("iVMD0jesRelativeStatFSRup");
@@ -7741,6 +8201,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativeStatFSRdn_branch) NLGen3jesRelativeStatFSRdn_branch->SetAddress(&NLGen3jesRelativeStatFSRdn_);
   NLGen4jesRelativeStatFSRdn_branch = tree->GetBranch("NLGen4jesRelativeStatFSRdn");
   if (NLGen4jesRelativeStatFSRdn_branch) NLGen4jesRelativeStatFSRdn_branch->SetAddress(&NLGen4jesRelativeStatFSRdn_);
+  NVQGen0jesRelativeStatFSRdn_branch = tree->GetBranch("NVQGen0jesRelativeStatFSRdn");
+  if (NVQGen0jesRelativeStatFSRdn_branch) NVQGen0jesRelativeStatFSRdn_branch->SetAddress(&NVQGen0jesRelativeStatFSRdn_);
+  NVQGen1jesRelativeStatFSRdn_branch = tree->GetBranch("NVQGen1jesRelativeStatFSRdn");
+  if (NVQGen1jesRelativeStatFSRdn_branch) NVQGen1jesRelativeStatFSRdn_branch->SetAddress(&NVQGen1jesRelativeStatFSRdn_);
+  NVQGen2jesRelativeStatFSRdn_branch = tree->GetBranch("NVQGen2jesRelativeStatFSRdn");
+  if (NVQGen2jesRelativeStatFSRdn_branch) NVQGen2jesRelativeStatFSRdn_branch->SetAddress(&NVQGen2jesRelativeStatFSRdn_);
+  NVQGen3jesRelativeStatFSRdn_branch = tree->GetBranch("NVQGen3jesRelativeStatFSRdn");
+  if (NVQGen3jesRelativeStatFSRdn_branch) NVQGen3jesRelativeStatFSRdn_branch->SetAddress(&NVQGen3jesRelativeStatFSRdn_);
+  NVQGen4jesRelativeStatFSRdn_branch = tree->GetBranch("NVQGen4jesRelativeStatFSRdn");
+  if (NVQGen4jesRelativeStatFSRdn_branch) NVQGen4jesRelativeStatFSRdn_branch->SetAddress(&NVQGen4jesRelativeStatFSRdn_);
   NiFJjesRelativeStatFSRdn_branch = tree->GetBranch("NiFJjesRelativeStatFSRdn");
   if (NiFJjesRelativeStatFSRdn_branch) NiFJjesRelativeStatFSRdn_branch->SetAddress(&NiFJjesRelativeStatFSRdn_);
   iVMD0jesRelativeStatFSRdn_branch = tree->GetBranch("iVMD0jesRelativeStatFSRdn");
@@ -7849,6 +8319,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativeStatECup_branch) NLGen3jesRelativeStatECup_branch->SetAddress(&NLGen3jesRelativeStatECup_);
   NLGen4jesRelativeStatECup_branch = tree->GetBranch("NLGen4jesRelativeStatECup");
   if (NLGen4jesRelativeStatECup_branch) NLGen4jesRelativeStatECup_branch->SetAddress(&NLGen4jesRelativeStatECup_);
+  NVQGen0jesRelativeStatECup_branch = tree->GetBranch("NVQGen0jesRelativeStatECup");
+  if (NVQGen0jesRelativeStatECup_branch) NVQGen0jesRelativeStatECup_branch->SetAddress(&NVQGen0jesRelativeStatECup_);
+  NVQGen1jesRelativeStatECup_branch = tree->GetBranch("NVQGen1jesRelativeStatECup");
+  if (NVQGen1jesRelativeStatECup_branch) NVQGen1jesRelativeStatECup_branch->SetAddress(&NVQGen1jesRelativeStatECup_);
+  NVQGen2jesRelativeStatECup_branch = tree->GetBranch("NVQGen2jesRelativeStatECup");
+  if (NVQGen2jesRelativeStatECup_branch) NVQGen2jesRelativeStatECup_branch->SetAddress(&NVQGen2jesRelativeStatECup_);
+  NVQGen3jesRelativeStatECup_branch = tree->GetBranch("NVQGen3jesRelativeStatECup");
+  if (NVQGen3jesRelativeStatECup_branch) NVQGen3jesRelativeStatECup_branch->SetAddress(&NVQGen3jesRelativeStatECup_);
+  NVQGen4jesRelativeStatECup_branch = tree->GetBranch("NVQGen4jesRelativeStatECup");
+  if (NVQGen4jesRelativeStatECup_branch) NVQGen4jesRelativeStatECup_branch->SetAddress(&NVQGen4jesRelativeStatECup_);
   NiFJjesRelativeStatECup_branch = tree->GetBranch("NiFJjesRelativeStatECup");
   if (NiFJjesRelativeStatECup_branch) NiFJjesRelativeStatECup_branch->SetAddress(&NiFJjesRelativeStatECup_);
   iVMD0jesRelativeStatECup_branch = tree->GetBranch("iVMD0jesRelativeStatECup");
@@ -7957,6 +8437,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativeStatECdn_branch) NLGen3jesRelativeStatECdn_branch->SetAddress(&NLGen3jesRelativeStatECdn_);
   NLGen4jesRelativeStatECdn_branch = tree->GetBranch("NLGen4jesRelativeStatECdn");
   if (NLGen4jesRelativeStatECdn_branch) NLGen4jesRelativeStatECdn_branch->SetAddress(&NLGen4jesRelativeStatECdn_);
+  NVQGen0jesRelativeStatECdn_branch = tree->GetBranch("NVQGen0jesRelativeStatECdn");
+  if (NVQGen0jesRelativeStatECdn_branch) NVQGen0jesRelativeStatECdn_branch->SetAddress(&NVQGen0jesRelativeStatECdn_);
+  NVQGen1jesRelativeStatECdn_branch = tree->GetBranch("NVQGen1jesRelativeStatECdn");
+  if (NVQGen1jesRelativeStatECdn_branch) NVQGen1jesRelativeStatECdn_branch->SetAddress(&NVQGen1jesRelativeStatECdn_);
+  NVQGen2jesRelativeStatECdn_branch = tree->GetBranch("NVQGen2jesRelativeStatECdn");
+  if (NVQGen2jesRelativeStatECdn_branch) NVQGen2jesRelativeStatECdn_branch->SetAddress(&NVQGen2jesRelativeStatECdn_);
+  NVQGen3jesRelativeStatECdn_branch = tree->GetBranch("NVQGen3jesRelativeStatECdn");
+  if (NVQGen3jesRelativeStatECdn_branch) NVQGen3jesRelativeStatECdn_branch->SetAddress(&NVQGen3jesRelativeStatECdn_);
+  NVQGen4jesRelativeStatECdn_branch = tree->GetBranch("NVQGen4jesRelativeStatECdn");
+  if (NVQGen4jesRelativeStatECdn_branch) NVQGen4jesRelativeStatECdn_branch->SetAddress(&NVQGen4jesRelativeStatECdn_);
   NiFJjesRelativeStatECdn_branch = tree->GetBranch("NiFJjesRelativeStatECdn");
   if (NiFJjesRelativeStatECdn_branch) NiFJjesRelativeStatECdn_branch->SetAddress(&NiFJjesRelativeStatECdn_);
   iVMD0jesRelativeStatECdn_branch = tree->GetBranch("iVMD0jesRelativeStatECdn");
@@ -8065,6 +8555,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativeStatHFup_branch) NLGen3jesRelativeStatHFup_branch->SetAddress(&NLGen3jesRelativeStatHFup_);
   NLGen4jesRelativeStatHFup_branch = tree->GetBranch("NLGen4jesRelativeStatHFup");
   if (NLGen4jesRelativeStatHFup_branch) NLGen4jesRelativeStatHFup_branch->SetAddress(&NLGen4jesRelativeStatHFup_);
+  NVQGen0jesRelativeStatHFup_branch = tree->GetBranch("NVQGen0jesRelativeStatHFup");
+  if (NVQGen0jesRelativeStatHFup_branch) NVQGen0jesRelativeStatHFup_branch->SetAddress(&NVQGen0jesRelativeStatHFup_);
+  NVQGen1jesRelativeStatHFup_branch = tree->GetBranch("NVQGen1jesRelativeStatHFup");
+  if (NVQGen1jesRelativeStatHFup_branch) NVQGen1jesRelativeStatHFup_branch->SetAddress(&NVQGen1jesRelativeStatHFup_);
+  NVQGen2jesRelativeStatHFup_branch = tree->GetBranch("NVQGen2jesRelativeStatHFup");
+  if (NVQGen2jesRelativeStatHFup_branch) NVQGen2jesRelativeStatHFup_branch->SetAddress(&NVQGen2jesRelativeStatHFup_);
+  NVQGen3jesRelativeStatHFup_branch = tree->GetBranch("NVQGen3jesRelativeStatHFup");
+  if (NVQGen3jesRelativeStatHFup_branch) NVQGen3jesRelativeStatHFup_branch->SetAddress(&NVQGen3jesRelativeStatHFup_);
+  NVQGen4jesRelativeStatHFup_branch = tree->GetBranch("NVQGen4jesRelativeStatHFup");
+  if (NVQGen4jesRelativeStatHFup_branch) NVQGen4jesRelativeStatHFup_branch->SetAddress(&NVQGen4jesRelativeStatHFup_);
   NiFJjesRelativeStatHFup_branch = tree->GetBranch("NiFJjesRelativeStatHFup");
   if (NiFJjesRelativeStatHFup_branch) NiFJjesRelativeStatHFup_branch->SetAddress(&NiFJjesRelativeStatHFup_);
   iVMD0jesRelativeStatHFup_branch = tree->GetBranch("iVMD0jesRelativeStatHFup");
@@ -8173,6 +8673,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesRelativeStatHFdn_branch) NLGen3jesRelativeStatHFdn_branch->SetAddress(&NLGen3jesRelativeStatHFdn_);
   NLGen4jesRelativeStatHFdn_branch = tree->GetBranch("NLGen4jesRelativeStatHFdn");
   if (NLGen4jesRelativeStatHFdn_branch) NLGen4jesRelativeStatHFdn_branch->SetAddress(&NLGen4jesRelativeStatHFdn_);
+  NVQGen0jesRelativeStatHFdn_branch = tree->GetBranch("NVQGen0jesRelativeStatHFdn");
+  if (NVQGen0jesRelativeStatHFdn_branch) NVQGen0jesRelativeStatHFdn_branch->SetAddress(&NVQGen0jesRelativeStatHFdn_);
+  NVQGen1jesRelativeStatHFdn_branch = tree->GetBranch("NVQGen1jesRelativeStatHFdn");
+  if (NVQGen1jesRelativeStatHFdn_branch) NVQGen1jesRelativeStatHFdn_branch->SetAddress(&NVQGen1jesRelativeStatHFdn_);
+  NVQGen2jesRelativeStatHFdn_branch = tree->GetBranch("NVQGen2jesRelativeStatHFdn");
+  if (NVQGen2jesRelativeStatHFdn_branch) NVQGen2jesRelativeStatHFdn_branch->SetAddress(&NVQGen2jesRelativeStatHFdn_);
+  NVQGen3jesRelativeStatHFdn_branch = tree->GetBranch("NVQGen3jesRelativeStatHFdn");
+  if (NVQGen3jesRelativeStatHFdn_branch) NVQGen3jesRelativeStatHFdn_branch->SetAddress(&NVQGen3jesRelativeStatHFdn_);
+  NVQGen4jesRelativeStatHFdn_branch = tree->GetBranch("NVQGen4jesRelativeStatHFdn");
+  if (NVQGen4jesRelativeStatHFdn_branch) NVQGen4jesRelativeStatHFdn_branch->SetAddress(&NVQGen4jesRelativeStatHFdn_);
   NiFJjesRelativeStatHFdn_branch = tree->GetBranch("NiFJjesRelativeStatHFdn");
   if (NiFJjesRelativeStatHFdn_branch) NiFJjesRelativeStatHFdn_branch->SetAddress(&NiFJjesRelativeStatHFdn_);
   iVMD0jesRelativeStatHFdn_branch = tree->GetBranch("iVMD0jesRelativeStatHFdn");
@@ -8281,6 +8791,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesPileUpDataMCup_branch) NLGen3jesPileUpDataMCup_branch->SetAddress(&NLGen3jesPileUpDataMCup_);
   NLGen4jesPileUpDataMCup_branch = tree->GetBranch("NLGen4jesPileUpDataMCup");
   if (NLGen4jesPileUpDataMCup_branch) NLGen4jesPileUpDataMCup_branch->SetAddress(&NLGen4jesPileUpDataMCup_);
+  NVQGen0jesPileUpDataMCup_branch = tree->GetBranch("NVQGen0jesPileUpDataMCup");
+  if (NVQGen0jesPileUpDataMCup_branch) NVQGen0jesPileUpDataMCup_branch->SetAddress(&NVQGen0jesPileUpDataMCup_);
+  NVQGen1jesPileUpDataMCup_branch = tree->GetBranch("NVQGen1jesPileUpDataMCup");
+  if (NVQGen1jesPileUpDataMCup_branch) NVQGen1jesPileUpDataMCup_branch->SetAddress(&NVQGen1jesPileUpDataMCup_);
+  NVQGen2jesPileUpDataMCup_branch = tree->GetBranch("NVQGen2jesPileUpDataMCup");
+  if (NVQGen2jesPileUpDataMCup_branch) NVQGen2jesPileUpDataMCup_branch->SetAddress(&NVQGen2jesPileUpDataMCup_);
+  NVQGen3jesPileUpDataMCup_branch = tree->GetBranch("NVQGen3jesPileUpDataMCup");
+  if (NVQGen3jesPileUpDataMCup_branch) NVQGen3jesPileUpDataMCup_branch->SetAddress(&NVQGen3jesPileUpDataMCup_);
+  NVQGen4jesPileUpDataMCup_branch = tree->GetBranch("NVQGen4jesPileUpDataMCup");
+  if (NVQGen4jesPileUpDataMCup_branch) NVQGen4jesPileUpDataMCup_branch->SetAddress(&NVQGen4jesPileUpDataMCup_);
   NiFJjesPileUpDataMCup_branch = tree->GetBranch("NiFJjesPileUpDataMCup");
   if (NiFJjesPileUpDataMCup_branch) NiFJjesPileUpDataMCup_branch->SetAddress(&NiFJjesPileUpDataMCup_);
   iVMD0jesPileUpDataMCup_branch = tree->GetBranch("iVMD0jesPileUpDataMCup");
@@ -8389,6 +8909,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesPileUpDataMCdn_branch) NLGen3jesPileUpDataMCdn_branch->SetAddress(&NLGen3jesPileUpDataMCdn_);
   NLGen4jesPileUpDataMCdn_branch = tree->GetBranch("NLGen4jesPileUpDataMCdn");
   if (NLGen4jesPileUpDataMCdn_branch) NLGen4jesPileUpDataMCdn_branch->SetAddress(&NLGen4jesPileUpDataMCdn_);
+  NVQGen0jesPileUpDataMCdn_branch = tree->GetBranch("NVQGen0jesPileUpDataMCdn");
+  if (NVQGen0jesPileUpDataMCdn_branch) NVQGen0jesPileUpDataMCdn_branch->SetAddress(&NVQGen0jesPileUpDataMCdn_);
+  NVQGen1jesPileUpDataMCdn_branch = tree->GetBranch("NVQGen1jesPileUpDataMCdn");
+  if (NVQGen1jesPileUpDataMCdn_branch) NVQGen1jesPileUpDataMCdn_branch->SetAddress(&NVQGen1jesPileUpDataMCdn_);
+  NVQGen2jesPileUpDataMCdn_branch = tree->GetBranch("NVQGen2jesPileUpDataMCdn");
+  if (NVQGen2jesPileUpDataMCdn_branch) NVQGen2jesPileUpDataMCdn_branch->SetAddress(&NVQGen2jesPileUpDataMCdn_);
+  NVQGen3jesPileUpDataMCdn_branch = tree->GetBranch("NVQGen3jesPileUpDataMCdn");
+  if (NVQGen3jesPileUpDataMCdn_branch) NVQGen3jesPileUpDataMCdn_branch->SetAddress(&NVQGen3jesPileUpDataMCdn_);
+  NVQGen4jesPileUpDataMCdn_branch = tree->GetBranch("NVQGen4jesPileUpDataMCdn");
+  if (NVQGen4jesPileUpDataMCdn_branch) NVQGen4jesPileUpDataMCdn_branch->SetAddress(&NVQGen4jesPileUpDataMCdn_);
   NiFJjesPileUpDataMCdn_branch = tree->GetBranch("NiFJjesPileUpDataMCdn");
   if (NiFJjesPileUpDataMCdn_branch) NiFJjesPileUpDataMCdn_branch->SetAddress(&NiFJjesPileUpDataMCdn_);
   iVMD0jesPileUpDataMCdn_branch = tree->GetBranch("iVMD0jesPileUpDataMCdn");
@@ -8497,6 +9027,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesPileUpPtRefup_branch) NLGen3jesPileUpPtRefup_branch->SetAddress(&NLGen3jesPileUpPtRefup_);
   NLGen4jesPileUpPtRefup_branch = tree->GetBranch("NLGen4jesPileUpPtRefup");
   if (NLGen4jesPileUpPtRefup_branch) NLGen4jesPileUpPtRefup_branch->SetAddress(&NLGen4jesPileUpPtRefup_);
+  NVQGen0jesPileUpPtRefup_branch = tree->GetBranch("NVQGen0jesPileUpPtRefup");
+  if (NVQGen0jesPileUpPtRefup_branch) NVQGen0jesPileUpPtRefup_branch->SetAddress(&NVQGen0jesPileUpPtRefup_);
+  NVQGen1jesPileUpPtRefup_branch = tree->GetBranch("NVQGen1jesPileUpPtRefup");
+  if (NVQGen1jesPileUpPtRefup_branch) NVQGen1jesPileUpPtRefup_branch->SetAddress(&NVQGen1jesPileUpPtRefup_);
+  NVQGen2jesPileUpPtRefup_branch = tree->GetBranch("NVQGen2jesPileUpPtRefup");
+  if (NVQGen2jesPileUpPtRefup_branch) NVQGen2jesPileUpPtRefup_branch->SetAddress(&NVQGen2jesPileUpPtRefup_);
+  NVQGen3jesPileUpPtRefup_branch = tree->GetBranch("NVQGen3jesPileUpPtRefup");
+  if (NVQGen3jesPileUpPtRefup_branch) NVQGen3jesPileUpPtRefup_branch->SetAddress(&NVQGen3jesPileUpPtRefup_);
+  NVQGen4jesPileUpPtRefup_branch = tree->GetBranch("NVQGen4jesPileUpPtRefup");
+  if (NVQGen4jesPileUpPtRefup_branch) NVQGen4jesPileUpPtRefup_branch->SetAddress(&NVQGen4jesPileUpPtRefup_);
   NiFJjesPileUpPtRefup_branch = tree->GetBranch("NiFJjesPileUpPtRefup");
   if (NiFJjesPileUpPtRefup_branch) NiFJjesPileUpPtRefup_branch->SetAddress(&NiFJjesPileUpPtRefup_);
   iVMD0jesPileUpPtRefup_branch = tree->GetBranch("iVMD0jesPileUpPtRefup");
@@ -8605,6 +9145,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesPileUpPtRefdn_branch) NLGen3jesPileUpPtRefdn_branch->SetAddress(&NLGen3jesPileUpPtRefdn_);
   NLGen4jesPileUpPtRefdn_branch = tree->GetBranch("NLGen4jesPileUpPtRefdn");
   if (NLGen4jesPileUpPtRefdn_branch) NLGen4jesPileUpPtRefdn_branch->SetAddress(&NLGen4jesPileUpPtRefdn_);
+  NVQGen0jesPileUpPtRefdn_branch = tree->GetBranch("NVQGen0jesPileUpPtRefdn");
+  if (NVQGen0jesPileUpPtRefdn_branch) NVQGen0jesPileUpPtRefdn_branch->SetAddress(&NVQGen0jesPileUpPtRefdn_);
+  NVQGen1jesPileUpPtRefdn_branch = tree->GetBranch("NVQGen1jesPileUpPtRefdn");
+  if (NVQGen1jesPileUpPtRefdn_branch) NVQGen1jesPileUpPtRefdn_branch->SetAddress(&NVQGen1jesPileUpPtRefdn_);
+  NVQGen2jesPileUpPtRefdn_branch = tree->GetBranch("NVQGen2jesPileUpPtRefdn");
+  if (NVQGen2jesPileUpPtRefdn_branch) NVQGen2jesPileUpPtRefdn_branch->SetAddress(&NVQGen2jesPileUpPtRefdn_);
+  NVQGen3jesPileUpPtRefdn_branch = tree->GetBranch("NVQGen3jesPileUpPtRefdn");
+  if (NVQGen3jesPileUpPtRefdn_branch) NVQGen3jesPileUpPtRefdn_branch->SetAddress(&NVQGen3jesPileUpPtRefdn_);
+  NVQGen4jesPileUpPtRefdn_branch = tree->GetBranch("NVQGen4jesPileUpPtRefdn");
+  if (NVQGen4jesPileUpPtRefdn_branch) NVQGen4jesPileUpPtRefdn_branch->SetAddress(&NVQGen4jesPileUpPtRefdn_);
   NiFJjesPileUpPtRefdn_branch = tree->GetBranch("NiFJjesPileUpPtRefdn");
   if (NiFJjesPileUpPtRefdn_branch) NiFJjesPileUpPtRefdn_branch->SetAddress(&NiFJjesPileUpPtRefdn_);
   iVMD0jesPileUpPtRefdn_branch = tree->GetBranch("iVMD0jesPileUpPtRefdn");
@@ -8713,6 +9263,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesPileUpPtBBup_branch) NLGen3jesPileUpPtBBup_branch->SetAddress(&NLGen3jesPileUpPtBBup_);
   NLGen4jesPileUpPtBBup_branch = tree->GetBranch("NLGen4jesPileUpPtBBup");
   if (NLGen4jesPileUpPtBBup_branch) NLGen4jesPileUpPtBBup_branch->SetAddress(&NLGen4jesPileUpPtBBup_);
+  NVQGen0jesPileUpPtBBup_branch = tree->GetBranch("NVQGen0jesPileUpPtBBup");
+  if (NVQGen0jesPileUpPtBBup_branch) NVQGen0jesPileUpPtBBup_branch->SetAddress(&NVQGen0jesPileUpPtBBup_);
+  NVQGen1jesPileUpPtBBup_branch = tree->GetBranch("NVQGen1jesPileUpPtBBup");
+  if (NVQGen1jesPileUpPtBBup_branch) NVQGen1jesPileUpPtBBup_branch->SetAddress(&NVQGen1jesPileUpPtBBup_);
+  NVQGen2jesPileUpPtBBup_branch = tree->GetBranch("NVQGen2jesPileUpPtBBup");
+  if (NVQGen2jesPileUpPtBBup_branch) NVQGen2jesPileUpPtBBup_branch->SetAddress(&NVQGen2jesPileUpPtBBup_);
+  NVQGen3jesPileUpPtBBup_branch = tree->GetBranch("NVQGen3jesPileUpPtBBup");
+  if (NVQGen3jesPileUpPtBBup_branch) NVQGen3jesPileUpPtBBup_branch->SetAddress(&NVQGen3jesPileUpPtBBup_);
+  NVQGen4jesPileUpPtBBup_branch = tree->GetBranch("NVQGen4jesPileUpPtBBup");
+  if (NVQGen4jesPileUpPtBBup_branch) NVQGen4jesPileUpPtBBup_branch->SetAddress(&NVQGen4jesPileUpPtBBup_);
   NiFJjesPileUpPtBBup_branch = tree->GetBranch("NiFJjesPileUpPtBBup");
   if (NiFJjesPileUpPtBBup_branch) NiFJjesPileUpPtBBup_branch->SetAddress(&NiFJjesPileUpPtBBup_);
   iVMD0jesPileUpPtBBup_branch = tree->GetBranch("iVMD0jesPileUpPtBBup");
@@ -8821,6 +9381,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesPileUpPtBBdn_branch) NLGen3jesPileUpPtBBdn_branch->SetAddress(&NLGen3jesPileUpPtBBdn_);
   NLGen4jesPileUpPtBBdn_branch = tree->GetBranch("NLGen4jesPileUpPtBBdn");
   if (NLGen4jesPileUpPtBBdn_branch) NLGen4jesPileUpPtBBdn_branch->SetAddress(&NLGen4jesPileUpPtBBdn_);
+  NVQGen0jesPileUpPtBBdn_branch = tree->GetBranch("NVQGen0jesPileUpPtBBdn");
+  if (NVQGen0jesPileUpPtBBdn_branch) NVQGen0jesPileUpPtBBdn_branch->SetAddress(&NVQGen0jesPileUpPtBBdn_);
+  NVQGen1jesPileUpPtBBdn_branch = tree->GetBranch("NVQGen1jesPileUpPtBBdn");
+  if (NVQGen1jesPileUpPtBBdn_branch) NVQGen1jesPileUpPtBBdn_branch->SetAddress(&NVQGen1jesPileUpPtBBdn_);
+  NVQGen2jesPileUpPtBBdn_branch = tree->GetBranch("NVQGen2jesPileUpPtBBdn");
+  if (NVQGen2jesPileUpPtBBdn_branch) NVQGen2jesPileUpPtBBdn_branch->SetAddress(&NVQGen2jesPileUpPtBBdn_);
+  NVQGen3jesPileUpPtBBdn_branch = tree->GetBranch("NVQGen3jesPileUpPtBBdn");
+  if (NVQGen3jesPileUpPtBBdn_branch) NVQGen3jesPileUpPtBBdn_branch->SetAddress(&NVQGen3jesPileUpPtBBdn_);
+  NVQGen4jesPileUpPtBBdn_branch = tree->GetBranch("NVQGen4jesPileUpPtBBdn");
+  if (NVQGen4jesPileUpPtBBdn_branch) NVQGen4jesPileUpPtBBdn_branch->SetAddress(&NVQGen4jesPileUpPtBBdn_);
   NiFJjesPileUpPtBBdn_branch = tree->GetBranch("NiFJjesPileUpPtBBdn");
   if (NiFJjesPileUpPtBBdn_branch) NiFJjesPileUpPtBBdn_branch->SetAddress(&NiFJjesPileUpPtBBdn_);
   iVMD0jesPileUpPtBBdn_branch = tree->GetBranch("iVMD0jesPileUpPtBBdn");
@@ -8929,6 +9499,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesPileUpPtEC1up_branch) NLGen3jesPileUpPtEC1up_branch->SetAddress(&NLGen3jesPileUpPtEC1up_);
   NLGen4jesPileUpPtEC1up_branch = tree->GetBranch("NLGen4jesPileUpPtEC1up");
   if (NLGen4jesPileUpPtEC1up_branch) NLGen4jesPileUpPtEC1up_branch->SetAddress(&NLGen4jesPileUpPtEC1up_);
+  NVQGen0jesPileUpPtEC1up_branch = tree->GetBranch("NVQGen0jesPileUpPtEC1up");
+  if (NVQGen0jesPileUpPtEC1up_branch) NVQGen0jesPileUpPtEC1up_branch->SetAddress(&NVQGen0jesPileUpPtEC1up_);
+  NVQGen1jesPileUpPtEC1up_branch = tree->GetBranch("NVQGen1jesPileUpPtEC1up");
+  if (NVQGen1jesPileUpPtEC1up_branch) NVQGen1jesPileUpPtEC1up_branch->SetAddress(&NVQGen1jesPileUpPtEC1up_);
+  NVQGen2jesPileUpPtEC1up_branch = tree->GetBranch("NVQGen2jesPileUpPtEC1up");
+  if (NVQGen2jesPileUpPtEC1up_branch) NVQGen2jesPileUpPtEC1up_branch->SetAddress(&NVQGen2jesPileUpPtEC1up_);
+  NVQGen3jesPileUpPtEC1up_branch = tree->GetBranch("NVQGen3jesPileUpPtEC1up");
+  if (NVQGen3jesPileUpPtEC1up_branch) NVQGen3jesPileUpPtEC1up_branch->SetAddress(&NVQGen3jesPileUpPtEC1up_);
+  NVQGen4jesPileUpPtEC1up_branch = tree->GetBranch("NVQGen4jesPileUpPtEC1up");
+  if (NVQGen4jesPileUpPtEC1up_branch) NVQGen4jesPileUpPtEC1up_branch->SetAddress(&NVQGen4jesPileUpPtEC1up_);
   NiFJjesPileUpPtEC1up_branch = tree->GetBranch("NiFJjesPileUpPtEC1up");
   if (NiFJjesPileUpPtEC1up_branch) NiFJjesPileUpPtEC1up_branch->SetAddress(&NiFJjesPileUpPtEC1up_);
   iVMD0jesPileUpPtEC1up_branch = tree->GetBranch("iVMD0jesPileUpPtEC1up");
@@ -9037,6 +9617,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesPileUpPtEC1dn_branch) NLGen3jesPileUpPtEC1dn_branch->SetAddress(&NLGen3jesPileUpPtEC1dn_);
   NLGen4jesPileUpPtEC1dn_branch = tree->GetBranch("NLGen4jesPileUpPtEC1dn");
   if (NLGen4jesPileUpPtEC1dn_branch) NLGen4jesPileUpPtEC1dn_branch->SetAddress(&NLGen4jesPileUpPtEC1dn_);
+  NVQGen0jesPileUpPtEC1dn_branch = tree->GetBranch("NVQGen0jesPileUpPtEC1dn");
+  if (NVQGen0jesPileUpPtEC1dn_branch) NVQGen0jesPileUpPtEC1dn_branch->SetAddress(&NVQGen0jesPileUpPtEC1dn_);
+  NVQGen1jesPileUpPtEC1dn_branch = tree->GetBranch("NVQGen1jesPileUpPtEC1dn");
+  if (NVQGen1jesPileUpPtEC1dn_branch) NVQGen1jesPileUpPtEC1dn_branch->SetAddress(&NVQGen1jesPileUpPtEC1dn_);
+  NVQGen2jesPileUpPtEC1dn_branch = tree->GetBranch("NVQGen2jesPileUpPtEC1dn");
+  if (NVQGen2jesPileUpPtEC1dn_branch) NVQGen2jesPileUpPtEC1dn_branch->SetAddress(&NVQGen2jesPileUpPtEC1dn_);
+  NVQGen3jesPileUpPtEC1dn_branch = tree->GetBranch("NVQGen3jesPileUpPtEC1dn");
+  if (NVQGen3jesPileUpPtEC1dn_branch) NVQGen3jesPileUpPtEC1dn_branch->SetAddress(&NVQGen3jesPileUpPtEC1dn_);
+  NVQGen4jesPileUpPtEC1dn_branch = tree->GetBranch("NVQGen4jesPileUpPtEC1dn");
+  if (NVQGen4jesPileUpPtEC1dn_branch) NVQGen4jesPileUpPtEC1dn_branch->SetAddress(&NVQGen4jesPileUpPtEC1dn_);
   NiFJjesPileUpPtEC1dn_branch = tree->GetBranch("NiFJjesPileUpPtEC1dn");
   if (NiFJjesPileUpPtEC1dn_branch) NiFJjesPileUpPtEC1dn_branch->SetAddress(&NiFJjesPileUpPtEC1dn_);
   iVMD0jesPileUpPtEC1dn_branch = tree->GetBranch("iVMD0jesPileUpPtEC1dn");
@@ -9145,6 +9735,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesPileUpPtEC2up_branch) NLGen3jesPileUpPtEC2up_branch->SetAddress(&NLGen3jesPileUpPtEC2up_);
   NLGen4jesPileUpPtEC2up_branch = tree->GetBranch("NLGen4jesPileUpPtEC2up");
   if (NLGen4jesPileUpPtEC2up_branch) NLGen4jesPileUpPtEC2up_branch->SetAddress(&NLGen4jesPileUpPtEC2up_);
+  NVQGen0jesPileUpPtEC2up_branch = tree->GetBranch("NVQGen0jesPileUpPtEC2up");
+  if (NVQGen0jesPileUpPtEC2up_branch) NVQGen0jesPileUpPtEC2up_branch->SetAddress(&NVQGen0jesPileUpPtEC2up_);
+  NVQGen1jesPileUpPtEC2up_branch = tree->GetBranch("NVQGen1jesPileUpPtEC2up");
+  if (NVQGen1jesPileUpPtEC2up_branch) NVQGen1jesPileUpPtEC2up_branch->SetAddress(&NVQGen1jesPileUpPtEC2up_);
+  NVQGen2jesPileUpPtEC2up_branch = tree->GetBranch("NVQGen2jesPileUpPtEC2up");
+  if (NVQGen2jesPileUpPtEC2up_branch) NVQGen2jesPileUpPtEC2up_branch->SetAddress(&NVQGen2jesPileUpPtEC2up_);
+  NVQGen3jesPileUpPtEC2up_branch = tree->GetBranch("NVQGen3jesPileUpPtEC2up");
+  if (NVQGen3jesPileUpPtEC2up_branch) NVQGen3jesPileUpPtEC2up_branch->SetAddress(&NVQGen3jesPileUpPtEC2up_);
+  NVQGen4jesPileUpPtEC2up_branch = tree->GetBranch("NVQGen4jesPileUpPtEC2up");
+  if (NVQGen4jesPileUpPtEC2up_branch) NVQGen4jesPileUpPtEC2up_branch->SetAddress(&NVQGen4jesPileUpPtEC2up_);
   NiFJjesPileUpPtEC2up_branch = tree->GetBranch("NiFJjesPileUpPtEC2up");
   if (NiFJjesPileUpPtEC2up_branch) NiFJjesPileUpPtEC2up_branch->SetAddress(&NiFJjesPileUpPtEC2up_);
   iVMD0jesPileUpPtEC2up_branch = tree->GetBranch("iVMD0jesPileUpPtEC2up");
@@ -9253,6 +9853,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesPileUpPtEC2dn_branch) NLGen3jesPileUpPtEC2dn_branch->SetAddress(&NLGen3jesPileUpPtEC2dn_);
   NLGen4jesPileUpPtEC2dn_branch = tree->GetBranch("NLGen4jesPileUpPtEC2dn");
   if (NLGen4jesPileUpPtEC2dn_branch) NLGen4jesPileUpPtEC2dn_branch->SetAddress(&NLGen4jesPileUpPtEC2dn_);
+  NVQGen0jesPileUpPtEC2dn_branch = tree->GetBranch("NVQGen0jesPileUpPtEC2dn");
+  if (NVQGen0jesPileUpPtEC2dn_branch) NVQGen0jesPileUpPtEC2dn_branch->SetAddress(&NVQGen0jesPileUpPtEC2dn_);
+  NVQGen1jesPileUpPtEC2dn_branch = tree->GetBranch("NVQGen1jesPileUpPtEC2dn");
+  if (NVQGen1jesPileUpPtEC2dn_branch) NVQGen1jesPileUpPtEC2dn_branch->SetAddress(&NVQGen1jesPileUpPtEC2dn_);
+  NVQGen2jesPileUpPtEC2dn_branch = tree->GetBranch("NVQGen2jesPileUpPtEC2dn");
+  if (NVQGen2jesPileUpPtEC2dn_branch) NVQGen2jesPileUpPtEC2dn_branch->SetAddress(&NVQGen2jesPileUpPtEC2dn_);
+  NVQGen3jesPileUpPtEC2dn_branch = tree->GetBranch("NVQGen3jesPileUpPtEC2dn");
+  if (NVQGen3jesPileUpPtEC2dn_branch) NVQGen3jesPileUpPtEC2dn_branch->SetAddress(&NVQGen3jesPileUpPtEC2dn_);
+  NVQGen4jesPileUpPtEC2dn_branch = tree->GetBranch("NVQGen4jesPileUpPtEC2dn");
+  if (NVQGen4jesPileUpPtEC2dn_branch) NVQGen4jesPileUpPtEC2dn_branch->SetAddress(&NVQGen4jesPileUpPtEC2dn_);
   NiFJjesPileUpPtEC2dn_branch = tree->GetBranch("NiFJjesPileUpPtEC2dn");
   if (NiFJjesPileUpPtEC2dn_branch) NiFJjesPileUpPtEC2dn_branch->SetAddress(&NiFJjesPileUpPtEC2dn_);
   iVMD0jesPileUpPtEC2dn_branch = tree->GetBranch("iVMD0jesPileUpPtEC2dn");
@@ -9361,6 +9971,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesPileUpPtHFup_branch) NLGen3jesPileUpPtHFup_branch->SetAddress(&NLGen3jesPileUpPtHFup_);
   NLGen4jesPileUpPtHFup_branch = tree->GetBranch("NLGen4jesPileUpPtHFup");
   if (NLGen4jesPileUpPtHFup_branch) NLGen4jesPileUpPtHFup_branch->SetAddress(&NLGen4jesPileUpPtHFup_);
+  NVQGen0jesPileUpPtHFup_branch = tree->GetBranch("NVQGen0jesPileUpPtHFup");
+  if (NVQGen0jesPileUpPtHFup_branch) NVQGen0jesPileUpPtHFup_branch->SetAddress(&NVQGen0jesPileUpPtHFup_);
+  NVQGen1jesPileUpPtHFup_branch = tree->GetBranch("NVQGen1jesPileUpPtHFup");
+  if (NVQGen1jesPileUpPtHFup_branch) NVQGen1jesPileUpPtHFup_branch->SetAddress(&NVQGen1jesPileUpPtHFup_);
+  NVQGen2jesPileUpPtHFup_branch = tree->GetBranch("NVQGen2jesPileUpPtHFup");
+  if (NVQGen2jesPileUpPtHFup_branch) NVQGen2jesPileUpPtHFup_branch->SetAddress(&NVQGen2jesPileUpPtHFup_);
+  NVQGen3jesPileUpPtHFup_branch = tree->GetBranch("NVQGen3jesPileUpPtHFup");
+  if (NVQGen3jesPileUpPtHFup_branch) NVQGen3jesPileUpPtHFup_branch->SetAddress(&NVQGen3jesPileUpPtHFup_);
+  NVQGen4jesPileUpPtHFup_branch = tree->GetBranch("NVQGen4jesPileUpPtHFup");
+  if (NVQGen4jesPileUpPtHFup_branch) NVQGen4jesPileUpPtHFup_branch->SetAddress(&NVQGen4jesPileUpPtHFup_);
   NiFJjesPileUpPtHFup_branch = tree->GetBranch("NiFJjesPileUpPtHFup");
   if (NiFJjesPileUpPtHFup_branch) NiFJjesPileUpPtHFup_branch->SetAddress(&NiFJjesPileUpPtHFup_);
   iVMD0jesPileUpPtHFup_branch = tree->GetBranch("iVMD0jesPileUpPtHFup");
@@ -9469,6 +10089,16 @@ void VVV0Tree::Init(TTree *tree) {
   if (NLGen3jesPileUpPtHFdn_branch) NLGen3jesPileUpPtHFdn_branch->SetAddress(&NLGen3jesPileUpPtHFdn_);
   NLGen4jesPileUpPtHFdn_branch = tree->GetBranch("NLGen4jesPileUpPtHFdn");
   if (NLGen4jesPileUpPtHFdn_branch) NLGen4jesPileUpPtHFdn_branch->SetAddress(&NLGen4jesPileUpPtHFdn_);
+  NVQGen0jesPileUpPtHFdn_branch = tree->GetBranch("NVQGen0jesPileUpPtHFdn");
+  if (NVQGen0jesPileUpPtHFdn_branch) NVQGen0jesPileUpPtHFdn_branch->SetAddress(&NVQGen0jesPileUpPtHFdn_);
+  NVQGen1jesPileUpPtHFdn_branch = tree->GetBranch("NVQGen1jesPileUpPtHFdn");
+  if (NVQGen1jesPileUpPtHFdn_branch) NVQGen1jesPileUpPtHFdn_branch->SetAddress(&NVQGen1jesPileUpPtHFdn_);
+  NVQGen2jesPileUpPtHFdn_branch = tree->GetBranch("NVQGen2jesPileUpPtHFdn");
+  if (NVQGen2jesPileUpPtHFdn_branch) NVQGen2jesPileUpPtHFdn_branch->SetAddress(&NVQGen2jesPileUpPtHFdn_);
+  NVQGen3jesPileUpPtHFdn_branch = tree->GetBranch("NVQGen3jesPileUpPtHFdn");
+  if (NVQGen3jesPileUpPtHFdn_branch) NVQGen3jesPileUpPtHFdn_branch->SetAddress(&NVQGen3jesPileUpPtHFdn_);
+  NVQGen4jesPileUpPtHFdn_branch = tree->GetBranch("NVQGen4jesPileUpPtHFdn");
+  if (NVQGen4jesPileUpPtHFdn_branch) NVQGen4jesPileUpPtHFdn_branch->SetAddress(&NVQGen4jesPileUpPtHFdn_);
   NiFJjesPileUpPtHFdn_branch = tree->GetBranch("NiFJjesPileUpPtHFdn");
   if (NiFJjesPileUpPtHFdn_branch) NiFJjesPileUpPtHFdn_branch->SetAddress(&NiFJjesPileUpPtHFdn_);
   iVMD0jesPileUpPtHFdn_branch = tree->GetBranch("iVMD0jesPileUpPtHFdn");
@@ -9596,6 +10226,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2_isLoaded = false;
   NLGen3_isLoaded = false;
   NLGen4_isLoaded = false;
+  NVQGen0_isLoaded = false;
+  NVQGen1_isLoaded = false;
+  NVQGen2_isLoaded = false;
+  NVQGen3_isLoaded = false;
+  NVQGen4_isLoaded = false;
   NiFJ_isLoaded = false;
   iFJ0_isLoaded = false;
   iFJ1_isLoaded = false;
@@ -9671,6 +10306,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2JESUp_isLoaded = false;
   NLGen3JESUp_isLoaded = false;
   NLGen4JESUp_isLoaded = false;
+  NVQGen0JESUp_isLoaded = false;
+  NVQGen1JESUp_isLoaded = false;
+  NVQGen2JESUp_isLoaded = false;
+  NVQGen3JESUp_isLoaded = false;
+  NVQGen4JESUp_isLoaded = false;
   NiFJJESUp_isLoaded = false;
   iFJ0JESUp_isLoaded = false;
   iFJ1JESUp_isLoaded = false;
@@ -9746,6 +10386,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2JESDn_isLoaded = false;
   NLGen3JESDn_isLoaded = false;
   NLGen4JESDn_isLoaded = false;
+  NVQGen0JESDn_isLoaded = false;
+  NVQGen1JESDn_isLoaded = false;
+  NVQGen2JESDn_isLoaded = false;
+  NVQGen3JESDn_isLoaded = false;
+  NVQGen4JESDn_isLoaded = false;
   NiFJJESDn_isLoaded = false;
   iFJ0JESDn_isLoaded = false;
   iFJ1JESDn_isLoaded = false;
@@ -9821,6 +10466,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2JERUp_isLoaded = false;
   NLGen3JERUp_isLoaded = false;
   NLGen4JERUp_isLoaded = false;
+  NVQGen0JERUp_isLoaded = false;
+  NVQGen1JERUp_isLoaded = false;
+  NVQGen2JERUp_isLoaded = false;
+  NVQGen3JERUp_isLoaded = false;
+  NVQGen4JERUp_isLoaded = false;
   NiFJJERUp_isLoaded = false;
   iFJ0JERUp_isLoaded = false;
   iFJ1JERUp_isLoaded = false;
@@ -9896,6 +10546,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2JERDn_isLoaded = false;
   NLGen3JERDn_isLoaded = false;
   NLGen4JERDn_isLoaded = false;
+  NVQGen0JERDn_isLoaded = false;
+  NVQGen1JERDn_isLoaded = false;
+  NVQGen2JERDn_isLoaded = false;
+  NVQGen3JERDn_isLoaded = false;
+  NVQGen4JERDn_isLoaded = false;
   NiFJJERDn_isLoaded = false;
   iFJ0JERDn_isLoaded = false;
   iFJ1JERDn_isLoaded = false;
@@ -9971,6 +10626,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2JMSUp_isLoaded = false;
   NLGen3JMSUp_isLoaded = false;
   NLGen4JMSUp_isLoaded = false;
+  NVQGen0JMSUp_isLoaded = false;
+  NVQGen1JMSUp_isLoaded = false;
+  NVQGen2JMSUp_isLoaded = false;
+  NVQGen3JMSUp_isLoaded = false;
+  NVQGen4JMSUp_isLoaded = false;
   NiFJJMSUp_isLoaded = false;
   iFJ0JMSUp_isLoaded = false;
   iFJ1JMSUp_isLoaded = false;
@@ -10046,6 +10706,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2JMSDn_isLoaded = false;
   NLGen3JMSDn_isLoaded = false;
   NLGen4JMSDn_isLoaded = false;
+  NVQGen0JMSDn_isLoaded = false;
+  NVQGen1JMSDn_isLoaded = false;
+  NVQGen2JMSDn_isLoaded = false;
+  NVQGen3JMSDn_isLoaded = false;
+  NVQGen4JMSDn_isLoaded = false;
   NiFJJMSDn_isLoaded = false;
   iFJ0JMSDn_isLoaded = false;
   iFJ1JMSDn_isLoaded = false;
@@ -10121,6 +10786,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2JMRUp_isLoaded = false;
   NLGen3JMRUp_isLoaded = false;
   NLGen4JMRUp_isLoaded = false;
+  NVQGen0JMRUp_isLoaded = false;
+  NVQGen1JMRUp_isLoaded = false;
+  NVQGen2JMRUp_isLoaded = false;
+  NVQGen3JMRUp_isLoaded = false;
+  NVQGen4JMRUp_isLoaded = false;
   NiFJJMRUp_isLoaded = false;
   iFJ0JMRUp_isLoaded = false;
   iFJ1JMRUp_isLoaded = false;
@@ -10196,6 +10866,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2JMRDn_isLoaded = false;
   NLGen3JMRDn_isLoaded = false;
   NLGen4JMRDn_isLoaded = false;
+  NVQGen0JMRDn_isLoaded = false;
+  NVQGen1JMRDn_isLoaded = false;
+  NVQGen2JMRDn_isLoaded = false;
+  NVQGen3JMRDn_isLoaded = false;
+  NVQGen4JMRDn_isLoaded = false;
   NiFJJMRDn_isLoaded = false;
   iFJ0JMRDn_isLoaded = false;
   iFJ1JMRDn_isLoaded = false;
@@ -10271,6 +10946,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesAbsoluteStatup_isLoaded = false;
   NLGen3jesAbsoluteStatup_isLoaded = false;
   NLGen4jesAbsoluteStatup_isLoaded = false;
+  NVQGen0jesAbsoluteStatup_isLoaded = false;
+  NVQGen1jesAbsoluteStatup_isLoaded = false;
+  NVQGen2jesAbsoluteStatup_isLoaded = false;
+  NVQGen3jesAbsoluteStatup_isLoaded = false;
+  NVQGen4jesAbsoluteStatup_isLoaded = false;
   NiFJjesAbsoluteStatup_isLoaded = false;
   iFJ0jesAbsoluteStatup_isLoaded = false;
   iFJ1jesAbsoluteStatup_isLoaded = false;
@@ -10346,6 +11026,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesAbsoluteStatdn_isLoaded = false;
   NLGen3jesAbsoluteStatdn_isLoaded = false;
   NLGen4jesAbsoluteStatdn_isLoaded = false;
+  NVQGen0jesAbsoluteStatdn_isLoaded = false;
+  NVQGen1jesAbsoluteStatdn_isLoaded = false;
+  NVQGen2jesAbsoluteStatdn_isLoaded = false;
+  NVQGen3jesAbsoluteStatdn_isLoaded = false;
+  NVQGen4jesAbsoluteStatdn_isLoaded = false;
   NiFJjesAbsoluteStatdn_isLoaded = false;
   iFJ0jesAbsoluteStatdn_isLoaded = false;
   iFJ1jesAbsoluteStatdn_isLoaded = false;
@@ -10421,6 +11106,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesAbsoluteScaleup_isLoaded = false;
   NLGen3jesAbsoluteScaleup_isLoaded = false;
   NLGen4jesAbsoluteScaleup_isLoaded = false;
+  NVQGen0jesAbsoluteScaleup_isLoaded = false;
+  NVQGen1jesAbsoluteScaleup_isLoaded = false;
+  NVQGen2jesAbsoluteScaleup_isLoaded = false;
+  NVQGen3jesAbsoluteScaleup_isLoaded = false;
+  NVQGen4jesAbsoluteScaleup_isLoaded = false;
   NiFJjesAbsoluteScaleup_isLoaded = false;
   iFJ0jesAbsoluteScaleup_isLoaded = false;
   iFJ1jesAbsoluteScaleup_isLoaded = false;
@@ -10496,6 +11186,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesAbsoluteScaledn_isLoaded = false;
   NLGen3jesAbsoluteScaledn_isLoaded = false;
   NLGen4jesAbsoluteScaledn_isLoaded = false;
+  NVQGen0jesAbsoluteScaledn_isLoaded = false;
+  NVQGen1jesAbsoluteScaledn_isLoaded = false;
+  NVQGen2jesAbsoluteScaledn_isLoaded = false;
+  NVQGen3jesAbsoluteScaledn_isLoaded = false;
+  NVQGen4jesAbsoluteScaledn_isLoaded = false;
   NiFJjesAbsoluteScaledn_isLoaded = false;
   iFJ0jesAbsoluteScaledn_isLoaded = false;
   iFJ1jesAbsoluteScaledn_isLoaded = false;
@@ -10571,6 +11266,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesAbsoluteMPFBiasup_isLoaded = false;
   NLGen3jesAbsoluteMPFBiasup_isLoaded = false;
   NLGen4jesAbsoluteMPFBiasup_isLoaded = false;
+  NVQGen0jesAbsoluteMPFBiasup_isLoaded = false;
+  NVQGen1jesAbsoluteMPFBiasup_isLoaded = false;
+  NVQGen2jesAbsoluteMPFBiasup_isLoaded = false;
+  NVQGen3jesAbsoluteMPFBiasup_isLoaded = false;
+  NVQGen4jesAbsoluteMPFBiasup_isLoaded = false;
   NiFJjesAbsoluteMPFBiasup_isLoaded = false;
   iFJ0jesAbsoluteMPFBiasup_isLoaded = false;
   iFJ1jesAbsoluteMPFBiasup_isLoaded = false;
@@ -10646,6 +11346,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesAbsoluteMPFBiasdn_isLoaded = false;
   NLGen3jesAbsoluteMPFBiasdn_isLoaded = false;
   NLGen4jesAbsoluteMPFBiasdn_isLoaded = false;
+  NVQGen0jesAbsoluteMPFBiasdn_isLoaded = false;
+  NVQGen1jesAbsoluteMPFBiasdn_isLoaded = false;
+  NVQGen2jesAbsoluteMPFBiasdn_isLoaded = false;
+  NVQGen3jesAbsoluteMPFBiasdn_isLoaded = false;
+  NVQGen4jesAbsoluteMPFBiasdn_isLoaded = false;
   NiFJjesAbsoluteMPFBiasdn_isLoaded = false;
   iFJ0jesAbsoluteMPFBiasdn_isLoaded = false;
   iFJ1jesAbsoluteMPFBiasdn_isLoaded = false;
@@ -10721,6 +11426,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesFragmentationup_isLoaded = false;
   NLGen3jesFragmentationup_isLoaded = false;
   NLGen4jesFragmentationup_isLoaded = false;
+  NVQGen0jesFragmentationup_isLoaded = false;
+  NVQGen1jesFragmentationup_isLoaded = false;
+  NVQGen2jesFragmentationup_isLoaded = false;
+  NVQGen3jesFragmentationup_isLoaded = false;
+  NVQGen4jesFragmentationup_isLoaded = false;
   NiFJjesFragmentationup_isLoaded = false;
   iFJ0jesFragmentationup_isLoaded = false;
   iFJ1jesFragmentationup_isLoaded = false;
@@ -10796,6 +11506,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesFragmentationdn_isLoaded = false;
   NLGen3jesFragmentationdn_isLoaded = false;
   NLGen4jesFragmentationdn_isLoaded = false;
+  NVQGen0jesFragmentationdn_isLoaded = false;
+  NVQGen1jesFragmentationdn_isLoaded = false;
+  NVQGen2jesFragmentationdn_isLoaded = false;
+  NVQGen3jesFragmentationdn_isLoaded = false;
+  NVQGen4jesFragmentationdn_isLoaded = false;
   NiFJjesFragmentationdn_isLoaded = false;
   iFJ0jesFragmentationdn_isLoaded = false;
   iFJ1jesFragmentationdn_isLoaded = false;
@@ -10871,6 +11586,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesSinglePionECALup_isLoaded = false;
   NLGen3jesSinglePionECALup_isLoaded = false;
   NLGen4jesSinglePionECALup_isLoaded = false;
+  NVQGen0jesSinglePionECALup_isLoaded = false;
+  NVQGen1jesSinglePionECALup_isLoaded = false;
+  NVQGen2jesSinglePionECALup_isLoaded = false;
+  NVQGen3jesSinglePionECALup_isLoaded = false;
+  NVQGen4jesSinglePionECALup_isLoaded = false;
   NiFJjesSinglePionECALup_isLoaded = false;
   iFJ0jesSinglePionECALup_isLoaded = false;
   iFJ1jesSinglePionECALup_isLoaded = false;
@@ -10946,6 +11666,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesSinglePionECALdn_isLoaded = false;
   NLGen3jesSinglePionECALdn_isLoaded = false;
   NLGen4jesSinglePionECALdn_isLoaded = false;
+  NVQGen0jesSinglePionECALdn_isLoaded = false;
+  NVQGen1jesSinglePionECALdn_isLoaded = false;
+  NVQGen2jesSinglePionECALdn_isLoaded = false;
+  NVQGen3jesSinglePionECALdn_isLoaded = false;
+  NVQGen4jesSinglePionECALdn_isLoaded = false;
   NiFJjesSinglePionECALdn_isLoaded = false;
   iFJ0jesSinglePionECALdn_isLoaded = false;
   iFJ1jesSinglePionECALdn_isLoaded = false;
@@ -11021,6 +11746,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesSinglePionHCALup_isLoaded = false;
   NLGen3jesSinglePionHCALup_isLoaded = false;
   NLGen4jesSinglePionHCALup_isLoaded = false;
+  NVQGen0jesSinglePionHCALup_isLoaded = false;
+  NVQGen1jesSinglePionHCALup_isLoaded = false;
+  NVQGen2jesSinglePionHCALup_isLoaded = false;
+  NVQGen3jesSinglePionHCALup_isLoaded = false;
+  NVQGen4jesSinglePionHCALup_isLoaded = false;
   NiFJjesSinglePionHCALup_isLoaded = false;
   iFJ0jesSinglePionHCALup_isLoaded = false;
   iFJ1jesSinglePionHCALup_isLoaded = false;
@@ -11096,6 +11826,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesSinglePionHCALdn_isLoaded = false;
   NLGen3jesSinglePionHCALdn_isLoaded = false;
   NLGen4jesSinglePionHCALdn_isLoaded = false;
+  NVQGen0jesSinglePionHCALdn_isLoaded = false;
+  NVQGen1jesSinglePionHCALdn_isLoaded = false;
+  NVQGen2jesSinglePionHCALdn_isLoaded = false;
+  NVQGen3jesSinglePionHCALdn_isLoaded = false;
+  NVQGen4jesSinglePionHCALdn_isLoaded = false;
   NiFJjesSinglePionHCALdn_isLoaded = false;
   iFJ0jesSinglePionHCALdn_isLoaded = false;
   iFJ1jesSinglePionHCALdn_isLoaded = false;
@@ -11171,6 +11906,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesFlavorQCDup_isLoaded = false;
   NLGen3jesFlavorQCDup_isLoaded = false;
   NLGen4jesFlavorQCDup_isLoaded = false;
+  NVQGen0jesFlavorQCDup_isLoaded = false;
+  NVQGen1jesFlavorQCDup_isLoaded = false;
+  NVQGen2jesFlavorQCDup_isLoaded = false;
+  NVQGen3jesFlavorQCDup_isLoaded = false;
+  NVQGen4jesFlavorQCDup_isLoaded = false;
   NiFJjesFlavorQCDup_isLoaded = false;
   iFJ0jesFlavorQCDup_isLoaded = false;
   iFJ1jesFlavorQCDup_isLoaded = false;
@@ -11246,6 +11986,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesFlavorQCDdn_isLoaded = false;
   NLGen3jesFlavorQCDdn_isLoaded = false;
   NLGen4jesFlavorQCDdn_isLoaded = false;
+  NVQGen0jesFlavorQCDdn_isLoaded = false;
+  NVQGen1jesFlavorQCDdn_isLoaded = false;
+  NVQGen2jesFlavorQCDdn_isLoaded = false;
+  NVQGen3jesFlavorQCDdn_isLoaded = false;
+  NVQGen4jesFlavorQCDdn_isLoaded = false;
   NiFJjesFlavorQCDdn_isLoaded = false;
   iFJ0jesFlavorQCDdn_isLoaded = false;
   iFJ1jesFlavorQCDdn_isLoaded = false;
@@ -11321,6 +12066,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesTimePtEtaup_isLoaded = false;
   NLGen3jesTimePtEtaup_isLoaded = false;
   NLGen4jesTimePtEtaup_isLoaded = false;
+  NVQGen0jesTimePtEtaup_isLoaded = false;
+  NVQGen1jesTimePtEtaup_isLoaded = false;
+  NVQGen2jesTimePtEtaup_isLoaded = false;
+  NVQGen3jesTimePtEtaup_isLoaded = false;
+  NVQGen4jesTimePtEtaup_isLoaded = false;
   NiFJjesTimePtEtaup_isLoaded = false;
   iFJ0jesTimePtEtaup_isLoaded = false;
   iFJ1jesTimePtEtaup_isLoaded = false;
@@ -11396,6 +12146,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesTimePtEtadn_isLoaded = false;
   NLGen3jesTimePtEtadn_isLoaded = false;
   NLGen4jesTimePtEtadn_isLoaded = false;
+  NVQGen0jesTimePtEtadn_isLoaded = false;
+  NVQGen1jesTimePtEtadn_isLoaded = false;
+  NVQGen2jesTimePtEtadn_isLoaded = false;
+  NVQGen3jesTimePtEtadn_isLoaded = false;
+  NVQGen4jesTimePtEtadn_isLoaded = false;
   NiFJjesTimePtEtadn_isLoaded = false;
   iFJ0jesTimePtEtadn_isLoaded = false;
   iFJ1jesTimePtEtadn_isLoaded = false;
@@ -11471,6 +12226,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativeJEREC1up_isLoaded = false;
   NLGen3jesRelativeJEREC1up_isLoaded = false;
   NLGen4jesRelativeJEREC1up_isLoaded = false;
+  NVQGen0jesRelativeJEREC1up_isLoaded = false;
+  NVQGen1jesRelativeJEREC1up_isLoaded = false;
+  NVQGen2jesRelativeJEREC1up_isLoaded = false;
+  NVQGen3jesRelativeJEREC1up_isLoaded = false;
+  NVQGen4jesRelativeJEREC1up_isLoaded = false;
   NiFJjesRelativeJEREC1up_isLoaded = false;
   iFJ0jesRelativeJEREC1up_isLoaded = false;
   iFJ1jesRelativeJEREC1up_isLoaded = false;
@@ -11546,6 +12306,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativeJEREC1dn_isLoaded = false;
   NLGen3jesRelativeJEREC1dn_isLoaded = false;
   NLGen4jesRelativeJEREC1dn_isLoaded = false;
+  NVQGen0jesRelativeJEREC1dn_isLoaded = false;
+  NVQGen1jesRelativeJEREC1dn_isLoaded = false;
+  NVQGen2jesRelativeJEREC1dn_isLoaded = false;
+  NVQGen3jesRelativeJEREC1dn_isLoaded = false;
+  NVQGen4jesRelativeJEREC1dn_isLoaded = false;
   NiFJjesRelativeJEREC1dn_isLoaded = false;
   iFJ0jesRelativeJEREC1dn_isLoaded = false;
   iFJ1jesRelativeJEREC1dn_isLoaded = false;
@@ -11621,6 +12386,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativeJEREC2up_isLoaded = false;
   NLGen3jesRelativeJEREC2up_isLoaded = false;
   NLGen4jesRelativeJEREC2up_isLoaded = false;
+  NVQGen0jesRelativeJEREC2up_isLoaded = false;
+  NVQGen1jesRelativeJEREC2up_isLoaded = false;
+  NVQGen2jesRelativeJEREC2up_isLoaded = false;
+  NVQGen3jesRelativeJEREC2up_isLoaded = false;
+  NVQGen4jesRelativeJEREC2up_isLoaded = false;
   NiFJjesRelativeJEREC2up_isLoaded = false;
   iFJ0jesRelativeJEREC2up_isLoaded = false;
   iFJ1jesRelativeJEREC2up_isLoaded = false;
@@ -11696,6 +12466,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativeJEREC2dn_isLoaded = false;
   NLGen3jesRelativeJEREC2dn_isLoaded = false;
   NLGen4jesRelativeJEREC2dn_isLoaded = false;
+  NVQGen0jesRelativeJEREC2dn_isLoaded = false;
+  NVQGen1jesRelativeJEREC2dn_isLoaded = false;
+  NVQGen2jesRelativeJEREC2dn_isLoaded = false;
+  NVQGen3jesRelativeJEREC2dn_isLoaded = false;
+  NVQGen4jesRelativeJEREC2dn_isLoaded = false;
   NiFJjesRelativeJEREC2dn_isLoaded = false;
   iFJ0jesRelativeJEREC2dn_isLoaded = false;
   iFJ1jesRelativeJEREC2dn_isLoaded = false;
@@ -11771,6 +12546,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativeJERHFup_isLoaded = false;
   NLGen3jesRelativeJERHFup_isLoaded = false;
   NLGen4jesRelativeJERHFup_isLoaded = false;
+  NVQGen0jesRelativeJERHFup_isLoaded = false;
+  NVQGen1jesRelativeJERHFup_isLoaded = false;
+  NVQGen2jesRelativeJERHFup_isLoaded = false;
+  NVQGen3jesRelativeJERHFup_isLoaded = false;
+  NVQGen4jesRelativeJERHFup_isLoaded = false;
   NiFJjesRelativeJERHFup_isLoaded = false;
   iFJ0jesRelativeJERHFup_isLoaded = false;
   iFJ1jesRelativeJERHFup_isLoaded = false;
@@ -11846,6 +12626,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativeJERHFdn_isLoaded = false;
   NLGen3jesRelativeJERHFdn_isLoaded = false;
   NLGen4jesRelativeJERHFdn_isLoaded = false;
+  NVQGen0jesRelativeJERHFdn_isLoaded = false;
+  NVQGen1jesRelativeJERHFdn_isLoaded = false;
+  NVQGen2jesRelativeJERHFdn_isLoaded = false;
+  NVQGen3jesRelativeJERHFdn_isLoaded = false;
+  NVQGen4jesRelativeJERHFdn_isLoaded = false;
   NiFJjesRelativeJERHFdn_isLoaded = false;
   iFJ0jesRelativeJERHFdn_isLoaded = false;
   iFJ1jesRelativeJERHFdn_isLoaded = false;
@@ -11921,6 +12706,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativePtBBup_isLoaded = false;
   NLGen3jesRelativePtBBup_isLoaded = false;
   NLGen4jesRelativePtBBup_isLoaded = false;
+  NVQGen0jesRelativePtBBup_isLoaded = false;
+  NVQGen1jesRelativePtBBup_isLoaded = false;
+  NVQGen2jesRelativePtBBup_isLoaded = false;
+  NVQGen3jesRelativePtBBup_isLoaded = false;
+  NVQGen4jesRelativePtBBup_isLoaded = false;
   NiFJjesRelativePtBBup_isLoaded = false;
   iFJ0jesRelativePtBBup_isLoaded = false;
   iFJ1jesRelativePtBBup_isLoaded = false;
@@ -11996,6 +12786,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativePtBBdn_isLoaded = false;
   NLGen3jesRelativePtBBdn_isLoaded = false;
   NLGen4jesRelativePtBBdn_isLoaded = false;
+  NVQGen0jesRelativePtBBdn_isLoaded = false;
+  NVQGen1jesRelativePtBBdn_isLoaded = false;
+  NVQGen2jesRelativePtBBdn_isLoaded = false;
+  NVQGen3jesRelativePtBBdn_isLoaded = false;
+  NVQGen4jesRelativePtBBdn_isLoaded = false;
   NiFJjesRelativePtBBdn_isLoaded = false;
   iFJ0jesRelativePtBBdn_isLoaded = false;
   iFJ1jesRelativePtBBdn_isLoaded = false;
@@ -12071,6 +12866,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativePtEC1up_isLoaded = false;
   NLGen3jesRelativePtEC1up_isLoaded = false;
   NLGen4jesRelativePtEC1up_isLoaded = false;
+  NVQGen0jesRelativePtEC1up_isLoaded = false;
+  NVQGen1jesRelativePtEC1up_isLoaded = false;
+  NVQGen2jesRelativePtEC1up_isLoaded = false;
+  NVQGen3jesRelativePtEC1up_isLoaded = false;
+  NVQGen4jesRelativePtEC1up_isLoaded = false;
   NiFJjesRelativePtEC1up_isLoaded = false;
   iFJ0jesRelativePtEC1up_isLoaded = false;
   iFJ1jesRelativePtEC1up_isLoaded = false;
@@ -12146,6 +12946,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativePtEC1dn_isLoaded = false;
   NLGen3jesRelativePtEC1dn_isLoaded = false;
   NLGen4jesRelativePtEC1dn_isLoaded = false;
+  NVQGen0jesRelativePtEC1dn_isLoaded = false;
+  NVQGen1jesRelativePtEC1dn_isLoaded = false;
+  NVQGen2jesRelativePtEC1dn_isLoaded = false;
+  NVQGen3jesRelativePtEC1dn_isLoaded = false;
+  NVQGen4jesRelativePtEC1dn_isLoaded = false;
   NiFJjesRelativePtEC1dn_isLoaded = false;
   iFJ0jesRelativePtEC1dn_isLoaded = false;
   iFJ1jesRelativePtEC1dn_isLoaded = false;
@@ -12221,6 +13026,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativePtEC2up_isLoaded = false;
   NLGen3jesRelativePtEC2up_isLoaded = false;
   NLGen4jesRelativePtEC2up_isLoaded = false;
+  NVQGen0jesRelativePtEC2up_isLoaded = false;
+  NVQGen1jesRelativePtEC2up_isLoaded = false;
+  NVQGen2jesRelativePtEC2up_isLoaded = false;
+  NVQGen3jesRelativePtEC2up_isLoaded = false;
+  NVQGen4jesRelativePtEC2up_isLoaded = false;
   NiFJjesRelativePtEC2up_isLoaded = false;
   iFJ0jesRelativePtEC2up_isLoaded = false;
   iFJ1jesRelativePtEC2up_isLoaded = false;
@@ -12296,6 +13106,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativePtEC2dn_isLoaded = false;
   NLGen3jesRelativePtEC2dn_isLoaded = false;
   NLGen4jesRelativePtEC2dn_isLoaded = false;
+  NVQGen0jesRelativePtEC2dn_isLoaded = false;
+  NVQGen1jesRelativePtEC2dn_isLoaded = false;
+  NVQGen2jesRelativePtEC2dn_isLoaded = false;
+  NVQGen3jesRelativePtEC2dn_isLoaded = false;
+  NVQGen4jesRelativePtEC2dn_isLoaded = false;
   NiFJjesRelativePtEC2dn_isLoaded = false;
   iFJ0jesRelativePtEC2dn_isLoaded = false;
   iFJ1jesRelativePtEC2dn_isLoaded = false;
@@ -12371,6 +13186,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativePtHFup_isLoaded = false;
   NLGen3jesRelativePtHFup_isLoaded = false;
   NLGen4jesRelativePtHFup_isLoaded = false;
+  NVQGen0jesRelativePtHFup_isLoaded = false;
+  NVQGen1jesRelativePtHFup_isLoaded = false;
+  NVQGen2jesRelativePtHFup_isLoaded = false;
+  NVQGen3jesRelativePtHFup_isLoaded = false;
+  NVQGen4jesRelativePtHFup_isLoaded = false;
   NiFJjesRelativePtHFup_isLoaded = false;
   iFJ0jesRelativePtHFup_isLoaded = false;
   iFJ1jesRelativePtHFup_isLoaded = false;
@@ -12446,6 +13266,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativePtHFdn_isLoaded = false;
   NLGen3jesRelativePtHFdn_isLoaded = false;
   NLGen4jesRelativePtHFdn_isLoaded = false;
+  NVQGen0jesRelativePtHFdn_isLoaded = false;
+  NVQGen1jesRelativePtHFdn_isLoaded = false;
+  NVQGen2jesRelativePtHFdn_isLoaded = false;
+  NVQGen3jesRelativePtHFdn_isLoaded = false;
+  NVQGen4jesRelativePtHFdn_isLoaded = false;
   NiFJjesRelativePtHFdn_isLoaded = false;
   iFJ0jesRelativePtHFdn_isLoaded = false;
   iFJ1jesRelativePtHFdn_isLoaded = false;
@@ -12521,6 +13346,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativeBalup_isLoaded = false;
   NLGen3jesRelativeBalup_isLoaded = false;
   NLGen4jesRelativeBalup_isLoaded = false;
+  NVQGen0jesRelativeBalup_isLoaded = false;
+  NVQGen1jesRelativeBalup_isLoaded = false;
+  NVQGen2jesRelativeBalup_isLoaded = false;
+  NVQGen3jesRelativeBalup_isLoaded = false;
+  NVQGen4jesRelativeBalup_isLoaded = false;
   NiFJjesRelativeBalup_isLoaded = false;
   iFJ0jesRelativeBalup_isLoaded = false;
   iFJ1jesRelativeBalup_isLoaded = false;
@@ -12596,6 +13426,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativeBaldn_isLoaded = false;
   NLGen3jesRelativeBaldn_isLoaded = false;
   NLGen4jesRelativeBaldn_isLoaded = false;
+  NVQGen0jesRelativeBaldn_isLoaded = false;
+  NVQGen1jesRelativeBaldn_isLoaded = false;
+  NVQGen2jesRelativeBaldn_isLoaded = false;
+  NVQGen3jesRelativeBaldn_isLoaded = false;
+  NVQGen4jesRelativeBaldn_isLoaded = false;
   NiFJjesRelativeBaldn_isLoaded = false;
   iFJ0jesRelativeBaldn_isLoaded = false;
   iFJ1jesRelativeBaldn_isLoaded = false;
@@ -12671,6 +13506,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativeSampleup_isLoaded = false;
   NLGen3jesRelativeSampleup_isLoaded = false;
   NLGen4jesRelativeSampleup_isLoaded = false;
+  NVQGen0jesRelativeSampleup_isLoaded = false;
+  NVQGen1jesRelativeSampleup_isLoaded = false;
+  NVQGen2jesRelativeSampleup_isLoaded = false;
+  NVQGen3jesRelativeSampleup_isLoaded = false;
+  NVQGen4jesRelativeSampleup_isLoaded = false;
   NiFJjesRelativeSampleup_isLoaded = false;
   iFJ0jesRelativeSampleup_isLoaded = false;
   iFJ1jesRelativeSampleup_isLoaded = false;
@@ -12746,6 +13586,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativeSampledn_isLoaded = false;
   NLGen3jesRelativeSampledn_isLoaded = false;
   NLGen4jesRelativeSampledn_isLoaded = false;
+  NVQGen0jesRelativeSampledn_isLoaded = false;
+  NVQGen1jesRelativeSampledn_isLoaded = false;
+  NVQGen2jesRelativeSampledn_isLoaded = false;
+  NVQGen3jesRelativeSampledn_isLoaded = false;
+  NVQGen4jesRelativeSampledn_isLoaded = false;
   NiFJjesRelativeSampledn_isLoaded = false;
   iFJ0jesRelativeSampledn_isLoaded = false;
   iFJ1jesRelativeSampledn_isLoaded = false;
@@ -12821,6 +13666,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativeFSRup_isLoaded = false;
   NLGen3jesRelativeFSRup_isLoaded = false;
   NLGen4jesRelativeFSRup_isLoaded = false;
+  NVQGen0jesRelativeFSRup_isLoaded = false;
+  NVQGen1jesRelativeFSRup_isLoaded = false;
+  NVQGen2jesRelativeFSRup_isLoaded = false;
+  NVQGen3jesRelativeFSRup_isLoaded = false;
+  NVQGen4jesRelativeFSRup_isLoaded = false;
   NiFJjesRelativeFSRup_isLoaded = false;
   iFJ0jesRelativeFSRup_isLoaded = false;
   iFJ1jesRelativeFSRup_isLoaded = false;
@@ -12896,6 +13746,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativeFSRdn_isLoaded = false;
   NLGen3jesRelativeFSRdn_isLoaded = false;
   NLGen4jesRelativeFSRdn_isLoaded = false;
+  NVQGen0jesRelativeFSRdn_isLoaded = false;
+  NVQGen1jesRelativeFSRdn_isLoaded = false;
+  NVQGen2jesRelativeFSRdn_isLoaded = false;
+  NVQGen3jesRelativeFSRdn_isLoaded = false;
+  NVQGen4jesRelativeFSRdn_isLoaded = false;
   NiFJjesRelativeFSRdn_isLoaded = false;
   iFJ0jesRelativeFSRdn_isLoaded = false;
   iFJ1jesRelativeFSRdn_isLoaded = false;
@@ -12971,6 +13826,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativeStatFSRup_isLoaded = false;
   NLGen3jesRelativeStatFSRup_isLoaded = false;
   NLGen4jesRelativeStatFSRup_isLoaded = false;
+  NVQGen0jesRelativeStatFSRup_isLoaded = false;
+  NVQGen1jesRelativeStatFSRup_isLoaded = false;
+  NVQGen2jesRelativeStatFSRup_isLoaded = false;
+  NVQGen3jesRelativeStatFSRup_isLoaded = false;
+  NVQGen4jesRelativeStatFSRup_isLoaded = false;
   NiFJjesRelativeStatFSRup_isLoaded = false;
   iFJ0jesRelativeStatFSRup_isLoaded = false;
   iFJ1jesRelativeStatFSRup_isLoaded = false;
@@ -13046,6 +13906,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativeStatFSRdn_isLoaded = false;
   NLGen3jesRelativeStatFSRdn_isLoaded = false;
   NLGen4jesRelativeStatFSRdn_isLoaded = false;
+  NVQGen0jesRelativeStatFSRdn_isLoaded = false;
+  NVQGen1jesRelativeStatFSRdn_isLoaded = false;
+  NVQGen2jesRelativeStatFSRdn_isLoaded = false;
+  NVQGen3jesRelativeStatFSRdn_isLoaded = false;
+  NVQGen4jesRelativeStatFSRdn_isLoaded = false;
   NiFJjesRelativeStatFSRdn_isLoaded = false;
   iFJ0jesRelativeStatFSRdn_isLoaded = false;
   iFJ1jesRelativeStatFSRdn_isLoaded = false;
@@ -13121,6 +13986,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativeStatECup_isLoaded = false;
   NLGen3jesRelativeStatECup_isLoaded = false;
   NLGen4jesRelativeStatECup_isLoaded = false;
+  NVQGen0jesRelativeStatECup_isLoaded = false;
+  NVQGen1jesRelativeStatECup_isLoaded = false;
+  NVQGen2jesRelativeStatECup_isLoaded = false;
+  NVQGen3jesRelativeStatECup_isLoaded = false;
+  NVQGen4jesRelativeStatECup_isLoaded = false;
   NiFJjesRelativeStatECup_isLoaded = false;
   iFJ0jesRelativeStatECup_isLoaded = false;
   iFJ1jesRelativeStatECup_isLoaded = false;
@@ -13196,6 +14066,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativeStatECdn_isLoaded = false;
   NLGen3jesRelativeStatECdn_isLoaded = false;
   NLGen4jesRelativeStatECdn_isLoaded = false;
+  NVQGen0jesRelativeStatECdn_isLoaded = false;
+  NVQGen1jesRelativeStatECdn_isLoaded = false;
+  NVQGen2jesRelativeStatECdn_isLoaded = false;
+  NVQGen3jesRelativeStatECdn_isLoaded = false;
+  NVQGen4jesRelativeStatECdn_isLoaded = false;
   NiFJjesRelativeStatECdn_isLoaded = false;
   iFJ0jesRelativeStatECdn_isLoaded = false;
   iFJ1jesRelativeStatECdn_isLoaded = false;
@@ -13271,6 +14146,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativeStatHFup_isLoaded = false;
   NLGen3jesRelativeStatHFup_isLoaded = false;
   NLGen4jesRelativeStatHFup_isLoaded = false;
+  NVQGen0jesRelativeStatHFup_isLoaded = false;
+  NVQGen1jesRelativeStatHFup_isLoaded = false;
+  NVQGen2jesRelativeStatHFup_isLoaded = false;
+  NVQGen3jesRelativeStatHFup_isLoaded = false;
+  NVQGen4jesRelativeStatHFup_isLoaded = false;
   NiFJjesRelativeStatHFup_isLoaded = false;
   iFJ0jesRelativeStatHFup_isLoaded = false;
   iFJ1jesRelativeStatHFup_isLoaded = false;
@@ -13346,6 +14226,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesRelativeStatHFdn_isLoaded = false;
   NLGen3jesRelativeStatHFdn_isLoaded = false;
   NLGen4jesRelativeStatHFdn_isLoaded = false;
+  NVQGen0jesRelativeStatHFdn_isLoaded = false;
+  NVQGen1jesRelativeStatHFdn_isLoaded = false;
+  NVQGen2jesRelativeStatHFdn_isLoaded = false;
+  NVQGen3jesRelativeStatHFdn_isLoaded = false;
+  NVQGen4jesRelativeStatHFdn_isLoaded = false;
   NiFJjesRelativeStatHFdn_isLoaded = false;
   iFJ0jesRelativeStatHFdn_isLoaded = false;
   iFJ1jesRelativeStatHFdn_isLoaded = false;
@@ -13421,6 +14306,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesPileUpDataMCup_isLoaded = false;
   NLGen3jesPileUpDataMCup_isLoaded = false;
   NLGen4jesPileUpDataMCup_isLoaded = false;
+  NVQGen0jesPileUpDataMCup_isLoaded = false;
+  NVQGen1jesPileUpDataMCup_isLoaded = false;
+  NVQGen2jesPileUpDataMCup_isLoaded = false;
+  NVQGen3jesPileUpDataMCup_isLoaded = false;
+  NVQGen4jesPileUpDataMCup_isLoaded = false;
   NiFJjesPileUpDataMCup_isLoaded = false;
   iFJ0jesPileUpDataMCup_isLoaded = false;
   iFJ1jesPileUpDataMCup_isLoaded = false;
@@ -13496,6 +14386,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesPileUpDataMCdn_isLoaded = false;
   NLGen3jesPileUpDataMCdn_isLoaded = false;
   NLGen4jesPileUpDataMCdn_isLoaded = false;
+  NVQGen0jesPileUpDataMCdn_isLoaded = false;
+  NVQGen1jesPileUpDataMCdn_isLoaded = false;
+  NVQGen2jesPileUpDataMCdn_isLoaded = false;
+  NVQGen3jesPileUpDataMCdn_isLoaded = false;
+  NVQGen4jesPileUpDataMCdn_isLoaded = false;
   NiFJjesPileUpDataMCdn_isLoaded = false;
   iFJ0jesPileUpDataMCdn_isLoaded = false;
   iFJ1jesPileUpDataMCdn_isLoaded = false;
@@ -13571,6 +14466,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesPileUpPtRefup_isLoaded = false;
   NLGen3jesPileUpPtRefup_isLoaded = false;
   NLGen4jesPileUpPtRefup_isLoaded = false;
+  NVQGen0jesPileUpPtRefup_isLoaded = false;
+  NVQGen1jesPileUpPtRefup_isLoaded = false;
+  NVQGen2jesPileUpPtRefup_isLoaded = false;
+  NVQGen3jesPileUpPtRefup_isLoaded = false;
+  NVQGen4jesPileUpPtRefup_isLoaded = false;
   NiFJjesPileUpPtRefup_isLoaded = false;
   iFJ0jesPileUpPtRefup_isLoaded = false;
   iFJ1jesPileUpPtRefup_isLoaded = false;
@@ -13646,6 +14546,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesPileUpPtRefdn_isLoaded = false;
   NLGen3jesPileUpPtRefdn_isLoaded = false;
   NLGen4jesPileUpPtRefdn_isLoaded = false;
+  NVQGen0jesPileUpPtRefdn_isLoaded = false;
+  NVQGen1jesPileUpPtRefdn_isLoaded = false;
+  NVQGen2jesPileUpPtRefdn_isLoaded = false;
+  NVQGen3jesPileUpPtRefdn_isLoaded = false;
+  NVQGen4jesPileUpPtRefdn_isLoaded = false;
   NiFJjesPileUpPtRefdn_isLoaded = false;
   iFJ0jesPileUpPtRefdn_isLoaded = false;
   iFJ1jesPileUpPtRefdn_isLoaded = false;
@@ -13721,6 +14626,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesPileUpPtBBup_isLoaded = false;
   NLGen3jesPileUpPtBBup_isLoaded = false;
   NLGen4jesPileUpPtBBup_isLoaded = false;
+  NVQGen0jesPileUpPtBBup_isLoaded = false;
+  NVQGen1jesPileUpPtBBup_isLoaded = false;
+  NVQGen2jesPileUpPtBBup_isLoaded = false;
+  NVQGen3jesPileUpPtBBup_isLoaded = false;
+  NVQGen4jesPileUpPtBBup_isLoaded = false;
   NiFJjesPileUpPtBBup_isLoaded = false;
   iFJ0jesPileUpPtBBup_isLoaded = false;
   iFJ1jesPileUpPtBBup_isLoaded = false;
@@ -13796,6 +14706,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesPileUpPtBBdn_isLoaded = false;
   NLGen3jesPileUpPtBBdn_isLoaded = false;
   NLGen4jesPileUpPtBBdn_isLoaded = false;
+  NVQGen0jesPileUpPtBBdn_isLoaded = false;
+  NVQGen1jesPileUpPtBBdn_isLoaded = false;
+  NVQGen2jesPileUpPtBBdn_isLoaded = false;
+  NVQGen3jesPileUpPtBBdn_isLoaded = false;
+  NVQGen4jesPileUpPtBBdn_isLoaded = false;
   NiFJjesPileUpPtBBdn_isLoaded = false;
   iFJ0jesPileUpPtBBdn_isLoaded = false;
   iFJ1jesPileUpPtBBdn_isLoaded = false;
@@ -13871,6 +14786,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesPileUpPtEC1up_isLoaded = false;
   NLGen3jesPileUpPtEC1up_isLoaded = false;
   NLGen4jesPileUpPtEC1up_isLoaded = false;
+  NVQGen0jesPileUpPtEC1up_isLoaded = false;
+  NVQGen1jesPileUpPtEC1up_isLoaded = false;
+  NVQGen2jesPileUpPtEC1up_isLoaded = false;
+  NVQGen3jesPileUpPtEC1up_isLoaded = false;
+  NVQGen4jesPileUpPtEC1up_isLoaded = false;
   NiFJjesPileUpPtEC1up_isLoaded = false;
   iFJ0jesPileUpPtEC1up_isLoaded = false;
   iFJ1jesPileUpPtEC1up_isLoaded = false;
@@ -13946,6 +14866,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesPileUpPtEC1dn_isLoaded = false;
   NLGen3jesPileUpPtEC1dn_isLoaded = false;
   NLGen4jesPileUpPtEC1dn_isLoaded = false;
+  NVQGen0jesPileUpPtEC1dn_isLoaded = false;
+  NVQGen1jesPileUpPtEC1dn_isLoaded = false;
+  NVQGen2jesPileUpPtEC1dn_isLoaded = false;
+  NVQGen3jesPileUpPtEC1dn_isLoaded = false;
+  NVQGen4jesPileUpPtEC1dn_isLoaded = false;
   NiFJjesPileUpPtEC1dn_isLoaded = false;
   iFJ0jesPileUpPtEC1dn_isLoaded = false;
   iFJ1jesPileUpPtEC1dn_isLoaded = false;
@@ -14021,6 +14946,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesPileUpPtEC2up_isLoaded = false;
   NLGen3jesPileUpPtEC2up_isLoaded = false;
   NLGen4jesPileUpPtEC2up_isLoaded = false;
+  NVQGen0jesPileUpPtEC2up_isLoaded = false;
+  NVQGen1jesPileUpPtEC2up_isLoaded = false;
+  NVQGen2jesPileUpPtEC2up_isLoaded = false;
+  NVQGen3jesPileUpPtEC2up_isLoaded = false;
+  NVQGen4jesPileUpPtEC2up_isLoaded = false;
   NiFJjesPileUpPtEC2up_isLoaded = false;
   iFJ0jesPileUpPtEC2up_isLoaded = false;
   iFJ1jesPileUpPtEC2up_isLoaded = false;
@@ -14096,6 +15026,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesPileUpPtEC2dn_isLoaded = false;
   NLGen3jesPileUpPtEC2dn_isLoaded = false;
   NLGen4jesPileUpPtEC2dn_isLoaded = false;
+  NVQGen0jesPileUpPtEC2dn_isLoaded = false;
+  NVQGen1jesPileUpPtEC2dn_isLoaded = false;
+  NVQGen2jesPileUpPtEC2dn_isLoaded = false;
+  NVQGen3jesPileUpPtEC2dn_isLoaded = false;
+  NVQGen4jesPileUpPtEC2dn_isLoaded = false;
   NiFJjesPileUpPtEC2dn_isLoaded = false;
   iFJ0jesPileUpPtEC2dn_isLoaded = false;
   iFJ1jesPileUpPtEC2dn_isLoaded = false;
@@ -14171,6 +15106,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesPileUpPtHFup_isLoaded = false;
   NLGen3jesPileUpPtHFup_isLoaded = false;
   NLGen4jesPileUpPtHFup_isLoaded = false;
+  NVQGen0jesPileUpPtHFup_isLoaded = false;
+  NVQGen1jesPileUpPtHFup_isLoaded = false;
+  NVQGen2jesPileUpPtHFup_isLoaded = false;
+  NVQGen3jesPileUpPtHFup_isLoaded = false;
+  NVQGen4jesPileUpPtHFup_isLoaded = false;
   NiFJjesPileUpPtHFup_isLoaded = false;
   iFJ0jesPileUpPtHFup_isLoaded = false;
   iFJ1jesPileUpPtHFup_isLoaded = false;
@@ -14246,6 +15186,11 @@ void VVV0Tree::GetEntry(unsigned int idx) {
   NLGen2jesPileUpPtHFdn_isLoaded = false;
   NLGen3jesPileUpPtHFdn_isLoaded = false;
   NLGen4jesPileUpPtHFdn_isLoaded = false;
+  NVQGen0jesPileUpPtHFdn_isLoaded = false;
+  NVQGen1jesPileUpPtHFdn_isLoaded = false;
+  NVQGen2jesPileUpPtHFdn_isLoaded = false;
+  NVQGen3jesPileUpPtHFdn_isLoaded = false;
+  NVQGen4jesPileUpPtHFdn_isLoaded = false;
   NiFJjesPileUpPtHFdn_isLoaded = false;
   iFJ0jesPileUpPtHFdn_isLoaded = false;
   iFJ1jesPileUpPtHFdn_isLoaded = false;
@@ -14363,6 +15308,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2_branch != 0) NLGen2();
   if (NLGen3_branch != 0) NLGen3();
   if (NLGen4_branch != 0) NLGen4();
+  if (NVQGen0_branch != 0) NVQGen0();
+  if (NVQGen1_branch != 0) NVQGen1();
+  if (NVQGen2_branch != 0) NVQGen2();
+  if (NVQGen3_branch != 0) NVQGen3();
+  if (NVQGen4_branch != 0) NVQGen4();
   if (NiFJ_branch != 0) NiFJ();
   if (iFJ0_branch != 0) iFJ0();
   if (iFJ1_branch != 0) iFJ1();
@@ -14438,6 +15388,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2JESUp_branch != 0) NLGen2JESUp();
   if (NLGen3JESUp_branch != 0) NLGen3JESUp();
   if (NLGen4JESUp_branch != 0) NLGen4JESUp();
+  if (NVQGen0JESUp_branch != 0) NVQGen0JESUp();
+  if (NVQGen1JESUp_branch != 0) NVQGen1JESUp();
+  if (NVQGen2JESUp_branch != 0) NVQGen2JESUp();
+  if (NVQGen3JESUp_branch != 0) NVQGen3JESUp();
+  if (NVQGen4JESUp_branch != 0) NVQGen4JESUp();
   if (NiFJJESUp_branch != 0) NiFJJESUp();
   if (iFJ0JESUp_branch != 0) iFJ0JESUp();
   if (iFJ1JESUp_branch != 0) iFJ1JESUp();
@@ -14513,6 +15468,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2JESDn_branch != 0) NLGen2JESDn();
   if (NLGen3JESDn_branch != 0) NLGen3JESDn();
   if (NLGen4JESDn_branch != 0) NLGen4JESDn();
+  if (NVQGen0JESDn_branch != 0) NVQGen0JESDn();
+  if (NVQGen1JESDn_branch != 0) NVQGen1JESDn();
+  if (NVQGen2JESDn_branch != 0) NVQGen2JESDn();
+  if (NVQGen3JESDn_branch != 0) NVQGen3JESDn();
+  if (NVQGen4JESDn_branch != 0) NVQGen4JESDn();
   if (NiFJJESDn_branch != 0) NiFJJESDn();
   if (iFJ0JESDn_branch != 0) iFJ0JESDn();
   if (iFJ1JESDn_branch != 0) iFJ1JESDn();
@@ -14588,6 +15548,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2JERUp_branch != 0) NLGen2JERUp();
   if (NLGen3JERUp_branch != 0) NLGen3JERUp();
   if (NLGen4JERUp_branch != 0) NLGen4JERUp();
+  if (NVQGen0JERUp_branch != 0) NVQGen0JERUp();
+  if (NVQGen1JERUp_branch != 0) NVQGen1JERUp();
+  if (NVQGen2JERUp_branch != 0) NVQGen2JERUp();
+  if (NVQGen3JERUp_branch != 0) NVQGen3JERUp();
+  if (NVQGen4JERUp_branch != 0) NVQGen4JERUp();
   if (NiFJJERUp_branch != 0) NiFJJERUp();
   if (iFJ0JERUp_branch != 0) iFJ0JERUp();
   if (iFJ1JERUp_branch != 0) iFJ1JERUp();
@@ -14663,6 +15628,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2JERDn_branch != 0) NLGen2JERDn();
   if (NLGen3JERDn_branch != 0) NLGen3JERDn();
   if (NLGen4JERDn_branch != 0) NLGen4JERDn();
+  if (NVQGen0JERDn_branch != 0) NVQGen0JERDn();
+  if (NVQGen1JERDn_branch != 0) NVQGen1JERDn();
+  if (NVQGen2JERDn_branch != 0) NVQGen2JERDn();
+  if (NVQGen3JERDn_branch != 0) NVQGen3JERDn();
+  if (NVQGen4JERDn_branch != 0) NVQGen4JERDn();
   if (NiFJJERDn_branch != 0) NiFJJERDn();
   if (iFJ0JERDn_branch != 0) iFJ0JERDn();
   if (iFJ1JERDn_branch != 0) iFJ1JERDn();
@@ -14738,6 +15708,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2JMSUp_branch != 0) NLGen2JMSUp();
   if (NLGen3JMSUp_branch != 0) NLGen3JMSUp();
   if (NLGen4JMSUp_branch != 0) NLGen4JMSUp();
+  if (NVQGen0JMSUp_branch != 0) NVQGen0JMSUp();
+  if (NVQGen1JMSUp_branch != 0) NVQGen1JMSUp();
+  if (NVQGen2JMSUp_branch != 0) NVQGen2JMSUp();
+  if (NVQGen3JMSUp_branch != 0) NVQGen3JMSUp();
+  if (NVQGen4JMSUp_branch != 0) NVQGen4JMSUp();
   if (NiFJJMSUp_branch != 0) NiFJJMSUp();
   if (iFJ0JMSUp_branch != 0) iFJ0JMSUp();
   if (iFJ1JMSUp_branch != 0) iFJ1JMSUp();
@@ -14813,6 +15788,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2JMSDn_branch != 0) NLGen2JMSDn();
   if (NLGen3JMSDn_branch != 0) NLGen3JMSDn();
   if (NLGen4JMSDn_branch != 0) NLGen4JMSDn();
+  if (NVQGen0JMSDn_branch != 0) NVQGen0JMSDn();
+  if (NVQGen1JMSDn_branch != 0) NVQGen1JMSDn();
+  if (NVQGen2JMSDn_branch != 0) NVQGen2JMSDn();
+  if (NVQGen3JMSDn_branch != 0) NVQGen3JMSDn();
+  if (NVQGen4JMSDn_branch != 0) NVQGen4JMSDn();
   if (NiFJJMSDn_branch != 0) NiFJJMSDn();
   if (iFJ0JMSDn_branch != 0) iFJ0JMSDn();
   if (iFJ1JMSDn_branch != 0) iFJ1JMSDn();
@@ -14888,6 +15868,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2JMRUp_branch != 0) NLGen2JMRUp();
   if (NLGen3JMRUp_branch != 0) NLGen3JMRUp();
   if (NLGen4JMRUp_branch != 0) NLGen4JMRUp();
+  if (NVQGen0JMRUp_branch != 0) NVQGen0JMRUp();
+  if (NVQGen1JMRUp_branch != 0) NVQGen1JMRUp();
+  if (NVQGen2JMRUp_branch != 0) NVQGen2JMRUp();
+  if (NVQGen3JMRUp_branch != 0) NVQGen3JMRUp();
+  if (NVQGen4JMRUp_branch != 0) NVQGen4JMRUp();
   if (NiFJJMRUp_branch != 0) NiFJJMRUp();
   if (iFJ0JMRUp_branch != 0) iFJ0JMRUp();
   if (iFJ1JMRUp_branch != 0) iFJ1JMRUp();
@@ -14963,6 +15948,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2JMRDn_branch != 0) NLGen2JMRDn();
   if (NLGen3JMRDn_branch != 0) NLGen3JMRDn();
   if (NLGen4JMRDn_branch != 0) NLGen4JMRDn();
+  if (NVQGen0JMRDn_branch != 0) NVQGen0JMRDn();
+  if (NVQGen1JMRDn_branch != 0) NVQGen1JMRDn();
+  if (NVQGen2JMRDn_branch != 0) NVQGen2JMRDn();
+  if (NVQGen3JMRDn_branch != 0) NVQGen3JMRDn();
+  if (NVQGen4JMRDn_branch != 0) NVQGen4JMRDn();
   if (NiFJJMRDn_branch != 0) NiFJJMRDn();
   if (iFJ0JMRDn_branch != 0) iFJ0JMRDn();
   if (iFJ1JMRDn_branch != 0) iFJ1JMRDn();
@@ -15038,6 +16028,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesAbsoluteStatup_branch != 0) NLGen2jesAbsoluteStatup();
   if (NLGen3jesAbsoluteStatup_branch != 0) NLGen3jesAbsoluteStatup();
   if (NLGen4jesAbsoluteStatup_branch != 0) NLGen4jesAbsoluteStatup();
+  if (NVQGen0jesAbsoluteStatup_branch != 0) NVQGen0jesAbsoluteStatup();
+  if (NVQGen1jesAbsoluteStatup_branch != 0) NVQGen1jesAbsoluteStatup();
+  if (NVQGen2jesAbsoluteStatup_branch != 0) NVQGen2jesAbsoluteStatup();
+  if (NVQGen3jesAbsoluteStatup_branch != 0) NVQGen3jesAbsoluteStatup();
+  if (NVQGen4jesAbsoluteStatup_branch != 0) NVQGen4jesAbsoluteStatup();
   if (NiFJjesAbsoluteStatup_branch != 0) NiFJjesAbsoluteStatup();
   if (iFJ0jesAbsoluteStatup_branch != 0) iFJ0jesAbsoluteStatup();
   if (iFJ1jesAbsoluteStatup_branch != 0) iFJ1jesAbsoluteStatup();
@@ -15113,6 +16108,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesAbsoluteStatdn_branch != 0) NLGen2jesAbsoluteStatdn();
   if (NLGen3jesAbsoluteStatdn_branch != 0) NLGen3jesAbsoluteStatdn();
   if (NLGen4jesAbsoluteStatdn_branch != 0) NLGen4jesAbsoluteStatdn();
+  if (NVQGen0jesAbsoluteStatdn_branch != 0) NVQGen0jesAbsoluteStatdn();
+  if (NVQGen1jesAbsoluteStatdn_branch != 0) NVQGen1jesAbsoluteStatdn();
+  if (NVQGen2jesAbsoluteStatdn_branch != 0) NVQGen2jesAbsoluteStatdn();
+  if (NVQGen3jesAbsoluteStatdn_branch != 0) NVQGen3jesAbsoluteStatdn();
+  if (NVQGen4jesAbsoluteStatdn_branch != 0) NVQGen4jesAbsoluteStatdn();
   if (NiFJjesAbsoluteStatdn_branch != 0) NiFJjesAbsoluteStatdn();
   if (iFJ0jesAbsoluteStatdn_branch != 0) iFJ0jesAbsoluteStatdn();
   if (iFJ1jesAbsoluteStatdn_branch != 0) iFJ1jesAbsoluteStatdn();
@@ -15188,6 +16188,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesAbsoluteScaleup_branch != 0) NLGen2jesAbsoluteScaleup();
   if (NLGen3jesAbsoluteScaleup_branch != 0) NLGen3jesAbsoluteScaleup();
   if (NLGen4jesAbsoluteScaleup_branch != 0) NLGen4jesAbsoluteScaleup();
+  if (NVQGen0jesAbsoluteScaleup_branch != 0) NVQGen0jesAbsoluteScaleup();
+  if (NVQGen1jesAbsoluteScaleup_branch != 0) NVQGen1jesAbsoluteScaleup();
+  if (NVQGen2jesAbsoluteScaleup_branch != 0) NVQGen2jesAbsoluteScaleup();
+  if (NVQGen3jesAbsoluteScaleup_branch != 0) NVQGen3jesAbsoluteScaleup();
+  if (NVQGen4jesAbsoluteScaleup_branch != 0) NVQGen4jesAbsoluteScaleup();
   if (NiFJjesAbsoluteScaleup_branch != 0) NiFJjesAbsoluteScaleup();
   if (iFJ0jesAbsoluteScaleup_branch != 0) iFJ0jesAbsoluteScaleup();
   if (iFJ1jesAbsoluteScaleup_branch != 0) iFJ1jesAbsoluteScaleup();
@@ -15263,6 +16268,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesAbsoluteScaledn_branch != 0) NLGen2jesAbsoluteScaledn();
   if (NLGen3jesAbsoluteScaledn_branch != 0) NLGen3jesAbsoluteScaledn();
   if (NLGen4jesAbsoluteScaledn_branch != 0) NLGen4jesAbsoluteScaledn();
+  if (NVQGen0jesAbsoluteScaledn_branch != 0) NVQGen0jesAbsoluteScaledn();
+  if (NVQGen1jesAbsoluteScaledn_branch != 0) NVQGen1jesAbsoluteScaledn();
+  if (NVQGen2jesAbsoluteScaledn_branch != 0) NVQGen2jesAbsoluteScaledn();
+  if (NVQGen3jesAbsoluteScaledn_branch != 0) NVQGen3jesAbsoluteScaledn();
+  if (NVQGen4jesAbsoluteScaledn_branch != 0) NVQGen4jesAbsoluteScaledn();
   if (NiFJjesAbsoluteScaledn_branch != 0) NiFJjesAbsoluteScaledn();
   if (iFJ0jesAbsoluteScaledn_branch != 0) iFJ0jesAbsoluteScaledn();
   if (iFJ1jesAbsoluteScaledn_branch != 0) iFJ1jesAbsoluteScaledn();
@@ -15338,6 +16348,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesAbsoluteMPFBiasup_branch != 0) NLGen2jesAbsoluteMPFBiasup();
   if (NLGen3jesAbsoluteMPFBiasup_branch != 0) NLGen3jesAbsoluteMPFBiasup();
   if (NLGen4jesAbsoluteMPFBiasup_branch != 0) NLGen4jesAbsoluteMPFBiasup();
+  if (NVQGen0jesAbsoluteMPFBiasup_branch != 0) NVQGen0jesAbsoluteMPFBiasup();
+  if (NVQGen1jesAbsoluteMPFBiasup_branch != 0) NVQGen1jesAbsoluteMPFBiasup();
+  if (NVQGen2jesAbsoluteMPFBiasup_branch != 0) NVQGen2jesAbsoluteMPFBiasup();
+  if (NVQGen3jesAbsoluteMPFBiasup_branch != 0) NVQGen3jesAbsoluteMPFBiasup();
+  if (NVQGen4jesAbsoluteMPFBiasup_branch != 0) NVQGen4jesAbsoluteMPFBiasup();
   if (NiFJjesAbsoluteMPFBiasup_branch != 0) NiFJjesAbsoluteMPFBiasup();
   if (iFJ0jesAbsoluteMPFBiasup_branch != 0) iFJ0jesAbsoluteMPFBiasup();
   if (iFJ1jesAbsoluteMPFBiasup_branch != 0) iFJ1jesAbsoluteMPFBiasup();
@@ -15413,6 +16428,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesAbsoluteMPFBiasdn_branch != 0) NLGen2jesAbsoluteMPFBiasdn();
   if (NLGen3jesAbsoluteMPFBiasdn_branch != 0) NLGen3jesAbsoluteMPFBiasdn();
   if (NLGen4jesAbsoluteMPFBiasdn_branch != 0) NLGen4jesAbsoluteMPFBiasdn();
+  if (NVQGen0jesAbsoluteMPFBiasdn_branch != 0) NVQGen0jesAbsoluteMPFBiasdn();
+  if (NVQGen1jesAbsoluteMPFBiasdn_branch != 0) NVQGen1jesAbsoluteMPFBiasdn();
+  if (NVQGen2jesAbsoluteMPFBiasdn_branch != 0) NVQGen2jesAbsoluteMPFBiasdn();
+  if (NVQGen3jesAbsoluteMPFBiasdn_branch != 0) NVQGen3jesAbsoluteMPFBiasdn();
+  if (NVQGen4jesAbsoluteMPFBiasdn_branch != 0) NVQGen4jesAbsoluteMPFBiasdn();
   if (NiFJjesAbsoluteMPFBiasdn_branch != 0) NiFJjesAbsoluteMPFBiasdn();
   if (iFJ0jesAbsoluteMPFBiasdn_branch != 0) iFJ0jesAbsoluteMPFBiasdn();
   if (iFJ1jesAbsoluteMPFBiasdn_branch != 0) iFJ1jesAbsoluteMPFBiasdn();
@@ -15488,6 +16508,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesFragmentationup_branch != 0) NLGen2jesFragmentationup();
   if (NLGen3jesFragmentationup_branch != 0) NLGen3jesFragmentationup();
   if (NLGen4jesFragmentationup_branch != 0) NLGen4jesFragmentationup();
+  if (NVQGen0jesFragmentationup_branch != 0) NVQGen0jesFragmentationup();
+  if (NVQGen1jesFragmentationup_branch != 0) NVQGen1jesFragmentationup();
+  if (NVQGen2jesFragmentationup_branch != 0) NVQGen2jesFragmentationup();
+  if (NVQGen3jesFragmentationup_branch != 0) NVQGen3jesFragmentationup();
+  if (NVQGen4jesFragmentationup_branch != 0) NVQGen4jesFragmentationup();
   if (NiFJjesFragmentationup_branch != 0) NiFJjesFragmentationup();
   if (iFJ0jesFragmentationup_branch != 0) iFJ0jesFragmentationup();
   if (iFJ1jesFragmentationup_branch != 0) iFJ1jesFragmentationup();
@@ -15563,6 +16588,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesFragmentationdn_branch != 0) NLGen2jesFragmentationdn();
   if (NLGen3jesFragmentationdn_branch != 0) NLGen3jesFragmentationdn();
   if (NLGen4jesFragmentationdn_branch != 0) NLGen4jesFragmentationdn();
+  if (NVQGen0jesFragmentationdn_branch != 0) NVQGen0jesFragmentationdn();
+  if (NVQGen1jesFragmentationdn_branch != 0) NVQGen1jesFragmentationdn();
+  if (NVQGen2jesFragmentationdn_branch != 0) NVQGen2jesFragmentationdn();
+  if (NVQGen3jesFragmentationdn_branch != 0) NVQGen3jesFragmentationdn();
+  if (NVQGen4jesFragmentationdn_branch != 0) NVQGen4jesFragmentationdn();
   if (NiFJjesFragmentationdn_branch != 0) NiFJjesFragmentationdn();
   if (iFJ0jesFragmentationdn_branch != 0) iFJ0jesFragmentationdn();
   if (iFJ1jesFragmentationdn_branch != 0) iFJ1jesFragmentationdn();
@@ -15638,6 +16668,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesSinglePionECALup_branch != 0) NLGen2jesSinglePionECALup();
   if (NLGen3jesSinglePionECALup_branch != 0) NLGen3jesSinglePionECALup();
   if (NLGen4jesSinglePionECALup_branch != 0) NLGen4jesSinglePionECALup();
+  if (NVQGen0jesSinglePionECALup_branch != 0) NVQGen0jesSinglePionECALup();
+  if (NVQGen1jesSinglePionECALup_branch != 0) NVQGen1jesSinglePionECALup();
+  if (NVQGen2jesSinglePionECALup_branch != 0) NVQGen2jesSinglePionECALup();
+  if (NVQGen3jesSinglePionECALup_branch != 0) NVQGen3jesSinglePionECALup();
+  if (NVQGen4jesSinglePionECALup_branch != 0) NVQGen4jesSinglePionECALup();
   if (NiFJjesSinglePionECALup_branch != 0) NiFJjesSinglePionECALup();
   if (iFJ0jesSinglePionECALup_branch != 0) iFJ0jesSinglePionECALup();
   if (iFJ1jesSinglePionECALup_branch != 0) iFJ1jesSinglePionECALup();
@@ -15713,6 +16748,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesSinglePionECALdn_branch != 0) NLGen2jesSinglePionECALdn();
   if (NLGen3jesSinglePionECALdn_branch != 0) NLGen3jesSinglePionECALdn();
   if (NLGen4jesSinglePionECALdn_branch != 0) NLGen4jesSinglePionECALdn();
+  if (NVQGen0jesSinglePionECALdn_branch != 0) NVQGen0jesSinglePionECALdn();
+  if (NVQGen1jesSinglePionECALdn_branch != 0) NVQGen1jesSinglePionECALdn();
+  if (NVQGen2jesSinglePionECALdn_branch != 0) NVQGen2jesSinglePionECALdn();
+  if (NVQGen3jesSinglePionECALdn_branch != 0) NVQGen3jesSinglePionECALdn();
+  if (NVQGen4jesSinglePionECALdn_branch != 0) NVQGen4jesSinglePionECALdn();
   if (NiFJjesSinglePionECALdn_branch != 0) NiFJjesSinglePionECALdn();
   if (iFJ0jesSinglePionECALdn_branch != 0) iFJ0jesSinglePionECALdn();
   if (iFJ1jesSinglePionECALdn_branch != 0) iFJ1jesSinglePionECALdn();
@@ -15788,6 +16828,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesSinglePionHCALup_branch != 0) NLGen2jesSinglePionHCALup();
   if (NLGen3jesSinglePionHCALup_branch != 0) NLGen3jesSinglePionHCALup();
   if (NLGen4jesSinglePionHCALup_branch != 0) NLGen4jesSinglePionHCALup();
+  if (NVQGen0jesSinglePionHCALup_branch != 0) NVQGen0jesSinglePionHCALup();
+  if (NVQGen1jesSinglePionHCALup_branch != 0) NVQGen1jesSinglePionHCALup();
+  if (NVQGen2jesSinglePionHCALup_branch != 0) NVQGen2jesSinglePionHCALup();
+  if (NVQGen3jesSinglePionHCALup_branch != 0) NVQGen3jesSinglePionHCALup();
+  if (NVQGen4jesSinglePionHCALup_branch != 0) NVQGen4jesSinglePionHCALup();
   if (NiFJjesSinglePionHCALup_branch != 0) NiFJjesSinglePionHCALup();
   if (iFJ0jesSinglePionHCALup_branch != 0) iFJ0jesSinglePionHCALup();
   if (iFJ1jesSinglePionHCALup_branch != 0) iFJ1jesSinglePionHCALup();
@@ -15863,6 +16908,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesSinglePionHCALdn_branch != 0) NLGen2jesSinglePionHCALdn();
   if (NLGen3jesSinglePionHCALdn_branch != 0) NLGen3jesSinglePionHCALdn();
   if (NLGen4jesSinglePionHCALdn_branch != 0) NLGen4jesSinglePionHCALdn();
+  if (NVQGen0jesSinglePionHCALdn_branch != 0) NVQGen0jesSinglePionHCALdn();
+  if (NVQGen1jesSinglePionHCALdn_branch != 0) NVQGen1jesSinglePionHCALdn();
+  if (NVQGen2jesSinglePionHCALdn_branch != 0) NVQGen2jesSinglePionHCALdn();
+  if (NVQGen3jesSinglePionHCALdn_branch != 0) NVQGen3jesSinglePionHCALdn();
+  if (NVQGen4jesSinglePionHCALdn_branch != 0) NVQGen4jesSinglePionHCALdn();
   if (NiFJjesSinglePionHCALdn_branch != 0) NiFJjesSinglePionHCALdn();
   if (iFJ0jesSinglePionHCALdn_branch != 0) iFJ0jesSinglePionHCALdn();
   if (iFJ1jesSinglePionHCALdn_branch != 0) iFJ1jesSinglePionHCALdn();
@@ -15938,6 +16988,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesFlavorQCDup_branch != 0) NLGen2jesFlavorQCDup();
   if (NLGen3jesFlavorQCDup_branch != 0) NLGen3jesFlavorQCDup();
   if (NLGen4jesFlavorQCDup_branch != 0) NLGen4jesFlavorQCDup();
+  if (NVQGen0jesFlavorQCDup_branch != 0) NVQGen0jesFlavorQCDup();
+  if (NVQGen1jesFlavorQCDup_branch != 0) NVQGen1jesFlavorQCDup();
+  if (NVQGen2jesFlavorQCDup_branch != 0) NVQGen2jesFlavorQCDup();
+  if (NVQGen3jesFlavorQCDup_branch != 0) NVQGen3jesFlavorQCDup();
+  if (NVQGen4jesFlavorQCDup_branch != 0) NVQGen4jesFlavorQCDup();
   if (NiFJjesFlavorQCDup_branch != 0) NiFJjesFlavorQCDup();
   if (iFJ0jesFlavorQCDup_branch != 0) iFJ0jesFlavorQCDup();
   if (iFJ1jesFlavorQCDup_branch != 0) iFJ1jesFlavorQCDup();
@@ -16013,6 +17068,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesFlavorQCDdn_branch != 0) NLGen2jesFlavorQCDdn();
   if (NLGen3jesFlavorQCDdn_branch != 0) NLGen3jesFlavorQCDdn();
   if (NLGen4jesFlavorQCDdn_branch != 0) NLGen4jesFlavorQCDdn();
+  if (NVQGen0jesFlavorQCDdn_branch != 0) NVQGen0jesFlavorQCDdn();
+  if (NVQGen1jesFlavorQCDdn_branch != 0) NVQGen1jesFlavorQCDdn();
+  if (NVQGen2jesFlavorQCDdn_branch != 0) NVQGen2jesFlavorQCDdn();
+  if (NVQGen3jesFlavorQCDdn_branch != 0) NVQGen3jesFlavorQCDdn();
+  if (NVQGen4jesFlavorQCDdn_branch != 0) NVQGen4jesFlavorQCDdn();
   if (NiFJjesFlavorQCDdn_branch != 0) NiFJjesFlavorQCDdn();
   if (iFJ0jesFlavorQCDdn_branch != 0) iFJ0jesFlavorQCDdn();
   if (iFJ1jesFlavorQCDdn_branch != 0) iFJ1jesFlavorQCDdn();
@@ -16088,6 +17148,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesTimePtEtaup_branch != 0) NLGen2jesTimePtEtaup();
   if (NLGen3jesTimePtEtaup_branch != 0) NLGen3jesTimePtEtaup();
   if (NLGen4jesTimePtEtaup_branch != 0) NLGen4jesTimePtEtaup();
+  if (NVQGen0jesTimePtEtaup_branch != 0) NVQGen0jesTimePtEtaup();
+  if (NVQGen1jesTimePtEtaup_branch != 0) NVQGen1jesTimePtEtaup();
+  if (NVQGen2jesTimePtEtaup_branch != 0) NVQGen2jesTimePtEtaup();
+  if (NVQGen3jesTimePtEtaup_branch != 0) NVQGen3jesTimePtEtaup();
+  if (NVQGen4jesTimePtEtaup_branch != 0) NVQGen4jesTimePtEtaup();
   if (NiFJjesTimePtEtaup_branch != 0) NiFJjesTimePtEtaup();
   if (iFJ0jesTimePtEtaup_branch != 0) iFJ0jesTimePtEtaup();
   if (iFJ1jesTimePtEtaup_branch != 0) iFJ1jesTimePtEtaup();
@@ -16163,6 +17228,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesTimePtEtadn_branch != 0) NLGen2jesTimePtEtadn();
   if (NLGen3jesTimePtEtadn_branch != 0) NLGen3jesTimePtEtadn();
   if (NLGen4jesTimePtEtadn_branch != 0) NLGen4jesTimePtEtadn();
+  if (NVQGen0jesTimePtEtadn_branch != 0) NVQGen0jesTimePtEtadn();
+  if (NVQGen1jesTimePtEtadn_branch != 0) NVQGen1jesTimePtEtadn();
+  if (NVQGen2jesTimePtEtadn_branch != 0) NVQGen2jesTimePtEtadn();
+  if (NVQGen3jesTimePtEtadn_branch != 0) NVQGen3jesTimePtEtadn();
+  if (NVQGen4jesTimePtEtadn_branch != 0) NVQGen4jesTimePtEtadn();
   if (NiFJjesTimePtEtadn_branch != 0) NiFJjesTimePtEtadn();
   if (iFJ0jesTimePtEtadn_branch != 0) iFJ0jesTimePtEtadn();
   if (iFJ1jesTimePtEtadn_branch != 0) iFJ1jesTimePtEtadn();
@@ -16238,6 +17308,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativeJEREC1up_branch != 0) NLGen2jesRelativeJEREC1up();
   if (NLGen3jesRelativeJEREC1up_branch != 0) NLGen3jesRelativeJEREC1up();
   if (NLGen4jesRelativeJEREC1up_branch != 0) NLGen4jesRelativeJEREC1up();
+  if (NVQGen0jesRelativeJEREC1up_branch != 0) NVQGen0jesRelativeJEREC1up();
+  if (NVQGen1jesRelativeJEREC1up_branch != 0) NVQGen1jesRelativeJEREC1up();
+  if (NVQGen2jesRelativeJEREC1up_branch != 0) NVQGen2jesRelativeJEREC1up();
+  if (NVQGen3jesRelativeJEREC1up_branch != 0) NVQGen3jesRelativeJEREC1up();
+  if (NVQGen4jesRelativeJEREC1up_branch != 0) NVQGen4jesRelativeJEREC1up();
   if (NiFJjesRelativeJEREC1up_branch != 0) NiFJjesRelativeJEREC1up();
   if (iFJ0jesRelativeJEREC1up_branch != 0) iFJ0jesRelativeJEREC1up();
   if (iFJ1jesRelativeJEREC1up_branch != 0) iFJ1jesRelativeJEREC1up();
@@ -16313,6 +17388,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativeJEREC1dn_branch != 0) NLGen2jesRelativeJEREC1dn();
   if (NLGen3jesRelativeJEREC1dn_branch != 0) NLGen3jesRelativeJEREC1dn();
   if (NLGen4jesRelativeJEREC1dn_branch != 0) NLGen4jesRelativeJEREC1dn();
+  if (NVQGen0jesRelativeJEREC1dn_branch != 0) NVQGen0jesRelativeJEREC1dn();
+  if (NVQGen1jesRelativeJEREC1dn_branch != 0) NVQGen1jesRelativeJEREC1dn();
+  if (NVQGen2jesRelativeJEREC1dn_branch != 0) NVQGen2jesRelativeJEREC1dn();
+  if (NVQGen3jesRelativeJEREC1dn_branch != 0) NVQGen3jesRelativeJEREC1dn();
+  if (NVQGen4jesRelativeJEREC1dn_branch != 0) NVQGen4jesRelativeJEREC1dn();
   if (NiFJjesRelativeJEREC1dn_branch != 0) NiFJjesRelativeJEREC1dn();
   if (iFJ0jesRelativeJEREC1dn_branch != 0) iFJ0jesRelativeJEREC1dn();
   if (iFJ1jesRelativeJEREC1dn_branch != 0) iFJ1jesRelativeJEREC1dn();
@@ -16388,6 +17468,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativeJEREC2up_branch != 0) NLGen2jesRelativeJEREC2up();
   if (NLGen3jesRelativeJEREC2up_branch != 0) NLGen3jesRelativeJEREC2up();
   if (NLGen4jesRelativeJEREC2up_branch != 0) NLGen4jesRelativeJEREC2up();
+  if (NVQGen0jesRelativeJEREC2up_branch != 0) NVQGen0jesRelativeJEREC2up();
+  if (NVQGen1jesRelativeJEREC2up_branch != 0) NVQGen1jesRelativeJEREC2up();
+  if (NVQGen2jesRelativeJEREC2up_branch != 0) NVQGen2jesRelativeJEREC2up();
+  if (NVQGen3jesRelativeJEREC2up_branch != 0) NVQGen3jesRelativeJEREC2up();
+  if (NVQGen4jesRelativeJEREC2up_branch != 0) NVQGen4jesRelativeJEREC2up();
   if (NiFJjesRelativeJEREC2up_branch != 0) NiFJjesRelativeJEREC2up();
   if (iFJ0jesRelativeJEREC2up_branch != 0) iFJ0jesRelativeJEREC2up();
   if (iFJ1jesRelativeJEREC2up_branch != 0) iFJ1jesRelativeJEREC2up();
@@ -16463,6 +17548,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativeJEREC2dn_branch != 0) NLGen2jesRelativeJEREC2dn();
   if (NLGen3jesRelativeJEREC2dn_branch != 0) NLGen3jesRelativeJEREC2dn();
   if (NLGen4jesRelativeJEREC2dn_branch != 0) NLGen4jesRelativeJEREC2dn();
+  if (NVQGen0jesRelativeJEREC2dn_branch != 0) NVQGen0jesRelativeJEREC2dn();
+  if (NVQGen1jesRelativeJEREC2dn_branch != 0) NVQGen1jesRelativeJEREC2dn();
+  if (NVQGen2jesRelativeJEREC2dn_branch != 0) NVQGen2jesRelativeJEREC2dn();
+  if (NVQGen3jesRelativeJEREC2dn_branch != 0) NVQGen3jesRelativeJEREC2dn();
+  if (NVQGen4jesRelativeJEREC2dn_branch != 0) NVQGen4jesRelativeJEREC2dn();
   if (NiFJjesRelativeJEREC2dn_branch != 0) NiFJjesRelativeJEREC2dn();
   if (iFJ0jesRelativeJEREC2dn_branch != 0) iFJ0jesRelativeJEREC2dn();
   if (iFJ1jesRelativeJEREC2dn_branch != 0) iFJ1jesRelativeJEREC2dn();
@@ -16538,6 +17628,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativeJERHFup_branch != 0) NLGen2jesRelativeJERHFup();
   if (NLGen3jesRelativeJERHFup_branch != 0) NLGen3jesRelativeJERHFup();
   if (NLGen4jesRelativeJERHFup_branch != 0) NLGen4jesRelativeJERHFup();
+  if (NVQGen0jesRelativeJERHFup_branch != 0) NVQGen0jesRelativeJERHFup();
+  if (NVQGen1jesRelativeJERHFup_branch != 0) NVQGen1jesRelativeJERHFup();
+  if (NVQGen2jesRelativeJERHFup_branch != 0) NVQGen2jesRelativeJERHFup();
+  if (NVQGen3jesRelativeJERHFup_branch != 0) NVQGen3jesRelativeJERHFup();
+  if (NVQGen4jesRelativeJERHFup_branch != 0) NVQGen4jesRelativeJERHFup();
   if (NiFJjesRelativeJERHFup_branch != 0) NiFJjesRelativeJERHFup();
   if (iFJ0jesRelativeJERHFup_branch != 0) iFJ0jesRelativeJERHFup();
   if (iFJ1jesRelativeJERHFup_branch != 0) iFJ1jesRelativeJERHFup();
@@ -16613,6 +17708,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativeJERHFdn_branch != 0) NLGen2jesRelativeJERHFdn();
   if (NLGen3jesRelativeJERHFdn_branch != 0) NLGen3jesRelativeJERHFdn();
   if (NLGen4jesRelativeJERHFdn_branch != 0) NLGen4jesRelativeJERHFdn();
+  if (NVQGen0jesRelativeJERHFdn_branch != 0) NVQGen0jesRelativeJERHFdn();
+  if (NVQGen1jesRelativeJERHFdn_branch != 0) NVQGen1jesRelativeJERHFdn();
+  if (NVQGen2jesRelativeJERHFdn_branch != 0) NVQGen2jesRelativeJERHFdn();
+  if (NVQGen3jesRelativeJERHFdn_branch != 0) NVQGen3jesRelativeJERHFdn();
+  if (NVQGen4jesRelativeJERHFdn_branch != 0) NVQGen4jesRelativeJERHFdn();
   if (NiFJjesRelativeJERHFdn_branch != 0) NiFJjesRelativeJERHFdn();
   if (iFJ0jesRelativeJERHFdn_branch != 0) iFJ0jesRelativeJERHFdn();
   if (iFJ1jesRelativeJERHFdn_branch != 0) iFJ1jesRelativeJERHFdn();
@@ -16688,6 +17788,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativePtBBup_branch != 0) NLGen2jesRelativePtBBup();
   if (NLGen3jesRelativePtBBup_branch != 0) NLGen3jesRelativePtBBup();
   if (NLGen4jesRelativePtBBup_branch != 0) NLGen4jesRelativePtBBup();
+  if (NVQGen0jesRelativePtBBup_branch != 0) NVQGen0jesRelativePtBBup();
+  if (NVQGen1jesRelativePtBBup_branch != 0) NVQGen1jesRelativePtBBup();
+  if (NVQGen2jesRelativePtBBup_branch != 0) NVQGen2jesRelativePtBBup();
+  if (NVQGen3jesRelativePtBBup_branch != 0) NVQGen3jesRelativePtBBup();
+  if (NVQGen4jesRelativePtBBup_branch != 0) NVQGen4jesRelativePtBBup();
   if (NiFJjesRelativePtBBup_branch != 0) NiFJjesRelativePtBBup();
   if (iFJ0jesRelativePtBBup_branch != 0) iFJ0jesRelativePtBBup();
   if (iFJ1jesRelativePtBBup_branch != 0) iFJ1jesRelativePtBBup();
@@ -16763,6 +17868,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativePtBBdn_branch != 0) NLGen2jesRelativePtBBdn();
   if (NLGen3jesRelativePtBBdn_branch != 0) NLGen3jesRelativePtBBdn();
   if (NLGen4jesRelativePtBBdn_branch != 0) NLGen4jesRelativePtBBdn();
+  if (NVQGen0jesRelativePtBBdn_branch != 0) NVQGen0jesRelativePtBBdn();
+  if (NVQGen1jesRelativePtBBdn_branch != 0) NVQGen1jesRelativePtBBdn();
+  if (NVQGen2jesRelativePtBBdn_branch != 0) NVQGen2jesRelativePtBBdn();
+  if (NVQGen3jesRelativePtBBdn_branch != 0) NVQGen3jesRelativePtBBdn();
+  if (NVQGen4jesRelativePtBBdn_branch != 0) NVQGen4jesRelativePtBBdn();
   if (NiFJjesRelativePtBBdn_branch != 0) NiFJjesRelativePtBBdn();
   if (iFJ0jesRelativePtBBdn_branch != 0) iFJ0jesRelativePtBBdn();
   if (iFJ1jesRelativePtBBdn_branch != 0) iFJ1jesRelativePtBBdn();
@@ -16838,6 +17948,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativePtEC1up_branch != 0) NLGen2jesRelativePtEC1up();
   if (NLGen3jesRelativePtEC1up_branch != 0) NLGen3jesRelativePtEC1up();
   if (NLGen4jesRelativePtEC1up_branch != 0) NLGen4jesRelativePtEC1up();
+  if (NVQGen0jesRelativePtEC1up_branch != 0) NVQGen0jesRelativePtEC1up();
+  if (NVQGen1jesRelativePtEC1up_branch != 0) NVQGen1jesRelativePtEC1up();
+  if (NVQGen2jesRelativePtEC1up_branch != 0) NVQGen2jesRelativePtEC1up();
+  if (NVQGen3jesRelativePtEC1up_branch != 0) NVQGen3jesRelativePtEC1up();
+  if (NVQGen4jesRelativePtEC1up_branch != 0) NVQGen4jesRelativePtEC1up();
   if (NiFJjesRelativePtEC1up_branch != 0) NiFJjesRelativePtEC1up();
   if (iFJ0jesRelativePtEC1up_branch != 0) iFJ0jesRelativePtEC1up();
   if (iFJ1jesRelativePtEC1up_branch != 0) iFJ1jesRelativePtEC1up();
@@ -16913,6 +18028,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativePtEC1dn_branch != 0) NLGen2jesRelativePtEC1dn();
   if (NLGen3jesRelativePtEC1dn_branch != 0) NLGen3jesRelativePtEC1dn();
   if (NLGen4jesRelativePtEC1dn_branch != 0) NLGen4jesRelativePtEC1dn();
+  if (NVQGen0jesRelativePtEC1dn_branch != 0) NVQGen0jesRelativePtEC1dn();
+  if (NVQGen1jesRelativePtEC1dn_branch != 0) NVQGen1jesRelativePtEC1dn();
+  if (NVQGen2jesRelativePtEC1dn_branch != 0) NVQGen2jesRelativePtEC1dn();
+  if (NVQGen3jesRelativePtEC1dn_branch != 0) NVQGen3jesRelativePtEC1dn();
+  if (NVQGen4jesRelativePtEC1dn_branch != 0) NVQGen4jesRelativePtEC1dn();
   if (NiFJjesRelativePtEC1dn_branch != 0) NiFJjesRelativePtEC1dn();
   if (iFJ0jesRelativePtEC1dn_branch != 0) iFJ0jesRelativePtEC1dn();
   if (iFJ1jesRelativePtEC1dn_branch != 0) iFJ1jesRelativePtEC1dn();
@@ -16988,6 +18108,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativePtEC2up_branch != 0) NLGen2jesRelativePtEC2up();
   if (NLGen3jesRelativePtEC2up_branch != 0) NLGen3jesRelativePtEC2up();
   if (NLGen4jesRelativePtEC2up_branch != 0) NLGen4jesRelativePtEC2up();
+  if (NVQGen0jesRelativePtEC2up_branch != 0) NVQGen0jesRelativePtEC2up();
+  if (NVQGen1jesRelativePtEC2up_branch != 0) NVQGen1jesRelativePtEC2up();
+  if (NVQGen2jesRelativePtEC2up_branch != 0) NVQGen2jesRelativePtEC2up();
+  if (NVQGen3jesRelativePtEC2up_branch != 0) NVQGen3jesRelativePtEC2up();
+  if (NVQGen4jesRelativePtEC2up_branch != 0) NVQGen4jesRelativePtEC2up();
   if (NiFJjesRelativePtEC2up_branch != 0) NiFJjesRelativePtEC2up();
   if (iFJ0jesRelativePtEC2up_branch != 0) iFJ0jesRelativePtEC2up();
   if (iFJ1jesRelativePtEC2up_branch != 0) iFJ1jesRelativePtEC2up();
@@ -17063,6 +18188,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativePtEC2dn_branch != 0) NLGen2jesRelativePtEC2dn();
   if (NLGen3jesRelativePtEC2dn_branch != 0) NLGen3jesRelativePtEC2dn();
   if (NLGen4jesRelativePtEC2dn_branch != 0) NLGen4jesRelativePtEC2dn();
+  if (NVQGen0jesRelativePtEC2dn_branch != 0) NVQGen0jesRelativePtEC2dn();
+  if (NVQGen1jesRelativePtEC2dn_branch != 0) NVQGen1jesRelativePtEC2dn();
+  if (NVQGen2jesRelativePtEC2dn_branch != 0) NVQGen2jesRelativePtEC2dn();
+  if (NVQGen3jesRelativePtEC2dn_branch != 0) NVQGen3jesRelativePtEC2dn();
+  if (NVQGen4jesRelativePtEC2dn_branch != 0) NVQGen4jesRelativePtEC2dn();
   if (NiFJjesRelativePtEC2dn_branch != 0) NiFJjesRelativePtEC2dn();
   if (iFJ0jesRelativePtEC2dn_branch != 0) iFJ0jesRelativePtEC2dn();
   if (iFJ1jesRelativePtEC2dn_branch != 0) iFJ1jesRelativePtEC2dn();
@@ -17138,6 +18268,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativePtHFup_branch != 0) NLGen2jesRelativePtHFup();
   if (NLGen3jesRelativePtHFup_branch != 0) NLGen3jesRelativePtHFup();
   if (NLGen4jesRelativePtHFup_branch != 0) NLGen4jesRelativePtHFup();
+  if (NVQGen0jesRelativePtHFup_branch != 0) NVQGen0jesRelativePtHFup();
+  if (NVQGen1jesRelativePtHFup_branch != 0) NVQGen1jesRelativePtHFup();
+  if (NVQGen2jesRelativePtHFup_branch != 0) NVQGen2jesRelativePtHFup();
+  if (NVQGen3jesRelativePtHFup_branch != 0) NVQGen3jesRelativePtHFup();
+  if (NVQGen4jesRelativePtHFup_branch != 0) NVQGen4jesRelativePtHFup();
   if (NiFJjesRelativePtHFup_branch != 0) NiFJjesRelativePtHFup();
   if (iFJ0jesRelativePtHFup_branch != 0) iFJ0jesRelativePtHFup();
   if (iFJ1jesRelativePtHFup_branch != 0) iFJ1jesRelativePtHFup();
@@ -17213,6 +18348,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativePtHFdn_branch != 0) NLGen2jesRelativePtHFdn();
   if (NLGen3jesRelativePtHFdn_branch != 0) NLGen3jesRelativePtHFdn();
   if (NLGen4jesRelativePtHFdn_branch != 0) NLGen4jesRelativePtHFdn();
+  if (NVQGen0jesRelativePtHFdn_branch != 0) NVQGen0jesRelativePtHFdn();
+  if (NVQGen1jesRelativePtHFdn_branch != 0) NVQGen1jesRelativePtHFdn();
+  if (NVQGen2jesRelativePtHFdn_branch != 0) NVQGen2jesRelativePtHFdn();
+  if (NVQGen3jesRelativePtHFdn_branch != 0) NVQGen3jesRelativePtHFdn();
+  if (NVQGen4jesRelativePtHFdn_branch != 0) NVQGen4jesRelativePtHFdn();
   if (NiFJjesRelativePtHFdn_branch != 0) NiFJjesRelativePtHFdn();
   if (iFJ0jesRelativePtHFdn_branch != 0) iFJ0jesRelativePtHFdn();
   if (iFJ1jesRelativePtHFdn_branch != 0) iFJ1jesRelativePtHFdn();
@@ -17288,6 +18428,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativeBalup_branch != 0) NLGen2jesRelativeBalup();
   if (NLGen3jesRelativeBalup_branch != 0) NLGen3jesRelativeBalup();
   if (NLGen4jesRelativeBalup_branch != 0) NLGen4jesRelativeBalup();
+  if (NVQGen0jesRelativeBalup_branch != 0) NVQGen0jesRelativeBalup();
+  if (NVQGen1jesRelativeBalup_branch != 0) NVQGen1jesRelativeBalup();
+  if (NVQGen2jesRelativeBalup_branch != 0) NVQGen2jesRelativeBalup();
+  if (NVQGen3jesRelativeBalup_branch != 0) NVQGen3jesRelativeBalup();
+  if (NVQGen4jesRelativeBalup_branch != 0) NVQGen4jesRelativeBalup();
   if (NiFJjesRelativeBalup_branch != 0) NiFJjesRelativeBalup();
   if (iFJ0jesRelativeBalup_branch != 0) iFJ0jesRelativeBalup();
   if (iFJ1jesRelativeBalup_branch != 0) iFJ1jesRelativeBalup();
@@ -17363,6 +18508,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativeBaldn_branch != 0) NLGen2jesRelativeBaldn();
   if (NLGen3jesRelativeBaldn_branch != 0) NLGen3jesRelativeBaldn();
   if (NLGen4jesRelativeBaldn_branch != 0) NLGen4jesRelativeBaldn();
+  if (NVQGen0jesRelativeBaldn_branch != 0) NVQGen0jesRelativeBaldn();
+  if (NVQGen1jesRelativeBaldn_branch != 0) NVQGen1jesRelativeBaldn();
+  if (NVQGen2jesRelativeBaldn_branch != 0) NVQGen2jesRelativeBaldn();
+  if (NVQGen3jesRelativeBaldn_branch != 0) NVQGen3jesRelativeBaldn();
+  if (NVQGen4jesRelativeBaldn_branch != 0) NVQGen4jesRelativeBaldn();
   if (NiFJjesRelativeBaldn_branch != 0) NiFJjesRelativeBaldn();
   if (iFJ0jesRelativeBaldn_branch != 0) iFJ0jesRelativeBaldn();
   if (iFJ1jesRelativeBaldn_branch != 0) iFJ1jesRelativeBaldn();
@@ -17438,6 +18588,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativeSampleup_branch != 0) NLGen2jesRelativeSampleup();
   if (NLGen3jesRelativeSampleup_branch != 0) NLGen3jesRelativeSampleup();
   if (NLGen4jesRelativeSampleup_branch != 0) NLGen4jesRelativeSampleup();
+  if (NVQGen0jesRelativeSampleup_branch != 0) NVQGen0jesRelativeSampleup();
+  if (NVQGen1jesRelativeSampleup_branch != 0) NVQGen1jesRelativeSampleup();
+  if (NVQGen2jesRelativeSampleup_branch != 0) NVQGen2jesRelativeSampleup();
+  if (NVQGen3jesRelativeSampleup_branch != 0) NVQGen3jesRelativeSampleup();
+  if (NVQGen4jesRelativeSampleup_branch != 0) NVQGen4jesRelativeSampleup();
   if (NiFJjesRelativeSampleup_branch != 0) NiFJjesRelativeSampleup();
   if (iFJ0jesRelativeSampleup_branch != 0) iFJ0jesRelativeSampleup();
   if (iFJ1jesRelativeSampleup_branch != 0) iFJ1jesRelativeSampleup();
@@ -17513,6 +18668,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativeSampledn_branch != 0) NLGen2jesRelativeSampledn();
   if (NLGen3jesRelativeSampledn_branch != 0) NLGen3jesRelativeSampledn();
   if (NLGen4jesRelativeSampledn_branch != 0) NLGen4jesRelativeSampledn();
+  if (NVQGen0jesRelativeSampledn_branch != 0) NVQGen0jesRelativeSampledn();
+  if (NVQGen1jesRelativeSampledn_branch != 0) NVQGen1jesRelativeSampledn();
+  if (NVQGen2jesRelativeSampledn_branch != 0) NVQGen2jesRelativeSampledn();
+  if (NVQGen3jesRelativeSampledn_branch != 0) NVQGen3jesRelativeSampledn();
+  if (NVQGen4jesRelativeSampledn_branch != 0) NVQGen4jesRelativeSampledn();
   if (NiFJjesRelativeSampledn_branch != 0) NiFJjesRelativeSampledn();
   if (iFJ0jesRelativeSampledn_branch != 0) iFJ0jesRelativeSampledn();
   if (iFJ1jesRelativeSampledn_branch != 0) iFJ1jesRelativeSampledn();
@@ -17588,6 +18748,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativeFSRup_branch != 0) NLGen2jesRelativeFSRup();
   if (NLGen3jesRelativeFSRup_branch != 0) NLGen3jesRelativeFSRup();
   if (NLGen4jesRelativeFSRup_branch != 0) NLGen4jesRelativeFSRup();
+  if (NVQGen0jesRelativeFSRup_branch != 0) NVQGen0jesRelativeFSRup();
+  if (NVQGen1jesRelativeFSRup_branch != 0) NVQGen1jesRelativeFSRup();
+  if (NVQGen2jesRelativeFSRup_branch != 0) NVQGen2jesRelativeFSRup();
+  if (NVQGen3jesRelativeFSRup_branch != 0) NVQGen3jesRelativeFSRup();
+  if (NVQGen4jesRelativeFSRup_branch != 0) NVQGen4jesRelativeFSRup();
   if (NiFJjesRelativeFSRup_branch != 0) NiFJjesRelativeFSRup();
   if (iFJ0jesRelativeFSRup_branch != 0) iFJ0jesRelativeFSRup();
   if (iFJ1jesRelativeFSRup_branch != 0) iFJ1jesRelativeFSRup();
@@ -17663,6 +18828,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativeFSRdn_branch != 0) NLGen2jesRelativeFSRdn();
   if (NLGen3jesRelativeFSRdn_branch != 0) NLGen3jesRelativeFSRdn();
   if (NLGen4jesRelativeFSRdn_branch != 0) NLGen4jesRelativeFSRdn();
+  if (NVQGen0jesRelativeFSRdn_branch != 0) NVQGen0jesRelativeFSRdn();
+  if (NVQGen1jesRelativeFSRdn_branch != 0) NVQGen1jesRelativeFSRdn();
+  if (NVQGen2jesRelativeFSRdn_branch != 0) NVQGen2jesRelativeFSRdn();
+  if (NVQGen3jesRelativeFSRdn_branch != 0) NVQGen3jesRelativeFSRdn();
+  if (NVQGen4jesRelativeFSRdn_branch != 0) NVQGen4jesRelativeFSRdn();
   if (NiFJjesRelativeFSRdn_branch != 0) NiFJjesRelativeFSRdn();
   if (iFJ0jesRelativeFSRdn_branch != 0) iFJ0jesRelativeFSRdn();
   if (iFJ1jesRelativeFSRdn_branch != 0) iFJ1jesRelativeFSRdn();
@@ -17738,6 +18908,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativeStatFSRup_branch != 0) NLGen2jesRelativeStatFSRup();
   if (NLGen3jesRelativeStatFSRup_branch != 0) NLGen3jesRelativeStatFSRup();
   if (NLGen4jesRelativeStatFSRup_branch != 0) NLGen4jesRelativeStatFSRup();
+  if (NVQGen0jesRelativeStatFSRup_branch != 0) NVQGen0jesRelativeStatFSRup();
+  if (NVQGen1jesRelativeStatFSRup_branch != 0) NVQGen1jesRelativeStatFSRup();
+  if (NVQGen2jesRelativeStatFSRup_branch != 0) NVQGen2jesRelativeStatFSRup();
+  if (NVQGen3jesRelativeStatFSRup_branch != 0) NVQGen3jesRelativeStatFSRup();
+  if (NVQGen4jesRelativeStatFSRup_branch != 0) NVQGen4jesRelativeStatFSRup();
   if (NiFJjesRelativeStatFSRup_branch != 0) NiFJjesRelativeStatFSRup();
   if (iFJ0jesRelativeStatFSRup_branch != 0) iFJ0jesRelativeStatFSRup();
   if (iFJ1jesRelativeStatFSRup_branch != 0) iFJ1jesRelativeStatFSRup();
@@ -17813,6 +18988,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativeStatFSRdn_branch != 0) NLGen2jesRelativeStatFSRdn();
   if (NLGen3jesRelativeStatFSRdn_branch != 0) NLGen3jesRelativeStatFSRdn();
   if (NLGen4jesRelativeStatFSRdn_branch != 0) NLGen4jesRelativeStatFSRdn();
+  if (NVQGen0jesRelativeStatFSRdn_branch != 0) NVQGen0jesRelativeStatFSRdn();
+  if (NVQGen1jesRelativeStatFSRdn_branch != 0) NVQGen1jesRelativeStatFSRdn();
+  if (NVQGen2jesRelativeStatFSRdn_branch != 0) NVQGen2jesRelativeStatFSRdn();
+  if (NVQGen3jesRelativeStatFSRdn_branch != 0) NVQGen3jesRelativeStatFSRdn();
+  if (NVQGen4jesRelativeStatFSRdn_branch != 0) NVQGen4jesRelativeStatFSRdn();
   if (NiFJjesRelativeStatFSRdn_branch != 0) NiFJjesRelativeStatFSRdn();
   if (iFJ0jesRelativeStatFSRdn_branch != 0) iFJ0jesRelativeStatFSRdn();
   if (iFJ1jesRelativeStatFSRdn_branch != 0) iFJ1jesRelativeStatFSRdn();
@@ -17888,6 +19068,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativeStatECup_branch != 0) NLGen2jesRelativeStatECup();
   if (NLGen3jesRelativeStatECup_branch != 0) NLGen3jesRelativeStatECup();
   if (NLGen4jesRelativeStatECup_branch != 0) NLGen4jesRelativeStatECup();
+  if (NVQGen0jesRelativeStatECup_branch != 0) NVQGen0jesRelativeStatECup();
+  if (NVQGen1jesRelativeStatECup_branch != 0) NVQGen1jesRelativeStatECup();
+  if (NVQGen2jesRelativeStatECup_branch != 0) NVQGen2jesRelativeStatECup();
+  if (NVQGen3jesRelativeStatECup_branch != 0) NVQGen3jesRelativeStatECup();
+  if (NVQGen4jesRelativeStatECup_branch != 0) NVQGen4jesRelativeStatECup();
   if (NiFJjesRelativeStatECup_branch != 0) NiFJjesRelativeStatECup();
   if (iFJ0jesRelativeStatECup_branch != 0) iFJ0jesRelativeStatECup();
   if (iFJ1jesRelativeStatECup_branch != 0) iFJ1jesRelativeStatECup();
@@ -17963,6 +19148,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativeStatECdn_branch != 0) NLGen2jesRelativeStatECdn();
   if (NLGen3jesRelativeStatECdn_branch != 0) NLGen3jesRelativeStatECdn();
   if (NLGen4jesRelativeStatECdn_branch != 0) NLGen4jesRelativeStatECdn();
+  if (NVQGen0jesRelativeStatECdn_branch != 0) NVQGen0jesRelativeStatECdn();
+  if (NVQGen1jesRelativeStatECdn_branch != 0) NVQGen1jesRelativeStatECdn();
+  if (NVQGen2jesRelativeStatECdn_branch != 0) NVQGen2jesRelativeStatECdn();
+  if (NVQGen3jesRelativeStatECdn_branch != 0) NVQGen3jesRelativeStatECdn();
+  if (NVQGen4jesRelativeStatECdn_branch != 0) NVQGen4jesRelativeStatECdn();
   if (NiFJjesRelativeStatECdn_branch != 0) NiFJjesRelativeStatECdn();
   if (iFJ0jesRelativeStatECdn_branch != 0) iFJ0jesRelativeStatECdn();
   if (iFJ1jesRelativeStatECdn_branch != 0) iFJ1jesRelativeStatECdn();
@@ -18038,6 +19228,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativeStatHFup_branch != 0) NLGen2jesRelativeStatHFup();
   if (NLGen3jesRelativeStatHFup_branch != 0) NLGen3jesRelativeStatHFup();
   if (NLGen4jesRelativeStatHFup_branch != 0) NLGen4jesRelativeStatHFup();
+  if (NVQGen0jesRelativeStatHFup_branch != 0) NVQGen0jesRelativeStatHFup();
+  if (NVQGen1jesRelativeStatHFup_branch != 0) NVQGen1jesRelativeStatHFup();
+  if (NVQGen2jesRelativeStatHFup_branch != 0) NVQGen2jesRelativeStatHFup();
+  if (NVQGen3jesRelativeStatHFup_branch != 0) NVQGen3jesRelativeStatHFup();
+  if (NVQGen4jesRelativeStatHFup_branch != 0) NVQGen4jesRelativeStatHFup();
   if (NiFJjesRelativeStatHFup_branch != 0) NiFJjesRelativeStatHFup();
   if (iFJ0jesRelativeStatHFup_branch != 0) iFJ0jesRelativeStatHFup();
   if (iFJ1jesRelativeStatHFup_branch != 0) iFJ1jesRelativeStatHFup();
@@ -18113,6 +19308,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesRelativeStatHFdn_branch != 0) NLGen2jesRelativeStatHFdn();
   if (NLGen3jesRelativeStatHFdn_branch != 0) NLGen3jesRelativeStatHFdn();
   if (NLGen4jesRelativeStatHFdn_branch != 0) NLGen4jesRelativeStatHFdn();
+  if (NVQGen0jesRelativeStatHFdn_branch != 0) NVQGen0jesRelativeStatHFdn();
+  if (NVQGen1jesRelativeStatHFdn_branch != 0) NVQGen1jesRelativeStatHFdn();
+  if (NVQGen2jesRelativeStatHFdn_branch != 0) NVQGen2jesRelativeStatHFdn();
+  if (NVQGen3jesRelativeStatHFdn_branch != 0) NVQGen3jesRelativeStatHFdn();
+  if (NVQGen4jesRelativeStatHFdn_branch != 0) NVQGen4jesRelativeStatHFdn();
   if (NiFJjesRelativeStatHFdn_branch != 0) NiFJjesRelativeStatHFdn();
   if (iFJ0jesRelativeStatHFdn_branch != 0) iFJ0jesRelativeStatHFdn();
   if (iFJ1jesRelativeStatHFdn_branch != 0) iFJ1jesRelativeStatHFdn();
@@ -18188,6 +19388,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesPileUpDataMCup_branch != 0) NLGen2jesPileUpDataMCup();
   if (NLGen3jesPileUpDataMCup_branch != 0) NLGen3jesPileUpDataMCup();
   if (NLGen4jesPileUpDataMCup_branch != 0) NLGen4jesPileUpDataMCup();
+  if (NVQGen0jesPileUpDataMCup_branch != 0) NVQGen0jesPileUpDataMCup();
+  if (NVQGen1jesPileUpDataMCup_branch != 0) NVQGen1jesPileUpDataMCup();
+  if (NVQGen2jesPileUpDataMCup_branch != 0) NVQGen2jesPileUpDataMCup();
+  if (NVQGen3jesPileUpDataMCup_branch != 0) NVQGen3jesPileUpDataMCup();
+  if (NVQGen4jesPileUpDataMCup_branch != 0) NVQGen4jesPileUpDataMCup();
   if (NiFJjesPileUpDataMCup_branch != 0) NiFJjesPileUpDataMCup();
   if (iFJ0jesPileUpDataMCup_branch != 0) iFJ0jesPileUpDataMCup();
   if (iFJ1jesPileUpDataMCup_branch != 0) iFJ1jesPileUpDataMCup();
@@ -18263,6 +19468,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesPileUpDataMCdn_branch != 0) NLGen2jesPileUpDataMCdn();
   if (NLGen3jesPileUpDataMCdn_branch != 0) NLGen3jesPileUpDataMCdn();
   if (NLGen4jesPileUpDataMCdn_branch != 0) NLGen4jesPileUpDataMCdn();
+  if (NVQGen0jesPileUpDataMCdn_branch != 0) NVQGen0jesPileUpDataMCdn();
+  if (NVQGen1jesPileUpDataMCdn_branch != 0) NVQGen1jesPileUpDataMCdn();
+  if (NVQGen2jesPileUpDataMCdn_branch != 0) NVQGen2jesPileUpDataMCdn();
+  if (NVQGen3jesPileUpDataMCdn_branch != 0) NVQGen3jesPileUpDataMCdn();
+  if (NVQGen4jesPileUpDataMCdn_branch != 0) NVQGen4jesPileUpDataMCdn();
   if (NiFJjesPileUpDataMCdn_branch != 0) NiFJjesPileUpDataMCdn();
   if (iFJ0jesPileUpDataMCdn_branch != 0) iFJ0jesPileUpDataMCdn();
   if (iFJ1jesPileUpDataMCdn_branch != 0) iFJ1jesPileUpDataMCdn();
@@ -18338,6 +19548,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesPileUpPtRefup_branch != 0) NLGen2jesPileUpPtRefup();
   if (NLGen3jesPileUpPtRefup_branch != 0) NLGen3jesPileUpPtRefup();
   if (NLGen4jesPileUpPtRefup_branch != 0) NLGen4jesPileUpPtRefup();
+  if (NVQGen0jesPileUpPtRefup_branch != 0) NVQGen0jesPileUpPtRefup();
+  if (NVQGen1jesPileUpPtRefup_branch != 0) NVQGen1jesPileUpPtRefup();
+  if (NVQGen2jesPileUpPtRefup_branch != 0) NVQGen2jesPileUpPtRefup();
+  if (NVQGen3jesPileUpPtRefup_branch != 0) NVQGen3jesPileUpPtRefup();
+  if (NVQGen4jesPileUpPtRefup_branch != 0) NVQGen4jesPileUpPtRefup();
   if (NiFJjesPileUpPtRefup_branch != 0) NiFJjesPileUpPtRefup();
   if (iFJ0jesPileUpPtRefup_branch != 0) iFJ0jesPileUpPtRefup();
   if (iFJ1jesPileUpPtRefup_branch != 0) iFJ1jesPileUpPtRefup();
@@ -18413,6 +19628,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesPileUpPtRefdn_branch != 0) NLGen2jesPileUpPtRefdn();
   if (NLGen3jesPileUpPtRefdn_branch != 0) NLGen3jesPileUpPtRefdn();
   if (NLGen4jesPileUpPtRefdn_branch != 0) NLGen4jesPileUpPtRefdn();
+  if (NVQGen0jesPileUpPtRefdn_branch != 0) NVQGen0jesPileUpPtRefdn();
+  if (NVQGen1jesPileUpPtRefdn_branch != 0) NVQGen1jesPileUpPtRefdn();
+  if (NVQGen2jesPileUpPtRefdn_branch != 0) NVQGen2jesPileUpPtRefdn();
+  if (NVQGen3jesPileUpPtRefdn_branch != 0) NVQGen3jesPileUpPtRefdn();
+  if (NVQGen4jesPileUpPtRefdn_branch != 0) NVQGen4jesPileUpPtRefdn();
   if (NiFJjesPileUpPtRefdn_branch != 0) NiFJjesPileUpPtRefdn();
   if (iFJ0jesPileUpPtRefdn_branch != 0) iFJ0jesPileUpPtRefdn();
   if (iFJ1jesPileUpPtRefdn_branch != 0) iFJ1jesPileUpPtRefdn();
@@ -18488,6 +19708,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesPileUpPtBBup_branch != 0) NLGen2jesPileUpPtBBup();
   if (NLGen3jesPileUpPtBBup_branch != 0) NLGen3jesPileUpPtBBup();
   if (NLGen4jesPileUpPtBBup_branch != 0) NLGen4jesPileUpPtBBup();
+  if (NVQGen0jesPileUpPtBBup_branch != 0) NVQGen0jesPileUpPtBBup();
+  if (NVQGen1jesPileUpPtBBup_branch != 0) NVQGen1jesPileUpPtBBup();
+  if (NVQGen2jesPileUpPtBBup_branch != 0) NVQGen2jesPileUpPtBBup();
+  if (NVQGen3jesPileUpPtBBup_branch != 0) NVQGen3jesPileUpPtBBup();
+  if (NVQGen4jesPileUpPtBBup_branch != 0) NVQGen4jesPileUpPtBBup();
   if (NiFJjesPileUpPtBBup_branch != 0) NiFJjesPileUpPtBBup();
   if (iFJ0jesPileUpPtBBup_branch != 0) iFJ0jesPileUpPtBBup();
   if (iFJ1jesPileUpPtBBup_branch != 0) iFJ1jesPileUpPtBBup();
@@ -18563,6 +19788,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesPileUpPtBBdn_branch != 0) NLGen2jesPileUpPtBBdn();
   if (NLGen3jesPileUpPtBBdn_branch != 0) NLGen3jesPileUpPtBBdn();
   if (NLGen4jesPileUpPtBBdn_branch != 0) NLGen4jesPileUpPtBBdn();
+  if (NVQGen0jesPileUpPtBBdn_branch != 0) NVQGen0jesPileUpPtBBdn();
+  if (NVQGen1jesPileUpPtBBdn_branch != 0) NVQGen1jesPileUpPtBBdn();
+  if (NVQGen2jesPileUpPtBBdn_branch != 0) NVQGen2jesPileUpPtBBdn();
+  if (NVQGen3jesPileUpPtBBdn_branch != 0) NVQGen3jesPileUpPtBBdn();
+  if (NVQGen4jesPileUpPtBBdn_branch != 0) NVQGen4jesPileUpPtBBdn();
   if (NiFJjesPileUpPtBBdn_branch != 0) NiFJjesPileUpPtBBdn();
   if (iFJ0jesPileUpPtBBdn_branch != 0) iFJ0jesPileUpPtBBdn();
   if (iFJ1jesPileUpPtBBdn_branch != 0) iFJ1jesPileUpPtBBdn();
@@ -18638,6 +19868,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesPileUpPtEC1up_branch != 0) NLGen2jesPileUpPtEC1up();
   if (NLGen3jesPileUpPtEC1up_branch != 0) NLGen3jesPileUpPtEC1up();
   if (NLGen4jesPileUpPtEC1up_branch != 0) NLGen4jesPileUpPtEC1up();
+  if (NVQGen0jesPileUpPtEC1up_branch != 0) NVQGen0jesPileUpPtEC1up();
+  if (NVQGen1jesPileUpPtEC1up_branch != 0) NVQGen1jesPileUpPtEC1up();
+  if (NVQGen2jesPileUpPtEC1up_branch != 0) NVQGen2jesPileUpPtEC1up();
+  if (NVQGen3jesPileUpPtEC1up_branch != 0) NVQGen3jesPileUpPtEC1up();
+  if (NVQGen4jesPileUpPtEC1up_branch != 0) NVQGen4jesPileUpPtEC1up();
   if (NiFJjesPileUpPtEC1up_branch != 0) NiFJjesPileUpPtEC1up();
   if (iFJ0jesPileUpPtEC1up_branch != 0) iFJ0jesPileUpPtEC1up();
   if (iFJ1jesPileUpPtEC1up_branch != 0) iFJ1jesPileUpPtEC1up();
@@ -18713,6 +19948,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesPileUpPtEC1dn_branch != 0) NLGen2jesPileUpPtEC1dn();
   if (NLGen3jesPileUpPtEC1dn_branch != 0) NLGen3jesPileUpPtEC1dn();
   if (NLGen4jesPileUpPtEC1dn_branch != 0) NLGen4jesPileUpPtEC1dn();
+  if (NVQGen0jesPileUpPtEC1dn_branch != 0) NVQGen0jesPileUpPtEC1dn();
+  if (NVQGen1jesPileUpPtEC1dn_branch != 0) NVQGen1jesPileUpPtEC1dn();
+  if (NVQGen2jesPileUpPtEC1dn_branch != 0) NVQGen2jesPileUpPtEC1dn();
+  if (NVQGen3jesPileUpPtEC1dn_branch != 0) NVQGen3jesPileUpPtEC1dn();
+  if (NVQGen4jesPileUpPtEC1dn_branch != 0) NVQGen4jesPileUpPtEC1dn();
   if (NiFJjesPileUpPtEC1dn_branch != 0) NiFJjesPileUpPtEC1dn();
   if (iFJ0jesPileUpPtEC1dn_branch != 0) iFJ0jesPileUpPtEC1dn();
   if (iFJ1jesPileUpPtEC1dn_branch != 0) iFJ1jesPileUpPtEC1dn();
@@ -18788,6 +20028,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesPileUpPtEC2up_branch != 0) NLGen2jesPileUpPtEC2up();
   if (NLGen3jesPileUpPtEC2up_branch != 0) NLGen3jesPileUpPtEC2up();
   if (NLGen4jesPileUpPtEC2up_branch != 0) NLGen4jesPileUpPtEC2up();
+  if (NVQGen0jesPileUpPtEC2up_branch != 0) NVQGen0jesPileUpPtEC2up();
+  if (NVQGen1jesPileUpPtEC2up_branch != 0) NVQGen1jesPileUpPtEC2up();
+  if (NVQGen2jesPileUpPtEC2up_branch != 0) NVQGen2jesPileUpPtEC2up();
+  if (NVQGen3jesPileUpPtEC2up_branch != 0) NVQGen3jesPileUpPtEC2up();
+  if (NVQGen4jesPileUpPtEC2up_branch != 0) NVQGen4jesPileUpPtEC2up();
   if (NiFJjesPileUpPtEC2up_branch != 0) NiFJjesPileUpPtEC2up();
   if (iFJ0jesPileUpPtEC2up_branch != 0) iFJ0jesPileUpPtEC2up();
   if (iFJ1jesPileUpPtEC2up_branch != 0) iFJ1jesPileUpPtEC2up();
@@ -18863,6 +20108,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesPileUpPtEC2dn_branch != 0) NLGen2jesPileUpPtEC2dn();
   if (NLGen3jesPileUpPtEC2dn_branch != 0) NLGen3jesPileUpPtEC2dn();
   if (NLGen4jesPileUpPtEC2dn_branch != 0) NLGen4jesPileUpPtEC2dn();
+  if (NVQGen0jesPileUpPtEC2dn_branch != 0) NVQGen0jesPileUpPtEC2dn();
+  if (NVQGen1jesPileUpPtEC2dn_branch != 0) NVQGen1jesPileUpPtEC2dn();
+  if (NVQGen2jesPileUpPtEC2dn_branch != 0) NVQGen2jesPileUpPtEC2dn();
+  if (NVQGen3jesPileUpPtEC2dn_branch != 0) NVQGen3jesPileUpPtEC2dn();
+  if (NVQGen4jesPileUpPtEC2dn_branch != 0) NVQGen4jesPileUpPtEC2dn();
   if (NiFJjesPileUpPtEC2dn_branch != 0) NiFJjesPileUpPtEC2dn();
   if (iFJ0jesPileUpPtEC2dn_branch != 0) iFJ0jesPileUpPtEC2dn();
   if (iFJ1jesPileUpPtEC2dn_branch != 0) iFJ1jesPileUpPtEC2dn();
@@ -18938,6 +20188,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesPileUpPtHFup_branch != 0) NLGen2jesPileUpPtHFup();
   if (NLGen3jesPileUpPtHFup_branch != 0) NLGen3jesPileUpPtHFup();
   if (NLGen4jesPileUpPtHFup_branch != 0) NLGen4jesPileUpPtHFup();
+  if (NVQGen0jesPileUpPtHFup_branch != 0) NVQGen0jesPileUpPtHFup();
+  if (NVQGen1jesPileUpPtHFup_branch != 0) NVQGen1jesPileUpPtHFup();
+  if (NVQGen2jesPileUpPtHFup_branch != 0) NVQGen2jesPileUpPtHFup();
+  if (NVQGen3jesPileUpPtHFup_branch != 0) NVQGen3jesPileUpPtHFup();
+  if (NVQGen4jesPileUpPtHFup_branch != 0) NVQGen4jesPileUpPtHFup();
   if (NiFJjesPileUpPtHFup_branch != 0) NiFJjesPileUpPtHFup();
   if (iFJ0jesPileUpPtHFup_branch != 0) iFJ0jesPileUpPtHFup();
   if (iFJ1jesPileUpPtHFup_branch != 0) iFJ1jesPileUpPtHFup();
@@ -19013,6 +20268,11 @@ void VVV0Tree::LoadAllBranches() {
   if (NLGen2jesPileUpPtHFdn_branch != 0) NLGen2jesPileUpPtHFdn();
   if (NLGen3jesPileUpPtHFdn_branch != 0) NLGen3jesPileUpPtHFdn();
   if (NLGen4jesPileUpPtHFdn_branch != 0) NLGen4jesPileUpPtHFdn();
+  if (NVQGen0jesPileUpPtHFdn_branch != 0) NVQGen0jesPileUpPtHFdn();
+  if (NVQGen1jesPileUpPtHFdn_branch != 0) NVQGen1jesPileUpPtHFdn();
+  if (NVQGen2jesPileUpPtHFdn_branch != 0) NVQGen2jesPileUpPtHFdn();
+  if (NVQGen3jesPileUpPtHFdn_branch != 0) NVQGen3jesPileUpPtHFdn();
+  if (NVQGen4jesPileUpPtHFdn_branch != 0) NVQGen4jesPileUpPtHFdn();
   if (NiFJjesPileUpPtHFdn_branch != 0) NiFJjesPileUpPtHFdn();
   if (iFJ0jesPileUpPtHFdn_branch != 0) iFJ0jesPileUpPtHFdn();
   if (iFJ1jesPileUpPtHFdn_branch != 0) iFJ1jesPileUpPtHFdn();
@@ -19822,6 +21082,71 @@ const int &VVV0Tree::NLGen4() {
     NLGen4_isLoaded = true;
   }
   return NLGen4_;
+}
+
+const int &VVV0Tree::NVQGen0() {
+  if (not NVQGen0_isLoaded) {
+    if (NVQGen0_branch != 0) {
+      NVQGen0_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0_isLoaded = true;
+  }
+  return NVQGen0_;
+}
+
+const int &VVV0Tree::NVQGen1() {
+  if (not NVQGen1_isLoaded) {
+    if (NVQGen1_branch != 0) {
+      NVQGen1_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1_isLoaded = true;
+  }
+  return NVQGen1_;
+}
+
+const int &VVV0Tree::NVQGen2() {
+  if (not NVQGen2_isLoaded) {
+    if (NVQGen2_branch != 0) {
+      NVQGen2_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2_isLoaded = true;
+  }
+  return NVQGen2_;
+}
+
+const int &VVV0Tree::NVQGen3() {
+  if (not NVQGen3_isLoaded) {
+    if (NVQGen3_branch != 0) {
+      NVQGen3_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3_isLoaded = true;
+  }
+  return NVQGen3_;
+}
+
+const int &VVV0Tree::NVQGen4() {
+  if (not NVQGen4_isLoaded) {
+    if (NVQGen4_branch != 0) {
+      NVQGen4_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4_isLoaded = true;
+  }
+  return NVQGen4_;
 }
 
 const int &VVV0Tree::NiFJ() {
@@ -20799,6 +22124,71 @@ const int &VVV0Tree::NLGen4JESUp() {
   return NLGen4JESUp_;
 }
 
+const int &VVV0Tree::NVQGen0JESUp() {
+  if (not NVQGen0JESUp_isLoaded) {
+    if (NVQGen0JESUp_branch != 0) {
+      NVQGen0JESUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0JESUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0JESUp_isLoaded = true;
+  }
+  return NVQGen0JESUp_;
+}
+
+const int &VVV0Tree::NVQGen1JESUp() {
+  if (not NVQGen1JESUp_isLoaded) {
+    if (NVQGen1JESUp_branch != 0) {
+      NVQGen1JESUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1JESUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1JESUp_isLoaded = true;
+  }
+  return NVQGen1JESUp_;
+}
+
+const int &VVV0Tree::NVQGen2JESUp() {
+  if (not NVQGen2JESUp_isLoaded) {
+    if (NVQGen2JESUp_branch != 0) {
+      NVQGen2JESUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2JESUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2JESUp_isLoaded = true;
+  }
+  return NVQGen2JESUp_;
+}
+
+const int &VVV0Tree::NVQGen3JESUp() {
+  if (not NVQGen3JESUp_isLoaded) {
+    if (NVQGen3JESUp_branch != 0) {
+      NVQGen3JESUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3JESUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3JESUp_isLoaded = true;
+  }
+  return NVQGen3JESUp_;
+}
+
+const int &VVV0Tree::NVQGen4JESUp() {
+  if (not NVQGen4JESUp_isLoaded) {
+    if (NVQGen4JESUp_branch != 0) {
+      NVQGen4JESUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4JESUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4JESUp_isLoaded = true;
+  }
+  return NVQGen4JESUp_;
+}
+
 const int &VVV0Tree::NiFJJESUp() {
   if (not NiFJJESUp_isLoaded) {
     if (NiFJJESUp_branch != 0) {
@@ -21772,6 +23162,71 @@ const int &VVV0Tree::NLGen4JESDn() {
     NLGen4JESDn_isLoaded = true;
   }
   return NLGen4JESDn_;
+}
+
+const int &VVV0Tree::NVQGen0JESDn() {
+  if (not NVQGen0JESDn_isLoaded) {
+    if (NVQGen0JESDn_branch != 0) {
+      NVQGen0JESDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0JESDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0JESDn_isLoaded = true;
+  }
+  return NVQGen0JESDn_;
+}
+
+const int &VVV0Tree::NVQGen1JESDn() {
+  if (not NVQGen1JESDn_isLoaded) {
+    if (NVQGen1JESDn_branch != 0) {
+      NVQGen1JESDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1JESDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1JESDn_isLoaded = true;
+  }
+  return NVQGen1JESDn_;
+}
+
+const int &VVV0Tree::NVQGen2JESDn() {
+  if (not NVQGen2JESDn_isLoaded) {
+    if (NVQGen2JESDn_branch != 0) {
+      NVQGen2JESDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2JESDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2JESDn_isLoaded = true;
+  }
+  return NVQGen2JESDn_;
+}
+
+const int &VVV0Tree::NVQGen3JESDn() {
+  if (not NVQGen3JESDn_isLoaded) {
+    if (NVQGen3JESDn_branch != 0) {
+      NVQGen3JESDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3JESDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3JESDn_isLoaded = true;
+  }
+  return NVQGen3JESDn_;
+}
+
+const int &VVV0Tree::NVQGen4JESDn() {
+  if (not NVQGen4JESDn_isLoaded) {
+    if (NVQGen4JESDn_branch != 0) {
+      NVQGen4JESDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4JESDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4JESDn_isLoaded = true;
+  }
+  return NVQGen4JESDn_;
 }
 
 const int &VVV0Tree::NiFJJESDn() {
@@ -22749,6 +24204,71 @@ const int &VVV0Tree::NLGen4JERUp() {
   return NLGen4JERUp_;
 }
 
+const int &VVV0Tree::NVQGen0JERUp() {
+  if (not NVQGen0JERUp_isLoaded) {
+    if (NVQGen0JERUp_branch != 0) {
+      NVQGen0JERUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0JERUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0JERUp_isLoaded = true;
+  }
+  return NVQGen0JERUp_;
+}
+
+const int &VVV0Tree::NVQGen1JERUp() {
+  if (not NVQGen1JERUp_isLoaded) {
+    if (NVQGen1JERUp_branch != 0) {
+      NVQGen1JERUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1JERUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1JERUp_isLoaded = true;
+  }
+  return NVQGen1JERUp_;
+}
+
+const int &VVV0Tree::NVQGen2JERUp() {
+  if (not NVQGen2JERUp_isLoaded) {
+    if (NVQGen2JERUp_branch != 0) {
+      NVQGen2JERUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2JERUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2JERUp_isLoaded = true;
+  }
+  return NVQGen2JERUp_;
+}
+
+const int &VVV0Tree::NVQGen3JERUp() {
+  if (not NVQGen3JERUp_isLoaded) {
+    if (NVQGen3JERUp_branch != 0) {
+      NVQGen3JERUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3JERUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3JERUp_isLoaded = true;
+  }
+  return NVQGen3JERUp_;
+}
+
+const int &VVV0Tree::NVQGen4JERUp() {
+  if (not NVQGen4JERUp_isLoaded) {
+    if (NVQGen4JERUp_branch != 0) {
+      NVQGen4JERUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4JERUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4JERUp_isLoaded = true;
+  }
+  return NVQGen4JERUp_;
+}
+
 const int &VVV0Tree::NiFJJERUp() {
   if (not NiFJJERUp_isLoaded) {
     if (NiFJJERUp_branch != 0) {
@@ -23722,6 +25242,71 @@ const int &VVV0Tree::NLGen4JERDn() {
     NLGen4JERDn_isLoaded = true;
   }
   return NLGen4JERDn_;
+}
+
+const int &VVV0Tree::NVQGen0JERDn() {
+  if (not NVQGen0JERDn_isLoaded) {
+    if (NVQGen0JERDn_branch != 0) {
+      NVQGen0JERDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0JERDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0JERDn_isLoaded = true;
+  }
+  return NVQGen0JERDn_;
+}
+
+const int &VVV0Tree::NVQGen1JERDn() {
+  if (not NVQGen1JERDn_isLoaded) {
+    if (NVQGen1JERDn_branch != 0) {
+      NVQGen1JERDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1JERDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1JERDn_isLoaded = true;
+  }
+  return NVQGen1JERDn_;
+}
+
+const int &VVV0Tree::NVQGen2JERDn() {
+  if (not NVQGen2JERDn_isLoaded) {
+    if (NVQGen2JERDn_branch != 0) {
+      NVQGen2JERDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2JERDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2JERDn_isLoaded = true;
+  }
+  return NVQGen2JERDn_;
+}
+
+const int &VVV0Tree::NVQGen3JERDn() {
+  if (not NVQGen3JERDn_isLoaded) {
+    if (NVQGen3JERDn_branch != 0) {
+      NVQGen3JERDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3JERDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3JERDn_isLoaded = true;
+  }
+  return NVQGen3JERDn_;
+}
+
+const int &VVV0Tree::NVQGen4JERDn() {
+  if (not NVQGen4JERDn_isLoaded) {
+    if (NVQGen4JERDn_branch != 0) {
+      NVQGen4JERDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4JERDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4JERDn_isLoaded = true;
+  }
+  return NVQGen4JERDn_;
 }
 
 const int &VVV0Tree::NiFJJERDn() {
@@ -24699,6 +26284,71 @@ const int &VVV0Tree::NLGen4JMSUp() {
   return NLGen4JMSUp_;
 }
 
+const int &VVV0Tree::NVQGen0JMSUp() {
+  if (not NVQGen0JMSUp_isLoaded) {
+    if (NVQGen0JMSUp_branch != 0) {
+      NVQGen0JMSUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0JMSUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0JMSUp_isLoaded = true;
+  }
+  return NVQGen0JMSUp_;
+}
+
+const int &VVV0Tree::NVQGen1JMSUp() {
+  if (not NVQGen1JMSUp_isLoaded) {
+    if (NVQGen1JMSUp_branch != 0) {
+      NVQGen1JMSUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1JMSUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1JMSUp_isLoaded = true;
+  }
+  return NVQGen1JMSUp_;
+}
+
+const int &VVV0Tree::NVQGen2JMSUp() {
+  if (not NVQGen2JMSUp_isLoaded) {
+    if (NVQGen2JMSUp_branch != 0) {
+      NVQGen2JMSUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2JMSUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2JMSUp_isLoaded = true;
+  }
+  return NVQGen2JMSUp_;
+}
+
+const int &VVV0Tree::NVQGen3JMSUp() {
+  if (not NVQGen3JMSUp_isLoaded) {
+    if (NVQGen3JMSUp_branch != 0) {
+      NVQGen3JMSUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3JMSUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3JMSUp_isLoaded = true;
+  }
+  return NVQGen3JMSUp_;
+}
+
+const int &VVV0Tree::NVQGen4JMSUp() {
+  if (not NVQGen4JMSUp_isLoaded) {
+    if (NVQGen4JMSUp_branch != 0) {
+      NVQGen4JMSUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4JMSUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4JMSUp_isLoaded = true;
+  }
+  return NVQGen4JMSUp_;
+}
+
 const int &VVV0Tree::NiFJJMSUp() {
   if (not NiFJJMSUp_isLoaded) {
     if (NiFJJMSUp_branch != 0) {
@@ -25672,6 +27322,71 @@ const int &VVV0Tree::NLGen4JMSDn() {
     NLGen4JMSDn_isLoaded = true;
   }
   return NLGen4JMSDn_;
+}
+
+const int &VVV0Tree::NVQGen0JMSDn() {
+  if (not NVQGen0JMSDn_isLoaded) {
+    if (NVQGen0JMSDn_branch != 0) {
+      NVQGen0JMSDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0JMSDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0JMSDn_isLoaded = true;
+  }
+  return NVQGen0JMSDn_;
+}
+
+const int &VVV0Tree::NVQGen1JMSDn() {
+  if (not NVQGen1JMSDn_isLoaded) {
+    if (NVQGen1JMSDn_branch != 0) {
+      NVQGen1JMSDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1JMSDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1JMSDn_isLoaded = true;
+  }
+  return NVQGen1JMSDn_;
+}
+
+const int &VVV0Tree::NVQGen2JMSDn() {
+  if (not NVQGen2JMSDn_isLoaded) {
+    if (NVQGen2JMSDn_branch != 0) {
+      NVQGen2JMSDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2JMSDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2JMSDn_isLoaded = true;
+  }
+  return NVQGen2JMSDn_;
+}
+
+const int &VVV0Tree::NVQGen3JMSDn() {
+  if (not NVQGen3JMSDn_isLoaded) {
+    if (NVQGen3JMSDn_branch != 0) {
+      NVQGen3JMSDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3JMSDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3JMSDn_isLoaded = true;
+  }
+  return NVQGen3JMSDn_;
+}
+
+const int &VVV0Tree::NVQGen4JMSDn() {
+  if (not NVQGen4JMSDn_isLoaded) {
+    if (NVQGen4JMSDn_branch != 0) {
+      NVQGen4JMSDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4JMSDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4JMSDn_isLoaded = true;
+  }
+  return NVQGen4JMSDn_;
 }
 
 const int &VVV0Tree::NiFJJMSDn() {
@@ -26649,6 +28364,71 @@ const int &VVV0Tree::NLGen4JMRUp() {
   return NLGen4JMRUp_;
 }
 
+const int &VVV0Tree::NVQGen0JMRUp() {
+  if (not NVQGen0JMRUp_isLoaded) {
+    if (NVQGen0JMRUp_branch != 0) {
+      NVQGen0JMRUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0JMRUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0JMRUp_isLoaded = true;
+  }
+  return NVQGen0JMRUp_;
+}
+
+const int &VVV0Tree::NVQGen1JMRUp() {
+  if (not NVQGen1JMRUp_isLoaded) {
+    if (NVQGen1JMRUp_branch != 0) {
+      NVQGen1JMRUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1JMRUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1JMRUp_isLoaded = true;
+  }
+  return NVQGen1JMRUp_;
+}
+
+const int &VVV0Tree::NVQGen2JMRUp() {
+  if (not NVQGen2JMRUp_isLoaded) {
+    if (NVQGen2JMRUp_branch != 0) {
+      NVQGen2JMRUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2JMRUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2JMRUp_isLoaded = true;
+  }
+  return NVQGen2JMRUp_;
+}
+
+const int &VVV0Tree::NVQGen3JMRUp() {
+  if (not NVQGen3JMRUp_isLoaded) {
+    if (NVQGen3JMRUp_branch != 0) {
+      NVQGen3JMRUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3JMRUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3JMRUp_isLoaded = true;
+  }
+  return NVQGen3JMRUp_;
+}
+
+const int &VVV0Tree::NVQGen4JMRUp() {
+  if (not NVQGen4JMRUp_isLoaded) {
+    if (NVQGen4JMRUp_branch != 0) {
+      NVQGen4JMRUp_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4JMRUp_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4JMRUp_isLoaded = true;
+  }
+  return NVQGen4JMRUp_;
+}
+
 const int &VVV0Tree::NiFJJMRUp() {
   if (not NiFJJMRUp_isLoaded) {
     if (NiFJJMRUp_branch != 0) {
@@ -27622,6 +29402,71 @@ const int &VVV0Tree::NLGen4JMRDn() {
     NLGen4JMRDn_isLoaded = true;
   }
   return NLGen4JMRDn_;
+}
+
+const int &VVV0Tree::NVQGen0JMRDn() {
+  if (not NVQGen0JMRDn_isLoaded) {
+    if (NVQGen0JMRDn_branch != 0) {
+      NVQGen0JMRDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0JMRDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0JMRDn_isLoaded = true;
+  }
+  return NVQGen0JMRDn_;
+}
+
+const int &VVV0Tree::NVQGen1JMRDn() {
+  if (not NVQGen1JMRDn_isLoaded) {
+    if (NVQGen1JMRDn_branch != 0) {
+      NVQGen1JMRDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1JMRDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1JMRDn_isLoaded = true;
+  }
+  return NVQGen1JMRDn_;
+}
+
+const int &VVV0Tree::NVQGen2JMRDn() {
+  if (not NVQGen2JMRDn_isLoaded) {
+    if (NVQGen2JMRDn_branch != 0) {
+      NVQGen2JMRDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2JMRDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2JMRDn_isLoaded = true;
+  }
+  return NVQGen2JMRDn_;
+}
+
+const int &VVV0Tree::NVQGen3JMRDn() {
+  if (not NVQGen3JMRDn_isLoaded) {
+    if (NVQGen3JMRDn_branch != 0) {
+      NVQGen3JMRDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3JMRDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3JMRDn_isLoaded = true;
+  }
+  return NVQGen3JMRDn_;
+}
+
+const int &VVV0Tree::NVQGen4JMRDn() {
+  if (not NVQGen4JMRDn_isLoaded) {
+    if (NVQGen4JMRDn_branch != 0) {
+      NVQGen4JMRDn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4JMRDn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4JMRDn_isLoaded = true;
+  }
+  return NVQGen4JMRDn_;
 }
 
 const int &VVV0Tree::NiFJJMRDn() {
@@ -28599,6 +30444,71 @@ const int &VVV0Tree::NLGen4jesAbsoluteStatup() {
   return NLGen4jesAbsoluteStatup_;
 }
 
+const int &VVV0Tree::NVQGen0jesAbsoluteStatup() {
+  if (not NVQGen0jesAbsoluteStatup_isLoaded) {
+    if (NVQGen0jesAbsoluteStatup_branch != 0) {
+      NVQGen0jesAbsoluteStatup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesAbsoluteStatup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesAbsoluteStatup_isLoaded = true;
+  }
+  return NVQGen0jesAbsoluteStatup_;
+}
+
+const int &VVV0Tree::NVQGen1jesAbsoluteStatup() {
+  if (not NVQGen1jesAbsoluteStatup_isLoaded) {
+    if (NVQGen1jesAbsoluteStatup_branch != 0) {
+      NVQGen1jesAbsoluteStatup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesAbsoluteStatup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesAbsoluteStatup_isLoaded = true;
+  }
+  return NVQGen1jesAbsoluteStatup_;
+}
+
+const int &VVV0Tree::NVQGen2jesAbsoluteStatup() {
+  if (not NVQGen2jesAbsoluteStatup_isLoaded) {
+    if (NVQGen2jesAbsoluteStatup_branch != 0) {
+      NVQGen2jesAbsoluteStatup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesAbsoluteStatup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesAbsoluteStatup_isLoaded = true;
+  }
+  return NVQGen2jesAbsoluteStatup_;
+}
+
+const int &VVV0Tree::NVQGen3jesAbsoluteStatup() {
+  if (not NVQGen3jesAbsoluteStatup_isLoaded) {
+    if (NVQGen3jesAbsoluteStatup_branch != 0) {
+      NVQGen3jesAbsoluteStatup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesAbsoluteStatup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesAbsoluteStatup_isLoaded = true;
+  }
+  return NVQGen3jesAbsoluteStatup_;
+}
+
+const int &VVV0Tree::NVQGen4jesAbsoluteStatup() {
+  if (not NVQGen4jesAbsoluteStatup_isLoaded) {
+    if (NVQGen4jesAbsoluteStatup_branch != 0) {
+      NVQGen4jesAbsoluteStatup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesAbsoluteStatup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesAbsoluteStatup_isLoaded = true;
+  }
+  return NVQGen4jesAbsoluteStatup_;
+}
+
 const int &VVV0Tree::NiFJjesAbsoluteStatup() {
   if (not NiFJjesAbsoluteStatup_isLoaded) {
     if (NiFJjesAbsoluteStatup_branch != 0) {
@@ -29572,6 +31482,71 @@ const int &VVV0Tree::NLGen4jesAbsoluteStatdn() {
     NLGen4jesAbsoluteStatdn_isLoaded = true;
   }
   return NLGen4jesAbsoluteStatdn_;
+}
+
+const int &VVV0Tree::NVQGen0jesAbsoluteStatdn() {
+  if (not NVQGen0jesAbsoluteStatdn_isLoaded) {
+    if (NVQGen0jesAbsoluteStatdn_branch != 0) {
+      NVQGen0jesAbsoluteStatdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesAbsoluteStatdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesAbsoluteStatdn_isLoaded = true;
+  }
+  return NVQGen0jesAbsoluteStatdn_;
+}
+
+const int &VVV0Tree::NVQGen1jesAbsoluteStatdn() {
+  if (not NVQGen1jesAbsoluteStatdn_isLoaded) {
+    if (NVQGen1jesAbsoluteStatdn_branch != 0) {
+      NVQGen1jesAbsoluteStatdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesAbsoluteStatdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesAbsoluteStatdn_isLoaded = true;
+  }
+  return NVQGen1jesAbsoluteStatdn_;
+}
+
+const int &VVV0Tree::NVQGen2jesAbsoluteStatdn() {
+  if (not NVQGen2jesAbsoluteStatdn_isLoaded) {
+    if (NVQGen2jesAbsoluteStatdn_branch != 0) {
+      NVQGen2jesAbsoluteStatdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesAbsoluteStatdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesAbsoluteStatdn_isLoaded = true;
+  }
+  return NVQGen2jesAbsoluteStatdn_;
+}
+
+const int &VVV0Tree::NVQGen3jesAbsoluteStatdn() {
+  if (not NVQGen3jesAbsoluteStatdn_isLoaded) {
+    if (NVQGen3jesAbsoluteStatdn_branch != 0) {
+      NVQGen3jesAbsoluteStatdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesAbsoluteStatdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesAbsoluteStatdn_isLoaded = true;
+  }
+  return NVQGen3jesAbsoluteStatdn_;
+}
+
+const int &VVV0Tree::NVQGen4jesAbsoluteStatdn() {
+  if (not NVQGen4jesAbsoluteStatdn_isLoaded) {
+    if (NVQGen4jesAbsoluteStatdn_branch != 0) {
+      NVQGen4jesAbsoluteStatdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesAbsoluteStatdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesAbsoluteStatdn_isLoaded = true;
+  }
+  return NVQGen4jesAbsoluteStatdn_;
 }
 
 const int &VVV0Tree::NiFJjesAbsoluteStatdn() {
@@ -30549,6 +32524,71 @@ const int &VVV0Tree::NLGen4jesAbsoluteScaleup() {
   return NLGen4jesAbsoluteScaleup_;
 }
 
+const int &VVV0Tree::NVQGen0jesAbsoluteScaleup() {
+  if (not NVQGen0jesAbsoluteScaleup_isLoaded) {
+    if (NVQGen0jesAbsoluteScaleup_branch != 0) {
+      NVQGen0jesAbsoluteScaleup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesAbsoluteScaleup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesAbsoluteScaleup_isLoaded = true;
+  }
+  return NVQGen0jesAbsoluteScaleup_;
+}
+
+const int &VVV0Tree::NVQGen1jesAbsoluteScaleup() {
+  if (not NVQGen1jesAbsoluteScaleup_isLoaded) {
+    if (NVQGen1jesAbsoluteScaleup_branch != 0) {
+      NVQGen1jesAbsoluteScaleup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesAbsoluteScaleup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesAbsoluteScaleup_isLoaded = true;
+  }
+  return NVQGen1jesAbsoluteScaleup_;
+}
+
+const int &VVV0Tree::NVQGen2jesAbsoluteScaleup() {
+  if (not NVQGen2jesAbsoluteScaleup_isLoaded) {
+    if (NVQGen2jesAbsoluteScaleup_branch != 0) {
+      NVQGen2jesAbsoluteScaleup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesAbsoluteScaleup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesAbsoluteScaleup_isLoaded = true;
+  }
+  return NVQGen2jesAbsoluteScaleup_;
+}
+
+const int &VVV0Tree::NVQGen3jesAbsoluteScaleup() {
+  if (not NVQGen3jesAbsoluteScaleup_isLoaded) {
+    if (NVQGen3jesAbsoluteScaleup_branch != 0) {
+      NVQGen3jesAbsoluteScaleup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesAbsoluteScaleup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesAbsoluteScaleup_isLoaded = true;
+  }
+  return NVQGen3jesAbsoluteScaleup_;
+}
+
+const int &VVV0Tree::NVQGen4jesAbsoluteScaleup() {
+  if (not NVQGen4jesAbsoluteScaleup_isLoaded) {
+    if (NVQGen4jesAbsoluteScaleup_branch != 0) {
+      NVQGen4jesAbsoluteScaleup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesAbsoluteScaleup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesAbsoluteScaleup_isLoaded = true;
+  }
+  return NVQGen4jesAbsoluteScaleup_;
+}
+
 const int &VVV0Tree::NiFJjesAbsoluteScaleup() {
   if (not NiFJjesAbsoluteScaleup_isLoaded) {
     if (NiFJjesAbsoluteScaleup_branch != 0) {
@@ -31522,6 +33562,71 @@ const int &VVV0Tree::NLGen4jesAbsoluteScaledn() {
     NLGen4jesAbsoluteScaledn_isLoaded = true;
   }
   return NLGen4jesAbsoluteScaledn_;
+}
+
+const int &VVV0Tree::NVQGen0jesAbsoluteScaledn() {
+  if (not NVQGen0jesAbsoluteScaledn_isLoaded) {
+    if (NVQGen0jesAbsoluteScaledn_branch != 0) {
+      NVQGen0jesAbsoluteScaledn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesAbsoluteScaledn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesAbsoluteScaledn_isLoaded = true;
+  }
+  return NVQGen0jesAbsoluteScaledn_;
+}
+
+const int &VVV0Tree::NVQGen1jesAbsoluteScaledn() {
+  if (not NVQGen1jesAbsoluteScaledn_isLoaded) {
+    if (NVQGen1jesAbsoluteScaledn_branch != 0) {
+      NVQGen1jesAbsoluteScaledn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesAbsoluteScaledn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesAbsoluteScaledn_isLoaded = true;
+  }
+  return NVQGen1jesAbsoluteScaledn_;
+}
+
+const int &VVV0Tree::NVQGen2jesAbsoluteScaledn() {
+  if (not NVQGen2jesAbsoluteScaledn_isLoaded) {
+    if (NVQGen2jesAbsoluteScaledn_branch != 0) {
+      NVQGen2jesAbsoluteScaledn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesAbsoluteScaledn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesAbsoluteScaledn_isLoaded = true;
+  }
+  return NVQGen2jesAbsoluteScaledn_;
+}
+
+const int &VVV0Tree::NVQGen3jesAbsoluteScaledn() {
+  if (not NVQGen3jesAbsoluteScaledn_isLoaded) {
+    if (NVQGen3jesAbsoluteScaledn_branch != 0) {
+      NVQGen3jesAbsoluteScaledn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesAbsoluteScaledn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesAbsoluteScaledn_isLoaded = true;
+  }
+  return NVQGen3jesAbsoluteScaledn_;
+}
+
+const int &VVV0Tree::NVQGen4jesAbsoluteScaledn() {
+  if (not NVQGen4jesAbsoluteScaledn_isLoaded) {
+    if (NVQGen4jesAbsoluteScaledn_branch != 0) {
+      NVQGen4jesAbsoluteScaledn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesAbsoluteScaledn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesAbsoluteScaledn_isLoaded = true;
+  }
+  return NVQGen4jesAbsoluteScaledn_;
 }
 
 const int &VVV0Tree::NiFJjesAbsoluteScaledn() {
@@ -32499,6 +34604,71 @@ const int &VVV0Tree::NLGen4jesAbsoluteMPFBiasup() {
   return NLGen4jesAbsoluteMPFBiasup_;
 }
 
+const int &VVV0Tree::NVQGen0jesAbsoluteMPFBiasup() {
+  if (not NVQGen0jesAbsoluteMPFBiasup_isLoaded) {
+    if (NVQGen0jesAbsoluteMPFBiasup_branch != 0) {
+      NVQGen0jesAbsoluteMPFBiasup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesAbsoluteMPFBiasup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesAbsoluteMPFBiasup_isLoaded = true;
+  }
+  return NVQGen0jesAbsoluteMPFBiasup_;
+}
+
+const int &VVV0Tree::NVQGen1jesAbsoluteMPFBiasup() {
+  if (not NVQGen1jesAbsoluteMPFBiasup_isLoaded) {
+    if (NVQGen1jesAbsoluteMPFBiasup_branch != 0) {
+      NVQGen1jesAbsoluteMPFBiasup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesAbsoluteMPFBiasup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesAbsoluteMPFBiasup_isLoaded = true;
+  }
+  return NVQGen1jesAbsoluteMPFBiasup_;
+}
+
+const int &VVV0Tree::NVQGen2jesAbsoluteMPFBiasup() {
+  if (not NVQGen2jesAbsoluteMPFBiasup_isLoaded) {
+    if (NVQGen2jesAbsoluteMPFBiasup_branch != 0) {
+      NVQGen2jesAbsoluteMPFBiasup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesAbsoluteMPFBiasup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesAbsoluteMPFBiasup_isLoaded = true;
+  }
+  return NVQGen2jesAbsoluteMPFBiasup_;
+}
+
+const int &VVV0Tree::NVQGen3jesAbsoluteMPFBiasup() {
+  if (not NVQGen3jesAbsoluteMPFBiasup_isLoaded) {
+    if (NVQGen3jesAbsoluteMPFBiasup_branch != 0) {
+      NVQGen3jesAbsoluteMPFBiasup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesAbsoluteMPFBiasup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesAbsoluteMPFBiasup_isLoaded = true;
+  }
+  return NVQGen3jesAbsoluteMPFBiasup_;
+}
+
+const int &VVV0Tree::NVQGen4jesAbsoluteMPFBiasup() {
+  if (not NVQGen4jesAbsoluteMPFBiasup_isLoaded) {
+    if (NVQGen4jesAbsoluteMPFBiasup_branch != 0) {
+      NVQGen4jesAbsoluteMPFBiasup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesAbsoluteMPFBiasup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesAbsoluteMPFBiasup_isLoaded = true;
+  }
+  return NVQGen4jesAbsoluteMPFBiasup_;
+}
+
 const int &VVV0Tree::NiFJjesAbsoluteMPFBiasup() {
   if (not NiFJjesAbsoluteMPFBiasup_isLoaded) {
     if (NiFJjesAbsoluteMPFBiasup_branch != 0) {
@@ -33472,6 +35642,71 @@ const int &VVV0Tree::NLGen4jesAbsoluteMPFBiasdn() {
     NLGen4jesAbsoluteMPFBiasdn_isLoaded = true;
   }
   return NLGen4jesAbsoluteMPFBiasdn_;
+}
+
+const int &VVV0Tree::NVQGen0jesAbsoluteMPFBiasdn() {
+  if (not NVQGen0jesAbsoluteMPFBiasdn_isLoaded) {
+    if (NVQGen0jesAbsoluteMPFBiasdn_branch != 0) {
+      NVQGen0jesAbsoluteMPFBiasdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesAbsoluteMPFBiasdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesAbsoluteMPFBiasdn_isLoaded = true;
+  }
+  return NVQGen0jesAbsoluteMPFBiasdn_;
+}
+
+const int &VVV0Tree::NVQGen1jesAbsoluteMPFBiasdn() {
+  if (not NVQGen1jesAbsoluteMPFBiasdn_isLoaded) {
+    if (NVQGen1jesAbsoluteMPFBiasdn_branch != 0) {
+      NVQGen1jesAbsoluteMPFBiasdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesAbsoluteMPFBiasdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesAbsoluteMPFBiasdn_isLoaded = true;
+  }
+  return NVQGen1jesAbsoluteMPFBiasdn_;
+}
+
+const int &VVV0Tree::NVQGen2jesAbsoluteMPFBiasdn() {
+  if (not NVQGen2jesAbsoluteMPFBiasdn_isLoaded) {
+    if (NVQGen2jesAbsoluteMPFBiasdn_branch != 0) {
+      NVQGen2jesAbsoluteMPFBiasdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesAbsoluteMPFBiasdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesAbsoluteMPFBiasdn_isLoaded = true;
+  }
+  return NVQGen2jesAbsoluteMPFBiasdn_;
+}
+
+const int &VVV0Tree::NVQGen3jesAbsoluteMPFBiasdn() {
+  if (not NVQGen3jesAbsoluteMPFBiasdn_isLoaded) {
+    if (NVQGen3jesAbsoluteMPFBiasdn_branch != 0) {
+      NVQGen3jesAbsoluteMPFBiasdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesAbsoluteMPFBiasdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesAbsoluteMPFBiasdn_isLoaded = true;
+  }
+  return NVQGen3jesAbsoluteMPFBiasdn_;
+}
+
+const int &VVV0Tree::NVQGen4jesAbsoluteMPFBiasdn() {
+  if (not NVQGen4jesAbsoluteMPFBiasdn_isLoaded) {
+    if (NVQGen4jesAbsoluteMPFBiasdn_branch != 0) {
+      NVQGen4jesAbsoluteMPFBiasdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesAbsoluteMPFBiasdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesAbsoluteMPFBiasdn_isLoaded = true;
+  }
+  return NVQGen4jesAbsoluteMPFBiasdn_;
 }
 
 const int &VVV0Tree::NiFJjesAbsoluteMPFBiasdn() {
@@ -34449,6 +36684,71 @@ const int &VVV0Tree::NLGen4jesFragmentationup() {
   return NLGen4jesFragmentationup_;
 }
 
+const int &VVV0Tree::NVQGen0jesFragmentationup() {
+  if (not NVQGen0jesFragmentationup_isLoaded) {
+    if (NVQGen0jesFragmentationup_branch != 0) {
+      NVQGen0jesFragmentationup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesFragmentationup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesFragmentationup_isLoaded = true;
+  }
+  return NVQGen0jesFragmentationup_;
+}
+
+const int &VVV0Tree::NVQGen1jesFragmentationup() {
+  if (not NVQGen1jesFragmentationup_isLoaded) {
+    if (NVQGen1jesFragmentationup_branch != 0) {
+      NVQGen1jesFragmentationup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesFragmentationup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesFragmentationup_isLoaded = true;
+  }
+  return NVQGen1jesFragmentationup_;
+}
+
+const int &VVV0Tree::NVQGen2jesFragmentationup() {
+  if (not NVQGen2jesFragmentationup_isLoaded) {
+    if (NVQGen2jesFragmentationup_branch != 0) {
+      NVQGen2jesFragmentationup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesFragmentationup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesFragmentationup_isLoaded = true;
+  }
+  return NVQGen2jesFragmentationup_;
+}
+
+const int &VVV0Tree::NVQGen3jesFragmentationup() {
+  if (not NVQGen3jesFragmentationup_isLoaded) {
+    if (NVQGen3jesFragmentationup_branch != 0) {
+      NVQGen3jesFragmentationup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesFragmentationup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesFragmentationup_isLoaded = true;
+  }
+  return NVQGen3jesFragmentationup_;
+}
+
+const int &VVV0Tree::NVQGen4jesFragmentationup() {
+  if (not NVQGen4jesFragmentationup_isLoaded) {
+    if (NVQGen4jesFragmentationup_branch != 0) {
+      NVQGen4jesFragmentationup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesFragmentationup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesFragmentationup_isLoaded = true;
+  }
+  return NVQGen4jesFragmentationup_;
+}
+
 const int &VVV0Tree::NiFJjesFragmentationup() {
   if (not NiFJjesFragmentationup_isLoaded) {
     if (NiFJjesFragmentationup_branch != 0) {
@@ -35422,6 +37722,71 @@ const int &VVV0Tree::NLGen4jesFragmentationdn() {
     NLGen4jesFragmentationdn_isLoaded = true;
   }
   return NLGen4jesFragmentationdn_;
+}
+
+const int &VVV0Tree::NVQGen0jesFragmentationdn() {
+  if (not NVQGen0jesFragmentationdn_isLoaded) {
+    if (NVQGen0jesFragmentationdn_branch != 0) {
+      NVQGen0jesFragmentationdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesFragmentationdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesFragmentationdn_isLoaded = true;
+  }
+  return NVQGen0jesFragmentationdn_;
+}
+
+const int &VVV0Tree::NVQGen1jesFragmentationdn() {
+  if (not NVQGen1jesFragmentationdn_isLoaded) {
+    if (NVQGen1jesFragmentationdn_branch != 0) {
+      NVQGen1jesFragmentationdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesFragmentationdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesFragmentationdn_isLoaded = true;
+  }
+  return NVQGen1jesFragmentationdn_;
+}
+
+const int &VVV0Tree::NVQGen2jesFragmentationdn() {
+  if (not NVQGen2jesFragmentationdn_isLoaded) {
+    if (NVQGen2jesFragmentationdn_branch != 0) {
+      NVQGen2jesFragmentationdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesFragmentationdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesFragmentationdn_isLoaded = true;
+  }
+  return NVQGen2jesFragmentationdn_;
+}
+
+const int &VVV0Tree::NVQGen3jesFragmentationdn() {
+  if (not NVQGen3jesFragmentationdn_isLoaded) {
+    if (NVQGen3jesFragmentationdn_branch != 0) {
+      NVQGen3jesFragmentationdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesFragmentationdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesFragmentationdn_isLoaded = true;
+  }
+  return NVQGen3jesFragmentationdn_;
+}
+
+const int &VVV0Tree::NVQGen4jesFragmentationdn() {
+  if (not NVQGen4jesFragmentationdn_isLoaded) {
+    if (NVQGen4jesFragmentationdn_branch != 0) {
+      NVQGen4jesFragmentationdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesFragmentationdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesFragmentationdn_isLoaded = true;
+  }
+  return NVQGen4jesFragmentationdn_;
 }
 
 const int &VVV0Tree::NiFJjesFragmentationdn() {
@@ -36399,6 +38764,71 @@ const int &VVV0Tree::NLGen4jesSinglePionECALup() {
   return NLGen4jesSinglePionECALup_;
 }
 
+const int &VVV0Tree::NVQGen0jesSinglePionECALup() {
+  if (not NVQGen0jesSinglePionECALup_isLoaded) {
+    if (NVQGen0jesSinglePionECALup_branch != 0) {
+      NVQGen0jesSinglePionECALup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesSinglePionECALup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesSinglePionECALup_isLoaded = true;
+  }
+  return NVQGen0jesSinglePionECALup_;
+}
+
+const int &VVV0Tree::NVQGen1jesSinglePionECALup() {
+  if (not NVQGen1jesSinglePionECALup_isLoaded) {
+    if (NVQGen1jesSinglePionECALup_branch != 0) {
+      NVQGen1jesSinglePionECALup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesSinglePionECALup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesSinglePionECALup_isLoaded = true;
+  }
+  return NVQGen1jesSinglePionECALup_;
+}
+
+const int &VVV0Tree::NVQGen2jesSinglePionECALup() {
+  if (not NVQGen2jesSinglePionECALup_isLoaded) {
+    if (NVQGen2jesSinglePionECALup_branch != 0) {
+      NVQGen2jesSinglePionECALup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesSinglePionECALup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesSinglePionECALup_isLoaded = true;
+  }
+  return NVQGen2jesSinglePionECALup_;
+}
+
+const int &VVV0Tree::NVQGen3jesSinglePionECALup() {
+  if (not NVQGen3jesSinglePionECALup_isLoaded) {
+    if (NVQGen3jesSinglePionECALup_branch != 0) {
+      NVQGen3jesSinglePionECALup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesSinglePionECALup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesSinglePionECALup_isLoaded = true;
+  }
+  return NVQGen3jesSinglePionECALup_;
+}
+
+const int &VVV0Tree::NVQGen4jesSinglePionECALup() {
+  if (not NVQGen4jesSinglePionECALup_isLoaded) {
+    if (NVQGen4jesSinglePionECALup_branch != 0) {
+      NVQGen4jesSinglePionECALup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesSinglePionECALup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesSinglePionECALup_isLoaded = true;
+  }
+  return NVQGen4jesSinglePionECALup_;
+}
+
 const int &VVV0Tree::NiFJjesSinglePionECALup() {
   if (not NiFJjesSinglePionECALup_isLoaded) {
     if (NiFJjesSinglePionECALup_branch != 0) {
@@ -37372,6 +39802,71 @@ const int &VVV0Tree::NLGen4jesSinglePionECALdn() {
     NLGen4jesSinglePionECALdn_isLoaded = true;
   }
   return NLGen4jesSinglePionECALdn_;
+}
+
+const int &VVV0Tree::NVQGen0jesSinglePionECALdn() {
+  if (not NVQGen0jesSinglePionECALdn_isLoaded) {
+    if (NVQGen0jesSinglePionECALdn_branch != 0) {
+      NVQGen0jesSinglePionECALdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesSinglePionECALdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesSinglePionECALdn_isLoaded = true;
+  }
+  return NVQGen0jesSinglePionECALdn_;
+}
+
+const int &VVV0Tree::NVQGen1jesSinglePionECALdn() {
+  if (not NVQGen1jesSinglePionECALdn_isLoaded) {
+    if (NVQGen1jesSinglePionECALdn_branch != 0) {
+      NVQGen1jesSinglePionECALdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesSinglePionECALdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesSinglePionECALdn_isLoaded = true;
+  }
+  return NVQGen1jesSinglePionECALdn_;
+}
+
+const int &VVV0Tree::NVQGen2jesSinglePionECALdn() {
+  if (not NVQGen2jesSinglePionECALdn_isLoaded) {
+    if (NVQGen2jesSinglePionECALdn_branch != 0) {
+      NVQGen2jesSinglePionECALdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesSinglePionECALdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesSinglePionECALdn_isLoaded = true;
+  }
+  return NVQGen2jesSinglePionECALdn_;
+}
+
+const int &VVV0Tree::NVQGen3jesSinglePionECALdn() {
+  if (not NVQGen3jesSinglePionECALdn_isLoaded) {
+    if (NVQGen3jesSinglePionECALdn_branch != 0) {
+      NVQGen3jesSinglePionECALdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesSinglePionECALdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesSinglePionECALdn_isLoaded = true;
+  }
+  return NVQGen3jesSinglePionECALdn_;
+}
+
+const int &VVV0Tree::NVQGen4jesSinglePionECALdn() {
+  if (not NVQGen4jesSinglePionECALdn_isLoaded) {
+    if (NVQGen4jesSinglePionECALdn_branch != 0) {
+      NVQGen4jesSinglePionECALdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesSinglePionECALdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesSinglePionECALdn_isLoaded = true;
+  }
+  return NVQGen4jesSinglePionECALdn_;
 }
 
 const int &VVV0Tree::NiFJjesSinglePionECALdn() {
@@ -38349,6 +40844,71 @@ const int &VVV0Tree::NLGen4jesSinglePionHCALup() {
   return NLGen4jesSinglePionHCALup_;
 }
 
+const int &VVV0Tree::NVQGen0jesSinglePionHCALup() {
+  if (not NVQGen0jesSinglePionHCALup_isLoaded) {
+    if (NVQGen0jesSinglePionHCALup_branch != 0) {
+      NVQGen0jesSinglePionHCALup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesSinglePionHCALup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesSinglePionHCALup_isLoaded = true;
+  }
+  return NVQGen0jesSinglePionHCALup_;
+}
+
+const int &VVV0Tree::NVQGen1jesSinglePionHCALup() {
+  if (not NVQGen1jesSinglePionHCALup_isLoaded) {
+    if (NVQGen1jesSinglePionHCALup_branch != 0) {
+      NVQGen1jesSinglePionHCALup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesSinglePionHCALup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesSinglePionHCALup_isLoaded = true;
+  }
+  return NVQGen1jesSinglePionHCALup_;
+}
+
+const int &VVV0Tree::NVQGen2jesSinglePionHCALup() {
+  if (not NVQGen2jesSinglePionHCALup_isLoaded) {
+    if (NVQGen2jesSinglePionHCALup_branch != 0) {
+      NVQGen2jesSinglePionHCALup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesSinglePionHCALup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesSinglePionHCALup_isLoaded = true;
+  }
+  return NVQGen2jesSinglePionHCALup_;
+}
+
+const int &VVV0Tree::NVQGen3jesSinglePionHCALup() {
+  if (not NVQGen3jesSinglePionHCALup_isLoaded) {
+    if (NVQGen3jesSinglePionHCALup_branch != 0) {
+      NVQGen3jesSinglePionHCALup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesSinglePionHCALup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesSinglePionHCALup_isLoaded = true;
+  }
+  return NVQGen3jesSinglePionHCALup_;
+}
+
+const int &VVV0Tree::NVQGen4jesSinglePionHCALup() {
+  if (not NVQGen4jesSinglePionHCALup_isLoaded) {
+    if (NVQGen4jesSinglePionHCALup_branch != 0) {
+      NVQGen4jesSinglePionHCALup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesSinglePionHCALup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesSinglePionHCALup_isLoaded = true;
+  }
+  return NVQGen4jesSinglePionHCALup_;
+}
+
 const int &VVV0Tree::NiFJjesSinglePionHCALup() {
   if (not NiFJjesSinglePionHCALup_isLoaded) {
     if (NiFJjesSinglePionHCALup_branch != 0) {
@@ -39322,6 +41882,71 @@ const int &VVV0Tree::NLGen4jesSinglePionHCALdn() {
     NLGen4jesSinglePionHCALdn_isLoaded = true;
   }
   return NLGen4jesSinglePionHCALdn_;
+}
+
+const int &VVV0Tree::NVQGen0jesSinglePionHCALdn() {
+  if (not NVQGen0jesSinglePionHCALdn_isLoaded) {
+    if (NVQGen0jesSinglePionHCALdn_branch != 0) {
+      NVQGen0jesSinglePionHCALdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesSinglePionHCALdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesSinglePionHCALdn_isLoaded = true;
+  }
+  return NVQGen0jesSinglePionHCALdn_;
+}
+
+const int &VVV0Tree::NVQGen1jesSinglePionHCALdn() {
+  if (not NVQGen1jesSinglePionHCALdn_isLoaded) {
+    if (NVQGen1jesSinglePionHCALdn_branch != 0) {
+      NVQGen1jesSinglePionHCALdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesSinglePionHCALdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesSinglePionHCALdn_isLoaded = true;
+  }
+  return NVQGen1jesSinglePionHCALdn_;
+}
+
+const int &VVV0Tree::NVQGen2jesSinglePionHCALdn() {
+  if (not NVQGen2jesSinglePionHCALdn_isLoaded) {
+    if (NVQGen2jesSinglePionHCALdn_branch != 0) {
+      NVQGen2jesSinglePionHCALdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesSinglePionHCALdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesSinglePionHCALdn_isLoaded = true;
+  }
+  return NVQGen2jesSinglePionHCALdn_;
+}
+
+const int &VVV0Tree::NVQGen3jesSinglePionHCALdn() {
+  if (not NVQGen3jesSinglePionHCALdn_isLoaded) {
+    if (NVQGen3jesSinglePionHCALdn_branch != 0) {
+      NVQGen3jesSinglePionHCALdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesSinglePionHCALdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesSinglePionHCALdn_isLoaded = true;
+  }
+  return NVQGen3jesSinglePionHCALdn_;
+}
+
+const int &VVV0Tree::NVQGen4jesSinglePionHCALdn() {
+  if (not NVQGen4jesSinglePionHCALdn_isLoaded) {
+    if (NVQGen4jesSinglePionHCALdn_branch != 0) {
+      NVQGen4jesSinglePionHCALdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesSinglePionHCALdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesSinglePionHCALdn_isLoaded = true;
+  }
+  return NVQGen4jesSinglePionHCALdn_;
 }
 
 const int &VVV0Tree::NiFJjesSinglePionHCALdn() {
@@ -40299,6 +42924,71 @@ const int &VVV0Tree::NLGen4jesFlavorQCDup() {
   return NLGen4jesFlavorQCDup_;
 }
 
+const int &VVV0Tree::NVQGen0jesFlavorQCDup() {
+  if (not NVQGen0jesFlavorQCDup_isLoaded) {
+    if (NVQGen0jesFlavorQCDup_branch != 0) {
+      NVQGen0jesFlavorQCDup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesFlavorQCDup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesFlavorQCDup_isLoaded = true;
+  }
+  return NVQGen0jesFlavorQCDup_;
+}
+
+const int &VVV0Tree::NVQGen1jesFlavorQCDup() {
+  if (not NVQGen1jesFlavorQCDup_isLoaded) {
+    if (NVQGen1jesFlavorQCDup_branch != 0) {
+      NVQGen1jesFlavorQCDup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesFlavorQCDup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesFlavorQCDup_isLoaded = true;
+  }
+  return NVQGen1jesFlavorQCDup_;
+}
+
+const int &VVV0Tree::NVQGen2jesFlavorQCDup() {
+  if (not NVQGen2jesFlavorQCDup_isLoaded) {
+    if (NVQGen2jesFlavorQCDup_branch != 0) {
+      NVQGen2jesFlavorQCDup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesFlavorQCDup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesFlavorQCDup_isLoaded = true;
+  }
+  return NVQGen2jesFlavorQCDup_;
+}
+
+const int &VVV0Tree::NVQGen3jesFlavorQCDup() {
+  if (not NVQGen3jesFlavorQCDup_isLoaded) {
+    if (NVQGen3jesFlavorQCDup_branch != 0) {
+      NVQGen3jesFlavorQCDup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesFlavorQCDup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesFlavorQCDup_isLoaded = true;
+  }
+  return NVQGen3jesFlavorQCDup_;
+}
+
+const int &VVV0Tree::NVQGen4jesFlavorQCDup() {
+  if (not NVQGen4jesFlavorQCDup_isLoaded) {
+    if (NVQGen4jesFlavorQCDup_branch != 0) {
+      NVQGen4jesFlavorQCDup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesFlavorQCDup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesFlavorQCDup_isLoaded = true;
+  }
+  return NVQGen4jesFlavorQCDup_;
+}
+
 const int &VVV0Tree::NiFJjesFlavorQCDup() {
   if (not NiFJjesFlavorQCDup_isLoaded) {
     if (NiFJjesFlavorQCDup_branch != 0) {
@@ -41272,6 +43962,71 @@ const int &VVV0Tree::NLGen4jesFlavorQCDdn() {
     NLGen4jesFlavorQCDdn_isLoaded = true;
   }
   return NLGen4jesFlavorQCDdn_;
+}
+
+const int &VVV0Tree::NVQGen0jesFlavorQCDdn() {
+  if (not NVQGen0jesFlavorQCDdn_isLoaded) {
+    if (NVQGen0jesFlavorQCDdn_branch != 0) {
+      NVQGen0jesFlavorQCDdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesFlavorQCDdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesFlavorQCDdn_isLoaded = true;
+  }
+  return NVQGen0jesFlavorQCDdn_;
+}
+
+const int &VVV0Tree::NVQGen1jesFlavorQCDdn() {
+  if (not NVQGen1jesFlavorQCDdn_isLoaded) {
+    if (NVQGen1jesFlavorQCDdn_branch != 0) {
+      NVQGen1jesFlavorQCDdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesFlavorQCDdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesFlavorQCDdn_isLoaded = true;
+  }
+  return NVQGen1jesFlavorQCDdn_;
+}
+
+const int &VVV0Tree::NVQGen2jesFlavorQCDdn() {
+  if (not NVQGen2jesFlavorQCDdn_isLoaded) {
+    if (NVQGen2jesFlavorQCDdn_branch != 0) {
+      NVQGen2jesFlavorQCDdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesFlavorQCDdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesFlavorQCDdn_isLoaded = true;
+  }
+  return NVQGen2jesFlavorQCDdn_;
+}
+
+const int &VVV0Tree::NVQGen3jesFlavorQCDdn() {
+  if (not NVQGen3jesFlavorQCDdn_isLoaded) {
+    if (NVQGen3jesFlavorQCDdn_branch != 0) {
+      NVQGen3jesFlavorQCDdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesFlavorQCDdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesFlavorQCDdn_isLoaded = true;
+  }
+  return NVQGen3jesFlavorQCDdn_;
+}
+
+const int &VVV0Tree::NVQGen4jesFlavorQCDdn() {
+  if (not NVQGen4jesFlavorQCDdn_isLoaded) {
+    if (NVQGen4jesFlavorQCDdn_branch != 0) {
+      NVQGen4jesFlavorQCDdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesFlavorQCDdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesFlavorQCDdn_isLoaded = true;
+  }
+  return NVQGen4jesFlavorQCDdn_;
 }
 
 const int &VVV0Tree::NiFJjesFlavorQCDdn() {
@@ -42249,6 +45004,71 @@ const int &VVV0Tree::NLGen4jesTimePtEtaup() {
   return NLGen4jesTimePtEtaup_;
 }
 
+const int &VVV0Tree::NVQGen0jesTimePtEtaup() {
+  if (not NVQGen0jesTimePtEtaup_isLoaded) {
+    if (NVQGen0jesTimePtEtaup_branch != 0) {
+      NVQGen0jesTimePtEtaup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesTimePtEtaup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesTimePtEtaup_isLoaded = true;
+  }
+  return NVQGen0jesTimePtEtaup_;
+}
+
+const int &VVV0Tree::NVQGen1jesTimePtEtaup() {
+  if (not NVQGen1jesTimePtEtaup_isLoaded) {
+    if (NVQGen1jesTimePtEtaup_branch != 0) {
+      NVQGen1jesTimePtEtaup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesTimePtEtaup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesTimePtEtaup_isLoaded = true;
+  }
+  return NVQGen1jesTimePtEtaup_;
+}
+
+const int &VVV0Tree::NVQGen2jesTimePtEtaup() {
+  if (not NVQGen2jesTimePtEtaup_isLoaded) {
+    if (NVQGen2jesTimePtEtaup_branch != 0) {
+      NVQGen2jesTimePtEtaup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesTimePtEtaup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesTimePtEtaup_isLoaded = true;
+  }
+  return NVQGen2jesTimePtEtaup_;
+}
+
+const int &VVV0Tree::NVQGen3jesTimePtEtaup() {
+  if (not NVQGen3jesTimePtEtaup_isLoaded) {
+    if (NVQGen3jesTimePtEtaup_branch != 0) {
+      NVQGen3jesTimePtEtaup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesTimePtEtaup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesTimePtEtaup_isLoaded = true;
+  }
+  return NVQGen3jesTimePtEtaup_;
+}
+
+const int &VVV0Tree::NVQGen4jesTimePtEtaup() {
+  if (not NVQGen4jesTimePtEtaup_isLoaded) {
+    if (NVQGen4jesTimePtEtaup_branch != 0) {
+      NVQGen4jesTimePtEtaup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesTimePtEtaup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesTimePtEtaup_isLoaded = true;
+  }
+  return NVQGen4jesTimePtEtaup_;
+}
+
 const int &VVV0Tree::NiFJjesTimePtEtaup() {
   if (not NiFJjesTimePtEtaup_isLoaded) {
     if (NiFJjesTimePtEtaup_branch != 0) {
@@ -43222,6 +46042,71 @@ const int &VVV0Tree::NLGen4jesTimePtEtadn() {
     NLGen4jesTimePtEtadn_isLoaded = true;
   }
   return NLGen4jesTimePtEtadn_;
+}
+
+const int &VVV0Tree::NVQGen0jesTimePtEtadn() {
+  if (not NVQGen0jesTimePtEtadn_isLoaded) {
+    if (NVQGen0jesTimePtEtadn_branch != 0) {
+      NVQGen0jesTimePtEtadn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesTimePtEtadn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesTimePtEtadn_isLoaded = true;
+  }
+  return NVQGen0jesTimePtEtadn_;
+}
+
+const int &VVV0Tree::NVQGen1jesTimePtEtadn() {
+  if (not NVQGen1jesTimePtEtadn_isLoaded) {
+    if (NVQGen1jesTimePtEtadn_branch != 0) {
+      NVQGen1jesTimePtEtadn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesTimePtEtadn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesTimePtEtadn_isLoaded = true;
+  }
+  return NVQGen1jesTimePtEtadn_;
+}
+
+const int &VVV0Tree::NVQGen2jesTimePtEtadn() {
+  if (not NVQGen2jesTimePtEtadn_isLoaded) {
+    if (NVQGen2jesTimePtEtadn_branch != 0) {
+      NVQGen2jesTimePtEtadn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesTimePtEtadn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesTimePtEtadn_isLoaded = true;
+  }
+  return NVQGen2jesTimePtEtadn_;
+}
+
+const int &VVV0Tree::NVQGen3jesTimePtEtadn() {
+  if (not NVQGen3jesTimePtEtadn_isLoaded) {
+    if (NVQGen3jesTimePtEtadn_branch != 0) {
+      NVQGen3jesTimePtEtadn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesTimePtEtadn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesTimePtEtadn_isLoaded = true;
+  }
+  return NVQGen3jesTimePtEtadn_;
+}
+
+const int &VVV0Tree::NVQGen4jesTimePtEtadn() {
+  if (not NVQGen4jesTimePtEtadn_isLoaded) {
+    if (NVQGen4jesTimePtEtadn_branch != 0) {
+      NVQGen4jesTimePtEtadn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesTimePtEtadn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesTimePtEtadn_isLoaded = true;
+  }
+  return NVQGen4jesTimePtEtadn_;
 }
 
 const int &VVV0Tree::NiFJjesTimePtEtadn() {
@@ -44199,6 +47084,71 @@ const int &VVV0Tree::NLGen4jesRelativeJEREC1up() {
   return NLGen4jesRelativeJEREC1up_;
 }
 
+const int &VVV0Tree::NVQGen0jesRelativeJEREC1up() {
+  if (not NVQGen0jesRelativeJEREC1up_isLoaded) {
+    if (NVQGen0jesRelativeJEREC1up_branch != 0) {
+      NVQGen0jesRelativeJEREC1up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativeJEREC1up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativeJEREC1up_isLoaded = true;
+  }
+  return NVQGen0jesRelativeJEREC1up_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativeJEREC1up() {
+  if (not NVQGen1jesRelativeJEREC1up_isLoaded) {
+    if (NVQGen1jesRelativeJEREC1up_branch != 0) {
+      NVQGen1jesRelativeJEREC1up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativeJEREC1up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativeJEREC1up_isLoaded = true;
+  }
+  return NVQGen1jesRelativeJEREC1up_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativeJEREC1up() {
+  if (not NVQGen2jesRelativeJEREC1up_isLoaded) {
+    if (NVQGen2jesRelativeJEREC1up_branch != 0) {
+      NVQGen2jesRelativeJEREC1up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativeJEREC1up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativeJEREC1up_isLoaded = true;
+  }
+  return NVQGen2jesRelativeJEREC1up_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativeJEREC1up() {
+  if (not NVQGen3jesRelativeJEREC1up_isLoaded) {
+    if (NVQGen3jesRelativeJEREC1up_branch != 0) {
+      NVQGen3jesRelativeJEREC1up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativeJEREC1up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativeJEREC1up_isLoaded = true;
+  }
+  return NVQGen3jesRelativeJEREC1up_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativeJEREC1up() {
+  if (not NVQGen4jesRelativeJEREC1up_isLoaded) {
+    if (NVQGen4jesRelativeJEREC1up_branch != 0) {
+      NVQGen4jesRelativeJEREC1up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativeJEREC1up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativeJEREC1up_isLoaded = true;
+  }
+  return NVQGen4jesRelativeJEREC1up_;
+}
+
 const int &VVV0Tree::NiFJjesRelativeJEREC1up() {
   if (not NiFJjesRelativeJEREC1up_isLoaded) {
     if (NiFJjesRelativeJEREC1up_branch != 0) {
@@ -45172,6 +48122,71 @@ const int &VVV0Tree::NLGen4jesRelativeJEREC1dn() {
     NLGen4jesRelativeJEREC1dn_isLoaded = true;
   }
   return NLGen4jesRelativeJEREC1dn_;
+}
+
+const int &VVV0Tree::NVQGen0jesRelativeJEREC1dn() {
+  if (not NVQGen0jesRelativeJEREC1dn_isLoaded) {
+    if (NVQGen0jesRelativeJEREC1dn_branch != 0) {
+      NVQGen0jesRelativeJEREC1dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativeJEREC1dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativeJEREC1dn_isLoaded = true;
+  }
+  return NVQGen0jesRelativeJEREC1dn_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativeJEREC1dn() {
+  if (not NVQGen1jesRelativeJEREC1dn_isLoaded) {
+    if (NVQGen1jesRelativeJEREC1dn_branch != 0) {
+      NVQGen1jesRelativeJEREC1dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativeJEREC1dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativeJEREC1dn_isLoaded = true;
+  }
+  return NVQGen1jesRelativeJEREC1dn_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativeJEREC1dn() {
+  if (not NVQGen2jesRelativeJEREC1dn_isLoaded) {
+    if (NVQGen2jesRelativeJEREC1dn_branch != 0) {
+      NVQGen2jesRelativeJEREC1dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativeJEREC1dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativeJEREC1dn_isLoaded = true;
+  }
+  return NVQGen2jesRelativeJEREC1dn_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativeJEREC1dn() {
+  if (not NVQGen3jesRelativeJEREC1dn_isLoaded) {
+    if (NVQGen3jesRelativeJEREC1dn_branch != 0) {
+      NVQGen3jesRelativeJEREC1dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativeJEREC1dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativeJEREC1dn_isLoaded = true;
+  }
+  return NVQGen3jesRelativeJEREC1dn_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativeJEREC1dn() {
+  if (not NVQGen4jesRelativeJEREC1dn_isLoaded) {
+    if (NVQGen4jesRelativeJEREC1dn_branch != 0) {
+      NVQGen4jesRelativeJEREC1dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativeJEREC1dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativeJEREC1dn_isLoaded = true;
+  }
+  return NVQGen4jesRelativeJEREC1dn_;
 }
 
 const int &VVV0Tree::NiFJjesRelativeJEREC1dn() {
@@ -46149,6 +49164,71 @@ const int &VVV0Tree::NLGen4jesRelativeJEREC2up() {
   return NLGen4jesRelativeJEREC2up_;
 }
 
+const int &VVV0Tree::NVQGen0jesRelativeJEREC2up() {
+  if (not NVQGen0jesRelativeJEREC2up_isLoaded) {
+    if (NVQGen0jesRelativeJEREC2up_branch != 0) {
+      NVQGen0jesRelativeJEREC2up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativeJEREC2up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativeJEREC2up_isLoaded = true;
+  }
+  return NVQGen0jesRelativeJEREC2up_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativeJEREC2up() {
+  if (not NVQGen1jesRelativeJEREC2up_isLoaded) {
+    if (NVQGen1jesRelativeJEREC2up_branch != 0) {
+      NVQGen1jesRelativeJEREC2up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativeJEREC2up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativeJEREC2up_isLoaded = true;
+  }
+  return NVQGen1jesRelativeJEREC2up_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativeJEREC2up() {
+  if (not NVQGen2jesRelativeJEREC2up_isLoaded) {
+    if (NVQGen2jesRelativeJEREC2up_branch != 0) {
+      NVQGen2jesRelativeJEREC2up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativeJEREC2up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativeJEREC2up_isLoaded = true;
+  }
+  return NVQGen2jesRelativeJEREC2up_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativeJEREC2up() {
+  if (not NVQGen3jesRelativeJEREC2up_isLoaded) {
+    if (NVQGen3jesRelativeJEREC2up_branch != 0) {
+      NVQGen3jesRelativeJEREC2up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativeJEREC2up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativeJEREC2up_isLoaded = true;
+  }
+  return NVQGen3jesRelativeJEREC2up_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativeJEREC2up() {
+  if (not NVQGen4jesRelativeJEREC2up_isLoaded) {
+    if (NVQGen4jesRelativeJEREC2up_branch != 0) {
+      NVQGen4jesRelativeJEREC2up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativeJEREC2up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativeJEREC2up_isLoaded = true;
+  }
+  return NVQGen4jesRelativeJEREC2up_;
+}
+
 const int &VVV0Tree::NiFJjesRelativeJEREC2up() {
   if (not NiFJjesRelativeJEREC2up_isLoaded) {
     if (NiFJjesRelativeJEREC2up_branch != 0) {
@@ -47122,6 +50202,71 @@ const int &VVV0Tree::NLGen4jesRelativeJEREC2dn() {
     NLGen4jesRelativeJEREC2dn_isLoaded = true;
   }
   return NLGen4jesRelativeJEREC2dn_;
+}
+
+const int &VVV0Tree::NVQGen0jesRelativeJEREC2dn() {
+  if (not NVQGen0jesRelativeJEREC2dn_isLoaded) {
+    if (NVQGen0jesRelativeJEREC2dn_branch != 0) {
+      NVQGen0jesRelativeJEREC2dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativeJEREC2dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativeJEREC2dn_isLoaded = true;
+  }
+  return NVQGen0jesRelativeJEREC2dn_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativeJEREC2dn() {
+  if (not NVQGen1jesRelativeJEREC2dn_isLoaded) {
+    if (NVQGen1jesRelativeJEREC2dn_branch != 0) {
+      NVQGen1jesRelativeJEREC2dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativeJEREC2dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativeJEREC2dn_isLoaded = true;
+  }
+  return NVQGen1jesRelativeJEREC2dn_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativeJEREC2dn() {
+  if (not NVQGen2jesRelativeJEREC2dn_isLoaded) {
+    if (NVQGen2jesRelativeJEREC2dn_branch != 0) {
+      NVQGen2jesRelativeJEREC2dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativeJEREC2dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativeJEREC2dn_isLoaded = true;
+  }
+  return NVQGen2jesRelativeJEREC2dn_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativeJEREC2dn() {
+  if (not NVQGen3jesRelativeJEREC2dn_isLoaded) {
+    if (NVQGen3jesRelativeJEREC2dn_branch != 0) {
+      NVQGen3jesRelativeJEREC2dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativeJEREC2dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativeJEREC2dn_isLoaded = true;
+  }
+  return NVQGen3jesRelativeJEREC2dn_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativeJEREC2dn() {
+  if (not NVQGen4jesRelativeJEREC2dn_isLoaded) {
+    if (NVQGen4jesRelativeJEREC2dn_branch != 0) {
+      NVQGen4jesRelativeJEREC2dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativeJEREC2dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativeJEREC2dn_isLoaded = true;
+  }
+  return NVQGen4jesRelativeJEREC2dn_;
 }
 
 const int &VVV0Tree::NiFJjesRelativeJEREC2dn() {
@@ -48099,6 +51244,71 @@ const int &VVV0Tree::NLGen4jesRelativeJERHFup() {
   return NLGen4jesRelativeJERHFup_;
 }
 
+const int &VVV0Tree::NVQGen0jesRelativeJERHFup() {
+  if (not NVQGen0jesRelativeJERHFup_isLoaded) {
+    if (NVQGen0jesRelativeJERHFup_branch != 0) {
+      NVQGen0jesRelativeJERHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativeJERHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativeJERHFup_isLoaded = true;
+  }
+  return NVQGen0jesRelativeJERHFup_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativeJERHFup() {
+  if (not NVQGen1jesRelativeJERHFup_isLoaded) {
+    if (NVQGen1jesRelativeJERHFup_branch != 0) {
+      NVQGen1jesRelativeJERHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativeJERHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativeJERHFup_isLoaded = true;
+  }
+  return NVQGen1jesRelativeJERHFup_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativeJERHFup() {
+  if (not NVQGen2jesRelativeJERHFup_isLoaded) {
+    if (NVQGen2jesRelativeJERHFup_branch != 0) {
+      NVQGen2jesRelativeJERHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativeJERHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativeJERHFup_isLoaded = true;
+  }
+  return NVQGen2jesRelativeJERHFup_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativeJERHFup() {
+  if (not NVQGen3jesRelativeJERHFup_isLoaded) {
+    if (NVQGen3jesRelativeJERHFup_branch != 0) {
+      NVQGen3jesRelativeJERHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativeJERHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativeJERHFup_isLoaded = true;
+  }
+  return NVQGen3jesRelativeJERHFup_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativeJERHFup() {
+  if (not NVQGen4jesRelativeJERHFup_isLoaded) {
+    if (NVQGen4jesRelativeJERHFup_branch != 0) {
+      NVQGen4jesRelativeJERHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativeJERHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativeJERHFup_isLoaded = true;
+  }
+  return NVQGen4jesRelativeJERHFup_;
+}
+
 const int &VVV0Tree::NiFJjesRelativeJERHFup() {
   if (not NiFJjesRelativeJERHFup_isLoaded) {
     if (NiFJjesRelativeJERHFup_branch != 0) {
@@ -49072,6 +52282,71 @@ const int &VVV0Tree::NLGen4jesRelativeJERHFdn() {
     NLGen4jesRelativeJERHFdn_isLoaded = true;
   }
   return NLGen4jesRelativeJERHFdn_;
+}
+
+const int &VVV0Tree::NVQGen0jesRelativeJERHFdn() {
+  if (not NVQGen0jesRelativeJERHFdn_isLoaded) {
+    if (NVQGen0jesRelativeJERHFdn_branch != 0) {
+      NVQGen0jesRelativeJERHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativeJERHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativeJERHFdn_isLoaded = true;
+  }
+  return NVQGen0jesRelativeJERHFdn_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativeJERHFdn() {
+  if (not NVQGen1jesRelativeJERHFdn_isLoaded) {
+    if (NVQGen1jesRelativeJERHFdn_branch != 0) {
+      NVQGen1jesRelativeJERHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativeJERHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativeJERHFdn_isLoaded = true;
+  }
+  return NVQGen1jesRelativeJERHFdn_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativeJERHFdn() {
+  if (not NVQGen2jesRelativeJERHFdn_isLoaded) {
+    if (NVQGen2jesRelativeJERHFdn_branch != 0) {
+      NVQGen2jesRelativeJERHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativeJERHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativeJERHFdn_isLoaded = true;
+  }
+  return NVQGen2jesRelativeJERHFdn_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativeJERHFdn() {
+  if (not NVQGen3jesRelativeJERHFdn_isLoaded) {
+    if (NVQGen3jesRelativeJERHFdn_branch != 0) {
+      NVQGen3jesRelativeJERHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativeJERHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativeJERHFdn_isLoaded = true;
+  }
+  return NVQGen3jesRelativeJERHFdn_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativeJERHFdn() {
+  if (not NVQGen4jesRelativeJERHFdn_isLoaded) {
+    if (NVQGen4jesRelativeJERHFdn_branch != 0) {
+      NVQGen4jesRelativeJERHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativeJERHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativeJERHFdn_isLoaded = true;
+  }
+  return NVQGen4jesRelativeJERHFdn_;
 }
 
 const int &VVV0Tree::NiFJjesRelativeJERHFdn() {
@@ -50049,6 +53324,71 @@ const int &VVV0Tree::NLGen4jesRelativePtBBup() {
   return NLGen4jesRelativePtBBup_;
 }
 
+const int &VVV0Tree::NVQGen0jesRelativePtBBup() {
+  if (not NVQGen0jesRelativePtBBup_isLoaded) {
+    if (NVQGen0jesRelativePtBBup_branch != 0) {
+      NVQGen0jesRelativePtBBup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativePtBBup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativePtBBup_isLoaded = true;
+  }
+  return NVQGen0jesRelativePtBBup_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativePtBBup() {
+  if (not NVQGen1jesRelativePtBBup_isLoaded) {
+    if (NVQGen1jesRelativePtBBup_branch != 0) {
+      NVQGen1jesRelativePtBBup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativePtBBup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativePtBBup_isLoaded = true;
+  }
+  return NVQGen1jesRelativePtBBup_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativePtBBup() {
+  if (not NVQGen2jesRelativePtBBup_isLoaded) {
+    if (NVQGen2jesRelativePtBBup_branch != 0) {
+      NVQGen2jesRelativePtBBup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativePtBBup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativePtBBup_isLoaded = true;
+  }
+  return NVQGen2jesRelativePtBBup_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativePtBBup() {
+  if (not NVQGen3jesRelativePtBBup_isLoaded) {
+    if (NVQGen3jesRelativePtBBup_branch != 0) {
+      NVQGen3jesRelativePtBBup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativePtBBup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativePtBBup_isLoaded = true;
+  }
+  return NVQGen3jesRelativePtBBup_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativePtBBup() {
+  if (not NVQGen4jesRelativePtBBup_isLoaded) {
+    if (NVQGen4jesRelativePtBBup_branch != 0) {
+      NVQGen4jesRelativePtBBup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativePtBBup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativePtBBup_isLoaded = true;
+  }
+  return NVQGen4jesRelativePtBBup_;
+}
+
 const int &VVV0Tree::NiFJjesRelativePtBBup() {
   if (not NiFJjesRelativePtBBup_isLoaded) {
     if (NiFJjesRelativePtBBup_branch != 0) {
@@ -51022,6 +54362,71 @@ const int &VVV0Tree::NLGen4jesRelativePtBBdn() {
     NLGen4jesRelativePtBBdn_isLoaded = true;
   }
   return NLGen4jesRelativePtBBdn_;
+}
+
+const int &VVV0Tree::NVQGen0jesRelativePtBBdn() {
+  if (not NVQGen0jesRelativePtBBdn_isLoaded) {
+    if (NVQGen0jesRelativePtBBdn_branch != 0) {
+      NVQGen0jesRelativePtBBdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativePtBBdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativePtBBdn_isLoaded = true;
+  }
+  return NVQGen0jesRelativePtBBdn_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativePtBBdn() {
+  if (not NVQGen1jesRelativePtBBdn_isLoaded) {
+    if (NVQGen1jesRelativePtBBdn_branch != 0) {
+      NVQGen1jesRelativePtBBdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativePtBBdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativePtBBdn_isLoaded = true;
+  }
+  return NVQGen1jesRelativePtBBdn_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativePtBBdn() {
+  if (not NVQGen2jesRelativePtBBdn_isLoaded) {
+    if (NVQGen2jesRelativePtBBdn_branch != 0) {
+      NVQGen2jesRelativePtBBdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativePtBBdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativePtBBdn_isLoaded = true;
+  }
+  return NVQGen2jesRelativePtBBdn_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativePtBBdn() {
+  if (not NVQGen3jesRelativePtBBdn_isLoaded) {
+    if (NVQGen3jesRelativePtBBdn_branch != 0) {
+      NVQGen3jesRelativePtBBdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativePtBBdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativePtBBdn_isLoaded = true;
+  }
+  return NVQGen3jesRelativePtBBdn_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativePtBBdn() {
+  if (not NVQGen4jesRelativePtBBdn_isLoaded) {
+    if (NVQGen4jesRelativePtBBdn_branch != 0) {
+      NVQGen4jesRelativePtBBdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativePtBBdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativePtBBdn_isLoaded = true;
+  }
+  return NVQGen4jesRelativePtBBdn_;
 }
 
 const int &VVV0Tree::NiFJjesRelativePtBBdn() {
@@ -51999,6 +55404,71 @@ const int &VVV0Tree::NLGen4jesRelativePtEC1up() {
   return NLGen4jesRelativePtEC1up_;
 }
 
+const int &VVV0Tree::NVQGen0jesRelativePtEC1up() {
+  if (not NVQGen0jesRelativePtEC1up_isLoaded) {
+    if (NVQGen0jesRelativePtEC1up_branch != 0) {
+      NVQGen0jesRelativePtEC1up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativePtEC1up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativePtEC1up_isLoaded = true;
+  }
+  return NVQGen0jesRelativePtEC1up_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativePtEC1up() {
+  if (not NVQGen1jesRelativePtEC1up_isLoaded) {
+    if (NVQGen1jesRelativePtEC1up_branch != 0) {
+      NVQGen1jesRelativePtEC1up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativePtEC1up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativePtEC1up_isLoaded = true;
+  }
+  return NVQGen1jesRelativePtEC1up_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativePtEC1up() {
+  if (not NVQGen2jesRelativePtEC1up_isLoaded) {
+    if (NVQGen2jesRelativePtEC1up_branch != 0) {
+      NVQGen2jesRelativePtEC1up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativePtEC1up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativePtEC1up_isLoaded = true;
+  }
+  return NVQGen2jesRelativePtEC1up_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativePtEC1up() {
+  if (not NVQGen3jesRelativePtEC1up_isLoaded) {
+    if (NVQGen3jesRelativePtEC1up_branch != 0) {
+      NVQGen3jesRelativePtEC1up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativePtEC1up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativePtEC1up_isLoaded = true;
+  }
+  return NVQGen3jesRelativePtEC1up_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativePtEC1up() {
+  if (not NVQGen4jesRelativePtEC1up_isLoaded) {
+    if (NVQGen4jesRelativePtEC1up_branch != 0) {
+      NVQGen4jesRelativePtEC1up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativePtEC1up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativePtEC1up_isLoaded = true;
+  }
+  return NVQGen4jesRelativePtEC1up_;
+}
+
 const int &VVV0Tree::NiFJjesRelativePtEC1up() {
   if (not NiFJjesRelativePtEC1up_isLoaded) {
     if (NiFJjesRelativePtEC1up_branch != 0) {
@@ -52972,6 +56442,71 @@ const int &VVV0Tree::NLGen4jesRelativePtEC1dn() {
     NLGen4jesRelativePtEC1dn_isLoaded = true;
   }
   return NLGen4jesRelativePtEC1dn_;
+}
+
+const int &VVV0Tree::NVQGen0jesRelativePtEC1dn() {
+  if (not NVQGen0jesRelativePtEC1dn_isLoaded) {
+    if (NVQGen0jesRelativePtEC1dn_branch != 0) {
+      NVQGen0jesRelativePtEC1dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativePtEC1dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativePtEC1dn_isLoaded = true;
+  }
+  return NVQGen0jesRelativePtEC1dn_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativePtEC1dn() {
+  if (not NVQGen1jesRelativePtEC1dn_isLoaded) {
+    if (NVQGen1jesRelativePtEC1dn_branch != 0) {
+      NVQGen1jesRelativePtEC1dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativePtEC1dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativePtEC1dn_isLoaded = true;
+  }
+  return NVQGen1jesRelativePtEC1dn_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativePtEC1dn() {
+  if (not NVQGen2jesRelativePtEC1dn_isLoaded) {
+    if (NVQGen2jesRelativePtEC1dn_branch != 0) {
+      NVQGen2jesRelativePtEC1dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativePtEC1dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativePtEC1dn_isLoaded = true;
+  }
+  return NVQGen2jesRelativePtEC1dn_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativePtEC1dn() {
+  if (not NVQGen3jesRelativePtEC1dn_isLoaded) {
+    if (NVQGen3jesRelativePtEC1dn_branch != 0) {
+      NVQGen3jesRelativePtEC1dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativePtEC1dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativePtEC1dn_isLoaded = true;
+  }
+  return NVQGen3jesRelativePtEC1dn_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativePtEC1dn() {
+  if (not NVQGen4jesRelativePtEC1dn_isLoaded) {
+    if (NVQGen4jesRelativePtEC1dn_branch != 0) {
+      NVQGen4jesRelativePtEC1dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativePtEC1dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativePtEC1dn_isLoaded = true;
+  }
+  return NVQGen4jesRelativePtEC1dn_;
 }
 
 const int &VVV0Tree::NiFJjesRelativePtEC1dn() {
@@ -53949,6 +57484,71 @@ const int &VVV0Tree::NLGen4jesRelativePtEC2up() {
   return NLGen4jesRelativePtEC2up_;
 }
 
+const int &VVV0Tree::NVQGen0jesRelativePtEC2up() {
+  if (not NVQGen0jesRelativePtEC2up_isLoaded) {
+    if (NVQGen0jesRelativePtEC2up_branch != 0) {
+      NVQGen0jesRelativePtEC2up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativePtEC2up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativePtEC2up_isLoaded = true;
+  }
+  return NVQGen0jesRelativePtEC2up_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativePtEC2up() {
+  if (not NVQGen1jesRelativePtEC2up_isLoaded) {
+    if (NVQGen1jesRelativePtEC2up_branch != 0) {
+      NVQGen1jesRelativePtEC2up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativePtEC2up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativePtEC2up_isLoaded = true;
+  }
+  return NVQGen1jesRelativePtEC2up_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativePtEC2up() {
+  if (not NVQGen2jesRelativePtEC2up_isLoaded) {
+    if (NVQGen2jesRelativePtEC2up_branch != 0) {
+      NVQGen2jesRelativePtEC2up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativePtEC2up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativePtEC2up_isLoaded = true;
+  }
+  return NVQGen2jesRelativePtEC2up_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativePtEC2up() {
+  if (not NVQGen3jesRelativePtEC2up_isLoaded) {
+    if (NVQGen3jesRelativePtEC2up_branch != 0) {
+      NVQGen3jesRelativePtEC2up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativePtEC2up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativePtEC2up_isLoaded = true;
+  }
+  return NVQGen3jesRelativePtEC2up_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativePtEC2up() {
+  if (not NVQGen4jesRelativePtEC2up_isLoaded) {
+    if (NVQGen4jesRelativePtEC2up_branch != 0) {
+      NVQGen4jesRelativePtEC2up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativePtEC2up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativePtEC2up_isLoaded = true;
+  }
+  return NVQGen4jesRelativePtEC2up_;
+}
+
 const int &VVV0Tree::NiFJjesRelativePtEC2up() {
   if (not NiFJjesRelativePtEC2up_isLoaded) {
     if (NiFJjesRelativePtEC2up_branch != 0) {
@@ -54922,6 +58522,71 @@ const int &VVV0Tree::NLGen4jesRelativePtEC2dn() {
     NLGen4jesRelativePtEC2dn_isLoaded = true;
   }
   return NLGen4jesRelativePtEC2dn_;
+}
+
+const int &VVV0Tree::NVQGen0jesRelativePtEC2dn() {
+  if (not NVQGen0jesRelativePtEC2dn_isLoaded) {
+    if (NVQGen0jesRelativePtEC2dn_branch != 0) {
+      NVQGen0jesRelativePtEC2dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativePtEC2dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativePtEC2dn_isLoaded = true;
+  }
+  return NVQGen0jesRelativePtEC2dn_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativePtEC2dn() {
+  if (not NVQGen1jesRelativePtEC2dn_isLoaded) {
+    if (NVQGen1jesRelativePtEC2dn_branch != 0) {
+      NVQGen1jesRelativePtEC2dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativePtEC2dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativePtEC2dn_isLoaded = true;
+  }
+  return NVQGen1jesRelativePtEC2dn_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativePtEC2dn() {
+  if (not NVQGen2jesRelativePtEC2dn_isLoaded) {
+    if (NVQGen2jesRelativePtEC2dn_branch != 0) {
+      NVQGen2jesRelativePtEC2dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativePtEC2dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativePtEC2dn_isLoaded = true;
+  }
+  return NVQGen2jesRelativePtEC2dn_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativePtEC2dn() {
+  if (not NVQGen3jesRelativePtEC2dn_isLoaded) {
+    if (NVQGen3jesRelativePtEC2dn_branch != 0) {
+      NVQGen3jesRelativePtEC2dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativePtEC2dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativePtEC2dn_isLoaded = true;
+  }
+  return NVQGen3jesRelativePtEC2dn_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativePtEC2dn() {
+  if (not NVQGen4jesRelativePtEC2dn_isLoaded) {
+    if (NVQGen4jesRelativePtEC2dn_branch != 0) {
+      NVQGen4jesRelativePtEC2dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativePtEC2dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativePtEC2dn_isLoaded = true;
+  }
+  return NVQGen4jesRelativePtEC2dn_;
 }
 
 const int &VVV0Tree::NiFJjesRelativePtEC2dn() {
@@ -55899,6 +59564,71 @@ const int &VVV0Tree::NLGen4jesRelativePtHFup() {
   return NLGen4jesRelativePtHFup_;
 }
 
+const int &VVV0Tree::NVQGen0jesRelativePtHFup() {
+  if (not NVQGen0jesRelativePtHFup_isLoaded) {
+    if (NVQGen0jesRelativePtHFup_branch != 0) {
+      NVQGen0jesRelativePtHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativePtHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativePtHFup_isLoaded = true;
+  }
+  return NVQGen0jesRelativePtHFup_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativePtHFup() {
+  if (not NVQGen1jesRelativePtHFup_isLoaded) {
+    if (NVQGen1jesRelativePtHFup_branch != 0) {
+      NVQGen1jesRelativePtHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativePtHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativePtHFup_isLoaded = true;
+  }
+  return NVQGen1jesRelativePtHFup_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativePtHFup() {
+  if (not NVQGen2jesRelativePtHFup_isLoaded) {
+    if (NVQGen2jesRelativePtHFup_branch != 0) {
+      NVQGen2jesRelativePtHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativePtHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativePtHFup_isLoaded = true;
+  }
+  return NVQGen2jesRelativePtHFup_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativePtHFup() {
+  if (not NVQGen3jesRelativePtHFup_isLoaded) {
+    if (NVQGen3jesRelativePtHFup_branch != 0) {
+      NVQGen3jesRelativePtHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativePtHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativePtHFup_isLoaded = true;
+  }
+  return NVQGen3jesRelativePtHFup_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativePtHFup() {
+  if (not NVQGen4jesRelativePtHFup_isLoaded) {
+    if (NVQGen4jesRelativePtHFup_branch != 0) {
+      NVQGen4jesRelativePtHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativePtHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativePtHFup_isLoaded = true;
+  }
+  return NVQGen4jesRelativePtHFup_;
+}
+
 const int &VVV0Tree::NiFJjesRelativePtHFup() {
   if (not NiFJjesRelativePtHFup_isLoaded) {
     if (NiFJjesRelativePtHFup_branch != 0) {
@@ -56872,6 +60602,71 @@ const int &VVV0Tree::NLGen4jesRelativePtHFdn() {
     NLGen4jesRelativePtHFdn_isLoaded = true;
   }
   return NLGen4jesRelativePtHFdn_;
+}
+
+const int &VVV0Tree::NVQGen0jesRelativePtHFdn() {
+  if (not NVQGen0jesRelativePtHFdn_isLoaded) {
+    if (NVQGen0jesRelativePtHFdn_branch != 0) {
+      NVQGen0jesRelativePtHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativePtHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativePtHFdn_isLoaded = true;
+  }
+  return NVQGen0jesRelativePtHFdn_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativePtHFdn() {
+  if (not NVQGen1jesRelativePtHFdn_isLoaded) {
+    if (NVQGen1jesRelativePtHFdn_branch != 0) {
+      NVQGen1jesRelativePtHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativePtHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativePtHFdn_isLoaded = true;
+  }
+  return NVQGen1jesRelativePtHFdn_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativePtHFdn() {
+  if (not NVQGen2jesRelativePtHFdn_isLoaded) {
+    if (NVQGen2jesRelativePtHFdn_branch != 0) {
+      NVQGen2jesRelativePtHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativePtHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativePtHFdn_isLoaded = true;
+  }
+  return NVQGen2jesRelativePtHFdn_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativePtHFdn() {
+  if (not NVQGen3jesRelativePtHFdn_isLoaded) {
+    if (NVQGen3jesRelativePtHFdn_branch != 0) {
+      NVQGen3jesRelativePtHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativePtHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativePtHFdn_isLoaded = true;
+  }
+  return NVQGen3jesRelativePtHFdn_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativePtHFdn() {
+  if (not NVQGen4jesRelativePtHFdn_isLoaded) {
+    if (NVQGen4jesRelativePtHFdn_branch != 0) {
+      NVQGen4jesRelativePtHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativePtHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativePtHFdn_isLoaded = true;
+  }
+  return NVQGen4jesRelativePtHFdn_;
 }
 
 const int &VVV0Tree::NiFJjesRelativePtHFdn() {
@@ -57849,6 +61644,71 @@ const int &VVV0Tree::NLGen4jesRelativeBalup() {
   return NLGen4jesRelativeBalup_;
 }
 
+const int &VVV0Tree::NVQGen0jesRelativeBalup() {
+  if (not NVQGen0jesRelativeBalup_isLoaded) {
+    if (NVQGen0jesRelativeBalup_branch != 0) {
+      NVQGen0jesRelativeBalup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativeBalup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativeBalup_isLoaded = true;
+  }
+  return NVQGen0jesRelativeBalup_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativeBalup() {
+  if (not NVQGen1jesRelativeBalup_isLoaded) {
+    if (NVQGen1jesRelativeBalup_branch != 0) {
+      NVQGen1jesRelativeBalup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativeBalup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativeBalup_isLoaded = true;
+  }
+  return NVQGen1jesRelativeBalup_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativeBalup() {
+  if (not NVQGen2jesRelativeBalup_isLoaded) {
+    if (NVQGen2jesRelativeBalup_branch != 0) {
+      NVQGen2jesRelativeBalup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativeBalup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativeBalup_isLoaded = true;
+  }
+  return NVQGen2jesRelativeBalup_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativeBalup() {
+  if (not NVQGen3jesRelativeBalup_isLoaded) {
+    if (NVQGen3jesRelativeBalup_branch != 0) {
+      NVQGen3jesRelativeBalup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativeBalup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativeBalup_isLoaded = true;
+  }
+  return NVQGen3jesRelativeBalup_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativeBalup() {
+  if (not NVQGen4jesRelativeBalup_isLoaded) {
+    if (NVQGen4jesRelativeBalup_branch != 0) {
+      NVQGen4jesRelativeBalup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativeBalup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativeBalup_isLoaded = true;
+  }
+  return NVQGen4jesRelativeBalup_;
+}
+
 const int &VVV0Tree::NiFJjesRelativeBalup() {
   if (not NiFJjesRelativeBalup_isLoaded) {
     if (NiFJjesRelativeBalup_branch != 0) {
@@ -58822,6 +62682,71 @@ const int &VVV0Tree::NLGen4jesRelativeBaldn() {
     NLGen4jesRelativeBaldn_isLoaded = true;
   }
   return NLGen4jesRelativeBaldn_;
+}
+
+const int &VVV0Tree::NVQGen0jesRelativeBaldn() {
+  if (not NVQGen0jesRelativeBaldn_isLoaded) {
+    if (NVQGen0jesRelativeBaldn_branch != 0) {
+      NVQGen0jesRelativeBaldn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativeBaldn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativeBaldn_isLoaded = true;
+  }
+  return NVQGen0jesRelativeBaldn_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativeBaldn() {
+  if (not NVQGen1jesRelativeBaldn_isLoaded) {
+    if (NVQGen1jesRelativeBaldn_branch != 0) {
+      NVQGen1jesRelativeBaldn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativeBaldn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativeBaldn_isLoaded = true;
+  }
+  return NVQGen1jesRelativeBaldn_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativeBaldn() {
+  if (not NVQGen2jesRelativeBaldn_isLoaded) {
+    if (NVQGen2jesRelativeBaldn_branch != 0) {
+      NVQGen2jesRelativeBaldn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativeBaldn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativeBaldn_isLoaded = true;
+  }
+  return NVQGen2jesRelativeBaldn_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativeBaldn() {
+  if (not NVQGen3jesRelativeBaldn_isLoaded) {
+    if (NVQGen3jesRelativeBaldn_branch != 0) {
+      NVQGen3jesRelativeBaldn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativeBaldn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativeBaldn_isLoaded = true;
+  }
+  return NVQGen3jesRelativeBaldn_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativeBaldn() {
+  if (not NVQGen4jesRelativeBaldn_isLoaded) {
+    if (NVQGen4jesRelativeBaldn_branch != 0) {
+      NVQGen4jesRelativeBaldn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativeBaldn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativeBaldn_isLoaded = true;
+  }
+  return NVQGen4jesRelativeBaldn_;
 }
 
 const int &VVV0Tree::NiFJjesRelativeBaldn() {
@@ -59799,6 +63724,71 @@ const int &VVV0Tree::NLGen4jesRelativeSampleup() {
   return NLGen4jesRelativeSampleup_;
 }
 
+const int &VVV0Tree::NVQGen0jesRelativeSampleup() {
+  if (not NVQGen0jesRelativeSampleup_isLoaded) {
+    if (NVQGen0jesRelativeSampleup_branch != 0) {
+      NVQGen0jesRelativeSampleup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativeSampleup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativeSampleup_isLoaded = true;
+  }
+  return NVQGen0jesRelativeSampleup_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativeSampleup() {
+  if (not NVQGen1jesRelativeSampleup_isLoaded) {
+    if (NVQGen1jesRelativeSampleup_branch != 0) {
+      NVQGen1jesRelativeSampleup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativeSampleup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativeSampleup_isLoaded = true;
+  }
+  return NVQGen1jesRelativeSampleup_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativeSampleup() {
+  if (not NVQGen2jesRelativeSampleup_isLoaded) {
+    if (NVQGen2jesRelativeSampleup_branch != 0) {
+      NVQGen2jesRelativeSampleup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativeSampleup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativeSampleup_isLoaded = true;
+  }
+  return NVQGen2jesRelativeSampleup_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativeSampleup() {
+  if (not NVQGen3jesRelativeSampleup_isLoaded) {
+    if (NVQGen3jesRelativeSampleup_branch != 0) {
+      NVQGen3jesRelativeSampleup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativeSampleup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativeSampleup_isLoaded = true;
+  }
+  return NVQGen3jesRelativeSampleup_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativeSampleup() {
+  if (not NVQGen4jesRelativeSampleup_isLoaded) {
+    if (NVQGen4jesRelativeSampleup_branch != 0) {
+      NVQGen4jesRelativeSampleup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativeSampleup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativeSampleup_isLoaded = true;
+  }
+  return NVQGen4jesRelativeSampleup_;
+}
+
 const int &VVV0Tree::NiFJjesRelativeSampleup() {
   if (not NiFJjesRelativeSampleup_isLoaded) {
     if (NiFJjesRelativeSampleup_branch != 0) {
@@ -60772,6 +64762,71 @@ const int &VVV0Tree::NLGen4jesRelativeSampledn() {
     NLGen4jesRelativeSampledn_isLoaded = true;
   }
   return NLGen4jesRelativeSampledn_;
+}
+
+const int &VVV0Tree::NVQGen0jesRelativeSampledn() {
+  if (not NVQGen0jesRelativeSampledn_isLoaded) {
+    if (NVQGen0jesRelativeSampledn_branch != 0) {
+      NVQGen0jesRelativeSampledn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativeSampledn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativeSampledn_isLoaded = true;
+  }
+  return NVQGen0jesRelativeSampledn_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativeSampledn() {
+  if (not NVQGen1jesRelativeSampledn_isLoaded) {
+    if (NVQGen1jesRelativeSampledn_branch != 0) {
+      NVQGen1jesRelativeSampledn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativeSampledn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativeSampledn_isLoaded = true;
+  }
+  return NVQGen1jesRelativeSampledn_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativeSampledn() {
+  if (not NVQGen2jesRelativeSampledn_isLoaded) {
+    if (NVQGen2jesRelativeSampledn_branch != 0) {
+      NVQGen2jesRelativeSampledn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativeSampledn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativeSampledn_isLoaded = true;
+  }
+  return NVQGen2jesRelativeSampledn_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativeSampledn() {
+  if (not NVQGen3jesRelativeSampledn_isLoaded) {
+    if (NVQGen3jesRelativeSampledn_branch != 0) {
+      NVQGen3jesRelativeSampledn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativeSampledn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativeSampledn_isLoaded = true;
+  }
+  return NVQGen3jesRelativeSampledn_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativeSampledn() {
+  if (not NVQGen4jesRelativeSampledn_isLoaded) {
+    if (NVQGen4jesRelativeSampledn_branch != 0) {
+      NVQGen4jesRelativeSampledn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativeSampledn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativeSampledn_isLoaded = true;
+  }
+  return NVQGen4jesRelativeSampledn_;
 }
 
 const int &VVV0Tree::NiFJjesRelativeSampledn() {
@@ -61749,6 +65804,71 @@ const int &VVV0Tree::NLGen4jesRelativeFSRup() {
   return NLGen4jesRelativeFSRup_;
 }
 
+const int &VVV0Tree::NVQGen0jesRelativeFSRup() {
+  if (not NVQGen0jesRelativeFSRup_isLoaded) {
+    if (NVQGen0jesRelativeFSRup_branch != 0) {
+      NVQGen0jesRelativeFSRup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativeFSRup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativeFSRup_isLoaded = true;
+  }
+  return NVQGen0jesRelativeFSRup_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativeFSRup() {
+  if (not NVQGen1jesRelativeFSRup_isLoaded) {
+    if (NVQGen1jesRelativeFSRup_branch != 0) {
+      NVQGen1jesRelativeFSRup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativeFSRup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativeFSRup_isLoaded = true;
+  }
+  return NVQGen1jesRelativeFSRup_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativeFSRup() {
+  if (not NVQGen2jesRelativeFSRup_isLoaded) {
+    if (NVQGen2jesRelativeFSRup_branch != 0) {
+      NVQGen2jesRelativeFSRup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativeFSRup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativeFSRup_isLoaded = true;
+  }
+  return NVQGen2jesRelativeFSRup_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativeFSRup() {
+  if (not NVQGen3jesRelativeFSRup_isLoaded) {
+    if (NVQGen3jesRelativeFSRup_branch != 0) {
+      NVQGen3jesRelativeFSRup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativeFSRup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativeFSRup_isLoaded = true;
+  }
+  return NVQGen3jesRelativeFSRup_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativeFSRup() {
+  if (not NVQGen4jesRelativeFSRup_isLoaded) {
+    if (NVQGen4jesRelativeFSRup_branch != 0) {
+      NVQGen4jesRelativeFSRup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativeFSRup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativeFSRup_isLoaded = true;
+  }
+  return NVQGen4jesRelativeFSRup_;
+}
+
 const int &VVV0Tree::NiFJjesRelativeFSRup() {
   if (not NiFJjesRelativeFSRup_isLoaded) {
     if (NiFJjesRelativeFSRup_branch != 0) {
@@ -62722,6 +66842,71 @@ const int &VVV0Tree::NLGen4jesRelativeFSRdn() {
     NLGen4jesRelativeFSRdn_isLoaded = true;
   }
   return NLGen4jesRelativeFSRdn_;
+}
+
+const int &VVV0Tree::NVQGen0jesRelativeFSRdn() {
+  if (not NVQGen0jesRelativeFSRdn_isLoaded) {
+    if (NVQGen0jesRelativeFSRdn_branch != 0) {
+      NVQGen0jesRelativeFSRdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativeFSRdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativeFSRdn_isLoaded = true;
+  }
+  return NVQGen0jesRelativeFSRdn_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativeFSRdn() {
+  if (not NVQGen1jesRelativeFSRdn_isLoaded) {
+    if (NVQGen1jesRelativeFSRdn_branch != 0) {
+      NVQGen1jesRelativeFSRdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativeFSRdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativeFSRdn_isLoaded = true;
+  }
+  return NVQGen1jesRelativeFSRdn_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativeFSRdn() {
+  if (not NVQGen2jesRelativeFSRdn_isLoaded) {
+    if (NVQGen2jesRelativeFSRdn_branch != 0) {
+      NVQGen2jesRelativeFSRdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativeFSRdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativeFSRdn_isLoaded = true;
+  }
+  return NVQGen2jesRelativeFSRdn_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativeFSRdn() {
+  if (not NVQGen3jesRelativeFSRdn_isLoaded) {
+    if (NVQGen3jesRelativeFSRdn_branch != 0) {
+      NVQGen3jesRelativeFSRdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativeFSRdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativeFSRdn_isLoaded = true;
+  }
+  return NVQGen3jesRelativeFSRdn_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativeFSRdn() {
+  if (not NVQGen4jesRelativeFSRdn_isLoaded) {
+    if (NVQGen4jesRelativeFSRdn_branch != 0) {
+      NVQGen4jesRelativeFSRdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativeFSRdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativeFSRdn_isLoaded = true;
+  }
+  return NVQGen4jesRelativeFSRdn_;
 }
 
 const int &VVV0Tree::NiFJjesRelativeFSRdn() {
@@ -63699,6 +67884,71 @@ const int &VVV0Tree::NLGen4jesRelativeStatFSRup() {
   return NLGen4jesRelativeStatFSRup_;
 }
 
+const int &VVV0Tree::NVQGen0jesRelativeStatFSRup() {
+  if (not NVQGen0jesRelativeStatFSRup_isLoaded) {
+    if (NVQGen0jesRelativeStatFSRup_branch != 0) {
+      NVQGen0jesRelativeStatFSRup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativeStatFSRup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativeStatFSRup_isLoaded = true;
+  }
+  return NVQGen0jesRelativeStatFSRup_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativeStatFSRup() {
+  if (not NVQGen1jesRelativeStatFSRup_isLoaded) {
+    if (NVQGen1jesRelativeStatFSRup_branch != 0) {
+      NVQGen1jesRelativeStatFSRup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativeStatFSRup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativeStatFSRup_isLoaded = true;
+  }
+  return NVQGen1jesRelativeStatFSRup_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativeStatFSRup() {
+  if (not NVQGen2jesRelativeStatFSRup_isLoaded) {
+    if (NVQGen2jesRelativeStatFSRup_branch != 0) {
+      NVQGen2jesRelativeStatFSRup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativeStatFSRup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativeStatFSRup_isLoaded = true;
+  }
+  return NVQGen2jesRelativeStatFSRup_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativeStatFSRup() {
+  if (not NVQGen3jesRelativeStatFSRup_isLoaded) {
+    if (NVQGen3jesRelativeStatFSRup_branch != 0) {
+      NVQGen3jesRelativeStatFSRup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativeStatFSRup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativeStatFSRup_isLoaded = true;
+  }
+  return NVQGen3jesRelativeStatFSRup_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativeStatFSRup() {
+  if (not NVQGen4jesRelativeStatFSRup_isLoaded) {
+    if (NVQGen4jesRelativeStatFSRup_branch != 0) {
+      NVQGen4jesRelativeStatFSRup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativeStatFSRup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativeStatFSRup_isLoaded = true;
+  }
+  return NVQGen4jesRelativeStatFSRup_;
+}
+
 const int &VVV0Tree::NiFJjesRelativeStatFSRup() {
   if (not NiFJjesRelativeStatFSRup_isLoaded) {
     if (NiFJjesRelativeStatFSRup_branch != 0) {
@@ -64672,6 +68922,71 @@ const int &VVV0Tree::NLGen4jesRelativeStatFSRdn() {
     NLGen4jesRelativeStatFSRdn_isLoaded = true;
   }
   return NLGen4jesRelativeStatFSRdn_;
+}
+
+const int &VVV0Tree::NVQGen0jesRelativeStatFSRdn() {
+  if (not NVQGen0jesRelativeStatFSRdn_isLoaded) {
+    if (NVQGen0jesRelativeStatFSRdn_branch != 0) {
+      NVQGen0jesRelativeStatFSRdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativeStatFSRdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativeStatFSRdn_isLoaded = true;
+  }
+  return NVQGen0jesRelativeStatFSRdn_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativeStatFSRdn() {
+  if (not NVQGen1jesRelativeStatFSRdn_isLoaded) {
+    if (NVQGen1jesRelativeStatFSRdn_branch != 0) {
+      NVQGen1jesRelativeStatFSRdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativeStatFSRdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativeStatFSRdn_isLoaded = true;
+  }
+  return NVQGen1jesRelativeStatFSRdn_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativeStatFSRdn() {
+  if (not NVQGen2jesRelativeStatFSRdn_isLoaded) {
+    if (NVQGen2jesRelativeStatFSRdn_branch != 0) {
+      NVQGen2jesRelativeStatFSRdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativeStatFSRdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativeStatFSRdn_isLoaded = true;
+  }
+  return NVQGen2jesRelativeStatFSRdn_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativeStatFSRdn() {
+  if (not NVQGen3jesRelativeStatFSRdn_isLoaded) {
+    if (NVQGen3jesRelativeStatFSRdn_branch != 0) {
+      NVQGen3jesRelativeStatFSRdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativeStatFSRdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativeStatFSRdn_isLoaded = true;
+  }
+  return NVQGen3jesRelativeStatFSRdn_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativeStatFSRdn() {
+  if (not NVQGen4jesRelativeStatFSRdn_isLoaded) {
+    if (NVQGen4jesRelativeStatFSRdn_branch != 0) {
+      NVQGen4jesRelativeStatFSRdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativeStatFSRdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativeStatFSRdn_isLoaded = true;
+  }
+  return NVQGen4jesRelativeStatFSRdn_;
 }
 
 const int &VVV0Tree::NiFJjesRelativeStatFSRdn() {
@@ -65649,6 +69964,71 @@ const int &VVV0Tree::NLGen4jesRelativeStatECup() {
   return NLGen4jesRelativeStatECup_;
 }
 
+const int &VVV0Tree::NVQGen0jesRelativeStatECup() {
+  if (not NVQGen0jesRelativeStatECup_isLoaded) {
+    if (NVQGen0jesRelativeStatECup_branch != 0) {
+      NVQGen0jesRelativeStatECup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativeStatECup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativeStatECup_isLoaded = true;
+  }
+  return NVQGen0jesRelativeStatECup_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativeStatECup() {
+  if (not NVQGen1jesRelativeStatECup_isLoaded) {
+    if (NVQGen1jesRelativeStatECup_branch != 0) {
+      NVQGen1jesRelativeStatECup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativeStatECup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativeStatECup_isLoaded = true;
+  }
+  return NVQGen1jesRelativeStatECup_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativeStatECup() {
+  if (not NVQGen2jesRelativeStatECup_isLoaded) {
+    if (NVQGen2jesRelativeStatECup_branch != 0) {
+      NVQGen2jesRelativeStatECup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativeStatECup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativeStatECup_isLoaded = true;
+  }
+  return NVQGen2jesRelativeStatECup_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativeStatECup() {
+  if (not NVQGen3jesRelativeStatECup_isLoaded) {
+    if (NVQGen3jesRelativeStatECup_branch != 0) {
+      NVQGen3jesRelativeStatECup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativeStatECup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativeStatECup_isLoaded = true;
+  }
+  return NVQGen3jesRelativeStatECup_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativeStatECup() {
+  if (not NVQGen4jesRelativeStatECup_isLoaded) {
+    if (NVQGen4jesRelativeStatECup_branch != 0) {
+      NVQGen4jesRelativeStatECup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativeStatECup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativeStatECup_isLoaded = true;
+  }
+  return NVQGen4jesRelativeStatECup_;
+}
+
 const int &VVV0Tree::NiFJjesRelativeStatECup() {
   if (not NiFJjesRelativeStatECup_isLoaded) {
     if (NiFJjesRelativeStatECup_branch != 0) {
@@ -66622,6 +71002,71 @@ const int &VVV0Tree::NLGen4jesRelativeStatECdn() {
     NLGen4jesRelativeStatECdn_isLoaded = true;
   }
   return NLGen4jesRelativeStatECdn_;
+}
+
+const int &VVV0Tree::NVQGen0jesRelativeStatECdn() {
+  if (not NVQGen0jesRelativeStatECdn_isLoaded) {
+    if (NVQGen0jesRelativeStatECdn_branch != 0) {
+      NVQGen0jesRelativeStatECdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativeStatECdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativeStatECdn_isLoaded = true;
+  }
+  return NVQGen0jesRelativeStatECdn_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativeStatECdn() {
+  if (not NVQGen1jesRelativeStatECdn_isLoaded) {
+    if (NVQGen1jesRelativeStatECdn_branch != 0) {
+      NVQGen1jesRelativeStatECdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativeStatECdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativeStatECdn_isLoaded = true;
+  }
+  return NVQGen1jesRelativeStatECdn_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativeStatECdn() {
+  if (not NVQGen2jesRelativeStatECdn_isLoaded) {
+    if (NVQGen2jesRelativeStatECdn_branch != 0) {
+      NVQGen2jesRelativeStatECdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativeStatECdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativeStatECdn_isLoaded = true;
+  }
+  return NVQGen2jesRelativeStatECdn_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativeStatECdn() {
+  if (not NVQGen3jesRelativeStatECdn_isLoaded) {
+    if (NVQGen3jesRelativeStatECdn_branch != 0) {
+      NVQGen3jesRelativeStatECdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativeStatECdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativeStatECdn_isLoaded = true;
+  }
+  return NVQGen3jesRelativeStatECdn_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativeStatECdn() {
+  if (not NVQGen4jesRelativeStatECdn_isLoaded) {
+    if (NVQGen4jesRelativeStatECdn_branch != 0) {
+      NVQGen4jesRelativeStatECdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativeStatECdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativeStatECdn_isLoaded = true;
+  }
+  return NVQGen4jesRelativeStatECdn_;
 }
 
 const int &VVV0Tree::NiFJjesRelativeStatECdn() {
@@ -67599,6 +72044,71 @@ const int &VVV0Tree::NLGen4jesRelativeStatHFup() {
   return NLGen4jesRelativeStatHFup_;
 }
 
+const int &VVV0Tree::NVQGen0jesRelativeStatHFup() {
+  if (not NVQGen0jesRelativeStatHFup_isLoaded) {
+    if (NVQGen0jesRelativeStatHFup_branch != 0) {
+      NVQGen0jesRelativeStatHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativeStatHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativeStatHFup_isLoaded = true;
+  }
+  return NVQGen0jesRelativeStatHFup_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativeStatHFup() {
+  if (not NVQGen1jesRelativeStatHFup_isLoaded) {
+    if (NVQGen1jesRelativeStatHFup_branch != 0) {
+      NVQGen1jesRelativeStatHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativeStatHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativeStatHFup_isLoaded = true;
+  }
+  return NVQGen1jesRelativeStatHFup_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativeStatHFup() {
+  if (not NVQGen2jesRelativeStatHFup_isLoaded) {
+    if (NVQGen2jesRelativeStatHFup_branch != 0) {
+      NVQGen2jesRelativeStatHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativeStatHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativeStatHFup_isLoaded = true;
+  }
+  return NVQGen2jesRelativeStatHFup_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativeStatHFup() {
+  if (not NVQGen3jesRelativeStatHFup_isLoaded) {
+    if (NVQGen3jesRelativeStatHFup_branch != 0) {
+      NVQGen3jesRelativeStatHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativeStatHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativeStatHFup_isLoaded = true;
+  }
+  return NVQGen3jesRelativeStatHFup_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativeStatHFup() {
+  if (not NVQGen4jesRelativeStatHFup_isLoaded) {
+    if (NVQGen4jesRelativeStatHFup_branch != 0) {
+      NVQGen4jesRelativeStatHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativeStatHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativeStatHFup_isLoaded = true;
+  }
+  return NVQGen4jesRelativeStatHFup_;
+}
+
 const int &VVV0Tree::NiFJjesRelativeStatHFup() {
   if (not NiFJjesRelativeStatHFup_isLoaded) {
     if (NiFJjesRelativeStatHFup_branch != 0) {
@@ -68572,6 +73082,71 @@ const int &VVV0Tree::NLGen4jesRelativeStatHFdn() {
     NLGen4jesRelativeStatHFdn_isLoaded = true;
   }
   return NLGen4jesRelativeStatHFdn_;
+}
+
+const int &VVV0Tree::NVQGen0jesRelativeStatHFdn() {
+  if (not NVQGen0jesRelativeStatHFdn_isLoaded) {
+    if (NVQGen0jesRelativeStatHFdn_branch != 0) {
+      NVQGen0jesRelativeStatHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesRelativeStatHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesRelativeStatHFdn_isLoaded = true;
+  }
+  return NVQGen0jesRelativeStatHFdn_;
+}
+
+const int &VVV0Tree::NVQGen1jesRelativeStatHFdn() {
+  if (not NVQGen1jesRelativeStatHFdn_isLoaded) {
+    if (NVQGen1jesRelativeStatHFdn_branch != 0) {
+      NVQGen1jesRelativeStatHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesRelativeStatHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesRelativeStatHFdn_isLoaded = true;
+  }
+  return NVQGen1jesRelativeStatHFdn_;
+}
+
+const int &VVV0Tree::NVQGen2jesRelativeStatHFdn() {
+  if (not NVQGen2jesRelativeStatHFdn_isLoaded) {
+    if (NVQGen2jesRelativeStatHFdn_branch != 0) {
+      NVQGen2jesRelativeStatHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesRelativeStatHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesRelativeStatHFdn_isLoaded = true;
+  }
+  return NVQGen2jesRelativeStatHFdn_;
+}
+
+const int &VVV0Tree::NVQGen3jesRelativeStatHFdn() {
+  if (not NVQGen3jesRelativeStatHFdn_isLoaded) {
+    if (NVQGen3jesRelativeStatHFdn_branch != 0) {
+      NVQGen3jesRelativeStatHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesRelativeStatHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesRelativeStatHFdn_isLoaded = true;
+  }
+  return NVQGen3jesRelativeStatHFdn_;
+}
+
+const int &VVV0Tree::NVQGen4jesRelativeStatHFdn() {
+  if (not NVQGen4jesRelativeStatHFdn_isLoaded) {
+    if (NVQGen4jesRelativeStatHFdn_branch != 0) {
+      NVQGen4jesRelativeStatHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesRelativeStatHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesRelativeStatHFdn_isLoaded = true;
+  }
+  return NVQGen4jesRelativeStatHFdn_;
 }
 
 const int &VVV0Tree::NiFJjesRelativeStatHFdn() {
@@ -69549,6 +74124,71 @@ const int &VVV0Tree::NLGen4jesPileUpDataMCup() {
   return NLGen4jesPileUpDataMCup_;
 }
 
+const int &VVV0Tree::NVQGen0jesPileUpDataMCup() {
+  if (not NVQGen0jesPileUpDataMCup_isLoaded) {
+    if (NVQGen0jesPileUpDataMCup_branch != 0) {
+      NVQGen0jesPileUpDataMCup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesPileUpDataMCup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesPileUpDataMCup_isLoaded = true;
+  }
+  return NVQGen0jesPileUpDataMCup_;
+}
+
+const int &VVV0Tree::NVQGen1jesPileUpDataMCup() {
+  if (not NVQGen1jesPileUpDataMCup_isLoaded) {
+    if (NVQGen1jesPileUpDataMCup_branch != 0) {
+      NVQGen1jesPileUpDataMCup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesPileUpDataMCup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesPileUpDataMCup_isLoaded = true;
+  }
+  return NVQGen1jesPileUpDataMCup_;
+}
+
+const int &VVV0Tree::NVQGen2jesPileUpDataMCup() {
+  if (not NVQGen2jesPileUpDataMCup_isLoaded) {
+    if (NVQGen2jesPileUpDataMCup_branch != 0) {
+      NVQGen2jesPileUpDataMCup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesPileUpDataMCup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesPileUpDataMCup_isLoaded = true;
+  }
+  return NVQGen2jesPileUpDataMCup_;
+}
+
+const int &VVV0Tree::NVQGen3jesPileUpDataMCup() {
+  if (not NVQGen3jesPileUpDataMCup_isLoaded) {
+    if (NVQGen3jesPileUpDataMCup_branch != 0) {
+      NVQGen3jesPileUpDataMCup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesPileUpDataMCup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesPileUpDataMCup_isLoaded = true;
+  }
+  return NVQGen3jesPileUpDataMCup_;
+}
+
+const int &VVV0Tree::NVQGen4jesPileUpDataMCup() {
+  if (not NVQGen4jesPileUpDataMCup_isLoaded) {
+    if (NVQGen4jesPileUpDataMCup_branch != 0) {
+      NVQGen4jesPileUpDataMCup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesPileUpDataMCup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesPileUpDataMCup_isLoaded = true;
+  }
+  return NVQGen4jesPileUpDataMCup_;
+}
+
 const int &VVV0Tree::NiFJjesPileUpDataMCup() {
   if (not NiFJjesPileUpDataMCup_isLoaded) {
     if (NiFJjesPileUpDataMCup_branch != 0) {
@@ -70522,6 +75162,71 @@ const int &VVV0Tree::NLGen4jesPileUpDataMCdn() {
     NLGen4jesPileUpDataMCdn_isLoaded = true;
   }
   return NLGen4jesPileUpDataMCdn_;
+}
+
+const int &VVV0Tree::NVQGen0jesPileUpDataMCdn() {
+  if (not NVQGen0jesPileUpDataMCdn_isLoaded) {
+    if (NVQGen0jesPileUpDataMCdn_branch != 0) {
+      NVQGen0jesPileUpDataMCdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesPileUpDataMCdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesPileUpDataMCdn_isLoaded = true;
+  }
+  return NVQGen0jesPileUpDataMCdn_;
+}
+
+const int &VVV0Tree::NVQGen1jesPileUpDataMCdn() {
+  if (not NVQGen1jesPileUpDataMCdn_isLoaded) {
+    if (NVQGen1jesPileUpDataMCdn_branch != 0) {
+      NVQGen1jesPileUpDataMCdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesPileUpDataMCdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesPileUpDataMCdn_isLoaded = true;
+  }
+  return NVQGen1jesPileUpDataMCdn_;
+}
+
+const int &VVV0Tree::NVQGen2jesPileUpDataMCdn() {
+  if (not NVQGen2jesPileUpDataMCdn_isLoaded) {
+    if (NVQGen2jesPileUpDataMCdn_branch != 0) {
+      NVQGen2jesPileUpDataMCdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesPileUpDataMCdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesPileUpDataMCdn_isLoaded = true;
+  }
+  return NVQGen2jesPileUpDataMCdn_;
+}
+
+const int &VVV0Tree::NVQGen3jesPileUpDataMCdn() {
+  if (not NVQGen3jesPileUpDataMCdn_isLoaded) {
+    if (NVQGen3jesPileUpDataMCdn_branch != 0) {
+      NVQGen3jesPileUpDataMCdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesPileUpDataMCdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesPileUpDataMCdn_isLoaded = true;
+  }
+  return NVQGen3jesPileUpDataMCdn_;
+}
+
+const int &VVV0Tree::NVQGen4jesPileUpDataMCdn() {
+  if (not NVQGen4jesPileUpDataMCdn_isLoaded) {
+    if (NVQGen4jesPileUpDataMCdn_branch != 0) {
+      NVQGen4jesPileUpDataMCdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesPileUpDataMCdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesPileUpDataMCdn_isLoaded = true;
+  }
+  return NVQGen4jesPileUpDataMCdn_;
 }
 
 const int &VVV0Tree::NiFJjesPileUpDataMCdn() {
@@ -71499,6 +76204,71 @@ const int &VVV0Tree::NLGen4jesPileUpPtRefup() {
   return NLGen4jesPileUpPtRefup_;
 }
 
+const int &VVV0Tree::NVQGen0jesPileUpPtRefup() {
+  if (not NVQGen0jesPileUpPtRefup_isLoaded) {
+    if (NVQGen0jesPileUpPtRefup_branch != 0) {
+      NVQGen0jesPileUpPtRefup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesPileUpPtRefup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesPileUpPtRefup_isLoaded = true;
+  }
+  return NVQGen0jesPileUpPtRefup_;
+}
+
+const int &VVV0Tree::NVQGen1jesPileUpPtRefup() {
+  if (not NVQGen1jesPileUpPtRefup_isLoaded) {
+    if (NVQGen1jesPileUpPtRefup_branch != 0) {
+      NVQGen1jesPileUpPtRefup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesPileUpPtRefup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesPileUpPtRefup_isLoaded = true;
+  }
+  return NVQGen1jesPileUpPtRefup_;
+}
+
+const int &VVV0Tree::NVQGen2jesPileUpPtRefup() {
+  if (not NVQGen2jesPileUpPtRefup_isLoaded) {
+    if (NVQGen2jesPileUpPtRefup_branch != 0) {
+      NVQGen2jesPileUpPtRefup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesPileUpPtRefup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesPileUpPtRefup_isLoaded = true;
+  }
+  return NVQGen2jesPileUpPtRefup_;
+}
+
+const int &VVV0Tree::NVQGen3jesPileUpPtRefup() {
+  if (not NVQGen3jesPileUpPtRefup_isLoaded) {
+    if (NVQGen3jesPileUpPtRefup_branch != 0) {
+      NVQGen3jesPileUpPtRefup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesPileUpPtRefup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesPileUpPtRefup_isLoaded = true;
+  }
+  return NVQGen3jesPileUpPtRefup_;
+}
+
+const int &VVV0Tree::NVQGen4jesPileUpPtRefup() {
+  if (not NVQGen4jesPileUpPtRefup_isLoaded) {
+    if (NVQGen4jesPileUpPtRefup_branch != 0) {
+      NVQGen4jesPileUpPtRefup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesPileUpPtRefup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesPileUpPtRefup_isLoaded = true;
+  }
+  return NVQGen4jesPileUpPtRefup_;
+}
+
 const int &VVV0Tree::NiFJjesPileUpPtRefup() {
   if (not NiFJjesPileUpPtRefup_isLoaded) {
     if (NiFJjesPileUpPtRefup_branch != 0) {
@@ -72472,6 +77242,71 @@ const int &VVV0Tree::NLGen4jesPileUpPtRefdn() {
     NLGen4jesPileUpPtRefdn_isLoaded = true;
   }
   return NLGen4jesPileUpPtRefdn_;
+}
+
+const int &VVV0Tree::NVQGen0jesPileUpPtRefdn() {
+  if (not NVQGen0jesPileUpPtRefdn_isLoaded) {
+    if (NVQGen0jesPileUpPtRefdn_branch != 0) {
+      NVQGen0jesPileUpPtRefdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesPileUpPtRefdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesPileUpPtRefdn_isLoaded = true;
+  }
+  return NVQGen0jesPileUpPtRefdn_;
+}
+
+const int &VVV0Tree::NVQGen1jesPileUpPtRefdn() {
+  if (not NVQGen1jesPileUpPtRefdn_isLoaded) {
+    if (NVQGen1jesPileUpPtRefdn_branch != 0) {
+      NVQGen1jesPileUpPtRefdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesPileUpPtRefdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesPileUpPtRefdn_isLoaded = true;
+  }
+  return NVQGen1jesPileUpPtRefdn_;
+}
+
+const int &VVV0Tree::NVQGen2jesPileUpPtRefdn() {
+  if (not NVQGen2jesPileUpPtRefdn_isLoaded) {
+    if (NVQGen2jesPileUpPtRefdn_branch != 0) {
+      NVQGen2jesPileUpPtRefdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesPileUpPtRefdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesPileUpPtRefdn_isLoaded = true;
+  }
+  return NVQGen2jesPileUpPtRefdn_;
+}
+
+const int &VVV0Tree::NVQGen3jesPileUpPtRefdn() {
+  if (not NVQGen3jesPileUpPtRefdn_isLoaded) {
+    if (NVQGen3jesPileUpPtRefdn_branch != 0) {
+      NVQGen3jesPileUpPtRefdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesPileUpPtRefdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesPileUpPtRefdn_isLoaded = true;
+  }
+  return NVQGen3jesPileUpPtRefdn_;
+}
+
+const int &VVV0Tree::NVQGen4jesPileUpPtRefdn() {
+  if (not NVQGen4jesPileUpPtRefdn_isLoaded) {
+    if (NVQGen4jesPileUpPtRefdn_branch != 0) {
+      NVQGen4jesPileUpPtRefdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesPileUpPtRefdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesPileUpPtRefdn_isLoaded = true;
+  }
+  return NVQGen4jesPileUpPtRefdn_;
 }
 
 const int &VVV0Tree::NiFJjesPileUpPtRefdn() {
@@ -73449,6 +78284,71 @@ const int &VVV0Tree::NLGen4jesPileUpPtBBup() {
   return NLGen4jesPileUpPtBBup_;
 }
 
+const int &VVV0Tree::NVQGen0jesPileUpPtBBup() {
+  if (not NVQGen0jesPileUpPtBBup_isLoaded) {
+    if (NVQGen0jesPileUpPtBBup_branch != 0) {
+      NVQGen0jesPileUpPtBBup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesPileUpPtBBup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesPileUpPtBBup_isLoaded = true;
+  }
+  return NVQGen0jesPileUpPtBBup_;
+}
+
+const int &VVV0Tree::NVQGen1jesPileUpPtBBup() {
+  if (not NVQGen1jesPileUpPtBBup_isLoaded) {
+    if (NVQGen1jesPileUpPtBBup_branch != 0) {
+      NVQGen1jesPileUpPtBBup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesPileUpPtBBup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesPileUpPtBBup_isLoaded = true;
+  }
+  return NVQGen1jesPileUpPtBBup_;
+}
+
+const int &VVV0Tree::NVQGen2jesPileUpPtBBup() {
+  if (not NVQGen2jesPileUpPtBBup_isLoaded) {
+    if (NVQGen2jesPileUpPtBBup_branch != 0) {
+      NVQGen2jesPileUpPtBBup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesPileUpPtBBup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesPileUpPtBBup_isLoaded = true;
+  }
+  return NVQGen2jesPileUpPtBBup_;
+}
+
+const int &VVV0Tree::NVQGen3jesPileUpPtBBup() {
+  if (not NVQGen3jesPileUpPtBBup_isLoaded) {
+    if (NVQGen3jesPileUpPtBBup_branch != 0) {
+      NVQGen3jesPileUpPtBBup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesPileUpPtBBup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesPileUpPtBBup_isLoaded = true;
+  }
+  return NVQGen3jesPileUpPtBBup_;
+}
+
+const int &VVV0Tree::NVQGen4jesPileUpPtBBup() {
+  if (not NVQGen4jesPileUpPtBBup_isLoaded) {
+    if (NVQGen4jesPileUpPtBBup_branch != 0) {
+      NVQGen4jesPileUpPtBBup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesPileUpPtBBup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesPileUpPtBBup_isLoaded = true;
+  }
+  return NVQGen4jesPileUpPtBBup_;
+}
+
 const int &VVV0Tree::NiFJjesPileUpPtBBup() {
   if (not NiFJjesPileUpPtBBup_isLoaded) {
     if (NiFJjesPileUpPtBBup_branch != 0) {
@@ -74422,6 +79322,71 @@ const int &VVV0Tree::NLGen4jesPileUpPtBBdn() {
     NLGen4jesPileUpPtBBdn_isLoaded = true;
   }
   return NLGen4jesPileUpPtBBdn_;
+}
+
+const int &VVV0Tree::NVQGen0jesPileUpPtBBdn() {
+  if (not NVQGen0jesPileUpPtBBdn_isLoaded) {
+    if (NVQGen0jesPileUpPtBBdn_branch != 0) {
+      NVQGen0jesPileUpPtBBdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesPileUpPtBBdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesPileUpPtBBdn_isLoaded = true;
+  }
+  return NVQGen0jesPileUpPtBBdn_;
+}
+
+const int &VVV0Tree::NVQGen1jesPileUpPtBBdn() {
+  if (not NVQGen1jesPileUpPtBBdn_isLoaded) {
+    if (NVQGen1jesPileUpPtBBdn_branch != 0) {
+      NVQGen1jesPileUpPtBBdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesPileUpPtBBdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesPileUpPtBBdn_isLoaded = true;
+  }
+  return NVQGen1jesPileUpPtBBdn_;
+}
+
+const int &VVV0Tree::NVQGen2jesPileUpPtBBdn() {
+  if (not NVQGen2jesPileUpPtBBdn_isLoaded) {
+    if (NVQGen2jesPileUpPtBBdn_branch != 0) {
+      NVQGen2jesPileUpPtBBdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesPileUpPtBBdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesPileUpPtBBdn_isLoaded = true;
+  }
+  return NVQGen2jesPileUpPtBBdn_;
+}
+
+const int &VVV0Tree::NVQGen3jesPileUpPtBBdn() {
+  if (not NVQGen3jesPileUpPtBBdn_isLoaded) {
+    if (NVQGen3jesPileUpPtBBdn_branch != 0) {
+      NVQGen3jesPileUpPtBBdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesPileUpPtBBdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesPileUpPtBBdn_isLoaded = true;
+  }
+  return NVQGen3jesPileUpPtBBdn_;
+}
+
+const int &VVV0Tree::NVQGen4jesPileUpPtBBdn() {
+  if (not NVQGen4jesPileUpPtBBdn_isLoaded) {
+    if (NVQGen4jesPileUpPtBBdn_branch != 0) {
+      NVQGen4jesPileUpPtBBdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesPileUpPtBBdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesPileUpPtBBdn_isLoaded = true;
+  }
+  return NVQGen4jesPileUpPtBBdn_;
 }
 
 const int &VVV0Tree::NiFJjesPileUpPtBBdn() {
@@ -75399,6 +80364,71 @@ const int &VVV0Tree::NLGen4jesPileUpPtEC1up() {
   return NLGen4jesPileUpPtEC1up_;
 }
 
+const int &VVV0Tree::NVQGen0jesPileUpPtEC1up() {
+  if (not NVQGen0jesPileUpPtEC1up_isLoaded) {
+    if (NVQGen0jesPileUpPtEC1up_branch != 0) {
+      NVQGen0jesPileUpPtEC1up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesPileUpPtEC1up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesPileUpPtEC1up_isLoaded = true;
+  }
+  return NVQGen0jesPileUpPtEC1up_;
+}
+
+const int &VVV0Tree::NVQGen1jesPileUpPtEC1up() {
+  if (not NVQGen1jesPileUpPtEC1up_isLoaded) {
+    if (NVQGen1jesPileUpPtEC1up_branch != 0) {
+      NVQGen1jesPileUpPtEC1up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesPileUpPtEC1up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesPileUpPtEC1up_isLoaded = true;
+  }
+  return NVQGen1jesPileUpPtEC1up_;
+}
+
+const int &VVV0Tree::NVQGen2jesPileUpPtEC1up() {
+  if (not NVQGen2jesPileUpPtEC1up_isLoaded) {
+    if (NVQGen2jesPileUpPtEC1up_branch != 0) {
+      NVQGen2jesPileUpPtEC1up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesPileUpPtEC1up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesPileUpPtEC1up_isLoaded = true;
+  }
+  return NVQGen2jesPileUpPtEC1up_;
+}
+
+const int &VVV0Tree::NVQGen3jesPileUpPtEC1up() {
+  if (not NVQGen3jesPileUpPtEC1up_isLoaded) {
+    if (NVQGen3jesPileUpPtEC1up_branch != 0) {
+      NVQGen3jesPileUpPtEC1up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesPileUpPtEC1up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesPileUpPtEC1up_isLoaded = true;
+  }
+  return NVQGen3jesPileUpPtEC1up_;
+}
+
+const int &VVV0Tree::NVQGen4jesPileUpPtEC1up() {
+  if (not NVQGen4jesPileUpPtEC1up_isLoaded) {
+    if (NVQGen4jesPileUpPtEC1up_branch != 0) {
+      NVQGen4jesPileUpPtEC1up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesPileUpPtEC1up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesPileUpPtEC1up_isLoaded = true;
+  }
+  return NVQGen4jesPileUpPtEC1up_;
+}
+
 const int &VVV0Tree::NiFJjesPileUpPtEC1up() {
   if (not NiFJjesPileUpPtEC1up_isLoaded) {
     if (NiFJjesPileUpPtEC1up_branch != 0) {
@@ -76372,6 +81402,71 @@ const int &VVV0Tree::NLGen4jesPileUpPtEC1dn() {
     NLGen4jesPileUpPtEC1dn_isLoaded = true;
   }
   return NLGen4jesPileUpPtEC1dn_;
+}
+
+const int &VVV0Tree::NVQGen0jesPileUpPtEC1dn() {
+  if (not NVQGen0jesPileUpPtEC1dn_isLoaded) {
+    if (NVQGen0jesPileUpPtEC1dn_branch != 0) {
+      NVQGen0jesPileUpPtEC1dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesPileUpPtEC1dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesPileUpPtEC1dn_isLoaded = true;
+  }
+  return NVQGen0jesPileUpPtEC1dn_;
+}
+
+const int &VVV0Tree::NVQGen1jesPileUpPtEC1dn() {
+  if (not NVQGen1jesPileUpPtEC1dn_isLoaded) {
+    if (NVQGen1jesPileUpPtEC1dn_branch != 0) {
+      NVQGen1jesPileUpPtEC1dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesPileUpPtEC1dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesPileUpPtEC1dn_isLoaded = true;
+  }
+  return NVQGen1jesPileUpPtEC1dn_;
+}
+
+const int &VVV0Tree::NVQGen2jesPileUpPtEC1dn() {
+  if (not NVQGen2jesPileUpPtEC1dn_isLoaded) {
+    if (NVQGen2jesPileUpPtEC1dn_branch != 0) {
+      NVQGen2jesPileUpPtEC1dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesPileUpPtEC1dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesPileUpPtEC1dn_isLoaded = true;
+  }
+  return NVQGen2jesPileUpPtEC1dn_;
+}
+
+const int &VVV0Tree::NVQGen3jesPileUpPtEC1dn() {
+  if (not NVQGen3jesPileUpPtEC1dn_isLoaded) {
+    if (NVQGen3jesPileUpPtEC1dn_branch != 0) {
+      NVQGen3jesPileUpPtEC1dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesPileUpPtEC1dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesPileUpPtEC1dn_isLoaded = true;
+  }
+  return NVQGen3jesPileUpPtEC1dn_;
+}
+
+const int &VVV0Tree::NVQGen4jesPileUpPtEC1dn() {
+  if (not NVQGen4jesPileUpPtEC1dn_isLoaded) {
+    if (NVQGen4jesPileUpPtEC1dn_branch != 0) {
+      NVQGen4jesPileUpPtEC1dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesPileUpPtEC1dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesPileUpPtEC1dn_isLoaded = true;
+  }
+  return NVQGen4jesPileUpPtEC1dn_;
 }
 
 const int &VVV0Tree::NiFJjesPileUpPtEC1dn() {
@@ -77349,6 +82444,71 @@ const int &VVV0Tree::NLGen4jesPileUpPtEC2up() {
   return NLGen4jesPileUpPtEC2up_;
 }
 
+const int &VVV0Tree::NVQGen0jesPileUpPtEC2up() {
+  if (not NVQGen0jesPileUpPtEC2up_isLoaded) {
+    if (NVQGen0jesPileUpPtEC2up_branch != 0) {
+      NVQGen0jesPileUpPtEC2up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesPileUpPtEC2up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesPileUpPtEC2up_isLoaded = true;
+  }
+  return NVQGen0jesPileUpPtEC2up_;
+}
+
+const int &VVV0Tree::NVQGen1jesPileUpPtEC2up() {
+  if (not NVQGen1jesPileUpPtEC2up_isLoaded) {
+    if (NVQGen1jesPileUpPtEC2up_branch != 0) {
+      NVQGen1jesPileUpPtEC2up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesPileUpPtEC2up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesPileUpPtEC2up_isLoaded = true;
+  }
+  return NVQGen1jesPileUpPtEC2up_;
+}
+
+const int &VVV0Tree::NVQGen2jesPileUpPtEC2up() {
+  if (not NVQGen2jesPileUpPtEC2up_isLoaded) {
+    if (NVQGen2jesPileUpPtEC2up_branch != 0) {
+      NVQGen2jesPileUpPtEC2up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesPileUpPtEC2up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesPileUpPtEC2up_isLoaded = true;
+  }
+  return NVQGen2jesPileUpPtEC2up_;
+}
+
+const int &VVV0Tree::NVQGen3jesPileUpPtEC2up() {
+  if (not NVQGen3jesPileUpPtEC2up_isLoaded) {
+    if (NVQGen3jesPileUpPtEC2up_branch != 0) {
+      NVQGen3jesPileUpPtEC2up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesPileUpPtEC2up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesPileUpPtEC2up_isLoaded = true;
+  }
+  return NVQGen3jesPileUpPtEC2up_;
+}
+
+const int &VVV0Tree::NVQGen4jesPileUpPtEC2up() {
+  if (not NVQGen4jesPileUpPtEC2up_isLoaded) {
+    if (NVQGen4jesPileUpPtEC2up_branch != 0) {
+      NVQGen4jesPileUpPtEC2up_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesPileUpPtEC2up_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesPileUpPtEC2up_isLoaded = true;
+  }
+  return NVQGen4jesPileUpPtEC2up_;
+}
+
 const int &VVV0Tree::NiFJjesPileUpPtEC2up() {
   if (not NiFJjesPileUpPtEC2up_isLoaded) {
     if (NiFJjesPileUpPtEC2up_branch != 0) {
@@ -78322,6 +83482,71 @@ const int &VVV0Tree::NLGen4jesPileUpPtEC2dn() {
     NLGen4jesPileUpPtEC2dn_isLoaded = true;
   }
   return NLGen4jesPileUpPtEC2dn_;
+}
+
+const int &VVV0Tree::NVQGen0jesPileUpPtEC2dn() {
+  if (not NVQGen0jesPileUpPtEC2dn_isLoaded) {
+    if (NVQGen0jesPileUpPtEC2dn_branch != 0) {
+      NVQGen0jesPileUpPtEC2dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesPileUpPtEC2dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesPileUpPtEC2dn_isLoaded = true;
+  }
+  return NVQGen0jesPileUpPtEC2dn_;
+}
+
+const int &VVV0Tree::NVQGen1jesPileUpPtEC2dn() {
+  if (not NVQGen1jesPileUpPtEC2dn_isLoaded) {
+    if (NVQGen1jesPileUpPtEC2dn_branch != 0) {
+      NVQGen1jesPileUpPtEC2dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesPileUpPtEC2dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesPileUpPtEC2dn_isLoaded = true;
+  }
+  return NVQGen1jesPileUpPtEC2dn_;
+}
+
+const int &VVV0Tree::NVQGen2jesPileUpPtEC2dn() {
+  if (not NVQGen2jesPileUpPtEC2dn_isLoaded) {
+    if (NVQGen2jesPileUpPtEC2dn_branch != 0) {
+      NVQGen2jesPileUpPtEC2dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesPileUpPtEC2dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesPileUpPtEC2dn_isLoaded = true;
+  }
+  return NVQGen2jesPileUpPtEC2dn_;
+}
+
+const int &VVV0Tree::NVQGen3jesPileUpPtEC2dn() {
+  if (not NVQGen3jesPileUpPtEC2dn_isLoaded) {
+    if (NVQGen3jesPileUpPtEC2dn_branch != 0) {
+      NVQGen3jesPileUpPtEC2dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesPileUpPtEC2dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesPileUpPtEC2dn_isLoaded = true;
+  }
+  return NVQGen3jesPileUpPtEC2dn_;
+}
+
+const int &VVV0Tree::NVQGen4jesPileUpPtEC2dn() {
+  if (not NVQGen4jesPileUpPtEC2dn_isLoaded) {
+    if (NVQGen4jesPileUpPtEC2dn_branch != 0) {
+      NVQGen4jesPileUpPtEC2dn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesPileUpPtEC2dn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesPileUpPtEC2dn_isLoaded = true;
+  }
+  return NVQGen4jesPileUpPtEC2dn_;
 }
 
 const int &VVV0Tree::NiFJjesPileUpPtEC2dn() {
@@ -79299,6 +84524,71 @@ const int &VVV0Tree::NLGen4jesPileUpPtHFup() {
   return NLGen4jesPileUpPtHFup_;
 }
 
+const int &VVV0Tree::NVQGen0jesPileUpPtHFup() {
+  if (not NVQGen0jesPileUpPtHFup_isLoaded) {
+    if (NVQGen0jesPileUpPtHFup_branch != 0) {
+      NVQGen0jesPileUpPtHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesPileUpPtHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesPileUpPtHFup_isLoaded = true;
+  }
+  return NVQGen0jesPileUpPtHFup_;
+}
+
+const int &VVV0Tree::NVQGen1jesPileUpPtHFup() {
+  if (not NVQGen1jesPileUpPtHFup_isLoaded) {
+    if (NVQGen1jesPileUpPtHFup_branch != 0) {
+      NVQGen1jesPileUpPtHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesPileUpPtHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesPileUpPtHFup_isLoaded = true;
+  }
+  return NVQGen1jesPileUpPtHFup_;
+}
+
+const int &VVV0Tree::NVQGen2jesPileUpPtHFup() {
+  if (not NVQGen2jesPileUpPtHFup_isLoaded) {
+    if (NVQGen2jesPileUpPtHFup_branch != 0) {
+      NVQGen2jesPileUpPtHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesPileUpPtHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesPileUpPtHFup_isLoaded = true;
+  }
+  return NVQGen2jesPileUpPtHFup_;
+}
+
+const int &VVV0Tree::NVQGen3jesPileUpPtHFup() {
+  if (not NVQGen3jesPileUpPtHFup_isLoaded) {
+    if (NVQGen3jesPileUpPtHFup_branch != 0) {
+      NVQGen3jesPileUpPtHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesPileUpPtHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesPileUpPtHFup_isLoaded = true;
+  }
+  return NVQGen3jesPileUpPtHFup_;
+}
+
+const int &VVV0Tree::NVQGen4jesPileUpPtHFup() {
+  if (not NVQGen4jesPileUpPtHFup_isLoaded) {
+    if (NVQGen4jesPileUpPtHFup_branch != 0) {
+      NVQGen4jesPileUpPtHFup_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesPileUpPtHFup_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesPileUpPtHFup_isLoaded = true;
+  }
+  return NVQGen4jesPileUpPtHFup_;
+}
+
 const int &VVV0Tree::NiFJjesPileUpPtHFup() {
   if (not NiFJjesPileUpPtHFup_isLoaded) {
     if (NiFJjesPileUpPtHFup_branch != 0) {
@@ -80274,6 +85564,71 @@ const int &VVV0Tree::NLGen4jesPileUpPtHFdn() {
   return NLGen4jesPileUpPtHFdn_;
 }
 
+const int &VVV0Tree::NVQGen0jesPileUpPtHFdn() {
+  if (not NVQGen0jesPileUpPtHFdn_isLoaded) {
+    if (NVQGen0jesPileUpPtHFdn_branch != 0) {
+      NVQGen0jesPileUpPtHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen0jesPileUpPtHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen0jesPileUpPtHFdn_isLoaded = true;
+  }
+  return NVQGen0jesPileUpPtHFdn_;
+}
+
+const int &VVV0Tree::NVQGen1jesPileUpPtHFdn() {
+  if (not NVQGen1jesPileUpPtHFdn_isLoaded) {
+    if (NVQGen1jesPileUpPtHFdn_branch != 0) {
+      NVQGen1jesPileUpPtHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen1jesPileUpPtHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen1jesPileUpPtHFdn_isLoaded = true;
+  }
+  return NVQGen1jesPileUpPtHFdn_;
+}
+
+const int &VVV0Tree::NVQGen2jesPileUpPtHFdn() {
+  if (not NVQGen2jesPileUpPtHFdn_isLoaded) {
+    if (NVQGen2jesPileUpPtHFdn_branch != 0) {
+      NVQGen2jesPileUpPtHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen2jesPileUpPtHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen2jesPileUpPtHFdn_isLoaded = true;
+  }
+  return NVQGen2jesPileUpPtHFdn_;
+}
+
+const int &VVV0Tree::NVQGen3jesPileUpPtHFdn() {
+  if (not NVQGen3jesPileUpPtHFdn_isLoaded) {
+    if (NVQGen3jesPileUpPtHFdn_branch != 0) {
+      NVQGen3jesPileUpPtHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen3jesPileUpPtHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen3jesPileUpPtHFdn_isLoaded = true;
+  }
+  return NVQGen3jesPileUpPtHFdn_;
+}
+
+const int &VVV0Tree::NVQGen4jesPileUpPtHFdn() {
+  if (not NVQGen4jesPileUpPtHFdn_isLoaded) {
+    if (NVQGen4jesPileUpPtHFdn_branch != 0) {
+      NVQGen4jesPileUpPtHFdn_branch->GetEntry(index);
+    } else {
+      printf("branch NVQGen4jesPileUpPtHFdn_branch does not exist!\n");
+      exit(1);
+    }
+    NVQGen4jesPileUpPtHFdn_isLoaded = true;
+  }
+  return NVQGen4jesPileUpPtHFdn_;
+}
+
 const int &VVV0Tree::NiFJjesPileUpPtHFdn() {
   if (not NiFJjesPileUpPtHFdn_isLoaded) {
     if (NiFJjesPileUpPtHFdn_branch != 0) {
@@ -81070,6 +86425,11 @@ const int &NLGen1() { return vvv.NLGen1(); }
 const int &NLGen2() { return vvv.NLGen2(); }
 const int &NLGen3() { return vvv.NLGen3(); }
 const int &NLGen4() { return vvv.NLGen4(); }
+const int &NVQGen0() { return vvv.NVQGen0(); }
+const int &NVQGen1() { return vvv.NVQGen1(); }
+const int &NVQGen2() { return vvv.NVQGen2(); }
+const int &NVQGen3() { return vvv.NVQGen3(); }
+const int &NVQGen4() { return vvv.NVQGen4(); }
 const int &NiFJ() { return vvv.NiFJ(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0() { return vvv.iFJ0(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1() { return vvv.iFJ1(); }
@@ -81145,6 +86505,11 @@ const int &NLGen1JESUp() { return vvv.NLGen1JESUp(); }
 const int &NLGen2JESUp() { return vvv.NLGen2JESUp(); }
 const int &NLGen3JESUp() { return vvv.NLGen3JESUp(); }
 const int &NLGen4JESUp() { return vvv.NLGen4JESUp(); }
+const int &NVQGen0JESUp() { return vvv.NVQGen0JESUp(); }
+const int &NVQGen1JESUp() { return vvv.NVQGen1JESUp(); }
+const int &NVQGen2JESUp() { return vvv.NVQGen2JESUp(); }
+const int &NVQGen3JESUp() { return vvv.NVQGen3JESUp(); }
+const int &NVQGen4JESUp() { return vvv.NVQGen4JESUp(); }
 const int &NiFJJESUp() { return vvv.NiFJJESUp(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0JESUp() { return vvv.iFJ0JESUp(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1JESUp() { return vvv.iFJ1JESUp(); }
@@ -81220,6 +86585,11 @@ const int &NLGen1JESDn() { return vvv.NLGen1JESDn(); }
 const int &NLGen2JESDn() { return vvv.NLGen2JESDn(); }
 const int &NLGen3JESDn() { return vvv.NLGen3JESDn(); }
 const int &NLGen4JESDn() { return vvv.NLGen4JESDn(); }
+const int &NVQGen0JESDn() { return vvv.NVQGen0JESDn(); }
+const int &NVQGen1JESDn() { return vvv.NVQGen1JESDn(); }
+const int &NVQGen2JESDn() { return vvv.NVQGen2JESDn(); }
+const int &NVQGen3JESDn() { return vvv.NVQGen3JESDn(); }
+const int &NVQGen4JESDn() { return vvv.NVQGen4JESDn(); }
 const int &NiFJJESDn() { return vvv.NiFJJESDn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0JESDn() { return vvv.iFJ0JESDn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1JESDn() { return vvv.iFJ1JESDn(); }
@@ -81295,6 +86665,11 @@ const int &NLGen1JERUp() { return vvv.NLGen1JERUp(); }
 const int &NLGen2JERUp() { return vvv.NLGen2JERUp(); }
 const int &NLGen3JERUp() { return vvv.NLGen3JERUp(); }
 const int &NLGen4JERUp() { return vvv.NLGen4JERUp(); }
+const int &NVQGen0JERUp() { return vvv.NVQGen0JERUp(); }
+const int &NVQGen1JERUp() { return vvv.NVQGen1JERUp(); }
+const int &NVQGen2JERUp() { return vvv.NVQGen2JERUp(); }
+const int &NVQGen3JERUp() { return vvv.NVQGen3JERUp(); }
+const int &NVQGen4JERUp() { return vvv.NVQGen4JERUp(); }
 const int &NiFJJERUp() { return vvv.NiFJJERUp(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0JERUp() { return vvv.iFJ0JERUp(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1JERUp() { return vvv.iFJ1JERUp(); }
@@ -81370,6 +86745,11 @@ const int &NLGen1JERDn() { return vvv.NLGen1JERDn(); }
 const int &NLGen2JERDn() { return vvv.NLGen2JERDn(); }
 const int &NLGen3JERDn() { return vvv.NLGen3JERDn(); }
 const int &NLGen4JERDn() { return vvv.NLGen4JERDn(); }
+const int &NVQGen0JERDn() { return vvv.NVQGen0JERDn(); }
+const int &NVQGen1JERDn() { return vvv.NVQGen1JERDn(); }
+const int &NVQGen2JERDn() { return vvv.NVQGen2JERDn(); }
+const int &NVQGen3JERDn() { return vvv.NVQGen3JERDn(); }
+const int &NVQGen4JERDn() { return vvv.NVQGen4JERDn(); }
 const int &NiFJJERDn() { return vvv.NiFJJERDn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0JERDn() { return vvv.iFJ0JERDn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1JERDn() { return vvv.iFJ1JERDn(); }
@@ -81445,6 +86825,11 @@ const int &NLGen1JMSUp() { return vvv.NLGen1JMSUp(); }
 const int &NLGen2JMSUp() { return vvv.NLGen2JMSUp(); }
 const int &NLGen3JMSUp() { return vvv.NLGen3JMSUp(); }
 const int &NLGen4JMSUp() { return vvv.NLGen4JMSUp(); }
+const int &NVQGen0JMSUp() { return vvv.NVQGen0JMSUp(); }
+const int &NVQGen1JMSUp() { return vvv.NVQGen1JMSUp(); }
+const int &NVQGen2JMSUp() { return vvv.NVQGen2JMSUp(); }
+const int &NVQGen3JMSUp() { return vvv.NVQGen3JMSUp(); }
+const int &NVQGen4JMSUp() { return vvv.NVQGen4JMSUp(); }
 const int &NiFJJMSUp() { return vvv.NiFJJMSUp(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0JMSUp() { return vvv.iFJ0JMSUp(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1JMSUp() { return vvv.iFJ1JMSUp(); }
@@ -81520,6 +86905,11 @@ const int &NLGen1JMSDn() { return vvv.NLGen1JMSDn(); }
 const int &NLGen2JMSDn() { return vvv.NLGen2JMSDn(); }
 const int &NLGen3JMSDn() { return vvv.NLGen3JMSDn(); }
 const int &NLGen4JMSDn() { return vvv.NLGen4JMSDn(); }
+const int &NVQGen0JMSDn() { return vvv.NVQGen0JMSDn(); }
+const int &NVQGen1JMSDn() { return vvv.NVQGen1JMSDn(); }
+const int &NVQGen2JMSDn() { return vvv.NVQGen2JMSDn(); }
+const int &NVQGen3JMSDn() { return vvv.NVQGen3JMSDn(); }
+const int &NVQGen4JMSDn() { return vvv.NVQGen4JMSDn(); }
 const int &NiFJJMSDn() { return vvv.NiFJJMSDn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0JMSDn() { return vvv.iFJ0JMSDn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1JMSDn() { return vvv.iFJ1JMSDn(); }
@@ -81595,6 +86985,11 @@ const int &NLGen1JMRUp() { return vvv.NLGen1JMRUp(); }
 const int &NLGen2JMRUp() { return vvv.NLGen2JMRUp(); }
 const int &NLGen3JMRUp() { return vvv.NLGen3JMRUp(); }
 const int &NLGen4JMRUp() { return vvv.NLGen4JMRUp(); }
+const int &NVQGen0JMRUp() { return vvv.NVQGen0JMRUp(); }
+const int &NVQGen1JMRUp() { return vvv.NVQGen1JMRUp(); }
+const int &NVQGen2JMRUp() { return vvv.NVQGen2JMRUp(); }
+const int &NVQGen3JMRUp() { return vvv.NVQGen3JMRUp(); }
+const int &NVQGen4JMRUp() { return vvv.NVQGen4JMRUp(); }
 const int &NiFJJMRUp() { return vvv.NiFJJMRUp(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0JMRUp() { return vvv.iFJ0JMRUp(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1JMRUp() { return vvv.iFJ1JMRUp(); }
@@ -81670,6 +87065,11 @@ const int &NLGen1JMRDn() { return vvv.NLGen1JMRDn(); }
 const int &NLGen2JMRDn() { return vvv.NLGen2JMRDn(); }
 const int &NLGen3JMRDn() { return vvv.NLGen3JMRDn(); }
 const int &NLGen4JMRDn() { return vvv.NLGen4JMRDn(); }
+const int &NVQGen0JMRDn() { return vvv.NVQGen0JMRDn(); }
+const int &NVQGen1JMRDn() { return vvv.NVQGen1JMRDn(); }
+const int &NVQGen2JMRDn() { return vvv.NVQGen2JMRDn(); }
+const int &NVQGen3JMRDn() { return vvv.NVQGen3JMRDn(); }
+const int &NVQGen4JMRDn() { return vvv.NVQGen4JMRDn(); }
 const int &NiFJJMRDn() { return vvv.NiFJJMRDn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0JMRDn() { return vvv.iFJ0JMRDn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1JMRDn() { return vvv.iFJ1JMRDn(); }
@@ -81745,6 +87145,11 @@ const int &NLGen1jesAbsoluteStatup() { return vvv.NLGen1jesAbsoluteStatup(); }
 const int &NLGen2jesAbsoluteStatup() { return vvv.NLGen2jesAbsoluteStatup(); }
 const int &NLGen3jesAbsoluteStatup() { return vvv.NLGen3jesAbsoluteStatup(); }
 const int &NLGen4jesAbsoluteStatup() { return vvv.NLGen4jesAbsoluteStatup(); }
+const int &NVQGen0jesAbsoluteStatup() { return vvv.NVQGen0jesAbsoluteStatup(); }
+const int &NVQGen1jesAbsoluteStatup() { return vvv.NVQGen1jesAbsoluteStatup(); }
+const int &NVQGen2jesAbsoluteStatup() { return vvv.NVQGen2jesAbsoluteStatup(); }
+const int &NVQGen3jesAbsoluteStatup() { return vvv.NVQGen3jesAbsoluteStatup(); }
+const int &NVQGen4jesAbsoluteStatup() { return vvv.NVQGen4jesAbsoluteStatup(); }
 const int &NiFJjesAbsoluteStatup() { return vvv.NiFJjesAbsoluteStatup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesAbsoluteStatup() { return vvv.iFJ0jesAbsoluteStatup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesAbsoluteStatup() { return vvv.iFJ1jesAbsoluteStatup(); }
@@ -81820,6 +87225,11 @@ const int &NLGen1jesAbsoluteStatdn() { return vvv.NLGen1jesAbsoluteStatdn(); }
 const int &NLGen2jesAbsoluteStatdn() { return vvv.NLGen2jesAbsoluteStatdn(); }
 const int &NLGen3jesAbsoluteStatdn() { return vvv.NLGen3jesAbsoluteStatdn(); }
 const int &NLGen4jesAbsoluteStatdn() { return vvv.NLGen4jesAbsoluteStatdn(); }
+const int &NVQGen0jesAbsoluteStatdn() { return vvv.NVQGen0jesAbsoluteStatdn(); }
+const int &NVQGen1jesAbsoluteStatdn() { return vvv.NVQGen1jesAbsoluteStatdn(); }
+const int &NVQGen2jesAbsoluteStatdn() { return vvv.NVQGen2jesAbsoluteStatdn(); }
+const int &NVQGen3jesAbsoluteStatdn() { return vvv.NVQGen3jesAbsoluteStatdn(); }
+const int &NVQGen4jesAbsoluteStatdn() { return vvv.NVQGen4jesAbsoluteStatdn(); }
 const int &NiFJjesAbsoluteStatdn() { return vvv.NiFJjesAbsoluteStatdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesAbsoluteStatdn() { return vvv.iFJ0jesAbsoluteStatdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesAbsoluteStatdn() { return vvv.iFJ1jesAbsoluteStatdn(); }
@@ -81895,6 +87305,11 @@ const int &NLGen1jesAbsoluteScaleup() { return vvv.NLGen1jesAbsoluteScaleup(); }
 const int &NLGen2jesAbsoluteScaleup() { return vvv.NLGen2jesAbsoluteScaleup(); }
 const int &NLGen3jesAbsoluteScaleup() { return vvv.NLGen3jesAbsoluteScaleup(); }
 const int &NLGen4jesAbsoluteScaleup() { return vvv.NLGen4jesAbsoluteScaleup(); }
+const int &NVQGen0jesAbsoluteScaleup() { return vvv.NVQGen0jesAbsoluteScaleup(); }
+const int &NVQGen1jesAbsoluteScaleup() { return vvv.NVQGen1jesAbsoluteScaleup(); }
+const int &NVQGen2jesAbsoluteScaleup() { return vvv.NVQGen2jesAbsoluteScaleup(); }
+const int &NVQGen3jesAbsoluteScaleup() { return vvv.NVQGen3jesAbsoluteScaleup(); }
+const int &NVQGen4jesAbsoluteScaleup() { return vvv.NVQGen4jesAbsoluteScaleup(); }
 const int &NiFJjesAbsoluteScaleup() { return vvv.NiFJjesAbsoluteScaleup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesAbsoluteScaleup() { return vvv.iFJ0jesAbsoluteScaleup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesAbsoluteScaleup() { return vvv.iFJ1jesAbsoluteScaleup(); }
@@ -81970,6 +87385,11 @@ const int &NLGen1jesAbsoluteScaledn() { return vvv.NLGen1jesAbsoluteScaledn(); }
 const int &NLGen2jesAbsoluteScaledn() { return vvv.NLGen2jesAbsoluteScaledn(); }
 const int &NLGen3jesAbsoluteScaledn() { return vvv.NLGen3jesAbsoluteScaledn(); }
 const int &NLGen4jesAbsoluteScaledn() { return vvv.NLGen4jesAbsoluteScaledn(); }
+const int &NVQGen0jesAbsoluteScaledn() { return vvv.NVQGen0jesAbsoluteScaledn(); }
+const int &NVQGen1jesAbsoluteScaledn() { return vvv.NVQGen1jesAbsoluteScaledn(); }
+const int &NVQGen2jesAbsoluteScaledn() { return vvv.NVQGen2jesAbsoluteScaledn(); }
+const int &NVQGen3jesAbsoluteScaledn() { return vvv.NVQGen3jesAbsoluteScaledn(); }
+const int &NVQGen4jesAbsoluteScaledn() { return vvv.NVQGen4jesAbsoluteScaledn(); }
 const int &NiFJjesAbsoluteScaledn() { return vvv.NiFJjesAbsoluteScaledn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesAbsoluteScaledn() { return vvv.iFJ0jesAbsoluteScaledn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesAbsoluteScaledn() { return vvv.iFJ1jesAbsoluteScaledn(); }
@@ -82045,6 +87465,11 @@ const int &NLGen1jesAbsoluteMPFBiasup() { return vvv.NLGen1jesAbsoluteMPFBiasup(
 const int &NLGen2jesAbsoluteMPFBiasup() { return vvv.NLGen2jesAbsoluteMPFBiasup(); }
 const int &NLGen3jesAbsoluteMPFBiasup() { return vvv.NLGen3jesAbsoluteMPFBiasup(); }
 const int &NLGen4jesAbsoluteMPFBiasup() { return vvv.NLGen4jesAbsoluteMPFBiasup(); }
+const int &NVQGen0jesAbsoluteMPFBiasup() { return vvv.NVQGen0jesAbsoluteMPFBiasup(); }
+const int &NVQGen1jesAbsoluteMPFBiasup() { return vvv.NVQGen1jesAbsoluteMPFBiasup(); }
+const int &NVQGen2jesAbsoluteMPFBiasup() { return vvv.NVQGen2jesAbsoluteMPFBiasup(); }
+const int &NVQGen3jesAbsoluteMPFBiasup() { return vvv.NVQGen3jesAbsoluteMPFBiasup(); }
+const int &NVQGen4jesAbsoluteMPFBiasup() { return vvv.NVQGen4jesAbsoluteMPFBiasup(); }
 const int &NiFJjesAbsoluteMPFBiasup() { return vvv.NiFJjesAbsoluteMPFBiasup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesAbsoluteMPFBiasup() { return vvv.iFJ0jesAbsoluteMPFBiasup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesAbsoluteMPFBiasup() { return vvv.iFJ1jesAbsoluteMPFBiasup(); }
@@ -82120,6 +87545,11 @@ const int &NLGen1jesAbsoluteMPFBiasdn() { return vvv.NLGen1jesAbsoluteMPFBiasdn(
 const int &NLGen2jesAbsoluteMPFBiasdn() { return vvv.NLGen2jesAbsoluteMPFBiasdn(); }
 const int &NLGen3jesAbsoluteMPFBiasdn() { return vvv.NLGen3jesAbsoluteMPFBiasdn(); }
 const int &NLGen4jesAbsoluteMPFBiasdn() { return vvv.NLGen4jesAbsoluteMPFBiasdn(); }
+const int &NVQGen0jesAbsoluteMPFBiasdn() { return vvv.NVQGen0jesAbsoluteMPFBiasdn(); }
+const int &NVQGen1jesAbsoluteMPFBiasdn() { return vvv.NVQGen1jesAbsoluteMPFBiasdn(); }
+const int &NVQGen2jesAbsoluteMPFBiasdn() { return vvv.NVQGen2jesAbsoluteMPFBiasdn(); }
+const int &NVQGen3jesAbsoluteMPFBiasdn() { return vvv.NVQGen3jesAbsoluteMPFBiasdn(); }
+const int &NVQGen4jesAbsoluteMPFBiasdn() { return vvv.NVQGen4jesAbsoluteMPFBiasdn(); }
 const int &NiFJjesAbsoluteMPFBiasdn() { return vvv.NiFJjesAbsoluteMPFBiasdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesAbsoluteMPFBiasdn() { return vvv.iFJ0jesAbsoluteMPFBiasdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesAbsoluteMPFBiasdn() { return vvv.iFJ1jesAbsoluteMPFBiasdn(); }
@@ -82195,6 +87625,11 @@ const int &NLGen1jesFragmentationup() { return vvv.NLGen1jesFragmentationup(); }
 const int &NLGen2jesFragmentationup() { return vvv.NLGen2jesFragmentationup(); }
 const int &NLGen3jesFragmentationup() { return vvv.NLGen3jesFragmentationup(); }
 const int &NLGen4jesFragmentationup() { return vvv.NLGen4jesFragmentationup(); }
+const int &NVQGen0jesFragmentationup() { return vvv.NVQGen0jesFragmentationup(); }
+const int &NVQGen1jesFragmentationup() { return vvv.NVQGen1jesFragmentationup(); }
+const int &NVQGen2jesFragmentationup() { return vvv.NVQGen2jesFragmentationup(); }
+const int &NVQGen3jesFragmentationup() { return vvv.NVQGen3jesFragmentationup(); }
+const int &NVQGen4jesFragmentationup() { return vvv.NVQGen4jesFragmentationup(); }
 const int &NiFJjesFragmentationup() { return vvv.NiFJjesFragmentationup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesFragmentationup() { return vvv.iFJ0jesFragmentationup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesFragmentationup() { return vvv.iFJ1jesFragmentationup(); }
@@ -82270,6 +87705,11 @@ const int &NLGen1jesFragmentationdn() { return vvv.NLGen1jesFragmentationdn(); }
 const int &NLGen2jesFragmentationdn() { return vvv.NLGen2jesFragmentationdn(); }
 const int &NLGen3jesFragmentationdn() { return vvv.NLGen3jesFragmentationdn(); }
 const int &NLGen4jesFragmentationdn() { return vvv.NLGen4jesFragmentationdn(); }
+const int &NVQGen0jesFragmentationdn() { return vvv.NVQGen0jesFragmentationdn(); }
+const int &NVQGen1jesFragmentationdn() { return vvv.NVQGen1jesFragmentationdn(); }
+const int &NVQGen2jesFragmentationdn() { return vvv.NVQGen2jesFragmentationdn(); }
+const int &NVQGen3jesFragmentationdn() { return vvv.NVQGen3jesFragmentationdn(); }
+const int &NVQGen4jesFragmentationdn() { return vvv.NVQGen4jesFragmentationdn(); }
 const int &NiFJjesFragmentationdn() { return vvv.NiFJjesFragmentationdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesFragmentationdn() { return vvv.iFJ0jesFragmentationdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesFragmentationdn() { return vvv.iFJ1jesFragmentationdn(); }
@@ -82345,6 +87785,11 @@ const int &NLGen1jesSinglePionECALup() { return vvv.NLGen1jesSinglePionECALup();
 const int &NLGen2jesSinglePionECALup() { return vvv.NLGen2jesSinglePionECALup(); }
 const int &NLGen3jesSinglePionECALup() { return vvv.NLGen3jesSinglePionECALup(); }
 const int &NLGen4jesSinglePionECALup() { return vvv.NLGen4jesSinglePionECALup(); }
+const int &NVQGen0jesSinglePionECALup() { return vvv.NVQGen0jesSinglePionECALup(); }
+const int &NVQGen1jesSinglePionECALup() { return vvv.NVQGen1jesSinglePionECALup(); }
+const int &NVQGen2jesSinglePionECALup() { return vvv.NVQGen2jesSinglePionECALup(); }
+const int &NVQGen3jesSinglePionECALup() { return vvv.NVQGen3jesSinglePionECALup(); }
+const int &NVQGen4jesSinglePionECALup() { return vvv.NVQGen4jesSinglePionECALup(); }
 const int &NiFJjesSinglePionECALup() { return vvv.NiFJjesSinglePionECALup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesSinglePionECALup() { return vvv.iFJ0jesSinglePionECALup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesSinglePionECALup() { return vvv.iFJ1jesSinglePionECALup(); }
@@ -82420,6 +87865,11 @@ const int &NLGen1jesSinglePionECALdn() { return vvv.NLGen1jesSinglePionECALdn();
 const int &NLGen2jesSinglePionECALdn() { return vvv.NLGen2jesSinglePionECALdn(); }
 const int &NLGen3jesSinglePionECALdn() { return vvv.NLGen3jesSinglePionECALdn(); }
 const int &NLGen4jesSinglePionECALdn() { return vvv.NLGen4jesSinglePionECALdn(); }
+const int &NVQGen0jesSinglePionECALdn() { return vvv.NVQGen0jesSinglePionECALdn(); }
+const int &NVQGen1jesSinglePionECALdn() { return vvv.NVQGen1jesSinglePionECALdn(); }
+const int &NVQGen2jesSinglePionECALdn() { return vvv.NVQGen2jesSinglePionECALdn(); }
+const int &NVQGen3jesSinglePionECALdn() { return vvv.NVQGen3jesSinglePionECALdn(); }
+const int &NVQGen4jesSinglePionECALdn() { return vvv.NVQGen4jesSinglePionECALdn(); }
 const int &NiFJjesSinglePionECALdn() { return vvv.NiFJjesSinglePionECALdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesSinglePionECALdn() { return vvv.iFJ0jesSinglePionECALdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesSinglePionECALdn() { return vvv.iFJ1jesSinglePionECALdn(); }
@@ -82495,6 +87945,11 @@ const int &NLGen1jesSinglePionHCALup() { return vvv.NLGen1jesSinglePionHCALup();
 const int &NLGen2jesSinglePionHCALup() { return vvv.NLGen2jesSinglePionHCALup(); }
 const int &NLGen3jesSinglePionHCALup() { return vvv.NLGen3jesSinglePionHCALup(); }
 const int &NLGen4jesSinglePionHCALup() { return vvv.NLGen4jesSinglePionHCALup(); }
+const int &NVQGen0jesSinglePionHCALup() { return vvv.NVQGen0jesSinglePionHCALup(); }
+const int &NVQGen1jesSinglePionHCALup() { return vvv.NVQGen1jesSinglePionHCALup(); }
+const int &NVQGen2jesSinglePionHCALup() { return vvv.NVQGen2jesSinglePionHCALup(); }
+const int &NVQGen3jesSinglePionHCALup() { return vvv.NVQGen3jesSinglePionHCALup(); }
+const int &NVQGen4jesSinglePionHCALup() { return vvv.NVQGen4jesSinglePionHCALup(); }
 const int &NiFJjesSinglePionHCALup() { return vvv.NiFJjesSinglePionHCALup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesSinglePionHCALup() { return vvv.iFJ0jesSinglePionHCALup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesSinglePionHCALup() { return vvv.iFJ1jesSinglePionHCALup(); }
@@ -82570,6 +88025,11 @@ const int &NLGen1jesSinglePionHCALdn() { return vvv.NLGen1jesSinglePionHCALdn();
 const int &NLGen2jesSinglePionHCALdn() { return vvv.NLGen2jesSinglePionHCALdn(); }
 const int &NLGen3jesSinglePionHCALdn() { return vvv.NLGen3jesSinglePionHCALdn(); }
 const int &NLGen4jesSinglePionHCALdn() { return vvv.NLGen4jesSinglePionHCALdn(); }
+const int &NVQGen0jesSinglePionHCALdn() { return vvv.NVQGen0jesSinglePionHCALdn(); }
+const int &NVQGen1jesSinglePionHCALdn() { return vvv.NVQGen1jesSinglePionHCALdn(); }
+const int &NVQGen2jesSinglePionHCALdn() { return vvv.NVQGen2jesSinglePionHCALdn(); }
+const int &NVQGen3jesSinglePionHCALdn() { return vvv.NVQGen3jesSinglePionHCALdn(); }
+const int &NVQGen4jesSinglePionHCALdn() { return vvv.NVQGen4jesSinglePionHCALdn(); }
 const int &NiFJjesSinglePionHCALdn() { return vvv.NiFJjesSinglePionHCALdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesSinglePionHCALdn() { return vvv.iFJ0jesSinglePionHCALdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesSinglePionHCALdn() { return vvv.iFJ1jesSinglePionHCALdn(); }
@@ -82645,6 +88105,11 @@ const int &NLGen1jesFlavorQCDup() { return vvv.NLGen1jesFlavorQCDup(); }
 const int &NLGen2jesFlavorQCDup() { return vvv.NLGen2jesFlavorQCDup(); }
 const int &NLGen3jesFlavorQCDup() { return vvv.NLGen3jesFlavorQCDup(); }
 const int &NLGen4jesFlavorQCDup() { return vvv.NLGen4jesFlavorQCDup(); }
+const int &NVQGen0jesFlavorQCDup() { return vvv.NVQGen0jesFlavorQCDup(); }
+const int &NVQGen1jesFlavorQCDup() { return vvv.NVQGen1jesFlavorQCDup(); }
+const int &NVQGen2jesFlavorQCDup() { return vvv.NVQGen2jesFlavorQCDup(); }
+const int &NVQGen3jesFlavorQCDup() { return vvv.NVQGen3jesFlavorQCDup(); }
+const int &NVQGen4jesFlavorQCDup() { return vvv.NVQGen4jesFlavorQCDup(); }
 const int &NiFJjesFlavorQCDup() { return vvv.NiFJjesFlavorQCDup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesFlavorQCDup() { return vvv.iFJ0jesFlavorQCDup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesFlavorQCDup() { return vvv.iFJ1jesFlavorQCDup(); }
@@ -82720,6 +88185,11 @@ const int &NLGen1jesFlavorQCDdn() { return vvv.NLGen1jesFlavorQCDdn(); }
 const int &NLGen2jesFlavorQCDdn() { return vvv.NLGen2jesFlavorQCDdn(); }
 const int &NLGen3jesFlavorQCDdn() { return vvv.NLGen3jesFlavorQCDdn(); }
 const int &NLGen4jesFlavorQCDdn() { return vvv.NLGen4jesFlavorQCDdn(); }
+const int &NVQGen0jesFlavorQCDdn() { return vvv.NVQGen0jesFlavorQCDdn(); }
+const int &NVQGen1jesFlavorQCDdn() { return vvv.NVQGen1jesFlavorQCDdn(); }
+const int &NVQGen2jesFlavorQCDdn() { return vvv.NVQGen2jesFlavorQCDdn(); }
+const int &NVQGen3jesFlavorQCDdn() { return vvv.NVQGen3jesFlavorQCDdn(); }
+const int &NVQGen4jesFlavorQCDdn() { return vvv.NVQGen4jesFlavorQCDdn(); }
 const int &NiFJjesFlavorQCDdn() { return vvv.NiFJjesFlavorQCDdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesFlavorQCDdn() { return vvv.iFJ0jesFlavorQCDdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesFlavorQCDdn() { return vvv.iFJ1jesFlavorQCDdn(); }
@@ -82795,6 +88265,11 @@ const int &NLGen1jesTimePtEtaup() { return vvv.NLGen1jesTimePtEtaup(); }
 const int &NLGen2jesTimePtEtaup() { return vvv.NLGen2jesTimePtEtaup(); }
 const int &NLGen3jesTimePtEtaup() { return vvv.NLGen3jesTimePtEtaup(); }
 const int &NLGen4jesTimePtEtaup() { return vvv.NLGen4jesTimePtEtaup(); }
+const int &NVQGen0jesTimePtEtaup() { return vvv.NVQGen0jesTimePtEtaup(); }
+const int &NVQGen1jesTimePtEtaup() { return vvv.NVQGen1jesTimePtEtaup(); }
+const int &NVQGen2jesTimePtEtaup() { return vvv.NVQGen2jesTimePtEtaup(); }
+const int &NVQGen3jesTimePtEtaup() { return vvv.NVQGen3jesTimePtEtaup(); }
+const int &NVQGen4jesTimePtEtaup() { return vvv.NVQGen4jesTimePtEtaup(); }
 const int &NiFJjesTimePtEtaup() { return vvv.NiFJjesTimePtEtaup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesTimePtEtaup() { return vvv.iFJ0jesTimePtEtaup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesTimePtEtaup() { return vvv.iFJ1jesTimePtEtaup(); }
@@ -82870,6 +88345,11 @@ const int &NLGen1jesTimePtEtadn() { return vvv.NLGen1jesTimePtEtadn(); }
 const int &NLGen2jesTimePtEtadn() { return vvv.NLGen2jesTimePtEtadn(); }
 const int &NLGen3jesTimePtEtadn() { return vvv.NLGen3jesTimePtEtadn(); }
 const int &NLGen4jesTimePtEtadn() { return vvv.NLGen4jesTimePtEtadn(); }
+const int &NVQGen0jesTimePtEtadn() { return vvv.NVQGen0jesTimePtEtadn(); }
+const int &NVQGen1jesTimePtEtadn() { return vvv.NVQGen1jesTimePtEtadn(); }
+const int &NVQGen2jesTimePtEtadn() { return vvv.NVQGen2jesTimePtEtadn(); }
+const int &NVQGen3jesTimePtEtadn() { return vvv.NVQGen3jesTimePtEtadn(); }
+const int &NVQGen4jesTimePtEtadn() { return vvv.NVQGen4jesTimePtEtadn(); }
 const int &NiFJjesTimePtEtadn() { return vvv.NiFJjesTimePtEtadn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesTimePtEtadn() { return vvv.iFJ0jesTimePtEtadn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesTimePtEtadn() { return vvv.iFJ1jesTimePtEtadn(); }
@@ -82945,6 +88425,11 @@ const int &NLGen1jesRelativeJEREC1up() { return vvv.NLGen1jesRelativeJEREC1up();
 const int &NLGen2jesRelativeJEREC1up() { return vvv.NLGen2jesRelativeJEREC1up(); }
 const int &NLGen3jesRelativeJEREC1up() { return vvv.NLGen3jesRelativeJEREC1up(); }
 const int &NLGen4jesRelativeJEREC1up() { return vvv.NLGen4jesRelativeJEREC1up(); }
+const int &NVQGen0jesRelativeJEREC1up() { return vvv.NVQGen0jesRelativeJEREC1up(); }
+const int &NVQGen1jesRelativeJEREC1up() { return vvv.NVQGen1jesRelativeJEREC1up(); }
+const int &NVQGen2jesRelativeJEREC1up() { return vvv.NVQGen2jesRelativeJEREC1up(); }
+const int &NVQGen3jesRelativeJEREC1up() { return vvv.NVQGen3jesRelativeJEREC1up(); }
+const int &NVQGen4jesRelativeJEREC1up() { return vvv.NVQGen4jesRelativeJEREC1up(); }
 const int &NiFJjesRelativeJEREC1up() { return vvv.NiFJjesRelativeJEREC1up(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativeJEREC1up() { return vvv.iFJ0jesRelativeJEREC1up(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativeJEREC1up() { return vvv.iFJ1jesRelativeJEREC1up(); }
@@ -83020,6 +88505,11 @@ const int &NLGen1jesRelativeJEREC1dn() { return vvv.NLGen1jesRelativeJEREC1dn();
 const int &NLGen2jesRelativeJEREC1dn() { return vvv.NLGen2jesRelativeJEREC1dn(); }
 const int &NLGen3jesRelativeJEREC1dn() { return vvv.NLGen3jesRelativeJEREC1dn(); }
 const int &NLGen4jesRelativeJEREC1dn() { return vvv.NLGen4jesRelativeJEREC1dn(); }
+const int &NVQGen0jesRelativeJEREC1dn() { return vvv.NVQGen0jesRelativeJEREC1dn(); }
+const int &NVQGen1jesRelativeJEREC1dn() { return vvv.NVQGen1jesRelativeJEREC1dn(); }
+const int &NVQGen2jesRelativeJEREC1dn() { return vvv.NVQGen2jesRelativeJEREC1dn(); }
+const int &NVQGen3jesRelativeJEREC1dn() { return vvv.NVQGen3jesRelativeJEREC1dn(); }
+const int &NVQGen4jesRelativeJEREC1dn() { return vvv.NVQGen4jesRelativeJEREC1dn(); }
 const int &NiFJjesRelativeJEREC1dn() { return vvv.NiFJjesRelativeJEREC1dn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativeJEREC1dn() { return vvv.iFJ0jesRelativeJEREC1dn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativeJEREC1dn() { return vvv.iFJ1jesRelativeJEREC1dn(); }
@@ -83095,6 +88585,11 @@ const int &NLGen1jesRelativeJEREC2up() { return vvv.NLGen1jesRelativeJEREC2up();
 const int &NLGen2jesRelativeJEREC2up() { return vvv.NLGen2jesRelativeJEREC2up(); }
 const int &NLGen3jesRelativeJEREC2up() { return vvv.NLGen3jesRelativeJEREC2up(); }
 const int &NLGen4jesRelativeJEREC2up() { return vvv.NLGen4jesRelativeJEREC2up(); }
+const int &NVQGen0jesRelativeJEREC2up() { return vvv.NVQGen0jesRelativeJEREC2up(); }
+const int &NVQGen1jesRelativeJEREC2up() { return vvv.NVQGen1jesRelativeJEREC2up(); }
+const int &NVQGen2jesRelativeJEREC2up() { return vvv.NVQGen2jesRelativeJEREC2up(); }
+const int &NVQGen3jesRelativeJEREC2up() { return vvv.NVQGen3jesRelativeJEREC2up(); }
+const int &NVQGen4jesRelativeJEREC2up() { return vvv.NVQGen4jesRelativeJEREC2up(); }
 const int &NiFJjesRelativeJEREC2up() { return vvv.NiFJjesRelativeJEREC2up(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativeJEREC2up() { return vvv.iFJ0jesRelativeJEREC2up(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativeJEREC2up() { return vvv.iFJ1jesRelativeJEREC2up(); }
@@ -83170,6 +88665,11 @@ const int &NLGen1jesRelativeJEREC2dn() { return vvv.NLGen1jesRelativeJEREC2dn();
 const int &NLGen2jesRelativeJEREC2dn() { return vvv.NLGen2jesRelativeJEREC2dn(); }
 const int &NLGen3jesRelativeJEREC2dn() { return vvv.NLGen3jesRelativeJEREC2dn(); }
 const int &NLGen4jesRelativeJEREC2dn() { return vvv.NLGen4jesRelativeJEREC2dn(); }
+const int &NVQGen0jesRelativeJEREC2dn() { return vvv.NVQGen0jesRelativeJEREC2dn(); }
+const int &NVQGen1jesRelativeJEREC2dn() { return vvv.NVQGen1jesRelativeJEREC2dn(); }
+const int &NVQGen2jesRelativeJEREC2dn() { return vvv.NVQGen2jesRelativeJEREC2dn(); }
+const int &NVQGen3jesRelativeJEREC2dn() { return vvv.NVQGen3jesRelativeJEREC2dn(); }
+const int &NVQGen4jesRelativeJEREC2dn() { return vvv.NVQGen4jesRelativeJEREC2dn(); }
 const int &NiFJjesRelativeJEREC2dn() { return vvv.NiFJjesRelativeJEREC2dn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativeJEREC2dn() { return vvv.iFJ0jesRelativeJEREC2dn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativeJEREC2dn() { return vvv.iFJ1jesRelativeJEREC2dn(); }
@@ -83245,6 +88745,11 @@ const int &NLGen1jesRelativeJERHFup() { return vvv.NLGen1jesRelativeJERHFup(); }
 const int &NLGen2jesRelativeJERHFup() { return vvv.NLGen2jesRelativeJERHFup(); }
 const int &NLGen3jesRelativeJERHFup() { return vvv.NLGen3jesRelativeJERHFup(); }
 const int &NLGen4jesRelativeJERHFup() { return vvv.NLGen4jesRelativeJERHFup(); }
+const int &NVQGen0jesRelativeJERHFup() { return vvv.NVQGen0jesRelativeJERHFup(); }
+const int &NVQGen1jesRelativeJERHFup() { return vvv.NVQGen1jesRelativeJERHFup(); }
+const int &NVQGen2jesRelativeJERHFup() { return vvv.NVQGen2jesRelativeJERHFup(); }
+const int &NVQGen3jesRelativeJERHFup() { return vvv.NVQGen3jesRelativeJERHFup(); }
+const int &NVQGen4jesRelativeJERHFup() { return vvv.NVQGen4jesRelativeJERHFup(); }
 const int &NiFJjesRelativeJERHFup() { return vvv.NiFJjesRelativeJERHFup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativeJERHFup() { return vvv.iFJ0jesRelativeJERHFup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativeJERHFup() { return vvv.iFJ1jesRelativeJERHFup(); }
@@ -83320,6 +88825,11 @@ const int &NLGen1jesRelativeJERHFdn() { return vvv.NLGen1jesRelativeJERHFdn(); }
 const int &NLGen2jesRelativeJERHFdn() { return vvv.NLGen2jesRelativeJERHFdn(); }
 const int &NLGen3jesRelativeJERHFdn() { return vvv.NLGen3jesRelativeJERHFdn(); }
 const int &NLGen4jesRelativeJERHFdn() { return vvv.NLGen4jesRelativeJERHFdn(); }
+const int &NVQGen0jesRelativeJERHFdn() { return vvv.NVQGen0jesRelativeJERHFdn(); }
+const int &NVQGen1jesRelativeJERHFdn() { return vvv.NVQGen1jesRelativeJERHFdn(); }
+const int &NVQGen2jesRelativeJERHFdn() { return vvv.NVQGen2jesRelativeJERHFdn(); }
+const int &NVQGen3jesRelativeJERHFdn() { return vvv.NVQGen3jesRelativeJERHFdn(); }
+const int &NVQGen4jesRelativeJERHFdn() { return vvv.NVQGen4jesRelativeJERHFdn(); }
 const int &NiFJjesRelativeJERHFdn() { return vvv.NiFJjesRelativeJERHFdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativeJERHFdn() { return vvv.iFJ0jesRelativeJERHFdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativeJERHFdn() { return vvv.iFJ1jesRelativeJERHFdn(); }
@@ -83395,6 +88905,11 @@ const int &NLGen1jesRelativePtBBup() { return vvv.NLGen1jesRelativePtBBup(); }
 const int &NLGen2jesRelativePtBBup() { return vvv.NLGen2jesRelativePtBBup(); }
 const int &NLGen3jesRelativePtBBup() { return vvv.NLGen3jesRelativePtBBup(); }
 const int &NLGen4jesRelativePtBBup() { return vvv.NLGen4jesRelativePtBBup(); }
+const int &NVQGen0jesRelativePtBBup() { return vvv.NVQGen0jesRelativePtBBup(); }
+const int &NVQGen1jesRelativePtBBup() { return vvv.NVQGen1jesRelativePtBBup(); }
+const int &NVQGen2jesRelativePtBBup() { return vvv.NVQGen2jesRelativePtBBup(); }
+const int &NVQGen3jesRelativePtBBup() { return vvv.NVQGen3jesRelativePtBBup(); }
+const int &NVQGen4jesRelativePtBBup() { return vvv.NVQGen4jesRelativePtBBup(); }
 const int &NiFJjesRelativePtBBup() { return vvv.NiFJjesRelativePtBBup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativePtBBup() { return vvv.iFJ0jesRelativePtBBup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativePtBBup() { return vvv.iFJ1jesRelativePtBBup(); }
@@ -83470,6 +88985,11 @@ const int &NLGen1jesRelativePtBBdn() { return vvv.NLGen1jesRelativePtBBdn(); }
 const int &NLGen2jesRelativePtBBdn() { return vvv.NLGen2jesRelativePtBBdn(); }
 const int &NLGen3jesRelativePtBBdn() { return vvv.NLGen3jesRelativePtBBdn(); }
 const int &NLGen4jesRelativePtBBdn() { return vvv.NLGen4jesRelativePtBBdn(); }
+const int &NVQGen0jesRelativePtBBdn() { return vvv.NVQGen0jesRelativePtBBdn(); }
+const int &NVQGen1jesRelativePtBBdn() { return vvv.NVQGen1jesRelativePtBBdn(); }
+const int &NVQGen2jesRelativePtBBdn() { return vvv.NVQGen2jesRelativePtBBdn(); }
+const int &NVQGen3jesRelativePtBBdn() { return vvv.NVQGen3jesRelativePtBBdn(); }
+const int &NVQGen4jesRelativePtBBdn() { return vvv.NVQGen4jesRelativePtBBdn(); }
 const int &NiFJjesRelativePtBBdn() { return vvv.NiFJjesRelativePtBBdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativePtBBdn() { return vvv.iFJ0jesRelativePtBBdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativePtBBdn() { return vvv.iFJ1jesRelativePtBBdn(); }
@@ -83545,6 +89065,11 @@ const int &NLGen1jesRelativePtEC1up() { return vvv.NLGen1jesRelativePtEC1up(); }
 const int &NLGen2jesRelativePtEC1up() { return vvv.NLGen2jesRelativePtEC1up(); }
 const int &NLGen3jesRelativePtEC1up() { return vvv.NLGen3jesRelativePtEC1up(); }
 const int &NLGen4jesRelativePtEC1up() { return vvv.NLGen4jesRelativePtEC1up(); }
+const int &NVQGen0jesRelativePtEC1up() { return vvv.NVQGen0jesRelativePtEC1up(); }
+const int &NVQGen1jesRelativePtEC1up() { return vvv.NVQGen1jesRelativePtEC1up(); }
+const int &NVQGen2jesRelativePtEC1up() { return vvv.NVQGen2jesRelativePtEC1up(); }
+const int &NVQGen3jesRelativePtEC1up() { return vvv.NVQGen3jesRelativePtEC1up(); }
+const int &NVQGen4jesRelativePtEC1up() { return vvv.NVQGen4jesRelativePtEC1up(); }
 const int &NiFJjesRelativePtEC1up() { return vvv.NiFJjesRelativePtEC1up(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativePtEC1up() { return vvv.iFJ0jesRelativePtEC1up(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativePtEC1up() { return vvv.iFJ1jesRelativePtEC1up(); }
@@ -83620,6 +89145,11 @@ const int &NLGen1jesRelativePtEC1dn() { return vvv.NLGen1jesRelativePtEC1dn(); }
 const int &NLGen2jesRelativePtEC1dn() { return vvv.NLGen2jesRelativePtEC1dn(); }
 const int &NLGen3jesRelativePtEC1dn() { return vvv.NLGen3jesRelativePtEC1dn(); }
 const int &NLGen4jesRelativePtEC1dn() { return vvv.NLGen4jesRelativePtEC1dn(); }
+const int &NVQGen0jesRelativePtEC1dn() { return vvv.NVQGen0jesRelativePtEC1dn(); }
+const int &NVQGen1jesRelativePtEC1dn() { return vvv.NVQGen1jesRelativePtEC1dn(); }
+const int &NVQGen2jesRelativePtEC1dn() { return vvv.NVQGen2jesRelativePtEC1dn(); }
+const int &NVQGen3jesRelativePtEC1dn() { return vvv.NVQGen3jesRelativePtEC1dn(); }
+const int &NVQGen4jesRelativePtEC1dn() { return vvv.NVQGen4jesRelativePtEC1dn(); }
 const int &NiFJjesRelativePtEC1dn() { return vvv.NiFJjesRelativePtEC1dn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativePtEC1dn() { return vvv.iFJ0jesRelativePtEC1dn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativePtEC1dn() { return vvv.iFJ1jesRelativePtEC1dn(); }
@@ -83695,6 +89225,11 @@ const int &NLGen1jesRelativePtEC2up() { return vvv.NLGen1jesRelativePtEC2up(); }
 const int &NLGen2jesRelativePtEC2up() { return vvv.NLGen2jesRelativePtEC2up(); }
 const int &NLGen3jesRelativePtEC2up() { return vvv.NLGen3jesRelativePtEC2up(); }
 const int &NLGen4jesRelativePtEC2up() { return vvv.NLGen4jesRelativePtEC2up(); }
+const int &NVQGen0jesRelativePtEC2up() { return vvv.NVQGen0jesRelativePtEC2up(); }
+const int &NVQGen1jesRelativePtEC2up() { return vvv.NVQGen1jesRelativePtEC2up(); }
+const int &NVQGen2jesRelativePtEC2up() { return vvv.NVQGen2jesRelativePtEC2up(); }
+const int &NVQGen3jesRelativePtEC2up() { return vvv.NVQGen3jesRelativePtEC2up(); }
+const int &NVQGen4jesRelativePtEC2up() { return vvv.NVQGen4jesRelativePtEC2up(); }
 const int &NiFJjesRelativePtEC2up() { return vvv.NiFJjesRelativePtEC2up(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativePtEC2up() { return vvv.iFJ0jesRelativePtEC2up(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativePtEC2up() { return vvv.iFJ1jesRelativePtEC2up(); }
@@ -83770,6 +89305,11 @@ const int &NLGen1jesRelativePtEC2dn() { return vvv.NLGen1jesRelativePtEC2dn(); }
 const int &NLGen2jesRelativePtEC2dn() { return vvv.NLGen2jesRelativePtEC2dn(); }
 const int &NLGen3jesRelativePtEC2dn() { return vvv.NLGen3jesRelativePtEC2dn(); }
 const int &NLGen4jesRelativePtEC2dn() { return vvv.NLGen4jesRelativePtEC2dn(); }
+const int &NVQGen0jesRelativePtEC2dn() { return vvv.NVQGen0jesRelativePtEC2dn(); }
+const int &NVQGen1jesRelativePtEC2dn() { return vvv.NVQGen1jesRelativePtEC2dn(); }
+const int &NVQGen2jesRelativePtEC2dn() { return vvv.NVQGen2jesRelativePtEC2dn(); }
+const int &NVQGen3jesRelativePtEC2dn() { return vvv.NVQGen3jesRelativePtEC2dn(); }
+const int &NVQGen4jesRelativePtEC2dn() { return vvv.NVQGen4jesRelativePtEC2dn(); }
 const int &NiFJjesRelativePtEC2dn() { return vvv.NiFJjesRelativePtEC2dn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativePtEC2dn() { return vvv.iFJ0jesRelativePtEC2dn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativePtEC2dn() { return vvv.iFJ1jesRelativePtEC2dn(); }
@@ -83845,6 +89385,11 @@ const int &NLGen1jesRelativePtHFup() { return vvv.NLGen1jesRelativePtHFup(); }
 const int &NLGen2jesRelativePtHFup() { return vvv.NLGen2jesRelativePtHFup(); }
 const int &NLGen3jesRelativePtHFup() { return vvv.NLGen3jesRelativePtHFup(); }
 const int &NLGen4jesRelativePtHFup() { return vvv.NLGen4jesRelativePtHFup(); }
+const int &NVQGen0jesRelativePtHFup() { return vvv.NVQGen0jesRelativePtHFup(); }
+const int &NVQGen1jesRelativePtHFup() { return vvv.NVQGen1jesRelativePtHFup(); }
+const int &NVQGen2jesRelativePtHFup() { return vvv.NVQGen2jesRelativePtHFup(); }
+const int &NVQGen3jesRelativePtHFup() { return vvv.NVQGen3jesRelativePtHFup(); }
+const int &NVQGen4jesRelativePtHFup() { return vvv.NVQGen4jesRelativePtHFup(); }
 const int &NiFJjesRelativePtHFup() { return vvv.NiFJjesRelativePtHFup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativePtHFup() { return vvv.iFJ0jesRelativePtHFup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativePtHFup() { return vvv.iFJ1jesRelativePtHFup(); }
@@ -83920,6 +89465,11 @@ const int &NLGen1jesRelativePtHFdn() { return vvv.NLGen1jesRelativePtHFdn(); }
 const int &NLGen2jesRelativePtHFdn() { return vvv.NLGen2jesRelativePtHFdn(); }
 const int &NLGen3jesRelativePtHFdn() { return vvv.NLGen3jesRelativePtHFdn(); }
 const int &NLGen4jesRelativePtHFdn() { return vvv.NLGen4jesRelativePtHFdn(); }
+const int &NVQGen0jesRelativePtHFdn() { return vvv.NVQGen0jesRelativePtHFdn(); }
+const int &NVQGen1jesRelativePtHFdn() { return vvv.NVQGen1jesRelativePtHFdn(); }
+const int &NVQGen2jesRelativePtHFdn() { return vvv.NVQGen2jesRelativePtHFdn(); }
+const int &NVQGen3jesRelativePtHFdn() { return vvv.NVQGen3jesRelativePtHFdn(); }
+const int &NVQGen4jesRelativePtHFdn() { return vvv.NVQGen4jesRelativePtHFdn(); }
 const int &NiFJjesRelativePtHFdn() { return vvv.NiFJjesRelativePtHFdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativePtHFdn() { return vvv.iFJ0jesRelativePtHFdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativePtHFdn() { return vvv.iFJ1jesRelativePtHFdn(); }
@@ -83995,6 +89545,11 @@ const int &NLGen1jesRelativeBalup() { return vvv.NLGen1jesRelativeBalup(); }
 const int &NLGen2jesRelativeBalup() { return vvv.NLGen2jesRelativeBalup(); }
 const int &NLGen3jesRelativeBalup() { return vvv.NLGen3jesRelativeBalup(); }
 const int &NLGen4jesRelativeBalup() { return vvv.NLGen4jesRelativeBalup(); }
+const int &NVQGen0jesRelativeBalup() { return vvv.NVQGen0jesRelativeBalup(); }
+const int &NVQGen1jesRelativeBalup() { return vvv.NVQGen1jesRelativeBalup(); }
+const int &NVQGen2jesRelativeBalup() { return vvv.NVQGen2jesRelativeBalup(); }
+const int &NVQGen3jesRelativeBalup() { return vvv.NVQGen3jesRelativeBalup(); }
+const int &NVQGen4jesRelativeBalup() { return vvv.NVQGen4jesRelativeBalup(); }
 const int &NiFJjesRelativeBalup() { return vvv.NiFJjesRelativeBalup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativeBalup() { return vvv.iFJ0jesRelativeBalup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativeBalup() { return vvv.iFJ1jesRelativeBalup(); }
@@ -84070,6 +89625,11 @@ const int &NLGen1jesRelativeBaldn() { return vvv.NLGen1jesRelativeBaldn(); }
 const int &NLGen2jesRelativeBaldn() { return vvv.NLGen2jesRelativeBaldn(); }
 const int &NLGen3jesRelativeBaldn() { return vvv.NLGen3jesRelativeBaldn(); }
 const int &NLGen4jesRelativeBaldn() { return vvv.NLGen4jesRelativeBaldn(); }
+const int &NVQGen0jesRelativeBaldn() { return vvv.NVQGen0jesRelativeBaldn(); }
+const int &NVQGen1jesRelativeBaldn() { return vvv.NVQGen1jesRelativeBaldn(); }
+const int &NVQGen2jesRelativeBaldn() { return vvv.NVQGen2jesRelativeBaldn(); }
+const int &NVQGen3jesRelativeBaldn() { return vvv.NVQGen3jesRelativeBaldn(); }
+const int &NVQGen4jesRelativeBaldn() { return vvv.NVQGen4jesRelativeBaldn(); }
 const int &NiFJjesRelativeBaldn() { return vvv.NiFJjesRelativeBaldn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativeBaldn() { return vvv.iFJ0jesRelativeBaldn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativeBaldn() { return vvv.iFJ1jesRelativeBaldn(); }
@@ -84145,6 +89705,11 @@ const int &NLGen1jesRelativeSampleup() { return vvv.NLGen1jesRelativeSampleup();
 const int &NLGen2jesRelativeSampleup() { return vvv.NLGen2jesRelativeSampleup(); }
 const int &NLGen3jesRelativeSampleup() { return vvv.NLGen3jesRelativeSampleup(); }
 const int &NLGen4jesRelativeSampleup() { return vvv.NLGen4jesRelativeSampleup(); }
+const int &NVQGen0jesRelativeSampleup() { return vvv.NVQGen0jesRelativeSampleup(); }
+const int &NVQGen1jesRelativeSampleup() { return vvv.NVQGen1jesRelativeSampleup(); }
+const int &NVQGen2jesRelativeSampleup() { return vvv.NVQGen2jesRelativeSampleup(); }
+const int &NVQGen3jesRelativeSampleup() { return vvv.NVQGen3jesRelativeSampleup(); }
+const int &NVQGen4jesRelativeSampleup() { return vvv.NVQGen4jesRelativeSampleup(); }
 const int &NiFJjesRelativeSampleup() { return vvv.NiFJjesRelativeSampleup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativeSampleup() { return vvv.iFJ0jesRelativeSampleup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativeSampleup() { return vvv.iFJ1jesRelativeSampleup(); }
@@ -84220,6 +89785,11 @@ const int &NLGen1jesRelativeSampledn() { return vvv.NLGen1jesRelativeSampledn();
 const int &NLGen2jesRelativeSampledn() { return vvv.NLGen2jesRelativeSampledn(); }
 const int &NLGen3jesRelativeSampledn() { return vvv.NLGen3jesRelativeSampledn(); }
 const int &NLGen4jesRelativeSampledn() { return vvv.NLGen4jesRelativeSampledn(); }
+const int &NVQGen0jesRelativeSampledn() { return vvv.NVQGen0jesRelativeSampledn(); }
+const int &NVQGen1jesRelativeSampledn() { return vvv.NVQGen1jesRelativeSampledn(); }
+const int &NVQGen2jesRelativeSampledn() { return vvv.NVQGen2jesRelativeSampledn(); }
+const int &NVQGen3jesRelativeSampledn() { return vvv.NVQGen3jesRelativeSampledn(); }
+const int &NVQGen4jesRelativeSampledn() { return vvv.NVQGen4jesRelativeSampledn(); }
 const int &NiFJjesRelativeSampledn() { return vvv.NiFJjesRelativeSampledn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativeSampledn() { return vvv.iFJ0jesRelativeSampledn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativeSampledn() { return vvv.iFJ1jesRelativeSampledn(); }
@@ -84295,6 +89865,11 @@ const int &NLGen1jesRelativeFSRup() { return vvv.NLGen1jesRelativeFSRup(); }
 const int &NLGen2jesRelativeFSRup() { return vvv.NLGen2jesRelativeFSRup(); }
 const int &NLGen3jesRelativeFSRup() { return vvv.NLGen3jesRelativeFSRup(); }
 const int &NLGen4jesRelativeFSRup() { return vvv.NLGen4jesRelativeFSRup(); }
+const int &NVQGen0jesRelativeFSRup() { return vvv.NVQGen0jesRelativeFSRup(); }
+const int &NVQGen1jesRelativeFSRup() { return vvv.NVQGen1jesRelativeFSRup(); }
+const int &NVQGen2jesRelativeFSRup() { return vvv.NVQGen2jesRelativeFSRup(); }
+const int &NVQGen3jesRelativeFSRup() { return vvv.NVQGen3jesRelativeFSRup(); }
+const int &NVQGen4jesRelativeFSRup() { return vvv.NVQGen4jesRelativeFSRup(); }
 const int &NiFJjesRelativeFSRup() { return vvv.NiFJjesRelativeFSRup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativeFSRup() { return vvv.iFJ0jesRelativeFSRup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativeFSRup() { return vvv.iFJ1jesRelativeFSRup(); }
@@ -84370,6 +89945,11 @@ const int &NLGen1jesRelativeFSRdn() { return vvv.NLGen1jesRelativeFSRdn(); }
 const int &NLGen2jesRelativeFSRdn() { return vvv.NLGen2jesRelativeFSRdn(); }
 const int &NLGen3jesRelativeFSRdn() { return vvv.NLGen3jesRelativeFSRdn(); }
 const int &NLGen4jesRelativeFSRdn() { return vvv.NLGen4jesRelativeFSRdn(); }
+const int &NVQGen0jesRelativeFSRdn() { return vvv.NVQGen0jesRelativeFSRdn(); }
+const int &NVQGen1jesRelativeFSRdn() { return vvv.NVQGen1jesRelativeFSRdn(); }
+const int &NVQGen2jesRelativeFSRdn() { return vvv.NVQGen2jesRelativeFSRdn(); }
+const int &NVQGen3jesRelativeFSRdn() { return vvv.NVQGen3jesRelativeFSRdn(); }
+const int &NVQGen4jesRelativeFSRdn() { return vvv.NVQGen4jesRelativeFSRdn(); }
 const int &NiFJjesRelativeFSRdn() { return vvv.NiFJjesRelativeFSRdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativeFSRdn() { return vvv.iFJ0jesRelativeFSRdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativeFSRdn() { return vvv.iFJ1jesRelativeFSRdn(); }
@@ -84445,6 +90025,11 @@ const int &NLGen1jesRelativeStatFSRup() { return vvv.NLGen1jesRelativeStatFSRup(
 const int &NLGen2jesRelativeStatFSRup() { return vvv.NLGen2jesRelativeStatFSRup(); }
 const int &NLGen3jesRelativeStatFSRup() { return vvv.NLGen3jesRelativeStatFSRup(); }
 const int &NLGen4jesRelativeStatFSRup() { return vvv.NLGen4jesRelativeStatFSRup(); }
+const int &NVQGen0jesRelativeStatFSRup() { return vvv.NVQGen0jesRelativeStatFSRup(); }
+const int &NVQGen1jesRelativeStatFSRup() { return vvv.NVQGen1jesRelativeStatFSRup(); }
+const int &NVQGen2jesRelativeStatFSRup() { return vvv.NVQGen2jesRelativeStatFSRup(); }
+const int &NVQGen3jesRelativeStatFSRup() { return vvv.NVQGen3jesRelativeStatFSRup(); }
+const int &NVQGen4jesRelativeStatFSRup() { return vvv.NVQGen4jesRelativeStatFSRup(); }
 const int &NiFJjesRelativeStatFSRup() { return vvv.NiFJjesRelativeStatFSRup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativeStatFSRup() { return vvv.iFJ0jesRelativeStatFSRup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativeStatFSRup() { return vvv.iFJ1jesRelativeStatFSRup(); }
@@ -84520,6 +90105,11 @@ const int &NLGen1jesRelativeStatFSRdn() { return vvv.NLGen1jesRelativeStatFSRdn(
 const int &NLGen2jesRelativeStatFSRdn() { return vvv.NLGen2jesRelativeStatFSRdn(); }
 const int &NLGen3jesRelativeStatFSRdn() { return vvv.NLGen3jesRelativeStatFSRdn(); }
 const int &NLGen4jesRelativeStatFSRdn() { return vvv.NLGen4jesRelativeStatFSRdn(); }
+const int &NVQGen0jesRelativeStatFSRdn() { return vvv.NVQGen0jesRelativeStatFSRdn(); }
+const int &NVQGen1jesRelativeStatFSRdn() { return vvv.NVQGen1jesRelativeStatFSRdn(); }
+const int &NVQGen2jesRelativeStatFSRdn() { return vvv.NVQGen2jesRelativeStatFSRdn(); }
+const int &NVQGen3jesRelativeStatFSRdn() { return vvv.NVQGen3jesRelativeStatFSRdn(); }
+const int &NVQGen4jesRelativeStatFSRdn() { return vvv.NVQGen4jesRelativeStatFSRdn(); }
 const int &NiFJjesRelativeStatFSRdn() { return vvv.NiFJjesRelativeStatFSRdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativeStatFSRdn() { return vvv.iFJ0jesRelativeStatFSRdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativeStatFSRdn() { return vvv.iFJ1jesRelativeStatFSRdn(); }
@@ -84595,6 +90185,11 @@ const int &NLGen1jesRelativeStatECup() { return vvv.NLGen1jesRelativeStatECup();
 const int &NLGen2jesRelativeStatECup() { return vvv.NLGen2jesRelativeStatECup(); }
 const int &NLGen3jesRelativeStatECup() { return vvv.NLGen3jesRelativeStatECup(); }
 const int &NLGen4jesRelativeStatECup() { return vvv.NLGen4jesRelativeStatECup(); }
+const int &NVQGen0jesRelativeStatECup() { return vvv.NVQGen0jesRelativeStatECup(); }
+const int &NVQGen1jesRelativeStatECup() { return vvv.NVQGen1jesRelativeStatECup(); }
+const int &NVQGen2jesRelativeStatECup() { return vvv.NVQGen2jesRelativeStatECup(); }
+const int &NVQGen3jesRelativeStatECup() { return vvv.NVQGen3jesRelativeStatECup(); }
+const int &NVQGen4jesRelativeStatECup() { return vvv.NVQGen4jesRelativeStatECup(); }
 const int &NiFJjesRelativeStatECup() { return vvv.NiFJjesRelativeStatECup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativeStatECup() { return vvv.iFJ0jesRelativeStatECup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativeStatECup() { return vvv.iFJ1jesRelativeStatECup(); }
@@ -84670,6 +90265,11 @@ const int &NLGen1jesRelativeStatECdn() { return vvv.NLGen1jesRelativeStatECdn();
 const int &NLGen2jesRelativeStatECdn() { return vvv.NLGen2jesRelativeStatECdn(); }
 const int &NLGen3jesRelativeStatECdn() { return vvv.NLGen3jesRelativeStatECdn(); }
 const int &NLGen4jesRelativeStatECdn() { return vvv.NLGen4jesRelativeStatECdn(); }
+const int &NVQGen0jesRelativeStatECdn() { return vvv.NVQGen0jesRelativeStatECdn(); }
+const int &NVQGen1jesRelativeStatECdn() { return vvv.NVQGen1jesRelativeStatECdn(); }
+const int &NVQGen2jesRelativeStatECdn() { return vvv.NVQGen2jesRelativeStatECdn(); }
+const int &NVQGen3jesRelativeStatECdn() { return vvv.NVQGen3jesRelativeStatECdn(); }
+const int &NVQGen4jesRelativeStatECdn() { return vvv.NVQGen4jesRelativeStatECdn(); }
 const int &NiFJjesRelativeStatECdn() { return vvv.NiFJjesRelativeStatECdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativeStatECdn() { return vvv.iFJ0jesRelativeStatECdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativeStatECdn() { return vvv.iFJ1jesRelativeStatECdn(); }
@@ -84745,6 +90345,11 @@ const int &NLGen1jesRelativeStatHFup() { return vvv.NLGen1jesRelativeStatHFup();
 const int &NLGen2jesRelativeStatHFup() { return vvv.NLGen2jesRelativeStatHFup(); }
 const int &NLGen3jesRelativeStatHFup() { return vvv.NLGen3jesRelativeStatHFup(); }
 const int &NLGen4jesRelativeStatHFup() { return vvv.NLGen4jesRelativeStatHFup(); }
+const int &NVQGen0jesRelativeStatHFup() { return vvv.NVQGen0jesRelativeStatHFup(); }
+const int &NVQGen1jesRelativeStatHFup() { return vvv.NVQGen1jesRelativeStatHFup(); }
+const int &NVQGen2jesRelativeStatHFup() { return vvv.NVQGen2jesRelativeStatHFup(); }
+const int &NVQGen3jesRelativeStatHFup() { return vvv.NVQGen3jesRelativeStatHFup(); }
+const int &NVQGen4jesRelativeStatHFup() { return vvv.NVQGen4jesRelativeStatHFup(); }
 const int &NiFJjesRelativeStatHFup() { return vvv.NiFJjesRelativeStatHFup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativeStatHFup() { return vvv.iFJ0jesRelativeStatHFup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativeStatHFup() { return vvv.iFJ1jesRelativeStatHFup(); }
@@ -84820,6 +90425,11 @@ const int &NLGen1jesRelativeStatHFdn() { return vvv.NLGen1jesRelativeStatHFdn();
 const int &NLGen2jesRelativeStatHFdn() { return vvv.NLGen2jesRelativeStatHFdn(); }
 const int &NLGen3jesRelativeStatHFdn() { return vvv.NLGen3jesRelativeStatHFdn(); }
 const int &NLGen4jesRelativeStatHFdn() { return vvv.NLGen4jesRelativeStatHFdn(); }
+const int &NVQGen0jesRelativeStatHFdn() { return vvv.NVQGen0jesRelativeStatHFdn(); }
+const int &NVQGen1jesRelativeStatHFdn() { return vvv.NVQGen1jesRelativeStatHFdn(); }
+const int &NVQGen2jesRelativeStatHFdn() { return vvv.NVQGen2jesRelativeStatHFdn(); }
+const int &NVQGen3jesRelativeStatHFdn() { return vvv.NVQGen3jesRelativeStatHFdn(); }
+const int &NVQGen4jesRelativeStatHFdn() { return vvv.NVQGen4jesRelativeStatHFdn(); }
 const int &NiFJjesRelativeStatHFdn() { return vvv.NiFJjesRelativeStatHFdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesRelativeStatHFdn() { return vvv.iFJ0jesRelativeStatHFdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesRelativeStatHFdn() { return vvv.iFJ1jesRelativeStatHFdn(); }
@@ -84895,6 +90505,11 @@ const int &NLGen1jesPileUpDataMCup() { return vvv.NLGen1jesPileUpDataMCup(); }
 const int &NLGen2jesPileUpDataMCup() { return vvv.NLGen2jesPileUpDataMCup(); }
 const int &NLGen3jesPileUpDataMCup() { return vvv.NLGen3jesPileUpDataMCup(); }
 const int &NLGen4jesPileUpDataMCup() { return vvv.NLGen4jesPileUpDataMCup(); }
+const int &NVQGen0jesPileUpDataMCup() { return vvv.NVQGen0jesPileUpDataMCup(); }
+const int &NVQGen1jesPileUpDataMCup() { return vvv.NVQGen1jesPileUpDataMCup(); }
+const int &NVQGen2jesPileUpDataMCup() { return vvv.NVQGen2jesPileUpDataMCup(); }
+const int &NVQGen3jesPileUpDataMCup() { return vvv.NVQGen3jesPileUpDataMCup(); }
+const int &NVQGen4jesPileUpDataMCup() { return vvv.NVQGen4jesPileUpDataMCup(); }
 const int &NiFJjesPileUpDataMCup() { return vvv.NiFJjesPileUpDataMCup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesPileUpDataMCup() { return vvv.iFJ0jesPileUpDataMCup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesPileUpDataMCup() { return vvv.iFJ1jesPileUpDataMCup(); }
@@ -84970,6 +90585,11 @@ const int &NLGen1jesPileUpDataMCdn() { return vvv.NLGen1jesPileUpDataMCdn(); }
 const int &NLGen2jesPileUpDataMCdn() { return vvv.NLGen2jesPileUpDataMCdn(); }
 const int &NLGen3jesPileUpDataMCdn() { return vvv.NLGen3jesPileUpDataMCdn(); }
 const int &NLGen4jesPileUpDataMCdn() { return vvv.NLGen4jesPileUpDataMCdn(); }
+const int &NVQGen0jesPileUpDataMCdn() { return vvv.NVQGen0jesPileUpDataMCdn(); }
+const int &NVQGen1jesPileUpDataMCdn() { return vvv.NVQGen1jesPileUpDataMCdn(); }
+const int &NVQGen2jesPileUpDataMCdn() { return vvv.NVQGen2jesPileUpDataMCdn(); }
+const int &NVQGen3jesPileUpDataMCdn() { return vvv.NVQGen3jesPileUpDataMCdn(); }
+const int &NVQGen4jesPileUpDataMCdn() { return vvv.NVQGen4jesPileUpDataMCdn(); }
 const int &NiFJjesPileUpDataMCdn() { return vvv.NiFJjesPileUpDataMCdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesPileUpDataMCdn() { return vvv.iFJ0jesPileUpDataMCdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesPileUpDataMCdn() { return vvv.iFJ1jesPileUpDataMCdn(); }
@@ -85045,6 +90665,11 @@ const int &NLGen1jesPileUpPtRefup() { return vvv.NLGen1jesPileUpPtRefup(); }
 const int &NLGen2jesPileUpPtRefup() { return vvv.NLGen2jesPileUpPtRefup(); }
 const int &NLGen3jesPileUpPtRefup() { return vvv.NLGen3jesPileUpPtRefup(); }
 const int &NLGen4jesPileUpPtRefup() { return vvv.NLGen4jesPileUpPtRefup(); }
+const int &NVQGen0jesPileUpPtRefup() { return vvv.NVQGen0jesPileUpPtRefup(); }
+const int &NVQGen1jesPileUpPtRefup() { return vvv.NVQGen1jesPileUpPtRefup(); }
+const int &NVQGen2jesPileUpPtRefup() { return vvv.NVQGen2jesPileUpPtRefup(); }
+const int &NVQGen3jesPileUpPtRefup() { return vvv.NVQGen3jesPileUpPtRefup(); }
+const int &NVQGen4jesPileUpPtRefup() { return vvv.NVQGen4jesPileUpPtRefup(); }
 const int &NiFJjesPileUpPtRefup() { return vvv.NiFJjesPileUpPtRefup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesPileUpPtRefup() { return vvv.iFJ0jesPileUpPtRefup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesPileUpPtRefup() { return vvv.iFJ1jesPileUpPtRefup(); }
@@ -85120,6 +90745,11 @@ const int &NLGen1jesPileUpPtRefdn() { return vvv.NLGen1jesPileUpPtRefdn(); }
 const int &NLGen2jesPileUpPtRefdn() { return vvv.NLGen2jesPileUpPtRefdn(); }
 const int &NLGen3jesPileUpPtRefdn() { return vvv.NLGen3jesPileUpPtRefdn(); }
 const int &NLGen4jesPileUpPtRefdn() { return vvv.NLGen4jesPileUpPtRefdn(); }
+const int &NVQGen0jesPileUpPtRefdn() { return vvv.NVQGen0jesPileUpPtRefdn(); }
+const int &NVQGen1jesPileUpPtRefdn() { return vvv.NVQGen1jesPileUpPtRefdn(); }
+const int &NVQGen2jesPileUpPtRefdn() { return vvv.NVQGen2jesPileUpPtRefdn(); }
+const int &NVQGen3jesPileUpPtRefdn() { return vvv.NVQGen3jesPileUpPtRefdn(); }
+const int &NVQGen4jesPileUpPtRefdn() { return vvv.NVQGen4jesPileUpPtRefdn(); }
 const int &NiFJjesPileUpPtRefdn() { return vvv.NiFJjesPileUpPtRefdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesPileUpPtRefdn() { return vvv.iFJ0jesPileUpPtRefdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesPileUpPtRefdn() { return vvv.iFJ1jesPileUpPtRefdn(); }
@@ -85195,6 +90825,11 @@ const int &NLGen1jesPileUpPtBBup() { return vvv.NLGen1jesPileUpPtBBup(); }
 const int &NLGen2jesPileUpPtBBup() { return vvv.NLGen2jesPileUpPtBBup(); }
 const int &NLGen3jesPileUpPtBBup() { return vvv.NLGen3jesPileUpPtBBup(); }
 const int &NLGen4jesPileUpPtBBup() { return vvv.NLGen4jesPileUpPtBBup(); }
+const int &NVQGen0jesPileUpPtBBup() { return vvv.NVQGen0jesPileUpPtBBup(); }
+const int &NVQGen1jesPileUpPtBBup() { return vvv.NVQGen1jesPileUpPtBBup(); }
+const int &NVQGen2jesPileUpPtBBup() { return vvv.NVQGen2jesPileUpPtBBup(); }
+const int &NVQGen3jesPileUpPtBBup() { return vvv.NVQGen3jesPileUpPtBBup(); }
+const int &NVQGen4jesPileUpPtBBup() { return vvv.NVQGen4jesPileUpPtBBup(); }
 const int &NiFJjesPileUpPtBBup() { return vvv.NiFJjesPileUpPtBBup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesPileUpPtBBup() { return vvv.iFJ0jesPileUpPtBBup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesPileUpPtBBup() { return vvv.iFJ1jesPileUpPtBBup(); }
@@ -85270,6 +90905,11 @@ const int &NLGen1jesPileUpPtBBdn() { return vvv.NLGen1jesPileUpPtBBdn(); }
 const int &NLGen2jesPileUpPtBBdn() { return vvv.NLGen2jesPileUpPtBBdn(); }
 const int &NLGen3jesPileUpPtBBdn() { return vvv.NLGen3jesPileUpPtBBdn(); }
 const int &NLGen4jesPileUpPtBBdn() { return vvv.NLGen4jesPileUpPtBBdn(); }
+const int &NVQGen0jesPileUpPtBBdn() { return vvv.NVQGen0jesPileUpPtBBdn(); }
+const int &NVQGen1jesPileUpPtBBdn() { return vvv.NVQGen1jesPileUpPtBBdn(); }
+const int &NVQGen2jesPileUpPtBBdn() { return vvv.NVQGen2jesPileUpPtBBdn(); }
+const int &NVQGen3jesPileUpPtBBdn() { return vvv.NVQGen3jesPileUpPtBBdn(); }
+const int &NVQGen4jesPileUpPtBBdn() { return vvv.NVQGen4jesPileUpPtBBdn(); }
 const int &NiFJjesPileUpPtBBdn() { return vvv.NiFJjesPileUpPtBBdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesPileUpPtBBdn() { return vvv.iFJ0jesPileUpPtBBdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesPileUpPtBBdn() { return vvv.iFJ1jesPileUpPtBBdn(); }
@@ -85345,6 +90985,11 @@ const int &NLGen1jesPileUpPtEC1up() { return vvv.NLGen1jesPileUpPtEC1up(); }
 const int &NLGen2jesPileUpPtEC1up() { return vvv.NLGen2jesPileUpPtEC1up(); }
 const int &NLGen3jesPileUpPtEC1up() { return vvv.NLGen3jesPileUpPtEC1up(); }
 const int &NLGen4jesPileUpPtEC1up() { return vvv.NLGen4jesPileUpPtEC1up(); }
+const int &NVQGen0jesPileUpPtEC1up() { return vvv.NVQGen0jesPileUpPtEC1up(); }
+const int &NVQGen1jesPileUpPtEC1up() { return vvv.NVQGen1jesPileUpPtEC1up(); }
+const int &NVQGen2jesPileUpPtEC1up() { return vvv.NVQGen2jesPileUpPtEC1up(); }
+const int &NVQGen3jesPileUpPtEC1up() { return vvv.NVQGen3jesPileUpPtEC1up(); }
+const int &NVQGen4jesPileUpPtEC1up() { return vvv.NVQGen4jesPileUpPtEC1up(); }
 const int &NiFJjesPileUpPtEC1up() { return vvv.NiFJjesPileUpPtEC1up(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesPileUpPtEC1up() { return vvv.iFJ0jesPileUpPtEC1up(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesPileUpPtEC1up() { return vvv.iFJ1jesPileUpPtEC1up(); }
@@ -85420,6 +91065,11 @@ const int &NLGen1jesPileUpPtEC1dn() { return vvv.NLGen1jesPileUpPtEC1dn(); }
 const int &NLGen2jesPileUpPtEC1dn() { return vvv.NLGen2jesPileUpPtEC1dn(); }
 const int &NLGen3jesPileUpPtEC1dn() { return vvv.NLGen3jesPileUpPtEC1dn(); }
 const int &NLGen4jesPileUpPtEC1dn() { return vvv.NLGen4jesPileUpPtEC1dn(); }
+const int &NVQGen0jesPileUpPtEC1dn() { return vvv.NVQGen0jesPileUpPtEC1dn(); }
+const int &NVQGen1jesPileUpPtEC1dn() { return vvv.NVQGen1jesPileUpPtEC1dn(); }
+const int &NVQGen2jesPileUpPtEC1dn() { return vvv.NVQGen2jesPileUpPtEC1dn(); }
+const int &NVQGen3jesPileUpPtEC1dn() { return vvv.NVQGen3jesPileUpPtEC1dn(); }
+const int &NVQGen4jesPileUpPtEC1dn() { return vvv.NVQGen4jesPileUpPtEC1dn(); }
 const int &NiFJjesPileUpPtEC1dn() { return vvv.NiFJjesPileUpPtEC1dn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesPileUpPtEC1dn() { return vvv.iFJ0jesPileUpPtEC1dn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesPileUpPtEC1dn() { return vvv.iFJ1jesPileUpPtEC1dn(); }
@@ -85495,6 +91145,11 @@ const int &NLGen1jesPileUpPtEC2up() { return vvv.NLGen1jesPileUpPtEC2up(); }
 const int &NLGen2jesPileUpPtEC2up() { return vvv.NLGen2jesPileUpPtEC2up(); }
 const int &NLGen3jesPileUpPtEC2up() { return vvv.NLGen3jesPileUpPtEC2up(); }
 const int &NLGen4jesPileUpPtEC2up() { return vvv.NLGen4jesPileUpPtEC2up(); }
+const int &NVQGen0jesPileUpPtEC2up() { return vvv.NVQGen0jesPileUpPtEC2up(); }
+const int &NVQGen1jesPileUpPtEC2up() { return vvv.NVQGen1jesPileUpPtEC2up(); }
+const int &NVQGen2jesPileUpPtEC2up() { return vvv.NVQGen2jesPileUpPtEC2up(); }
+const int &NVQGen3jesPileUpPtEC2up() { return vvv.NVQGen3jesPileUpPtEC2up(); }
+const int &NVQGen4jesPileUpPtEC2up() { return vvv.NVQGen4jesPileUpPtEC2up(); }
 const int &NiFJjesPileUpPtEC2up() { return vvv.NiFJjesPileUpPtEC2up(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesPileUpPtEC2up() { return vvv.iFJ0jesPileUpPtEC2up(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesPileUpPtEC2up() { return vvv.iFJ1jesPileUpPtEC2up(); }
@@ -85570,6 +91225,11 @@ const int &NLGen1jesPileUpPtEC2dn() { return vvv.NLGen1jesPileUpPtEC2dn(); }
 const int &NLGen2jesPileUpPtEC2dn() { return vvv.NLGen2jesPileUpPtEC2dn(); }
 const int &NLGen3jesPileUpPtEC2dn() { return vvv.NLGen3jesPileUpPtEC2dn(); }
 const int &NLGen4jesPileUpPtEC2dn() { return vvv.NLGen4jesPileUpPtEC2dn(); }
+const int &NVQGen0jesPileUpPtEC2dn() { return vvv.NVQGen0jesPileUpPtEC2dn(); }
+const int &NVQGen1jesPileUpPtEC2dn() { return vvv.NVQGen1jesPileUpPtEC2dn(); }
+const int &NVQGen2jesPileUpPtEC2dn() { return vvv.NVQGen2jesPileUpPtEC2dn(); }
+const int &NVQGen3jesPileUpPtEC2dn() { return vvv.NVQGen3jesPileUpPtEC2dn(); }
+const int &NVQGen4jesPileUpPtEC2dn() { return vvv.NVQGen4jesPileUpPtEC2dn(); }
 const int &NiFJjesPileUpPtEC2dn() { return vvv.NiFJjesPileUpPtEC2dn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesPileUpPtEC2dn() { return vvv.iFJ0jesPileUpPtEC2dn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesPileUpPtEC2dn() { return vvv.iFJ1jesPileUpPtEC2dn(); }
@@ -85645,6 +91305,11 @@ const int &NLGen1jesPileUpPtHFup() { return vvv.NLGen1jesPileUpPtHFup(); }
 const int &NLGen2jesPileUpPtHFup() { return vvv.NLGen2jesPileUpPtHFup(); }
 const int &NLGen3jesPileUpPtHFup() { return vvv.NLGen3jesPileUpPtHFup(); }
 const int &NLGen4jesPileUpPtHFup() { return vvv.NLGen4jesPileUpPtHFup(); }
+const int &NVQGen0jesPileUpPtHFup() { return vvv.NVQGen0jesPileUpPtHFup(); }
+const int &NVQGen1jesPileUpPtHFup() { return vvv.NVQGen1jesPileUpPtHFup(); }
+const int &NVQGen2jesPileUpPtHFup() { return vvv.NVQGen2jesPileUpPtHFup(); }
+const int &NVQGen3jesPileUpPtHFup() { return vvv.NVQGen3jesPileUpPtHFup(); }
+const int &NVQGen4jesPileUpPtHFup() { return vvv.NVQGen4jesPileUpPtHFup(); }
 const int &NiFJjesPileUpPtHFup() { return vvv.NiFJjesPileUpPtHFup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesPileUpPtHFup() { return vvv.iFJ0jesPileUpPtHFup(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesPileUpPtHFup() { return vvv.iFJ1jesPileUpPtHFup(); }
@@ -85720,6 +91385,11 @@ const int &NLGen1jesPileUpPtHFdn() { return vvv.NLGen1jesPileUpPtHFdn(); }
 const int &NLGen2jesPileUpPtHFdn() { return vvv.NLGen2jesPileUpPtHFdn(); }
 const int &NLGen3jesPileUpPtHFdn() { return vvv.NLGen3jesPileUpPtHFdn(); }
 const int &NLGen4jesPileUpPtHFdn() { return vvv.NLGen4jesPileUpPtHFdn(); }
+const int &NVQGen0jesPileUpPtHFdn() { return vvv.NVQGen0jesPileUpPtHFdn(); }
+const int &NVQGen1jesPileUpPtHFdn() { return vvv.NVQGen1jesPileUpPtHFdn(); }
+const int &NVQGen2jesPileUpPtHFdn() { return vvv.NVQGen2jesPileUpPtHFdn(); }
+const int &NVQGen3jesPileUpPtHFdn() { return vvv.NVQGen3jesPileUpPtHFdn(); }
+const int &NVQGen4jesPileUpPtHFdn() { return vvv.NVQGen4jesPileUpPtHFdn(); }
 const int &NiFJjesPileUpPtHFdn() { return vvv.NiFJjesPileUpPtHFdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ0jesPileUpPtHFdn() { return vvv.iFJ0jesPileUpPtHFdn(); }
 const ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float> > &iFJ1jesPileUpPtHFdn() { return vvv.iFJ1jesPileUpPtHFdn(); }

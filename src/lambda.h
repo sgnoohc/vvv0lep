@@ -1,5 +1,4 @@
 #include "variable.h"
-#include "histvariable.h"
 
 //***************************************************************************************************************************************************************
 //
@@ -36,6 +35,529 @@ auto fjcateg = [&]()
     {
         return 5;
     }
+};
+
+
+//===============================================================================================================================================================
+// Variable to categorize the fat-jet truth matching top v. w v. qb v. q v. b v. other
+// This is for one lepton region for scale factor computation
+auto FJSFMedium = [&, year, is_data](TString syst_name=VARIATION)
+{
+    if (is_data) return 1.f;
+    float SF = 1.;
+    if (NFJ(syst_name) == 2)
+    {
+
+        // 2018
+        const float SF0_No_2018 = 0.86;
+        const float SF1_No_2018 = 0.86;
+        const float SF2_No_2018 = 0.82;
+        const float SF0_Up_2018 = SF0_No_2018 + 0.02;
+        const float SF1_Up_2018 = SF1_No_2018 + 0.02;
+        const float SF2_Up_2018 = SF2_No_2018 + 0.04;
+        const float SF0_Dn_2018 = SF0_No_2018 - 0.02;
+        const float SF1_Dn_2018 = SF1_No_2018 - 0.02;
+        const float SF2_Dn_2018 = SF2_No_2018 - 0.04;
+
+        // 2017
+        const float SF0_No_2017 = 0.91;
+        const float SF1_No_2017 = 0.90;
+        const float SF2_No_2017 = 0.89;
+        const float SF0_Up_2017 = SF0_No_2017 + 0.02;
+        const float SF1_Up_2017 = SF1_No_2017 + 0.03;
+        const float SF2_Up_2017 = SF2_No_2017 + 0.05;
+        const float SF0_Dn_2017 = SF0_No_2017 - 0.02;
+        const float SF1_Dn_2017 = SF1_No_2017 - 0.03;
+        const float SF2_Dn_2017 = SF2_No_2017 - 0.04;
+
+        // 2016
+        const float SF0_No_2016 = 0.89;
+        const float SF1_No_2016 = 0.86;
+        const float SF2_No_2016 = 0.73;
+        const float SF0_Up_2016 = SF0_No_2016 + 0.04;
+        const float SF1_Up_2016 = SF1_No_2016 + 0.04;
+        const float SF2_Up_2016 = SF2_No_2016 + 0.07;
+        const float SF0_Dn_2016 = SF0_No_2016 - 0.03;
+        const float SF1_Dn_2016 = SF1_No_2016 - 0.04;
+        const float SF2_Dn_2016 = SF2_No_2016 - 0.07;
+
+        // 2016APV
+        const float SF0_No_2016APV = 0.90;
+        const float SF1_No_2016APV = 0.87;
+        const float SF2_No_2016APV = 0.92;
+        const float SF0_Up_2016APV = SF0_No_2016APV + 0.03;
+        const float SF1_Up_2016APV = SF1_No_2016APV + 0.04;
+        const float SF2_Up_2016APV = SF2_No_2016APV + 0.08;
+        const float SF0_Dn_2016APV = SF0_No_2016APV - 0.03;
+        const float SF1_Dn_2016APV = SF1_No_2016APV - 0.04;
+        const float SF2_Dn_2016APV = SF2_No_2016APV - 0.07;
+
+        // 2018
+        const float FakeSF_No_2018 = 1.20;
+        const float FakeSF_Up_2018 = FakeSF_No_2018 + 0.18;
+        const float FakeSF_Dn_2018 = FakeSF_No_2018 - 0.18;
+
+        // 2017
+        const float FakeSF_No_2017 = 1.25;
+        const float FakeSF_Up_2017 = FakeSF_No_2017 + 0.20;
+        const float FakeSF_Dn_2017 = FakeSF_No_2017 - 0.20;
+
+        // 2016
+        const float FakeSF_No_2016 = 1.05;
+        const float FakeSF_Up_2016 = FakeSF_No_2016 + 0.24;
+        const float FakeSF_Dn_2016 = FakeSF_No_2016 - 0.24;
+
+        // 2016APV
+        const float FakeSF_No_2016APV = 1.08;
+        const float FakeSF_Up_2016APV = FakeSF_No_2016APV + 0.25;
+        const float FakeSF_Dn_2016APV = FakeSF_No_2016APV - 0.25;
+
+        // 2018
+        const float BSF_No_2018 = 1.40;
+        const float BSF_Up_2018 = BSF_No_2018 + 0.17;
+        const float BSF_Dn_2018 = BSF_No_2018 - 0.17;
+
+        // 2017
+        const float BSF_No_2017 = 1.10;
+        const float BSF_Up_2017 = BSF_No_2017 + 0.23;
+        const float BSF_Dn_2017 = BSF_No_2017 - 0.23;
+
+        // 2016
+        const float BSF_No_2016 = 1.45;
+        const float BSF_Up_2016 = BSF_No_2016 + 0.22;
+        const float BSF_Dn_2016 = BSF_No_2016 - 0.22;
+
+        // 2016APV
+        const float BSF_No_2016APV = 1.23;
+        const float BSF_Up_2016APV = BSF_No_2016APV + 0.23;
+        const float BSF_Dn_2016APV = BSF_No_2016APV - 0.23;
+
+        float SF0, SF1, SF2, FakeSF, BSF;
+        if (syst_name.EqualTo("WSFUp") or syst_name.EqualTo("SFUp"))
+        {
+            if (year == 2018)
+            {
+                SF0 = SF0_Up_2018;
+                SF1 = SF1_Up_2018;
+                SF2 = SF2_Up_2018;
+            }
+            else if (year == 2017)
+            {
+                SF0 = SF0_Up_2017;
+                SF1 = SF1_Up_2017;
+                SF2 = SF2_Up_2017;
+            }
+            else if (year == 2016)
+            {
+                SF0 = SF0_Up_2016;
+                SF1 = SF1_Up_2016;
+                SF2 = SF2_Up_2016;
+            }
+            else
+            {
+                SF0 = SF0_Up_2016APV;
+                SF1 = SF1_Up_2016APV;
+                SF2 = SF2_Up_2016APV;
+            }
+        }
+        else if (syst_name.EqualTo("WSFDn") or syst_name.EqualTo("SFDn"))
+        {
+            if (year == 2018)
+            {
+                SF0 = SF0_Dn_2018;
+                SF1 = SF1_Dn_2018;
+                SF2 = SF2_Dn_2018;
+            }
+            else if (year == 2017)
+            {
+                SF0 = SF0_Dn_2017;
+                SF1 = SF1_Dn_2017;
+                SF2 = SF2_Dn_2017;
+            }
+            else if (year == 2016)
+            {
+                SF0 = SF0_Dn_2016;
+                SF1 = SF1_Dn_2016;
+                SF2 = SF2_Dn_2016;
+            }
+            else
+            {
+                SF0 = SF0_Dn_2016APV;
+                SF1 = SF1_Dn_2016APV;
+                SF2 = SF2_Dn_2016APV;
+            }
+        }
+        else
+        {
+            if (year == 2018)
+            {
+                SF0 = SF0_No_2018;
+                SF1 = SF1_No_2018;
+                SF2 = SF2_No_2018;
+            }
+            else if (year == 2017)
+            {
+                SF0 = SF0_No_2017;
+                SF1 = SF1_No_2017;
+                SF2 = SF2_No_2017;
+            }
+            else if (year == 2016)
+            {
+                SF0 = SF0_No_2016;
+                SF1 = SF1_No_2016;
+                SF2 = SF2_No_2016;
+            }
+            else
+            {
+                SF0 = SF0_No_2016APV;
+                SF1 = SF1_No_2016APV;
+                SF2 = SF2_No_2016APV;
+            }
+        }
+
+        if (syst_name.EqualTo("FakeSFUp") or syst_name.EqualTo("SFUp"))
+        {
+            if      (year == 2018) FakeSF = FakeSF_Up_2018;
+            else if (year == 2017) FakeSF = FakeSF_Up_2017;
+            else if (year == 2016) FakeSF = FakeSF_Up_2016;
+            else                   FakeSF = FakeSF_Up_2016APV;
+        }
+        else if (syst_name.EqualTo("FakeSFDn") or syst_name.EqualTo("SFDn"))
+        {
+            if      (year == 2018) FakeSF = FakeSF_Dn_2018;
+            else if (year == 2017) FakeSF = FakeSF_Dn_2017;
+            else if (year == 2016) FakeSF = FakeSF_Dn_2016;
+            else                   FakeSF = FakeSF_Dn_2016APV;
+        }
+        else
+        {
+            if      (year == 2018) FakeSF = FakeSF_No_2018;
+            else if (year == 2017) FakeSF = FakeSF_No_2017;
+            else if (year == 2016) FakeSF = FakeSF_No_2016;
+            else                   FakeSF = FakeSF_No_2016APV;
+        }
+
+        if (syst_name.EqualTo("BSFUp") or syst_name.EqualTo("SFUp"))
+        {
+            if      (year == 2018) BSF = BSF_Up_2018;
+            else if (year == 2017) BSF = BSF_Up_2017;
+            else if (year == 2016) BSF = BSF_Up_2016;
+            else                   BSF = BSF_Up_2016APV;
+        }
+        else if (syst_name.EqualTo("BSFDn") or syst_name.EqualTo("SFDn"))
+        {
+            if      (year == 2018) BSF = BSF_Dn_2018;
+            else if (year == 2017) BSF = BSF_Dn_2017;
+            else if (year == 2016) BSF = BSF_Dn_2016;
+            else                   BSF = BSF_Dn_2016APV;
+        }
+        else
+        {
+            if      (year == 2018) BSF = BSF_No_2018;
+            else if (year == 2017) BSF = BSF_No_2017;
+            else if (year == 2016) BSF = BSF_No_2016;
+            else                   BSF = BSF_No_2016APV;
+        }
+
+        if (NVQGen0() >= 1) // True
+        {
+            if      (FJ0(syst_name).pt() > 200. and FJ0(syst_name).pt() <= 300) SF *= SF0;
+            else if (FJ0(syst_name).pt() > 300. and FJ0(syst_name).pt() <= 400) SF *= SF1;
+            else if (FJ0(syst_name).pt() > 400.                               ) SF *= SF2;
+        }
+        else if (NVQGen0() == 0 and NBGen0() >= 1) // b
+        {
+            SF *= BSF;
+        }
+        else
+        {
+            SF *= FakeSF;
+        }
+
+        if (NVQGen1() >= 1) // True
+        {
+            if      (FJ1(syst_name).pt() > 200. and FJ1(syst_name).pt() <= 300) SF *= SF0;
+            else if (FJ1(syst_name).pt() > 300. and FJ1(syst_name).pt() <= 400) SF *= SF1;
+            else if (FJ1(syst_name).pt() > 400.                               ) SF *= SF2;
+        }
+        else if (NVQGen1() == 0 and NBGen1() >= 1) // b
+        {
+            SF *= BSF;
+        }
+        else
+        {
+            SF *= FakeSF;
+        }
+    }
+    return SF;
+};
+
+//===============================================================================================================================================================
+// Variable to categorize the fat-jet truth matching top v. w v. qb v. q v. b v. other
+// This is for one lepton region for scale factor computation
+auto FJSFLoose = [&, year, is_data](TString syst_name=VARIATION)
+{
+    if (is_data) return 1.f;
+    float SF = 1.;
+    if (NFJ(syst_name) >= 3)
+    {
+        // 2018
+        const float SF0_No_2018 = 0.91;
+        const float SF1_No_2018 = 0.91;
+        const float SF2_No_2018 = 0.87;
+        const float SF0_Up_2018 = SF0_No_2018 + 0.02;
+        const float SF1_Up_2018 = SF1_No_2018 + 0.02;
+        const float SF2_Up_2018 = SF2_No_2018 + 0.04;
+        const float SF0_Dn_2018 = SF0_No_2018 - 0.02;
+        const float SF1_Dn_2018 = SF1_No_2018 - 0.02;
+        const float SF2_Dn_2018 = SF2_No_2018 - 0.04;
+
+        // 2017
+        const float SF0_No_2017 = 0.96;
+        const float SF1_No_2017 = 0.95;
+        const float SF2_No_2017 = 0.98;
+        const float SF0_Up_2017 = SF0_No_2017 + 0.03;
+        const float SF1_Up_2017 = SF1_No_2017 + 0.03;
+        const float SF2_Up_2017 = SF2_No_2017 + 0.05;
+        const float SF0_Dn_2017 = SF0_No_2017 - 0.03;
+        const float SF1_Dn_2017 = SF1_No_2017 - 0.02;
+        const float SF2_Dn_2017 = SF2_No_2017 - 0.05;
+
+        // 2016
+        const float SF0_No_2016 = 0.95;
+        const float SF1_No_2016 = 0.91;
+        const float SF2_No_2016 = 0.84;
+        const float SF0_Up_2016 = SF0_No_2016 + 0.04;
+        const float SF1_Up_2016 = SF1_No_2016 + 0.04;
+        const float SF2_Up_2016 = SF2_No_2016 + 0.07;
+        const float SF0_Dn_2016 = SF0_No_2016 - 0.04;
+        const float SF1_Dn_2016 = SF1_No_2016 - 0.04;
+        const float SF2_Dn_2016 = SF2_No_2016 - 0.07;
+
+        // 2016APV
+        const float SF0_No_2016APV = 0.90;
+        const float SF1_No_2016APV = 0.94;
+        const float SF2_No_2016APV = 0.94;
+        const float SF0_Up_2016APV = SF0_No_2016APV + 0.02;
+        const float SF1_Up_2016APV = SF1_No_2016APV + 0.04;
+        const float SF2_Up_2016APV = SF2_No_2016APV + 0.07;
+        const float SF0_Dn_2016APV = SF0_No_2016APV - 0.02;
+        const float SF1_Dn_2016APV = SF1_No_2016APV - 0.04;
+        const float SF2_Dn_2016APV = SF2_No_2016APV - 0.07;
+
+        // 2018
+        const float FakeSF_No_2018 = 1.26;
+        const float FakeSF_Up_2018 = FakeSF_No_2018 + 0.08;
+        const float FakeSF_Dn_2018 = FakeSF_No_2018 - 0.08;
+
+        // 2017
+        const float FakeSF_No_2017 = 1.30;
+        const float FakeSF_Up_2017 = FakeSF_No_2017 + 0.09;
+        const float FakeSF_Dn_2017 = FakeSF_No_2017 - 0.09;
+
+        // 2016
+        const float FakeSF_No_2016 = 1.17;
+        const float FakeSF_Up_2016 = FakeSF_No_2016 + 0.13;
+        const float FakeSF_Dn_2016 = FakeSF_No_2016 - 0.13;
+
+        // 2016APV
+        const float FakeSF_No_2016APV = 1.26;
+        const float FakeSF_Up_2016APV = FakeSF_No_2016APV + 0.13;
+        const float FakeSF_Dn_2016APV = FakeSF_No_2016APV - 0.13;
+
+        // 2018
+        const float BSF_No_2018 = 1.38;
+        const float BSF_Up_2018 = BSF_No_2018 + 0.10;
+        const float BSF_Dn_2018 = BSF_No_2018 - 0.10;
+
+        // 2017
+        const float BSF_No_2017 = 1.09;
+        const float BSF_Up_2017 = BSF_No_2017 + 0.15;
+        const float BSF_Dn_2017 = BSF_No_2017 - 0.15;
+
+        // 2016
+        const float BSF_No_2016 = 1.17;
+        const float BSF_Up_2016 = BSF_No_2016 + 0.16;
+        const float BSF_Dn_2016 = BSF_No_2016 - 0.16;
+
+        // 2016APV
+        const float BSF_No_2016APV = 1.05;
+        const float BSF_Up_2016APV = BSF_No_2016APV + 0.16;
+        const float BSF_Dn_2016APV = BSF_No_2016APV - 0.16;
+
+        float SF0, SF1, SF2, FakeSF, BSF;
+        if (syst_name.EqualTo("WSFUp") or syst_name.EqualTo("SFUp"))
+        {
+            if (year == 2018)
+            {
+                SF0 = SF0_Up_2018;
+                SF1 = SF1_Up_2018;
+                SF2 = SF2_Up_2018;
+            }
+            else if (year == 2017)
+            {
+                SF0 = SF0_Up_2017;
+                SF1 = SF1_Up_2017;
+                SF2 = SF2_Up_2017;
+            }
+            else if (year == 2016)
+            {
+                SF0 = SF0_Up_2016;
+                SF1 = SF1_Up_2016;
+                SF2 = SF2_Up_2016;
+            }
+            else
+            {
+                SF0 = SF0_Up_2016APV;
+                SF1 = SF1_Up_2016APV;
+                SF2 = SF2_Up_2016APV;
+            }
+        }
+        else if (syst_name.EqualTo("WSFDn") or syst_name.EqualTo("SFDn"))
+        {
+            if (year == 2018)
+            {
+                SF0 = SF0_Dn_2018;
+                SF1 = SF1_Dn_2018;
+                SF2 = SF2_Dn_2018;
+            }
+            else if (year == 2017)
+            {
+                SF0 = SF0_Dn_2017;
+                SF1 = SF1_Dn_2017;
+                SF2 = SF2_Dn_2017;
+            }
+            else if (year == 2016)
+            {
+                SF0 = SF0_Dn_2016;
+                SF1 = SF1_Dn_2016;
+                SF2 = SF2_Dn_2016;
+            }
+            else
+            {
+                SF0 = SF0_Dn_2016APV;
+                SF1 = SF1_Dn_2016APV;
+                SF2 = SF2_Dn_2016APV;
+            }
+        }
+        else
+        {
+            if (year == 2018)
+            {
+                SF0 = SF0_No_2018;
+                SF1 = SF1_No_2018;
+                SF2 = SF2_No_2018;
+            }
+            else if (year == 2017)
+            {
+                SF0 = SF0_No_2017;
+                SF1 = SF1_No_2017;
+                SF2 = SF2_No_2017;
+            }
+            else if (year == 2016)
+            {
+                SF0 = SF0_No_2016;
+                SF1 = SF1_No_2016;
+                SF2 = SF2_No_2016;
+            }
+            else
+            {
+                SF0 = SF0_No_2016APV;
+                SF1 = SF1_No_2016APV;
+                SF2 = SF2_No_2016APV;
+            }
+        }
+
+        if (syst_name.EqualTo("FakeSFUp") or syst_name.EqualTo("SFUp"))
+        {
+            if      (year == 2018) FakeSF = FakeSF_Up_2018;
+            else if (year == 2017) FakeSF = FakeSF_Up_2017;
+            else if (year == 2016) FakeSF = FakeSF_Up_2016;
+            else                   FakeSF = FakeSF_Up_2016APV;
+        }
+        else if (syst_name.EqualTo("FakeSFDn") or syst_name.EqualTo("SFDn"))
+        {
+            if      (year == 2018) FakeSF = FakeSF_Dn_2018;
+            else if (year == 2017) FakeSF = FakeSF_Dn_2017;
+            else if (year == 2016) FakeSF = FakeSF_Dn_2016;
+            else                   FakeSF = FakeSF_Dn_2016APV;
+        }
+        else
+        {
+            if      (year == 2018) FakeSF = FakeSF_No_2018;
+            else if (year == 2017) FakeSF = FakeSF_No_2017;
+            else if (year == 2016) FakeSF = FakeSF_No_2016;
+            else                   FakeSF = FakeSF_No_2016APV;
+        }
+
+        if (syst_name.EqualTo("BSFUp") or syst_name.EqualTo("SFUp"))
+        {
+            if      (year == 2018) BSF = BSF_Up_2018;
+            else if (year == 2017) BSF = BSF_Up_2017;
+            else if (year == 2016) BSF = BSF_Up_2016;
+            else                   BSF = BSF_Up_2016APV;
+        }
+        else if (syst_name.EqualTo("BSFDn") or syst_name.EqualTo("SFDn"))
+        {
+            if      (year == 2018) BSF = BSF_Dn_2018;
+            else if (year == 2017) BSF = BSF_Dn_2017;
+            else if (year == 2016) BSF = BSF_Dn_2016;
+            else                   BSF = BSF_Dn_2016APV;
+        }
+        else
+        {
+            if      (year == 2018) BSF = BSF_No_2018;
+            else if (year == 2017) BSF = BSF_No_2017;
+            else if (year == 2016) BSF = BSF_No_2016;
+            else                   BSF = BSF_No_2016APV;
+        }
+
+        if (NVQGen0() >= 1) // True
+        {
+            if      (FJ0(syst_name).pt() > 200. and FJ0(syst_name).pt() <= 300) SF *= SF0;
+            else if (FJ0(syst_name).pt() > 300. and FJ0(syst_name).pt() <= 400) SF *= SF1;
+            else if (FJ0(syst_name).pt() > 400.                               ) SF *= SF2;
+        }
+        else if (NVQGen0() == 0 and NBGen0() >= 1) // b
+        {
+            SF *= BSF;
+        }
+        else
+        {
+            SF *= FakeSF;
+        }
+
+        if (NVQGen1() >= 1) // True
+        {
+            if      (FJ1(syst_name).pt() > 200. and FJ1(syst_name).pt() <= 300) SF *= SF0;
+            else if (FJ1(syst_name).pt() > 300. and FJ1(syst_name).pt() <= 400) SF *= SF1;
+            else if (FJ1(syst_name).pt() > 400.                               ) SF *= SF2;
+        }
+        else if (NVQGen1() == 0 and NBGen1() >= 1) // b
+        {
+            SF *= BSF;
+        }
+        else
+        {
+            SF *= FakeSF;
+        }
+
+        if (NVQGen2() >= 1) // True
+        {
+            if      (FJ2(syst_name).pt() > 200. and FJ2(syst_name).pt() <= 300) SF *= SF0;
+            else if (FJ2(syst_name).pt() > 300. and FJ2(syst_name).pt() <= 400) SF *= SF1;
+            else if (FJ2(syst_name).pt() > 400.                               ) SF *= SF2;
+        }
+        else if (NVQGen2() == 0 and NBGen2() >= 1) // b
+        {
+            SF *= BSF;
+        }
+        else
+        {
+            SF *= FakeSF;
+        }
+    }
+    return SF;
 };
 
 
@@ -450,3 +972,5 @@ auto wmd_reg_3d = [&](TString syst_name="Nominal")
         }
     }
 };
+
+#include "histvariable.h"

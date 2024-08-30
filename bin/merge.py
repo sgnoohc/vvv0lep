@@ -28,6 +28,8 @@ sample_jsons = glob.glob(f"data/samples/{c.tag}/*")
 for sample_json in sample_jsons:
     # if "QCD" not in sample_json and "Dim" not in sample_json:
     #     continue
+    # if "Dim" not in sample_json:
+    #     continue
     f = open(sample_json)
     sj = json.loads(f.read())
     output_dir = sj["output_dir"]

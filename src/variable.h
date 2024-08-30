@@ -4091,6 +4091,666 @@ auto NLGen4 = [&](TString syst_name=VARIATION)
         return vvv.NLGen4();
 };
 
+auto NVQGen0 = [&](TString syst_name=VARIATION)
+{
+    if (syst_name.EqualTo("Nominal"))
+        return vvv.NVQGen0();
+    else if (syst_name.EqualTo("JESUp"))
+        return vvv.NVQGen0JESUp();
+    else if (syst_name.EqualTo("JESDn"))
+        return vvv.NVQGen0JESDn();
+    else if (syst_name.EqualTo("JERUp"))
+        return vvv.NVQGen0JERUp();
+    else if (syst_name.EqualTo("JERDn"))
+        return vvv.NVQGen0JERDn();
+    else if (syst_name.EqualTo("JMSUp"))
+        return vvv.NVQGen0JMSUp();
+    else if (syst_name.EqualTo("JMSDn"))
+        return vvv.NVQGen0JMSDn();
+    else if (syst_name.EqualTo("JMRUp"))
+        return vvv.NVQGen0JMRUp();
+    else if (syst_name.EqualTo("JMRDn"))
+        return vvv.NVQGen0JMRDn();
+    else if (syst_name.EqualTo("jesAbsoluteStatup"))
+        return vvv.NVQGen0jesAbsoluteStatup();
+    else if (syst_name.EqualTo("jesAbsoluteStatdn"))
+        return vvv.NVQGen0jesAbsoluteStatdn();
+    else if (syst_name.EqualTo("jesAbsoluteScaleup"))
+        return vvv.NVQGen0jesAbsoluteScaleup();
+    else if (syst_name.EqualTo("jesAbsoluteScaledn"))
+        return vvv.NVQGen0jesAbsoluteScaledn();
+    else if (syst_name.EqualTo("jesAbsoluteMPFBiasup"))
+        return vvv.NVQGen0jesAbsoluteMPFBiasup();
+    else if (syst_name.EqualTo("jesAbsoluteMPFBiasdn"))
+        return vvv.NVQGen0jesAbsoluteMPFBiasdn();
+    else if (syst_name.EqualTo("jesFragmentationup"))
+        return vvv.NVQGen0jesFragmentationup();
+    else if (syst_name.EqualTo("jesFragmentationdn"))
+        return vvv.NVQGen0jesFragmentationdn();
+    else if (syst_name.EqualTo("jesSinglePionECALup"))
+        return vvv.NVQGen0jesSinglePionECALup();
+    else if (syst_name.EqualTo("jesSinglePionECALdn"))
+        return vvv.NVQGen0jesSinglePionECALdn();
+    else if (syst_name.EqualTo("jesSinglePionHCALup"))
+        return vvv.NVQGen0jesSinglePionHCALup();
+    else if (syst_name.EqualTo("jesSinglePionHCALdn"))
+        return vvv.NVQGen0jesSinglePionHCALdn();
+    else if (syst_name.EqualTo("jesFlavorQCDup"))
+        return vvv.NVQGen0jesFlavorQCDup();
+    else if (syst_name.EqualTo("jesFlavorQCDdn"))
+        return vvv.NVQGen0jesFlavorQCDdn();
+    else if (syst_name.EqualTo("jesTimePtEtaup"))
+        return vvv.NVQGen0jesTimePtEtaup();
+    else if (syst_name.EqualTo("jesTimePtEtadn"))
+        return vvv.NVQGen0jesTimePtEtadn();
+    else if (syst_name.EqualTo("jesRelativeJEREC1up"))
+        return vvv.NVQGen0jesRelativeJEREC1up();
+    else if (syst_name.EqualTo("jesRelativeJEREC1dn"))
+        return vvv.NVQGen0jesRelativeJEREC1dn();
+    else if (syst_name.EqualTo("jesRelativeJEREC2up"))
+        return vvv.NVQGen0jesRelativeJEREC2up();
+    else if (syst_name.EqualTo("jesRelativeJEREC2dn"))
+        return vvv.NVQGen0jesRelativeJEREC2dn();
+    else if (syst_name.EqualTo("jesRelativeJERHFup"))
+        return vvv.NVQGen0jesRelativeJERHFup();
+    else if (syst_name.EqualTo("jesRelativeJERHFdn"))
+        return vvv.NVQGen0jesRelativeJERHFdn();
+    else if (syst_name.EqualTo("jesRelativePtBBup"))
+        return vvv.NVQGen0jesRelativePtBBup();
+    else if (syst_name.EqualTo("jesRelativePtBBdn"))
+        return vvv.NVQGen0jesRelativePtBBdn();
+    else if (syst_name.EqualTo("jesRelativePtEC1up"))
+        return vvv.NVQGen0jesRelativePtEC1up();
+    else if (syst_name.EqualTo("jesRelativePtEC1dn"))
+        return vvv.NVQGen0jesRelativePtEC1dn();
+    else if (syst_name.EqualTo("jesRelativePtEC2up"))
+        return vvv.NVQGen0jesRelativePtEC2up();
+    else if (syst_name.EqualTo("jesRelativePtEC2dn"))
+        return vvv.NVQGen0jesRelativePtEC2dn();
+    else if (syst_name.EqualTo("jesRelativePtHFup"))
+        return vvv.NVQGen0jesRelativePtHFup();
+    else if (syst_name.EqualTo("jesRelativePtHFdn"))
+        return vvv.NVQGen0jesRelativePtHFdn();
+    else if (syst_name.EqualTo("jesRelativeBalup"))
+        return vvv.NVQGen0jesRelativeBalup();
+    else if (syst_name.EqualTo("jesRelativeBaldn"))
+        return vvv.NVQGen0jesRelativeBaldn();
+    else if (syst_name.EqualTo("jesRelativeSampleup"))
+        return vvv.NVQGen0jesRelativeSampleup();
+    else if (syst_name.EqualTo("jesRelativeSampledn"))
+        return vvv.NVQGen0jesRelativeSampledn();
+    else if (syst_name.EqualTo("jesRelativeFSRup"))
+        return vvv.NVQGen0jesRelativeFSRup();
+    else if (syst_name.EqualTo("jesRelativeFSRdn"))
+        return vvv.NVQGen0jesRelativeFSRdn();
+    else if (syst_name.EqualTo("jesRelativeStatFSRup"))
+        return vvv.NVQGen0jesRelativeStatFSRup();
+    else if (syst_name.EqualTo("jesRelativeStatFSRdn"))
+        return vvv.NVQGen0jesRelativeStatFSRdn();
+    else if (syst_name.EqualTo("jesRelativeStatECup"))
+        return vvv.NVQGen0jesRelativeStatECup();
+    else if (syst_name.EqualTo("jesRelativeStatECdn"))
+        return vvv.NVQGen0jesRelativeStatECdn();
+    else if (syst_name.EqualTo("jesRelativeStatHFup"))
+        return vvv.NVQGen0jesRelativeStatHFup();
+    else if (syst_name.EqualTo("jesRelativeStatHFdn"))
+        return vvv.NVQGen0jesRelativeStatHFdn();
+    else if (syst_name.EqualTo("jesPileUpDataMCup"))
+        return vvv.NVQGen0jesPileUpDataMCup();
+    else if (syst_name.EqualTo("jesPileUpDataMCdn"))
+        return vvv.NVQGen0jesPileUpDataMCdn();
+    else if (syst_name.EqualTo("jesPileUpPtRefup"))
+        return vvv.NVQGen0jesPileUpPtRefup();
+    else if (syst_name.EqualTo("jesPileUpPtRefdn"))
+        return vvv.NVQGen0jesPileUpPtRefdn();
+    else if (syst_name.EqualTo("jesPileUpPtBBup"))
+        return vvv.NVQGen0jesPileUpPtBBup();
+    else if (syst_name.EqualTo("jesPileUpPtBBdn"))
+        return vvv.NVQGen0jesPileUpPtBBdn();
+    else if (syst_name.EqualTo("jesPileUpPtEC1up"))
+        return vvv.NVQGen0jesPileUpPtEC1up();
+    else if (syst_name.EqualTo("jesPileUpPtEC1dn"))
+        return vvv.NVQGen0jesPileUpPtEC1dn();
+    else if (syst_name.EqualTo("jesPileUpPtEC2up"))
+        return vvv.NVQGen0jesPileUpPtEC2up();
+    else if (syst_name.EqualTo("jesPileUpPtEC2dn"))
+        return vvv.NVQGen0jesPileUpPtEC2dn();
+    else if (syst_name.EqualTo("jesPileUpPtHFup"))
+        return vvv.NVQGen0jesPileUpPtHFup();
+    else if (syst_name.EqualTo("jesPileUpPtHFdn"))
+        return vvv.NVQGen0jesPileUpPtHFdn();
+    else
+        return vvv.NVQGen0();
+};
+
+auto NVQGen1 = [&](TString syst_name=VARIATION)
+{
+    if (syst_name.EqualTo("Nominal"))
+        return vvv.NVQGen1();
+    else if (syst_name.EqualTo("JESUp"))
+        return vvv.NVQGen1JESUp();
+    else if (syst_name.EqualTo("JESDn"))
+        return vvv.NVQGen1JESDn();
+    else if (syst_name.EqualTo("JERUp"))
+        return vvv.NVQGen1JERUp();
+    else if (syst_name.EqualTo("JERDn"))
+        return vvv.NVQGen1JERDn();
+    else if (syst_name.EqualTo("JMSUp"))
+        return vvv.NVQGen1JMSUp();
+    else if (syst_name.EqualTo("JMSDn"))
+        return vvv.NVQGen1JMSDn();
+    else if (syst_name.EqualTo("JMRUp"))
+        return vvv.NVQGen1JMRUp();
+    else if (syst_name.EqualTo("JMRDn"))
+        return vvv.NVQGen1JMRDn();
+    else if (syst_name.EqualTo("jesAbsoluteStatup"))
+        return vvv.NVQGen1jesAbsoluteStatup();
+    else if (syst_name.EqualTo("jesAbsoluteStatdn"))
+        return vvv.NVQGen1jesAbsoluteStatdn();
+    else if (syst_name.EqualTo("jesAbsoluteScaleup"))
+        return vvv.NVQGen1jesAbsoluteScaleup();
+    else if (syst_name.EqualTo("jesAbsoluteScaledn"))
+        return vvv.NVQGen1jesAbsoluteScaledn();
+    else if (syst_name.EqualTo("jesAbsoluteMPFBiasup"))
+        return vvv.NVQGen1jesAbsoluteMPFBiasup();
+    else if (syst_name.EqualTo("jesAbsoluteMPFBiasdn"))
+        return vvv.NVQGen1jesAbsoluteMPFBiasdn();
+    else if (syst_name.EqualTo("jesFragmentationup"))
+        return vvv.NVQGen1jesFragmentationup();
+    else if (syst_name.EqualTo("jesFragmentationdn"))
+        return vvv.NVQGen1jesFragmentationdn();
+    else if (syst_name.EqualTo("jesSinglePionECALup"))
+        return vvv.NVQGen1jesSinglePionECALup();
+    else if (syst_name.EqualTo("jesSinglePionECALdn"))
+        return vvv.NVQGen1jesSinglePionECALdn();
+    else if (syst_name.EqualTo("jesSinglePionHCALup"))
+        return vvv.NVQGen1jesSinglePionHCALup();
+    else if (syst_name.EqualTo("jesSinglePionHCALdn"))
+        return vvv.NVQGen1jesSinglePionHCALdn();
+    else if (syst_name.EqualTo("jesFlavorQCDup"))
+        return vvv.NVQGen1jesFlavorQCDup();
+    else if (syst_name.EqualTo("jesFlavorQCDdn"))
+        return vvv.NVQGen1jesFlavorQCDdn();
+    else if (syst_name.EqualTo("jesTimePtEtaup"))
+        return vvv.NVQGen1jesTimePtEtaup();
+    else if (syst_name.EqualTo("jesTimePtEtadn"))
+        return vvv.NVQGen1jesTimePtEtadn();
+    else if (syst_name.EqualTo("jesRelativeJEREC1up"))
+        return vvv.NVQGen1jesRelativeJEREC1up();
+    else if (syst_name.EqualTo("jesRelativeJEREC1dn"))
+        return vvv.NVQGen1jesRelativeJEREC1dn();
+    else if (syst_name.EqualTo("jesRelativeJEREC2up"))
+        return vvv.NVQGen1jesRelativeJEREC2up();
+    else if (syst_name.EqualTo("jesRelativeJEREC2dn"))
+        return vvv.NVQGen1jesRelativeJEREC2dn();
+    else if (syst_name.EqualTo("jesRelativeJERHFup"))
+        return vvv.NVQGen1jesRelativeJERHFup();
+    else if (syst_name.EqualTo("jesRelativeJERHFdn"))
+        return vvv.NVQGen1jesRelativeJERHFdn();
+    else if (syst_name.EqualTo("jesRelativePtBBup"))
+        return vvv.NVQGen1jesRelativePtBBup();
+    else if (syst_name.EqualTo("jesRelativePtBBdn"))
+        return vvv.NVQGen1jesRelativePtBBdn();
+    else if (syst_name.EqualTo("jesRelativePtEC1up"))
+        return vvv.NVQGen1jesRelativePtEC1up();
+    else if (syst_name.EqualTo("jesRelativePtEC1dn"))
+        return vvv.NVQGen1jesRelativePtEC1dn();
+    else if (syst_name.EqualTo("jesRelativePtEC2up"))
+        return vvv.NVQGen1jesRelativePtEC2up();
+    else if (syst_name.EqualTo("jesRelativePtEC2dn"))
+        return vvv.NVQGen1jesRelativePtEC2dn();
+    else if (syst_name.EqualTo("jesRelativePtHFup"))
+        return vvv.NVQGen1jesRelativePtHFup();
+    else if (syst_name.EqualTo("jesRelativePtHFdn"))
+        return vvv.NVQGen1jesRelativePtHFdn();
+    else if (syst_name.EqualTo("jesRelativeBalup"))
+        return vvv.NVQGen1jesRelativeBalup();
+    else if (syst_name.EqualTo("jesRelativeBaldn"))
+        return vvv.NVQGen1jesRelativeBaldn();
+    else if (syst_name.EqualTo("jesRelativeSampleup"))
+        return vvv.NVQGen1jesRelativeSampleup();
+    else if (syst_name.EqualTo("jesRelativeSampledn"))
+        return vvv.NVQGen1jesRelativeSampledn();
+    else if (syst_name.EqualTo("jesRelativeFSRup"))
+        return vvv.NVQGen1jesRelativeFSRup();
+    else if (syst_name.EqualTo("jesRelativeFSRdn"))
+        return vvv.NVQGen1jesRelativeFSRdn();
+    else if (syst_name.EqualTo("jesRelativeStatFSRup"))
+        return vvv.NVQGen1jesRelativeStatFSRup();
+    else if (syst_name.EqualTo("jesRelativeStatFSRdn"))
+        return vvv.NVQGen1jesRelativeStatFSRdn();
+    else if (syst_name.EqualTo("jesRelativeStatECup"))
+        return vvv.NVQGen1jesRelativeStatECup();
+    else if (syst_name.EqualTo("jesRelativeStatECdn"))
+        return vvv.NVQGen1jesRelativeStatECdn();
+    else if (syst_name.EqualTo("jesRelativeStatHFup"))
+        return vvv.NVQGen1jesRelativeStatHFup();
+    else if (syst_name.EqualTo("jesRelativeStatHFdn"))
+        return vvv.NVQGen1jesRelativeStatHFdn();
+    else if (syst_name.EqualTo("jesPileUpDataMCup"))
+        return vvv.NVQGen1jesPileUpDataMCup();
+    else if (syst_name.EqualTo("jesPileUpDataMCdn"))
+        return vvv.NVQGen1jesPileUpDataMCdn();
+    else if (syst_name.EqualTo("jesPileUpPtRefup"))
+        return vvv.NVQGen1jesPileUpPtRefup();
+    else if (syst_name.EqualTo("jesPileUpPtRefdn"))
+        return vvv.NVQGen1jesPileUpPtRefdn();
+    else if (syst_name.EqualTo("jesPileUpPtBBup"))
+        return vvv.NVQGen1jesPileUpPtBBup();
+    else if (syst_name.EqualTo("jesPileUpPtBBdn"))
+        return vvv.NVQGen1jesPileUpPtBBdn();
+    else if (syst_name.EqualTo("jesPileUpPtEC1up"))
+        return vvv.NVQGen1jesPileUpPtEC1up();
+    else if (syst_name.EqualTo("jesPileUpPtEC1dn"))
+        return vvv.NVQGen1jesPileUpPtEC1dn();
+    else if (syst_name.EqualTo("jesPileUpPtEC2up"))
+        return vvv.NVQGen1jesPileUpPtEC2up();
+    else if (syst_name.EqualTo("jesPileUpPtEC2dn"))
+        return vvv.NVQGen1jesPileUpPtEC2dn();
+    else if (syst_name.EqualTo("jesPileUpPtHFup"))
+        return vvv.NVQGen1jesPileUpPtHFup();
+    else if (syst_name.EqualTo("jesPileUpPtHFdn"))
+        return vvv.NVQGen1jesPileUpPtHFdn();
+    else
+        return vvv.NVQGen1();
+};
+
+auto NVQGen2 = [&](TString syst_name=VARIATION)
+{
+    if (syst_name.EqualTo("Nominal"))
+        return vvv.NVQGen2();
+    else if (syst_name.EqualTo("JESUp"))
+        return vvv.NVQGen2JESUp();
+    else if (syst_name.EqualTo("JESDn"))
+        return vvv.NVQGen2JESDn();
+    else if (syst_name.EqualTo("JERUp"))
+        return vvv.NVQGen2JERUp();
+    else if (syst_name.EqualTo("JERDn"))
+        return vvv.NVQGen2JERDn();
+    else if (syst_name.EqualTo("JMSUp"))
+        return vvv.NVQGen2JMSUp();
+    else if (syst_name.EqualTo("JMSDn"))
+        return vvv.NVQGen2JMSDn();
+    else if (syst_name.EqualTo("JMRUp"))
+        return vvv.NVQGen2JMRUp();
+    else if (syst_name.EqualTo("JMRDn"))
+        return vvv.NVQGen2JMRDn();
+    else if (syst_name.EqualTo("jesAbsoluteStatup"))
+        return vvv.NVQGen2jesAbsoluteStatup();
+    else if (syst_name.EqualTo("jesAbsoluteStatdn"))
+        return vvv.NVQGen2jesAbsoluteStatdn();
+    else if (syst_name.EqualTo("jesAbsoluteScaleup"))
+        return vvv.NVQGen2jesAbsoluteScaleup();
+    else if (syst_name.EqualTo("jesAbsoluteScaledn"))
+        return vvv.NVQGen2jesAbsoluteScaledn();
+    else if (syst_name.EqualTo("jesAbsoluteMPFBiasup"))
+        return vvv.NVQGen2jesAbsoluteMPFBiasup();
+    else if (syst_name.EqualTo("jesAbsoluteMPFBiasdn"))
+        return vvv.NVQGen2jesAbsoluteMPFBiasdn();
+    else if (syst_name.EqualTo("jesFragmentationup"))
+        return vvv.NVQGen2jesFragmentationup();
+    else if (syst_name.EqualTo("jesFragmentationdn"))
+        return vvv.NVQGen2jesFragmentationdn();
+    else if (syst_name.EqualTo("jesSinglePionECALup"))
+        return vvv.NVQGen2jesSinglePionECALup();
+    else if (syst_name.EqualTo("jesSinglePionECALdn"))
+        return vvv.NVQGen2jesSinglePionECALdn();
+    else if (syst_name.EqualTo("jesSinglePionHCALup"))
+        return vvv.NVQGen2jesSinglePionHCALup();
+    else if (syst_name.EqualTo("jesSinglePionHCALdn"))
+        return vvv.NVQGen2jesSinglePionHCALdn();
+    else if (syst_name.EqualTo("jesFlavorQCDup"))
+        return vvv.NVQGen2jesFlavorQCDup();
+    else if (syst_name.EqualTo("jesFlavorQCDdn"))
+        return vvv.NVQGen2jesFlavorQCDdn();
+    else if (syst_name.EqualTo("jesTimePtEtaup"))
+        return vvv.NVQGen2jesTimePtEtaup();
+    else if (syst_name.EqualTo("jesTimePtEtadn"))
+        return vvv.NVQGen2jesTimePtEtadn();
+    else if (syst_name.EqualTo("jesRelativeJEREC1up"))
+        return vvv.NVQGen2jesRelativeJEREC1up();
+    else if (syst_name.EqualTo("jesRelativeJEREC1dn"))
+        return vvv.NVQGen2jesRelativeJEREC1dn();
+    else if (syst_name.EqualTo("jesRelativeJEREC2up"))
+        return vvv.NVQGen2jesRelativeJEREC2up();
+    else if (syst_name.EqualTo("jesRelativeJEREC2dn"))
+        return vvv.NVQGen2jesRelativeJEREC2dn();
+    else if (syst_name.EqualTo("jesRelativeJERHFup"))
+        return vvv.NVQGen2jesRelativeJERHFup();
+    else if (syst_name.EqualTo("jesRelativeJERHFdn"))
+        return vvv.NVQGen2jesRelativeJERHFdn();
+    else if (syst_name.EqualTo("jesRelativePtBBup"))
+        return vvv.NVQGen2jesRelativePtBBup();
+    else if (syst_name.EqualTo("jesRelativePtBBdn"))
+        return vvv.NVQGen2jesRelativePtBBdn();
+    else if (syst_name.EqualTo("jesRelativePtEC1up"))
+        return vvv.NVQGen2jesRelativePtEC1up();
+    else if (syst_name.EqualTo("jesRelativePtEC1dn"))
+        return vvv.NVQGen2jesRelativePtEC1dn();
+    else if (syst_name.EqualTo("jesRelativePtEC2up"))
+        return vvv.NVQGen2jesRelativePtEC2up();
+    else if (syst_name.EqualTo("jesRelativePtEC2dn"))
+        return vvv.NVQGen2jesRelativePtEC2dn();
+    else if (syst_name.EqualTo("jesRelativePtHFup"))
+        return vvv.NVQGen2jesRelativePtHFup();
+    else if (syst_name.EqualTo("jesRelativePtHFdn"))
+        return vvv.NVQGen2jesRelativePtHFdn();
+    else if (syst_name.EqualTo("jesRelativeBalup"))
+        return vvv.NVQGen2jesRelativeBalup();
+    else if (syst_name.EqualTo("jesRelativeBaldn"))
+        return vvv.NVQGen2jesRelativeBaldn();
+    else if (syst_name.EqualTo("jesRelativeSampleup"))
+        return vvv.NVQGen2jesRelativeSampleup();
+    else if (syst_name.EqualTo("jesRelativeSampledn"))
+        return vvv.NVQGen2jesRelativeSampledn();
+    else if (syst_name.EqualTo("jesRelativeFSRup"))
+        return vvv.NVQGen2jesRelativeFSRup();
+    else if (syst_name.EqualTo("jesRelativeFSRdn"))
+        return vvv.NVQGen2jesRelativeFSRdn();
+    else if (syst_name.EqualTo("jesRelativeStatFSRup"))
+        return vvv.NVQGen2jesRelativeStatFSRup();
+    else if (syst_name.EqualTo("jesRelativeStatFSRdn"))
+        return vvv.NVQGen2jesRelativeStatFSRdn();
+    else if (syst_name.EqualTo("jesRelativeStatECup"))
+        return vvv.NVQGen2jesRelativeStatECup();
+    else if (syst_name.EqualTo("jesRelativeStatECdn"))
+        return vvv.NVQGen2jesRelativeStatECdn();
+    else if (syst_name.EqualTo("jesRelativeStatHFup"))
+        return vvv.NVQGen2jesRelativeStatHFup();
+    else if (syst_name.EqualTo("jesRelativeStatHFdn"))
+        return vvv.NVQGen2jesRelativeStatHFdn();
+    else if (syst_name.EqualTo("jesPileUpDataMCup"))
+        return vvv.NVQGen2jesPileUpDataMCup();
+    else if (syst_name.EqualTo("jesPileUpDataMCdn"))
+        return vvv.NVQGen2jesPileUpDataMCdn();
+    else if (syst_name.EqualTo("jesPileUpPtRefup"))
+        return vvv.NVQGen2jesPileUpPtRefup();
+    else if (syst_name.EqualTo("jesPileUpPtRefdn"))
+        return vvv.NVQGen2jesPileUpPtRefdn();
+    else if (syst_name.EqualTo("jesPileUpPtBBup"))
+        return vvv.NVQGen2jesPileUpPtBBup();
+    else if (syst_name.EqualTo("jesPileUpPtBBdn"))
+        return vvv.NVQGen2jesPileUpPtBBdn();
+    else if (syst_name.EqualTo("jesPileUpPtEC1up"))
+        return vvv.NVQGen2jesPileUpPtEC1up();
+    else if (syst_name.EqualTo("jesPileUpPtEC1dn"))
+        return vvv.NVQGen2jesPileUpPtEC1dn();
+    else if (syst_name.EqualTo("jesPileUpPtEC2up"))
+        return vvv.NVQGen2jesPileUpPtEC2up();
+    else if (syst_name.EqualTo("jesPileUpPtEC2dn"))
+        return vvv.NVQGen2jesPileUpPtEC2dn();
+    else if (syst_name.EqualTo("jesPileUpPtHFup"))
+        return vvv.NVQGen2jesPileUpPtHFup();
+    else if (syst_name.EqualTo("jesPileUpPtHFdn"))
+        return vvv.NVQGen2jesPileUpPtHFdn();
+    else
+        return vvv.NVQGen2();
+};
+
+auto NVQGen3 = [&](TString syst_name=VARIATION)
+{
+    if (syst_name.EqualTo("Nominal"))
+        return vvv.NVQGen3();
+    else if (syst_name.EqualTo("JESUp"))
+        return vvv.NVQGen3JESUp();
+    else if (syst_name.EqualTo("JESDn"))
+        return vvv.NVQGen3JESDn();
+    else if (syst_name.EqualTo("JERUp"))
+        return vvv.NVQGen3JERUp();
+    else if (syst_name.EqualTo("JERDn"))
+        return vvv.NVQGen3JERDn();
+    else if (syst_name.EqualTo("JMSUp"))
+        return vvv.NVQGen3JMSUp();
+    else if (syst_name.EqualTo("JMSDn"))
+        return vvv.NVQGen3JMSDn();
+    else if (syst_name.EqualTo("JMRUp"))
+        return vvv.NVQGen3JMRUp();
+    else if (syst_name.EqualTo("JMRDn"))
+        return vvv.NVQGen3JMRDn();
+    else if (syst_name.EqualTo("jesAbsoluteStatup"))
+        return vvv.NVQGen3jesAbsoluteStatup();
+    else if (syst_name.EqualTo("jesAbsoluteStatdn"))
+        return vvv.NVQGen3jesAbsoluteStatdn();
+    else if (syst_name.EqualTo("jesAbsoluteScaleup"))
+        return vvv.NVQGen3jesAbsoluteScaleup();
+    else if (syst_name.EqualTo("jesAbsoluteScaledn"))
+        return vvv.NVQGen3jesAbsoluteScaledn();
+    else if (syst_name.EqualTo("jesAbsoluteMPFBiasup"))
+        return vvv.NVQGen3jesAbsoluteMPFBiasup();
+    else if (syst_name.EqualTo("jesAbsoluteMPFBiasdn"))
+        return vvv.NVQGen3jesAbsoluteMPFBiasdn();
+    else if (syst_name.EqualTo("jesFragmentationup"))
+        return vvv.NVQGen3jesFragmentationup();
+    else if (syst_name.EqualTo("jesFragmentationdn"))
+        return vvv.NVQGen3jesFragmentationdn();
+    else if (syst_name.EqualTo("jesSinglePionECALup"))
+        return vvv.NVQGen3jesSinglePionECALup();
+    else if (syst_name.EqualTo("jesSinglePionECALdn"))
+        return vvv.NVQGen3jesSinglePionECALdn();
+    else if (syst_name.EqualTo("jesSinglePionHCALup"))
+        return vvv.NVQGen3jesSinglePionHCALup();
+    else if (syst_name.EqualTo("jesSinglePionHCALdn"))
+        return vvv.NVQGen3jesSinglePionHCALdn();
+    else if (syst_name.EqualTo("jesFlavorQCDup"))
+        return vvv.NVQGen3jesFlavorQCDup();
+    else if (syst_name.EqualTo("jesFlavorQCDdn"))
+        return vvv.NVQGen3jesFlavorQCDdn();
+    else if (syst_name.EqualTo("jesTimePtEtaup"))
+        return vvv.NVQGen3jesTimePtEtaup();
+    else if (syst_name.EqualTo("jesTimePtEtadn"))
+        return vvv.NVQGen3jesTimePtEtadn();
+    else if (syst_name.EqualTo("jesRelativeJEREC1up"))
+        return vvv.NVQGen3jesRelativeJEREC1up();
+    else if (syst_name.EqualTo("jesRelativeJEREC1dn"))
+        return vvv.NVQGen3jesRelativeJEREC1dn();
+    else if (syst_name.EqualTo("jesRelativeJEREC2up"))
+        return vvv.NVQGen3jesRelativeJEREC2up();
+    else if (syst_name.EqualTo("jesRelativeJEREC2dn"))
+        return vvv.NVQGen3jesRelativeJEREC2dn();
+    else if (syst_name.EqualTo("jesRelativeJERHFup"))
+        return vvv.NVQGen3jesRelativeJERHFup();
+    else if (syst_name.EqualTo("jesRelativeJERHFdn"))
+        return vvv.NVQGen3jesRelativeJERHFdn();
+    else if (syst_name.EqualTo("jesRelativePtBBup"))
+        return vvv.NVQGen3jesRelativePtBBup();
+    else if (syst_name.EqualTo("jesRelativePtBBdn"))
+        return vvv.NVQGen3jesRelativePtBBdn();
+    else if (syst_name.EqualTo("jesRelativePtEC1up"))
+        return vvv.NVQGen3jesRelativePtEC1up();
+    else if (syst_name.EqualTo("jesRelativePtEC1dn"))
+        return vvv.NVQGen3jesRelativePtEC1dn();
+    else if (syst_name.EqualTo("jesRelativePtEC2up"))
+        return vvv.NVQGen3jesRelativePtEC2up();
+    else if (syst_name.EqualTo("jesRelativePtEC2dn"))
+        return vvv.NVQGen3jesRelativePtEC2dn();
+    else if (syst_name.EqualTo("jesRelativePtHFup"))
+        return vvv.NVQGen3jesRelativePtHFup();
+    else if (syst_name.EqualTo("jesRelativePtHFdn"))
+        return vvv.NVQGen3jesRelativePtHFdn();
+    else if (syst_name.EqualTo("jesRelativeBalup"))
+        return vvv.NVQGen3jesRelativeBalup();
+    else if (syst_name.EqualTo("jesRelativeBaldn"))
+        return vvv.NVQGen3jesRelativeBaldn();
+    else if (syst_name.EqualTo("jesRelativeSampleup"))
+        return vvv.NVQGen3jesRelativeSampleup();
+    else if (syst_name.EqualTo("jesRelativeSampledn"))
+        return vvv.NVQGen3jesRelativeSampledn();
+    else if (syst_name.EqualTo("jesRelativeFSRup"))
+        return vvv.NVQGen3jesRelativeFSRup();
+    else if (syst_name.EqualTo("jesRelativeFSRdn"))
+        return vvv.NVQGen3jesRelativeFSRdn();
+    else if (syst_name.EqualTo("jesRelativeStatFSRup"))
+        return vvv.NVQGen3jesRelativeStatFSRup();
+    else if (syst_name.EqualTo("jesRelativeStatFSRdn"))
+        return vvv.NVQGen3jesRelativeStatFSRdn();
+    else if (syst_name.EqualTo("jesRelativeStatECup"))
+        return vvv.NVQGen3jesRelativeStatECup();
+    else if (syst_name.EqualTo("jesRelativeStatECdn"))
+        return vvv.NVQGen3jesRelativeStatECdn();
+    else if (syst_name.EqualTo("jesRelativeStatHFup"))
+        return vvv.NVQGen3jesRelativeStatHFup();
+    else if (syst_name.EqualTo("jesRelativeStatHFdn"))
+        return vvv.NVQGen3jesRelativeStatHFdn();
+    else if (syst_name.EqualTo("jesPileUpDataMCup"))
+        return vvv.NVQGen3jesPileUpDataMCup();
+    else if (syst_name.EqualTo("jesPileUpDataMCdn"))
+        return vvv.NVQGen3jesPileUpDataMCdn();
+    else if (syst_name.EqualTo("jesPileUpPtRefup"))
+        return vvv.NVQGen3jesPileUpPtRefup();
+    else if (syst_name.EqualTo("jesPileUpPtRefdn"))
+        return vvv.NVQGen3jesPileUpPtRefdn();
+    else if (syst_name.EqualTo("jesPileUpPtBBup"))
+        return vvv.NVQGen3jesPileUpPtBBup();
+    else if (syst_name.EqualTo("jesPileUpPtBBdn"))
+        return vvv.NVQGen3jesPileUpPtBBdn();
+    else if (syst_name.EqualTo("jesPileUpPtEC1up"))
+        return vvv.NVQGen3jesPileUpPtEC1up();
+    else if (syst_name.EqualTo("jesPileUpPtEC1dn"))
+        return vvv.NVQGen3jesPileUpPtEC1dn();
+    else if (syst_name.EqualTo("jesPileUpPtEC2up"))
+        return vvv.NVQGen3jesPileUpPtEC2up();
+    else if (syst_name.EqualTo("jesPileUpPtEC2dn"))
+        return vvv.NVQGen3jesPileUpPtEC2dn();
+    else if (syst_name.EqualTo("jesPileUpPtHFup"))
+        return vvv.NVQGen3jesPileUpPtHFup();
+    else if (syst_name.EqualTo("jesPileUpPtHFdn"))
+        return vvv.NVQGen3jesPileUpPtHFdn();
+    else
+        return vvv.NVQGen3();
+};
+
+auto NVQGen4 = [&](TString syst_name=VARIATION)
+{
+    if (syst_name.EqualTo("Nominal"))
+        return vvv.NVQGen4();
+    else if (syst_name.EqualTo("JESUp"))
+        return vvv.NVQGen4JESUp();
+    else if (syst_name.EqualTo("JESDn"))
+        return vvv.NVQGen4JESDn();
+    else if (syst_name.EqualTo("JERUp"))
+        return vvv.NVQGen4JERUp();
+    else if (syst_name.EqualTo("JERDn"))
+        return vvv.NVQGen4JERDn();
+    else if (syst_name.EqualTo("JMSUp"))
+        return vvv.NVQGen4JMSUp();
+    else if (syst_name.EqualTo("JMSDn"))
+        return vvv.NVQGen4JMSDn();
+    else if (syst_name.EqualTo("JMRUp"))
+        return vvv.NVQGen4JMRUp();
+    else if (syst_name.EqualTo("JMRDn"))
+        return vvv.NVQGen4JMRDn();
+    else if (syst_name.EqualTo("jesAbsoluteStatup"))
+        return vvv.NVQGen4jesAbsoluteStatup();
+    else if (syst_name.EqualTo("jesAbsoluteStatdn"))
+        return vvv.NVQGen4jesAbsoluteStatdn();
+    else if (syst_name.EqualTo("jesAbsoluteScaleup"))
+        return vvv.NVQGen4jesAbsoluteScaleup();
+    else if (syst_name.EqualTo("jesAbsoluteScaledn"))
+        return vvv.NVQGen4jesAbsoluteScaledn();
+    else if (syst_name.EqualTo("jesAbsoluteMPFBiasup"))
+        return vvv.NVQGen4jesAbsoluteMPFBiasup();
+    else if (syst_name.EqualTo("jesAbsoluteMPFBiasdn"))
+        return vvv.NVQGen4jesAbsoluteMPFBiasdn();
+    else if (syst_name.EqualTo("jesFragmentationup"))
+        return vvv.NVQGen4jesFragmentationup();
+    else if (syst_name.EqualTo("jesFragmentationdn"))
+        return vvv.NVQGen4jesFragmentationdn();
+    else if (syst_name.EqualTo("jesSinglePionECALup"))
+        return vvv.NVQGen4jesSinglePionECALup();
+    else if (syst_name.EqualTo("jesSinglePionECALdn"))
+        return vvv.NVQGen4jesSinglePionECALdn();
+    else if (syst_name.EqualTo("jesSinglePionHCALup"))
+        return vvv.NVQGen4jesSinglePionHCALup();
+    else if (syst_name.EqualTo("jesSinglePionHCALdn"))
+        return vvv.NVQGen4jesSinglePionHCALdn();
+    else if (syst_name.EqualTo("jesFlavorQCDup"))
+        return vvv.NVQGen4jesFlavorQCDup();
+    else if (syst_name.EqualTo("jesFlavorQCDdn"))
+        return vvv.NVQGen4jesFlavorQCDdn();
+    else if (syst_name.EqualTo("jesTimePtEtaup"))
+        return vvv.NVQGen4jesTimePtEtaup();
+    else if (syst_name.EqualTo("jesTimePtEtadn"))
+        return vvv.NVQGen4jesTimePtEtadn();
+    else if (syst_name.EqualTo("jesRelativeJEREC1up"))
+        return vvv.NVQGen4jesRelativeJEREC1up();
+    else if (syst_name.EqualTo("jesRelativeJEREC1dn"))
+        return vvv.NVQGen4jesRelativeJEREC1dn();
+    else if (syst_name.EqualTo("jesRelativeJEREC2up"))
+        return vvv.NVQGen4jesRelativeJEREC2up();
+    else if (syst_name.EqualTo("jesRelativeJEREC2dn"))
+        return vvv.NVQGen4jesRelativeJEREC2dn();
+    else if (syst_name.EqualTo("jesRelativeJERHFup"))
+        return vvv.NVQGen4jesRelativeJERHFup();
+    else if (syst_name.EqualTo("jesRelativeJERHFdn"))
+        return vvv.NVQGen4jesRelativeJERHFdn();
+    else if (syst_name.EqualTo("jesRelativePtBBup"))
+        return vvv.NVQGen4jesRelativePtBBup();
+    else if (syst_name.EqualTo("jesRelativePtBBdn"))
+        return vvv.NVQGen4jesRelativePtBBdn();
+    else if (syst_name.EqualTo("jesRelativePtEC1up"))
+        return vvv.NVQGen4jesRelativePtEC1up();
+    else if (syst_name.EqualTo("jesRelativePtEC1dn"))
+        return vvv.NVQGen4jesRelativePtEC1dn();
+    else if (syst_name.EqualTo("jesRelativePtEC2up"))
+        return vvv.NVQGen4jesRelativePtEC2up();
+    else if (syst_name.EqualTo("jesRelativePtEC2dn"))
+        return vvv.NVQGen4jesRelativePtEC2dn();
+    else if (syst_name.EqualTo("jesRelativePtHFup"))
+        return vvv.NVQGen4jesRelativePtHFup();
+    else if (syst_name.EqualTo("jesRelativePtHFdn"))
+        return vvv.NVQGen4jesRelativePtHFdn();
+    else if (syst_name.EqualTo("jesRelativeBalup"))
+        return vvv.NVQGen4jesRelativeBalup();
+    else if (syst_name.EqualTo("jesRelativeBaldn"))
+        return vvv.NVQGen4jesRelativeBaldn();
+    else if (syst_name.EqualTo("jesRelativeSampleup"))
+        return vvv.NVQGen4jesRelativeSampleup();
+    else if (syst_name.EqualTo("jesRelativeSampledn"))
+        return vvv.NVQGen4jesRelativeSampledn();
+    else if (syst_name.EqualTo("jesRelativeFSRup"))
+        return vvv.NVQGen4jesRelativeFSRup();
+    else if (syst_name.EqualTo("jesRelativeFSRdn"))
+        return vvv.NVQGen4jesRelativeFSRdn();
+    else if (syst_name.EqualTo("jesRelativeStatFSRup"))
+        return vvv.NVQGen4jesRelativeStatFSRup();
+    else if (syst_name.EqualTo("jesRelativeStatFSRdn"))
+        return vvv.NVQGen4jesRelativeStatFSRdn();
+    else if (syst_name.EqualTo("jesRelativeStatECup"))
+        return vvv.NVQGen4jesRelativeStatECup();
+    else if (syst_name.EqualTo("jesRelativeStatECdn"))
+        return vvv.NVQGen4jesRelativeStatECdn();
+    else if (syst_name.EqualTo("jesRelativeStatHFup"))
+        return vvv.NVQGen4jesRelativeStatHFup();
+    else if (syst_name.EqualTo("jesRelativeStatHFdn"))
+        return vvv.NVQGen4jesRelativeStatHFdn();
+    else if (syst_name.EqualTo("jesPileUpDataMCup"))
+        return vvv.NVQGen4jesPileUpDataMCup();
+    else if (syst_name.EqualTo("jesPileUpDataMCdn"))
+        return vvv.NVQGen4jesPileUpDataMCdn();
+    else if (syst_name.EqualTo("jesPileUpPtRefup"))
+        return vvv.NVQGen4jesPileUpPtRefup();
+    else if (syst_name.EqualTo("jesPileUpPtRefdn"))
+        return vvv.NVQGen4jesPileUpPtRefdn();
+    else if (syst_name.EqualTo("jesPileUpPtBBup"))
+        return vvv.NVQGen4jesPileUpPtBBup();
+    else if (syst_name.EqualTo("jesPileUpPtBBdn"))
+        return vvv.NVQGen4jesPileUpPtBBdn();
+    else if (syst_name.EqualTo("jesPileUpPtEC1up"))
+        return vvv.NVQGen4jesPileUpPtEC1up();
+    else if (syst_name.EqualTo("jesPileUpPtEC1dn"))
+        return vvv.NVQGen4jesPileUpPtEC1dn();
+    else if (syst_name.EqualTo("jesPileUpPtEC2up"))
+        return vvv.NVQGen4jesPileUpPtEC2up();
+    else if (syst_name.EqualTo("jesPileUpPtEC2dn"))
+        return vvv.NVQGen4jesPileUpPtEC2dn();
+    else if (syst_name.EqualTo("jesPileUpPtHFup"))
+        return vvv.NVQGen4jesPileUpPtHFup();
+    else if (syst_name.EqualTo("jesPileUpPtHFdn"))
+        return vvv.NVQGen4jesPileUpPtHFdn();
+    else
+        return vvv.NVQGen4();
+};
+
 auto NiFJ = [&](TString syst_name=VARIATION)
 {
     if (syst_name.EqualTo("Nominal"))

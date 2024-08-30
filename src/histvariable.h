@@ -8,6 +8,13 @@ int n_wgt_syst = 9
                + 2 // puwgt
                + 2 // trigwgt
                + 2 // lumi
+               + 2 // WSFMed
+               + 2 // WSFLoose
+               + 2 // FakeSFMed
+               + 2 // FakeSFLoose
+               + 2 // BSFMed
+               + 2 // BSFLoose
+               + 2 // FatJetSF (all types)
                + 103 // PDF
                + LHEReweightingWeight().size()
                ;
@@ -38,7 +45,28 @@ auto wgtvec = [&, eft_idx_benchmark]() {
                     // 16, 17 is Luminosity
                     rtn.push_back(1.016); // luminosity unc place holders
                     rtn.push_back(0.984); // luminosity unc place holders
-                    // 18 - 120 is PDF
+                    // 18, 19 is Medium WSF
+                    rtn.push_back(FJSFMedium("WSFUp")/FJSFMedium()); // WSF Up
+                    rtn.push_back(FJSFMedium("WSFDn")/FJSFMedium()); // WSF Dn
+                    // 20, 21 is Loose WSF
+                    rtn.push_back(FJSFLoose("WSFUp")/FJSFLoose()); // WSF Up
+                    rtn.push_back(FJSFLoose("WSFDn")/FJSFLoose()); // WSF Dn
+                    // 22, 23 is Medium FakeSF
+                    rtn.push_back(FJSFMedium("FakeSFUp")/FJSFMedium()); // FakeSF Up
+                    rtn.push_back(FJSFMedium("FakeSFDn")/FJSFMedium()); // FakeSF Dn
+                    // 24, 25 is Loose FakeSF
+                    rtn.push_back(FJSFLoose("FakeSFUp")/FJSFLoose()); // FakeSF Up
+                    rtn.push_back(FJSFLoose("FakeSFDn")/FJSFLoose()); // FakeSF Dn
+                    // 26, 27 is Medium BSF
+                    rtn.push_back(FJSFMedium("BSFUp")/FJSFMedium()); // BSF Up
+                    rtn.push_back(FJSFMedium("BSFDn")/FJSFMedium()); // BSF Dn
+                    // 28, 29 is Loose BSF
+                    rtn.push_back(FJSFLoose("BSFUp")/FJSFLoose()); // BSF Up
+                    rtn.push_back(FJSFLoose("BSFDn")/FJSFLoose()); // BSF Dn
+                    // 30, 31 is Loose BSF
+                    rtn.push_back(FJSFMedium("SFUp")/FJSFMedium() * FJSFLoose("SFUp")/FJSFLoose()); // SF Up
+                    rtn.push_back(FJSFMedium("SFDn")/FJSFMedium() * FJSFLoose("SFDn")/FJSFLoose()); // SF Dn
+                    // 32 - 134 is PDF
                     std::vector<float> rtn2 = PDF();
                     rtn.insert(rtn.end(), rtn2.begin(), rtn2.end());
                     if (PDF().size() == 101)
@@ -51,7 +79,7 @@ auto wgtvec = [&, eft_idx_benchmark]() {
                         for (size_t i = 0; i < 103; ++i)
                             rtn.push_back(0);
                     }
-                    // Starting from 121 LHEReweightingWeight
+                    // Starting from 135 LHEReweightingWeight
                     std::vector<float> rtn3 = LHEReweightingWeight();
                     for (auto& v : rtn3)
                     {
@@ -62,16 +90,20 @@ auto wgtvec = [&, eft_idx_benchmark]() {
                 };
 
 std::vector<float> SR1SumPtFJ_bins = {1250, 1500, 1750, 2000, 2250, 2500, 3000, 4000};
+// std::vector<float> SR1SumPtFJ_bins = {1250, 2000, 2500, 3000};
 std::vector<float> HTFJ_bins = {1100, 1500, 2000, 2500, 3000, 3500};
+// std::vector<float> HTFJ_bins = {1100, 3000, 3500, 4000};
 
 std::map<TString, std::function<float()>> SR1SumPtFJ_var;
 std::map<TString, std::function<std::vector<float>()>> SR1SumPtFJ_var_w_wgt;
 std::map<TString, std::function<float()>> HTFJ_var;
 std::map<TString, std::function<std::vector<float>()>> HTFJ_var_w_wgt;
 
-std::vector<TString> variations = {"Nominal", "JESUp", "JESDn", "JERUp", "JERDn", "JMSUp", "JMSDn", "JMRUp", "JMRDn", "jesAbsoluteStatup", "jesAbsoluteStatdn", "jesAbsoluteScaleup", "jesAbsoluteScaledn", "jesAbsoluteMPFBiasup", "jesAbsoluteMPFBiasdn", "jesFragmentationup", "jesFragmentationdn", "jesSinglePionECALup", "jesSinglePionECALdn", "jesSinglePionHCALup", "jesSinglePionHCALdn", "jesFlavorQCDup", "jesFlavorQCDdn", "jesTimePtEtaup", "jesTimePtEtadn", "jesRelativeJEREC1up", "jesRelativeJEREC1dn", "jesRelativeJEREC2up", "jesRelativeJEREC2dn", "jesRelativeJERHFup", "jesRelativeJERHFdn", "jesRelativePtBBup", "jesRelativePtBBdn", "jesRelativePtEC1up", "jesRelativePtEC1dn", "jesRelativePtEC2up", "jesRelativePtEC2dn", "jesRelativePtHFup", "jesRelativePtHFdn", "jesRelativeBalup", "jesRelativeBaldn", "jesRelativeSampleup", "jesRelativeSampledn", "jesRelativeFSRup", "jesRelativeFSRdn", "jesRelativeStatFSRup", "jesRelativeStatFSRdn", "jesRelativeStatECup", "jesRelativeStatECdn", "jesRelativeStatHFup", "jesRelativeStatHFdn", "jesPileUpDataMCup", "jesPileUpDataMCdn", "jesPileUpPtRefup", "jesPileUpPtRefdn", "jesPileUpPtBBup", "jesPileUpPtBBdn", "jesPileUpPtEC1up", "jesPileUpPtEC1dn", "jesPileUpPtEC2up", "jesPileUpPtEC2dn", "jesPileUpPtHFup", "jesPileUpPtHFdn"};
-// std::vector<TString> variations = {"Nominal", "JESUp", "JESDn"};
-// std::vector<TString> variations = {"Nominal"};
+std::vector<TString> variations;
+if (ana.syst_idx == -1)
+    variations = {"Nominal"};
+else if (ana.syst_idx == 0)
+    variations = {"Nominal", "JESUp", "JESDn", "JERUp", "JERDn", "JMSUp", "JMSDn", "JMRUp", "JMRDn", "jesAbsoluteStatup", "jesAbsoluteStatdn", "jesAbsoluteScaleup", "jesAbsoluteScaledn", "jesAbsoluteMPFBiasup", "jesAbsoluteMPFBiasdn", "jesFragmentationup", "jesFragmentationdn", "jesSinglePionECALup", "jesSinglePionECALdn", "jesSinglePionHCALup", "jesSinglePionHCALdn", "jesFlavorQCDup", "jesFlavorQCDdn", "jesTimePtEtaup", "jesTimePtEtadn", "jesRelativeJEREC1up", "jesRelativeJEREC1dn", "jesRelativeJEREC2up", "jesRelativeJEREC2dn", "jesRelativeJERHFup", "jesRelativeJERHFdn", "jesRelativePtBBup", "jesRelativePtBBdn", "jesRelativePtEC1up", "jesRelativePtEC1dn", "jesRelativePtEC2up", "jesRelativePtEC2dn", "jesRelativePtHFup", "jesRelativePtHFdn", "jesRelativeBalup", "jesRelativeBaldn", "jesRelativeSampleup", "jesRelativeSampledn", "jesRelativeFSRup", "jesRelativeFSRdn", "jesRelativeStatFSRup", "jesRelativeStatFSRdn", "jesRelativeStatECup", "jesRelativeStatECdn", "jesRelativeStatHFup", "jesRelativeStatHFdn", "jesPileUpDataMCup", "jesPileUpDataMCdn", "jesPileUpPtRefup", "jesPileUpPtRefdn", "jesPileUpPtBBup", "jesPileUpPtBBdn", "jesPileUpPtEC1up", "jesPileUpPtEC1dn", "jesPileUpPtEC2up", "jesPileUpPtEC2dn", "jesPileUpPtHFup", "jesPileUpPtHFdn"};
 
 for (auto& systvar : variations)
 {
